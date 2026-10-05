@@ -1,0 +1,139 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C28-v1",
+ "cs_id": "C28",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "9480f784ff608dc5e6245dffaf7e4ce7d5309a4b652cfdeed1adec1d74a0142c",
+ "inicio": "2026-10-05T14:29:36+00:00",
+ "duracao_s": 74.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3663,
+ "tokens_saida": 7713,
+ "tokens_raciocinio": 6657,
+ "custo": 0.015566056,
+ "id_requisicao": "gen-1791210576-GL9tJjHPYicKhEzRJsI5",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 74317
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Consulta N+1 em loop",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Para cada transação, são feitas consultas adicionais à tabela Venda e Estoque dentro do loop, causando um problema de N+1 queries."
+   },
+   {
+    "nome": "Consulta N+1 em loop",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Para cada transação do dia, são feitas consultas adicionais à tabela Venda e Estoque dentro do loop, causando N+1 queries."
+   },
+   {
+    "nome": "Consulta N+1 em loop",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Para cada transação do intervalo, são feitas consultas adicionais à tabela Venda e Estoque dentro do loop, causando N+1 queries."
+   },
+   {
+    "nome": "Código inalcançável",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A instrução 'return $request->valor;' nunca será executada porque todos os caminhos anteriores retornam uma resposta."
+   },
+   {
+    "nome": "Variável indefinida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 167,
+    "justificativa": "No bloco else, a variável $e é usada para acessar errorInfo, mas $e não está definida nesse escopo, causando erro."
+   },
+   {
+    "nome": "Tratamento de erro inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "O bloco catch retorna $e->errorInfo[2] diretamente como string, enquanto outros métodos retornam respostas JSON padronizadas."
+   },
+   {
+    "nome": "Parâmetro não utilizado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 253,
+    "linha_fim": 256,
+    "justificativa": "O parâmetro $valor do método montarDescricaoDeSangria não é utilizado na implementação, apenas $descricao é usado."
+   },
+   {
+    "nome": "Formatação de dados no controlador",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 65,
+    "linha_fim": 96,
+    "justificativa": "A formatação de valores monetários com number_format é feita diretamente no controlador, em vez de ser delegada à camada de apresentação ou modelo."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método fecharCaixaView é longo e realiza múltiplas responsabilidades como consulta, processamento e formatação, dificultando manutenção."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI é longo, com múltiplas ramificações e código duplicado, dificultando leitura e manutenção."
+   },
+   {
+    "nome": "Erro de digitação em propriedade",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 224,
+    "linha_fim": 230,
+    "justificativa": "O código usa $request->rage, provavelmente um erro de digitação para $request->range, podendo causar índice indefinido."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,462 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "forcado",
+ "entrada": "C28-v2",
+ "cs_id": "C28",
+ "variante": "v2",
+ "hash_condicao": "f95b74f9fca5d23d",
+ "sha256_entrada": "8f3e431d5986bfcdd6a0e44713c3d757348359b6a8b3ba1c2240eb49ff71a62a",
+ "inicio": "2026-10-05T14:58:23+00:00",
+ "duracao_s": 174.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 4563,
+ "tokens_saida": 17605,
+ "tokens_raciocinio": 14780,
+ "custo": 0.035092904,
+ "id_requisicao": "gen-1791212303-ue56MlGSL2DnDuvx9Nhd",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 173724
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "avaliacoes": [
+   {
+    "item": 1,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 2,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 21,
+      "linha_fim": 23
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 25,
+      "linha_fim": 29
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 31,
+      "linha_fim": 58
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 60,
+      "linha_fim": 100
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 102,
+      "linha_fim": 108
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 110,
+      "linha_fim": 112
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 114,
+      "linha_fim": 134
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 136,
+      "linha_fim": 138
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 140,
+      "linha_fim": 170
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 172,
+      "linha_fim": 176
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 178,
+      "linha_fim": 222
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 224,
+      "linha_fim": 231
+     }
+    ],
+    "justificativa": "Dos 13 métodos, apenas totalDeEntradasFormatado possui comentário de documentação; os demais não possuem docblock."
+   },
+   {
+    "item": 3,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 4,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 21,
+      "linha_fim": 23
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 25,
+      "linha_fim": 29
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 31,
+      "linha_fim": 58
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 60,
+      "linha_fim": 100
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 102,
+      "linha_fim": 108
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 110,
+      "linha_fim": 112
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 114,
+      "linha_fim": 134
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 136,
+      "linha_fim": 138
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 140,
+      "linha_fim": 170
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 172,
+      "linha_fim": 176
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 178,
+      "linha_fim": 222
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 224,
+      "linha_fim": 231
+     }
+    ],
+    "justificativa": "As chaves de abertura são colocadas na mesma linha da declaração, em vez de em nova linha, em todos esses métodos."
+   },
+   {
+    "item": 5,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 6,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 241,
+      "linha_fim": 244
+     }
+    ],
+    "justificativa": "O parâmetro $data não é utilizado no corpo do método totalDeEntradasFormatado."
+   },
+   {
+    "item": 7,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 8,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 9,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 10,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 11,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 12,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 13,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 14,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 15,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 16,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 73,
+      "linha_fim": 86
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 186,
+      "linha_fim": 198
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 207,
+      "linha_fim": 219
+     }
+    ],
+    "justificativa": "A variável $key dos laços foreach não é utilizada dentro do bloco."
+   },
+   {
+    "item": 17,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 18,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 19,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 20,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 21,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 22,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 23,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 17,
+      "linha_fim": 245
+     }
+    ],
+    "justificativa": "A classe possui 13 métodos públicos, excedendo o limite de 10."
+   },
+   {
+    "item": 24,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 25,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 26,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 27,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 28,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 29,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 1,
+      "linha_fim": 245
+     }
+    ],
+    "justificativa": "Há ausência de espaço após vírgulas em diversas chamadas de função e arrays, como str_replace([\".\",\",\"],[\"\",\".\"],$request->valor) e whereMonth('data','=',$date)."
+   },
+   {
+    "item": 30,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 31,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 32,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 33,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 34,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 35,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 36,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 73,
+      "linha_fim": 86
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 186,
+      "linha_fim": 198
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 207,
+      "linha_fim": 219
+     }
+    ],
+    "justificativa": "A lógica de processamento de transações (consulta de vendas, formatação de pagamento e detalhes) é duplicada nesses três trechos."
+   },
+   {
+    "item": 37,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 38,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   }
+  ]
+ },
+ "desvios": []
+}

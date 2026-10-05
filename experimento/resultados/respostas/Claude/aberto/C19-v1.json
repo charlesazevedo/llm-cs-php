@@ -1,0 +1,137 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C19-v1",
+ "cs_id": "C19",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "e9c1fc7f4b87df9bedfc15dd9e024012332cf39de364bac71736db2871af444e",
+ "inicio": "2026-10-05T13:37:08+00:00",
+ "duracao_s": 11.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5812,
+ "tokens_saida": 1280,
+ "tokens_raciocinio": 0,
+ "custo": 0.048848,
+ "id_requisicao": "gen-1791207428-A2cs0fPRpsHexh2vI1Sl",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 11685
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O laço que formata transações e monta os detalhes das vendas é repetido quase idêntico em historicoAPI, sem extração para um método reutilizável."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O bloco de formatação de transações e montagem de detalhes é idêntico ao do ramo 'range' (linhas 207-219)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Repetição literal do laço de formatação de transações já presente nos ramos 'day' e em fecharCaixaView."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView acumula consulta, formatação de sangrias, entradas, transações, detalhes de estoque e totais do caixa em um único método."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI trata três tipos de consulta com lógica extensa e duplicada em um único método condicional."
+   },
+   {
+    "nome": "Switch Statements",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 221,
+    "justificativa": "Cadeia de if/else sobre a string $type seleciona comportamentos distintos, em vez de usar estratégias ou métodos separados."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de moeda via str_replace([\".\",\",\"],[\"\",\".\"]) é repetida em vários pontos (linhas 119, 145, 148) sem um método auxiliar."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 92,
+    "linha_fim": 96,
+    "justificativa": "A formatação number_format(..., 2, ',', '.') é repetida dezenas de vezes no controller em vez de centralizada num helper."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return $request->valor é inalcançável, pois todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O controller manipula intensamente dados de Transacoes, Venda e Estoque (tradução de pagamento, formatação, detalhes), lógica que pertence aos modelos ou a presenters."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Códigos literais 'DI','CR','DE' e seus rótulos são embutidos e repetidos (linhas 189, 210) em vez de constantes ou enum."
+   }
+  ]
+ },
+ "desvios": []
+}

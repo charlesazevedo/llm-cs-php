@@ -1,0 +1,450 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "forcado",
+ "entrada": "C31-v1",
+ "cs_id": "C31",
+ "variante": "v1",
+ "hash_condicao": "f95b74f9fca5d23d",
+ "sha256_entrada": "6179b3fa427d2fe35794f9cbf7ab78b1715de92ce39810a9c98b9002afb0d9d3",
+ "inicio": "2026-10-05T15:21:49+00:00",
+ "duracao_s": 24.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 7021,
+ "tokens_saida": 3270,
+ "tokens_raciocinio": 523,
+ "custo": 0.093484,
+ "id_requisicao": "gen-1791213709-JSuEJ15k5dQY66yqmWHv",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 24400
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "avaliacoes": [
+   {
+    "item": 1,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 2,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 21,
+      "linha_fim": 231
+     }
+    ],
+    "justificativa": "Os métodos de data() até historicoPrint() não têm nenhum comentário de documentação."
+   },
+   {
+    "item": 3,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 4,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 21,
+      "linha_fim": 231
+     }
+    ],
+    "justificativa": "As chaves de abertura dos métodos ficam na mesma linha da assinatura, e não em nova linha como pede o PSR-2."
+   },
+   {
+    "item": 5,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 6,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 7,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 8,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 9,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 10,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 11,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 12,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 13,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 14,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 15,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 16,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 73,
+      "linha_fim": 73
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 186,
+      "linha_fim": 186
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 207,
+      "linha_fim": 207
+     }
+    ],
+    "justificativa": "A variável $key é declarada nos foreach e nunca é usada."
+   },
+   {
+    "item": 17,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 18,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 19,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 20,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 21,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 233,
+      "linha_fim": 238
+     }
+    ],
+    "justificativa": "O docblock de descreverSangria não tem a tag @return, embora o método retorne uma string."
+   },
+   {
+    "item": 22,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 23,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 17,
+      "linha_fim": 245
+     }
+    ],
+    "justificativa": "A classe tem 13 métodos públicos, acima do limite de 10."
+   },
+   {
+    "item": 24,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 25,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 26,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 27,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 28,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 29,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 27,
+      "linha_fim": 27
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 39,
+      "linha_fim": 41
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 75,
+      "linha_fim": 76
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 81,
+      "linha_fim": 81
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 89,
+      "linha_fim": 89
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 98,
+      "linha_fim": 98
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 103,
+      "linha_fim": 103
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 111,
+      "linha_fim": 111
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 119,
+      "linha_fim": 119
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 137,
+      "linha_fim": 137
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 145,
+      "linha_fim": 148
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 178,
+      "linha_fim": 178
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 180,
+      "linha_fim": 180
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 183,
+      "linha_fim": 183
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 188,
+      "linha_fim": 189
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 193,
+      "linha_fim": 193
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 202,
+      "linha_fim": 202
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 206,
+      "linha_fim": 206
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 209,
+      "linha_fim": 210
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 214,
+      "linha_fim": 214
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 225,
+      "linha_fim": 225
+     }
+    ],
+    "justificativa": "Há vírgulas sem espaço em seguida em arrays e em argumentos de chamadas."
+   },
+   {
+    "item": 30,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 31,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 32,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 33,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 34,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 35,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 36,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 73,
+      "linha_fim": 86
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 186,
+      "linha_fim": 198
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 207,
+      "linha_fim": 219
+     }
+    ],
+    "justificativa": "O laço que formata as transações e monta os detalhes das vendas se repete quase igual em três lugares."
+   },
+   {
+    "item": 37,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 38,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,277 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C23-v2",
+ "cs_id": "C23",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "05686eaecbd9c2adb7eb6a4b6ca1bbadcd373a15795182131f0d92a4165b91df",
+ "inicio": "2026-10-05T13:41:55+00:00",
+ "duracao_s": 30.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 10509,
+ "tokens_saida": 3104,
+ "tokens_raciocinio": 1319,
+ "custo": 0.057311,
+ "id_requisicao": "gen-1791207716-ln4ZnAc5rowwSLQhza8L",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 30282
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/BoletoBancario.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/CartaoDaLoja.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/CartaoDeCredito.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/CartaoDeCreditoInternacional.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/CartaoDeDebito.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/CartaoPrePago.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/CarteiraDigital.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/Cashback.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/Cheque.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/ChequePreDatado.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/ConvenioEmpresa.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/Crediario.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/CreditoDaLoja.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/Criptomoeda.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/DebitoEmConta.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/DepositoBancario.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/Dinheiro.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/FinanciamentoBancario.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/LinkDePagamento.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/NotaPromissoria.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/PagamentoPorAproximacao.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/Permuta.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/Pix.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/PontosDeFidelidade.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/TransferenciaBancaria.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/ValeAlimentacao.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/ValeCombustivel.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/ValeCultura.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/ValePresente.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/ValeRefeicao.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, não justificando um subtipo dedicado."
+   },
+   {
+    "nome": "Uso de ponto flutuante para valores monetários",
+    "arquivo": "app/Pdv/FormaDePagamento.php",
+    "linha_inicio": 31,
+    "linha_fim": 40,
+    "justificativa": "O cálculo monetário usa float, que pode introduzir erros binários de precisão mesmo com arredondamento posterior."
+   }
+  ]
+ },
+ "desvios": []
+}

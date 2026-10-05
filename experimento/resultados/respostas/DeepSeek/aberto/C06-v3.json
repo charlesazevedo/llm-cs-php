@@ -1,0 +1,188 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C06-v3",
+ "cs_id": "C06",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "b18e61dbed87a061e04cab2019096a96c0859453c33e179de9642038af1291d1",
+ "inicio": "2026-10-03T23:15:25+00:00",
+ "duracao_s": 55.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3576,
+ "tokens_saida": 8029,
+ "tokens_raciocinio": 6572,
+ "custo": 0.016134316,
+ "id_requisicao": "gen-1791069326-prdufLtRiRuCaTZo8NlD",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 54881
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Inconsistent Return Types",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 58,
+    "justificativa": "O método retorna JSON em alguns fluxos e uma view em outro, misturando formatos de resposta."
+   },
+   {
+    "nome": "Exception Information Leak",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 52,
+    "justificativa": "Expõe a mensagem de erro do banco de dados para o cliente."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método tem muitas responsabilidades e é excessivamente longo."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Realiza consultas ao banco dentro de loops, gerando múltiplas consultas desnecessárias."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de montagem de detalhes duplicado em outros métodos, como historicoAPI."
+   },
+   {
+    "nome": "Repeated Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 88,
+    "linha_fim": 91,
+    "justificativa": "Chama Caixa::today() duas vezes para obter o mesmo dado no mesmo fluxo."
+   },
+   {
+    "nome": "Inconsistent Return Types",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "Retorna JSON em caso de sucesso, string no catch e nada quando o caixa não está aberto."
+   },
+   {
+    "nome": "Exception Information Leak",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "Retorna a mensagem de erro do banco de dados diretamente para o cliente."
+   },
+   {
+    "nome": "Missing Return",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 115,
+    "linha_fim": 132,
+    "justificativa": "Não retorna nenhuma resposta quando Caixa::checkOpen() é falso, deixando o fluxo sem retorno."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 167,
+    "justificativa": "Usa $e->errorInfo[2] no bloco else fora do catch, onde $e não está definido."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Linha de retorno inalcançável, pois ambos os ramos do if/else já retornam."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método com múltiplas branches longas e responsabilidades misturadas."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Trecho quase idêntico ao bloco do tipo 'range' e ao loop em fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 218,
+    "justificativa": "Trecho quase idêntico ao bloco do tipo 'day' e ao loop em fecharCaixaView."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 188,
+    "linha_fim": 193,
+    "justificativa": "Realiza consultas ao banco dentro de loops aninhados no tipo 'day'."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 209,
+    "linha_fim": 214,
+    "justificativa": "Realiza consultas ao banco dentro de loops aninhados no tipo 'range'."
+   },
+   {
+    "nome": "Typo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 230,
+    "justificativa": "Usa 'rage' em vez de 'range' para acessar a propriedade da requisição."
+   },
+   {
+    "nome": "Presentation Logic in Controller",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 239,
+    "linha_fim": 246,
+    "justificativa": "Monta HTML diretamente no controller, misturando apresentação com lógica de controle."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,186 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C22-v1",
+ "cs_id": "C22",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "51ef12c38279a847816d0313e0da8979c87ae3d5892bbc7764a165ad5cf4ef0e",
+ "inicio": "2026-10-05T13:39:48+00:00",
+ "duracao_s": 48.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 2795,
+ "tokens_saida": 6495,
+ "tokens_raciocinio": 4744,
+ "custo": 0.08353,
+ "id_requisicao": "gen-1791207588-h7YHIGrvTMO90PlHKY7I",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 47985
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Herança Profunda (Deep Inheritance Tree)",
+    "arquivo": "app/Pdv/RelatorioDeVendas.php",
+    "linha_inicio": 10,
+    "linha_fim": 25,
+    "justificativa": "A classe inicia uma longa cadeia de herança para adicionar seções ao relatório, criando um acoplamento excessivo que deveria ser evitado através de composição (como o padrão Decorator)."
+   },
+   {
+    "nome": "Herança Profunda (Deep Inheritance Tree)",
+    "arquivo": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+    "linha_inicio": 10,
+    "linha_fim": 26,
+    "justificativa": "A classe prolonga uma hierarquia frágil apenas para adicionar uma nova propriedade às seções do relatório."
+   },
+   {
+    "nome": "Herança Profunda (Deep Inheritance Tree)",
+    "arquivo": "app/Pdv/RelatorioDeCaixa.php",
+    "linha_inicio": 10,
+    "linha_fim": 25,
+    "justificativa": "A herança é utilizada como mecanismo para agrupar comportamentos diferentes de forma linear, o que dificulta a manutenção do código."
+   },
+   {
+    "nome": "Herança Profunda (Deep Inheritance Tree)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComSangrias.php",
+    "linha_inicio": 10,
+    "linha_fim": 24,
+    "justificativa": "Estender uma cadeia de classes pai repetidamente apenas para acumular chaves de array demonstra um claro mau uso do polimorfismo."
+   },
+   {
+    "nome": "Herança Profunda (Deep Inheritance Tree)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComEntradas.php",
+    "linha_inicio": 10,
+    "linha_fim": 26,
+    "justificativa": "A adicão de novas seções força o crescimento desnecessário e rígido da árvore de classes."
+   },
+   {
+    "nome": "Herança Profunda (Deep Inheritance Tree)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+    "linha_inicio": 11,
+    "linha_fim": 27,
+    "justificativa": "Aprofunda ainda mais a linha de herança, tornando as classes filhas altamente dependentes das implementações exatas de suas classes avós."
+   },
+   {
+    "nome": "Herança Profunda (Deep Inheritance Tree)",
+    "arquivo": "app/Pdv/RelatorioDeFechamento.php",
+    "linha_inicio": 10,
+    "linha_fim": 35,
+    "justificativa": "Sendo o último nó de uma árvore de 8 níveis, esta classe consolida um anti-padrão estrutural severo na aplicação."
+   },
+   {
+    "nome": "Strings Mágicas (Magic Strings)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+    "linha_inicio": 22,
+    "linha_fim": 22,
+    "justificativa": "As strings 'CR' e 'DE' estão inseridas diretamente no código (hardcoded), dificultando a alteração e refatoração; deveriam ser constantes no Model."
+   },
+   {
+    "nome": "Strings Mágicas (Magic Strings)",
+    "arquivo": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+    "linha_inicio": 21,
+    "linha_fim": 21,
+    "justificativa": "A string 'DI' é um valor mágico e deve ser substituída por uma constante autoexplicativa."
+   },
+   {
+    "nome": "Violação de Convenção de Nomenclatura",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComEntradas.php",
+    "linha_inicio": 5,
+    "linha_fim": 5,
+    "justificativa": "A classe de Model 'Entrada_caixa' utiliza 'snake_case', violando a regra de nomenclatura PSR-1/PSR-12 (PascalCase/StudlyCaps)."
+   },
+   {
+    "nome": "Violação de Convenção de Nomenclatura",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComEntradas.php",
+    "linha_inicio": 20,
+    "linha_fim": 20,
+    "justificativa": "Chamada referenciando a classe de Model 'Entrada_caixa', que possui nome fora do padrão estabelecido (PascalCase)."
+   },
+   {
+    "nome": "Violação de Convenção de Nomenclatura",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+    "linha_inicio": 5,
+    "linha_fim": 5,
+    "justificativa": "O Model 'Transacoes' está no plural, violando a convenção de nomenclatura do framework Laravel (Models devem ser no singular)."
+   },
+   {
+    "nome": "Violação de Convenção de Nomenclatura",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+    "linha_inicio": 21,
+    "linha_fim": 21,
+    "justificativa": "Uso da classe de Model no plural ('Transacoes') quando o padrão determina que seja no singular ('Transacao')."
+   },
+   {
+    "nome": "Violação de Convenção de Nomenclatura",
+    "arquivo": "app/Pdv/RelatorioDeVendas.php",
+    "linha_inicio": 5,
+    "linha_fim": 5,
+    "justificativa": "O Model 'Transacoes' está no plural, violando a convenção de nomenclatura do framework Laravel."
+   },
+   {
+    "nome": "Violação de Convenção de Nomenclatura",
+    "arquivo": "app/Pdv/RelatorioDeVendas.php",
+    "linha_inicio": 20,
+    "linha_fim": 20,
+    "justificativa": "Uso do Model com nome no plural ('Transacoes') contrariando o padrão."
+   },
+   {
+    "nome": "Violação de Convenção de Nomenclatura",
+    "arquivo": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+    "linha_inicio": 5,
+    "linha_fim": 5,
+    "justificativa": "O Model 'Transacoes' está nomeado no plural, o que quebra os padrões do Laravel."
+   },
+   {
+    "nome": "Violação de Convenção de Nomenclatura",
+    "arquivo": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+    "linha_inicio": 20,
+    "linha_fim": 20,
+    "justificativa": "Consulta utilizando a Model 'Transacoes' com nomenclatura inapropriada (plural)."
+   },
+   {
+    "nome": "Obsessão por Primitivos (Primitive Obsession)",
+    "arquivo": "app/Pdv/Relatorio.php",
+    "linha_inicio": 23,
+    "linha_fim": 26,
+    "justificativa": "A data é passada e manipulada como uma string em vez de um objeto nativo, como a classe DateTime ou Carbon."
+   }
+  ]
+ },
+ "desvios": []
+}

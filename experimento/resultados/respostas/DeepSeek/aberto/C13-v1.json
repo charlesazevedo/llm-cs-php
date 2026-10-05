@@ -1,0 +1,167 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C13-v1",
+ "cs_id": "C13",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "f68337108cfa6fc0c1fafcd657d7ddc70490328904c1119a825332c4e2e8a7fa",
+ "inicio": "2026-10-05T12:51:38+00:00",
+ "duracao_s": 82.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 4120,
+ "tokens_saida": 7755,
+ "tokens_raciocinio": 6410,
+ "custo": 0.017910772,
+ "id_requisicao": "gen-1791204699-uTP22yNKnCUTpPgyRSzT",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 82682
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 286,
+    "justificativa": "Controller lida com muitas responsabilidades não relacionadas (abertura/fechamento de caixa, sangria, histórico, registro de venda), violando o Princípio da Responsabilidade Única."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método muito longo que executa múltiplas tarefas (busca de dados, formatação, loops e construção de detalhes), reduzindo legibilidade e manutenibilidade."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de formatação e construção de detalhes duplicado nos branches day e range do método historicoAPI."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Loop consulta Venda e Estoque para cada transação, causando N+1 consultas ao banco de dados."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Abreviaturas de forma de pagamento e rótulos são strings mágicas hardcoded que deveriam ser extraídas para constantes ou configuração."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "Bloco catch retorna string de erro crua em vez de resposta JSON, criando respostas de API inconsistentes."
+   },
+   {
+    "nome": "Unreachable Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Instrução return após bloco if/else é inalcançável porque ambos os branches já retornam, indicando código morto."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método contém três grandes branches condicionais com código repetido, tornando-o longo e complexo."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Bloco duplica a mesma lógica encontrada em fecharCaixaView e no branch range do mesmo método."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Loop consulta Venda e Estoque para cada transação, causando N+1 consultas ao banco de dados."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Abreviaturas de forma de pagamento e rótulos são strings mágicas hardcoded que deveriam ser extraídas para constantes ou configuração."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Bloco duplica a mesma lógica encontrada em fecharCaixaView e no branch day do mesmo método."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Loop consulta Venda e Estoque para cada transação, causando N+1 consultas ao banco de dados."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Abreviaturas de forma de pagamento e rótulos são strings mágicas hardcoded que deveriam ser extraídas para constantes ou configuração."
+   },
+   {
+    "nome": "Long Parameter List",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 251,
+    "linha_fim": 263,
+    "justificativa": "Método aceita 10 parâmetros, tornando chamadas propensas a erro e indicando necessidade de um objeto de parâmetros."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,6 @@
+# Área de trabalho (a CaixaController do PDVLaravel, que não tem licença; o
+# texto das entradas e os prompts montados) e a chave do OpenRouter: nunca publicar.
+experimento/trabalho/
+experimento/.env
+experimento/resultados/relatorio*.md
+__pycache__/

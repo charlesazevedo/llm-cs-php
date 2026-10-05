@@ -1,0 +1,67 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C20-v2",
+ "cs_id": "C20",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5143e7811b19b1083628d7aab8b669fcf3ed06093f9b0a42208c297b2c7fd606",
+ "inicio": "2026-10-05T13:37:37+00:00",
+ "duracao_s": 8.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 8857,
+ "tokens_saida": 451,
+ "tokens_raciocinio": 286,
+ "custo": 0.044448,
+ "id_requisicao": "gen-1791207457-rZN7LDPPGKYTPefd5cGc",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 8470
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 14,
+    "linha_fim": 527,
+    "justificativa": "A classe acumula responsabilidades sem relação entre si: faixa de ticket, dia da semana, fechamento de caixa, validação de vendas, formas de pagamento, taxas de cartão, estoque, perfil de clientes e conferência de sangrias e produtos."
+   }
+  ]
+ },
+ "desvios": []
+}

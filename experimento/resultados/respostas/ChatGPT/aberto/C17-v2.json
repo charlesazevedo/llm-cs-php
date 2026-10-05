@@ -1,0 +1,214 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C17-v2",
+ "cs_id": "C17",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5e4cb4054d2b17ad6726cb58b3d83806d9fee3623d1104c8e89c3407fca46499",
+ "inicio": "2026-10-05T12:54:01+00:00",
+ "duracao_s": 34.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 8227,
+ "tokens_saida": 2908,
+ "tokens_raciocinio": 1539,
+ "custo": 0.049646,
+ "id_requisicao": "gen-1791204841-ZoTwnhOaSmbSYPLxRrdj",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 34050
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe Deus",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 17,
+    "linha_fim": 830,
+    "justificativa": "A classe concentra centenas de linhas e indicadores de vendas, pagamentos, caixa, estoque, clientes e apresentação, acumulando responsabilidades demais."
+   },
+   {
+    "nome": "Estado público mutável excessivo",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 24,
+    "linha_fim": 578,
+    "justificativa": "Dezenas de propriedades públicas permitem alterações externas sem validação e tornam difícil preservar a consistência dos indicadores."
+   },
+   {
+    "nome": "Objeto parcialmente inicializado",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 585,
+    "linha_fim": 805,
+    "justificativa": "As propriedades só recebem valores após chamadas manuais a diferentes métodos carregar*, criando dependência da ordem de uso e risco de acesso a campos não inicializados."
+   },
+   {
+    "nome": "Duplicação de dados derivados",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 89,
+    "linha_fim": 564,
+    "justificativa": "Diversos valores são armazenados simultaneamente em versões numéricas e formatadas, duplicando estado que pode ficar inconsistente."
+   },
+   {
+    "nome": "Mistura de responsabilidades",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 585,
+    "linha_fim": 829,
+    "justificativa": "A classe mistura acesso ao banco, cálculo de indicadores, manutenção de estado e formatação para apresentação."
+   },
+   {
+    "nome": "Acoplamento rígido a dependências estáticas",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 587,
+    "linha_fim": 802,
+    "justificativa": "O uso direto e estático de vários modelos impede injeção de dependências e dificulta testes isolados e substituição das fontes de dados."
+   },
+   {
+    "nome": "Consultas excessivas ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 587,
+    "linha_fim": 603,
+    "justificativa": "Os indicadores de vendas executam repetidamente consultas sobre o mesmo conjunto diário em vez de consolidar agregações em poucas consultas."
+   },
+   {
+    "nome": "Processamento desnecessário em memória",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 592,
+    "linha_fim": 594,
+    "justificativa": "Todos os clientes do dia são carregados para uma coleção antes de aplicar unique e count, operação que poderia ser feita diretamente no banco."
+   },
+   {
+    "nome": "Consulta duplicada",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 595,
+    "linha_fim": 601,
+    "justificativa": "A lista de IDs de Transacoes::today() é consultada duas vezes para calcular indicadores que poderiam compartilhar a mesma subconsulta ou agregação."
+   },
+   {
+    "nome": "Consultas excessivas ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 620,
+    "linha_fim": 632,
+    "justificativa": "Totais e quantidades por forma de pagamento são obtidos por várias consultas separadas sobre as transações do mesmo dia."
+   },
+   {
+    "nome": "Magic strings",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 620,
+    "linha_fim": 632,
+    "justificativa": "Os códigos de pagamento DI, CR e DE estão embutidos no método sem constantes ou enumerações que expressem seu significado."
+   },
+   {
+    "nome": "Consultas excessivas ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 647,
+    "linha_fim": 654,
+    "justificativa": "Os indicadores de parcelamento executam várias agregações independentes sobre o mesmo conjunto de transações diárias."
+   },
+   {
+    "nome": "Consulta duplicada",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 668,
+    "linha_fim": 670,
+    "justificativa": "O mesmo registro de caixa da data atual é consultado duas vezes para recuperar colunas diferentes."
+   },
+   {
+    "nome": "Dependência de relógio global",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 668,
+    "linha_fim": 670,
+    "justificativa": "O uso direto de date() fixa o método ao relógio global e dificulta testes determinísticos e controle de fuso horário."
+   },
+   {
+    "nome": "Consultas excessivas ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 685,
+    "linha_fim": 690,
+    "justificativa": "Totais, quantidades e máximos de sangrias e entradas são calculados por seis consultas independentes."
+   },
+   {
+    "nome": "Filtro temporal incompleto",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 708,
+    "linha_fim": 712,
+    "justificativa": "Os filtros usam apenas o número do mês sem restringir o ano, podendo misturar movimentações de anos anteriores."
+   },
+   {
+    "nome": "Dependência de relógio global",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 708,
+    "linha_fim": 712,
+    "justificativa": "A obtenção direta do mês por date() introduz uma dependência temporal implícita e pouco testável."
+   },
+   {
+    "nome": "Magic strings",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 727,
+    "linha_fim": 732,
+    "justificativa": "Os códigos CR, DE e DI são repetidos como literais em vez de serem centralizados em constantes ou enumerações de domínio."
+   },
+   {
+    "nome": "Dependência de relógio global",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 748,
+    "linha_fim": 753,
+    "justificativa": "O cálculo anual consulta diretamente date(), dificultando simular períodos e garantir um fuso horário consistente."
+   },
+   {
+    "nome": "Consultas excessivas ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 771,
+    "linha_fim": 779,
+    "justificativa": "A situação do estoque é montada por diversas consultas agregadas separadas, aumentando o número de acessos ao banco."
+   },
+   {
+    "nome": "Filtro temporal incompleto",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 801,
+    "linha_fim": 802,
+    "justificativa": "A contagem de novos clientes filtra somente pelo mês e pode incluir registros do mesmo mês em outros anos."
+   },
+   {
+    "nome": "Dependência de relógio global",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 801,
+    "linha_fim": 802,
+    "justificativa": "O mês corrente é obtido diretamente por date(), tornando o comportamento dependente do ambiente e mais difícil de testar."
+   }
+  ]
+ },
+ "desvios": []
+}

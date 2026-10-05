@@ -1,0 +1,74 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C07-v2",
+ "cs_id": "C07",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "e3aa267dd8e50b8684fe6053be9977f26d7fee4f68652eb7618f42498c515cdd",
+ "inicio": "2026-10-03T23:11:48+00:00",
+ "duracao_s": 10.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 478,
+ "tokens_saida": 1132,
+ "tokens_raciocinio": 976,
+ "custo": 0.01454,
+ "id_requisicao": "gen-1791069108-feWFXS59xsXqsjDP6cPv",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 10169
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Hardcoded CSS in JavaScript",
+    "arquivo": "resources/views/admin/caixa/aviso.blade.php",
+    "linha_inicio": 14,
+    "linha_fim": 19,
+    "justificativa": "Estilos visuais estão sendo aplicados via manipulação direta com JavaScript em vez de utilizar classes CSS adequadas."
+   },
+   {
+    "nome": "Duplicate DOM Query",
+    "arquivo": "resources/views/admin/caixa/aviso.blade.php",
+    "linha_inicio": 16,
+    "linha_fim": 17,
+    "justificativa": "O código realiza a busca pelo mesmo elemento no DOM duas vezes seguidas, o que poderia ser otimizado armazenando-o em uma variável."
+   }
+  ]
+ },
+ "desvios": []
+}

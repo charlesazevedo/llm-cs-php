@@ -1,0 +1,130 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C25-v1",
+ "cs_id": "C25",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5d747d32f1d3959d729fbb893239de1edb2c273ac97f5b5d87d893bbfb67d587",
+ "inicio": "2026-10-02T18:41:41+00:00",
+ "duracao_s": 15.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5183,
+ "tokens_saida": 1537,
+ "tokens_raciocinio": 397,
+ "custo": 0.051472,
+ "id_requisicao": "gen-1790966501-YVCl3NP2ZAlg47M3xr1X",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 15397
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método fecharCaixaView acumula várias responsabilidades: busca de dados, formatação monetária, montagem de detalhes de vendas e cálculo de totais."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI é extenso e trata três tipos de consulta com lógica de formatação embutida em cadeias de if/else."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O laço que formata transações e monta os detalhes das vendas é praticamente idêntico aos laços de historicoAPI."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O bloco de formatação de transações do tipo 'day' é uma cópia do bloco do tipo 'range'."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "O bloco de formatação de transações do tipo 'range' repete integralmente o código do tipo 'day'."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de valor monetário via str_replace é repetida em vários pontos (linhas 39, 40, 119, 145 e 148) em vez de ficar centralizada num helper."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return $request->valor é inalcançável, pois todos os caminhos anteriores já retornam."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 233,
+    "linha_fim": 238,
+    "justificativa": "A propriedade $limiteDeSangria é declarada, mas nunca é usada, nem mesmo em sangriaPost."
+   },
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 239,
+    "justificativa": "O controller concentra abertura e fechamento de caixa, sangria, entradas e histórico de transações, o que indica responsabilidades demais."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Os códigos de pagamento 'DI', 'CR' e 'DE' e seus rótulos estão fixos no código e repetidos nas linhas 189 e 210 com grafias inconsistentes."
+   }
+  ]
+ },
+ "desvios": []
+}

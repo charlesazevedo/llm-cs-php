@@ -1,0 +1,102 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C24-v2",
+ "cs_id": "C24",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "2967fba9021ccfe72d366a028553e867e3e1687c06ffc5596fbd16bb2e7d53d5",
+ "inicio": "2026-10-05T13:42:26+00:00",
+ "duracao_s": 7.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 1101,
+ "tokens_saida": 621,
+ "tokens_raciocinio": 216,
+ "custo": 0.008961,
+ "id_requisicao": "gen-1791207746-2AktBZbwJddxFqqjcVOj",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 6784
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioDeEntradas.php",
+    "linha_inicio": 17,
+    "linha_fim": 36,
+    "justificativa": "O método repete praticamente toda a estrutura de consulta, iteração, totalização, formatação e montagem do relatório existente em RelatorioDeSangrias."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioDeSangrias.php",
+    "linha_inicio": 17,
+    "linha_fim": 36,
+    "justificativa": "O método repete praticamente toda a estrutura de consulta, iteração, totalização, formatação e montagem do relatório existente em RelatorioDeEntradas."
+   },
+   {
+    "nome": "Múltiplas responsabilidades",
+    "arquivo": "app/Pdv/RelatorioDeEntradas.php",
+    "linha_inicio": 17,
+    "linha_fim": 36,
+    "justificativa": "O método consulta dados, calcula totais, formata valores e horários e monta a estrutura de apresentação do relatório."
+   },
+   {
+    "nome": "Múltiplas responsabilidades",
+    "arquivo": "app/Pdv/RelatorioDeSangrias.php",
+    "linha_inicio": 17,
+    "linha_fim": 36,
+    "justificativa": "O método consulta dados, calcula totais, formata valores e horários e monta a estrutura de apresentação do relatório."
+   },
+   {
+    "nome": "Acoplamento rígido a dependência estática",
+    "arquivo": "app/Pdv/RelatorioDeEntradas.php",
+    "linha_inicio": 19,
+    "linha_fim": 19,
+    "justificativa": "A chamada estática direta ao model Entrada_caixa oculta a dependência e dificulta substituição e testes isolados."
+   },
+   {
+    "nome": "Acoplamento rígido a dependência estática",
+    "arquivo": "app/Pdv/RelatorioDeSangrias.php",
+    "linha_inicio": 19,
+    "linha_fim": 19,
+    "justificativa": "A chamada estática direta ao model Sangria oculta a dependência e dificulta substituição e testes isolados."
+   }
+  ]
+ },
+ "desvios": []
+}

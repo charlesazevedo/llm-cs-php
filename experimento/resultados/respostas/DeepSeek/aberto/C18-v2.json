@@ -1,0 +1,202 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C18-v2",
+ "cs_id": "C18",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "461a6701c300ef6c380056767b84e69fc46c9ed5a6f6a178b724766551f80c16",
+ "inicio": "2026-10-05T13:37:00+00:00",
+ "duracao_s": 79.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 4281,
+ "tokens_saida": 7155,
+ "tokens_raciocinio": 5343,
+ "custo": 0.014869096,
+ "id_requisicao": "gen-1791207421-V4kqKsYb00rrrQBoo4ci",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 78704
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método fecharCaixaView é longo e executa múltiplas tarefas: consulta registros, formata valores, monta detalhes das transações e calcula totais."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI é extenso e contém lógica duplicada para diferentes tipos de consulta, dificultando a manutenção."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Dentro do loop de transações são feitas consultas adicionais a Venda e Estoque para cada transação, resultando em múltiplas queries."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "No branch 'day', para cada transação são realizadas novas consultas a Venda e Estoque, gerando N+1 consultas."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "No branch 'range', o mesmo padrão de consultas internas a Venda e Estoque por transação causa N+1 queries."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Este trecho de montagem de detalhes com consultas aninhadas é duplicado em dois outros locais do controller."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Lógica idêntica de formatação e consulta aparece também no branch 'range' e em fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Mesmo código de formatação e consulta duplicado do branch 'day' e de fecharCaixaView."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 58,
+    "justificativa": "O método iniciarCaixa retorna JSON em caso de sucesso ou exceção, mas retorna uma view quando o caixa já está aberto."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "sangriaPost retorna JSON no sucesso, porém retorna uma string crua no catch e não retorna nada se o save falhar."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "No bloco else de addCaixa é usada a variável $e->errorInfo[2], mas $e não está definida nesse escopo."
+   },
+   {
+    "nome": "Unreachable Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A instrução return $request->valor é inalcançável porque todos os caminhos anteriores do método já retornam uma resposta."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 37,
+    "linha_fim": 40,
+    "justificativa": "Os campos de valor e inicial são atribuídos diretamente do request sem qualquer validação ou sanitização adequada."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 116,
+    "linha_fim": 119,
+    "justificativa": "Os dados de sangria (descrição e valor) vêm diretamente do request sem validação de tipo ou presença."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 144,
+    "linha_fim": 148,
+    "justificativa": "Os campos de entrada de caixa e valor são usados sem validação, aceitando potencialmente dados inválidos."
+   },
+   {
+    "nome": "Leaky Exception Details",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 53,
+    "justificativa": "O catch expõe a mensagem de erro do banco de dados ($e->errorInfo[2]) diretamente ao cliente, podendo vazar informações sensíveis."
+   },
+   {
+    "nome": "Leaky Exception Details",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 129,
+    "justificativa": "O catch retorna $e->errorInfo[2] diretamente, expondo detalhes internos do banco de dados."
+   },
+   {
+    "nome": "Leaky Exception Details",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 160,
+    "justificativa": "Mensagens de erro do QueryException são enviadas ao cliente sem tratamento, revelando informações técnicas."
+   },
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 308,
+    "justificativa": "O controller acumula responsabilidades de abertura/fechamento de caixa, sangria, entradas, histórico e indicadores, violando o princípio da responsabilidade única."
+   },
+   {
+    "nome": "Typo in Property Name",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 230,
+    "justificativa": "O código usa $request->rage, mas provavelmente o correto seria $request->range, indicando um erro de digitação que pode causar falha."
+   }
+  ]
+ },
+ "desvios": []
+}

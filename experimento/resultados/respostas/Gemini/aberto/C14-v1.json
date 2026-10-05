@@ -1,0 +1,88 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C14-v1",
+ "cs_id": "C14",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "b59538a0b53bea438cd5077a06d36d54002a32ccdc829ee650d9c74aa502f432",
+ "inicio": "2026-10-05T12:50:53+00:00",
+ "duracao_s": 20.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 3530,
+ "tokens_saida": 2338,
+ "tokens_raciocinio": 1967,
+ "custo": 0.035116,
+ "id_requisicao": "gen-1791204653-MUjVnXVIsq55gXwHVDib",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 19939
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 207,
+    "linha_fim": 220,
+    "justificativa": "As consultas ao modelo Caixa usando 'where('data', date('Y-m-d'))' são repetidas para buscar colunas diferentes, gerando duplicidade e processamento desnecessário."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 107,
+    "linha_fim": 140,
+    "justificativa": "A chamada ao escopo 'Transacoes::today()' é repetida várias vezes para calcular diferentes agregações (sum, count, avg, max), o que poderia ser resolvido em uma única consulta ao banco."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 147,
+    "linha_fim": 150,
+    "justificativa": "A string 'DI' está sendo usada diretamente no código para representar pagamento em dinheiro, sem ser definida como uma constante com significado semântico."
+   },
+   {
+    "nome": "Lazy Method",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 102,
+    "linha_fim": 301,
+    "justificativa": "Existem diversos métodos privados de apenas uma linha que funcionam puramente como delegadores simples para os Models, aumentando a verbosidade sem agregar comportamento real."
+   }
+  ]
+ },
+ "desvios": []
+}

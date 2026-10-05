@@ -1,0 +1,116 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C18-v1",
+ "cs_id": "C18",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "fc4d2584581adfd5c98879a5dff6af10d629c850b207c89fd9b5bbe393dbd490",
+ "inicio": "2026-10-02T18:42:03+00:00",
+ "duracao_s": 26.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4401,
+ "tokens_saida": 3629,
+ "tokens_raciocinio": 2884,
+ "custo": 0.05235,
+ "id_requisicao": "gen-1790966523-sU2RmtVe5NiYqFHfhwEH",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 26435
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "A lógica de iteração, formatação e busca de detalhes das transações está duplicada em outros métodos do arquivo."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Bloco de código com lógica idêntica ao das linhas 207-219 e muito semelhante ao das linhas 73-86."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Bloco de código repetindo exatamente a mesma lógica do trecho nas linhas 186-198."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 74,
+    "linha_fim": 83,
+    "justificativa": "Consultas de banco de dados (Venda e Estoque) sendo executadas repetidamente dentro de um laço de repetição."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 187,
+    "linha_fim": 195,
+    "justificativa": "Consultas ao banco (Venda e Estoque) ocorrendo em iterações de laços aninhados, degradando a performance."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 208,
+    "linha_fim": 216,
+    "justificativa": "As buscas de Venda e Estoque acontecem dentro de ciclos em uma coleção, causando o problema de N+1 queries."
+   },
+   {
+    "nome": "Undefined Variable / Logic Error",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 168,
+    "justificativa": "A variável de exceção $e está sendo utilizada no bloco else, fora do escopo do bloco catch, o que resultará em erro na execução."
+   },
+   {
+    "nome": "Switch Statement",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 242,
+    "linha_fim": 275,
+    "justificativa": "Estrutura switch longa que concentra muitas regras e viola o Princípio do Aberto/Fechado (OCP), sendo mais bem implementada por polimorfismo ou dicionário."
+   }
+  ]
+ },
+ "desvios": []
+}

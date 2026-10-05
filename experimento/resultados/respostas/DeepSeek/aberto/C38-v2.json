@@ -1,0 +1,167 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C38-v2",
+ "cs_id": "C38",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "70645d725034ea9e6266feab0ab9628169676c6e41e98f41a0d756e57b49acf3",
+ "inicio": "2026-10-05T15:43:05+00:00",
+ "duracao_s": 49.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3532,
+ "tokens_saida": 4316,
+ "tokens_raciocinio": 3012,
+ "custo": 0.008753536,
+ "id_requisicao": "gen-1791214985-PXz5t857QGLLXAU5DApT",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 49494
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "God Class",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 246,
+    "justificativa": "A classe assume múltiplas responsabilidades: abrir/fechar caixa, gerenciar sangrias e entradas, além de gerar histórico e impressão."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de formatação de transações é duplicado em outros métodos (historicoAPI)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Bloco de formatação de transações duplicado em relação a fecharCaixaView e ao branch 'range' do mesmo método."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Terceira ocorrência do mesmo bloco de formatação, presente também em fecharCaixaView e no branch 'day'."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 83,
+    "justificativa": "Para cada transação, são realizadas consultas adicionais a Venda e Estoque dentro do loop, causando múltiplas queries."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 195,
+    "justificativa": "Mesmo padrão de consulta dentro de loop no branch 'day' do historicoAPI."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 216,
+    "justificativa": "Mesmo padrão de consulta dentro de loop no branch 'range' do historicoAPI."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView realiza muitas tarefas: recupera dados, formata cada transação e prepara a view, tornando o método longo e difícil de manter."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI contém múltiplos branches com lógica repetida e extensa, exigindo grande esforço de leitura."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Códigos de pagamento ('DI','CR','DE') são usados diretamente sem constantes ou configuração."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Códigos de pagamento aparecem novamente como strings mágicas no branch 'day'."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Códigos de pagamento aparecem novamente como strings mágicas no branch 'range'."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return após o bloco if/else é inalcançável, pois todos os caminhos já retornam dentro do bloco."
+   },
+   {
+    "nome": "Inconsistent Error Handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "No catch de sangriaPost, retorna diretamente a string de erro em vez de uma resposta JSON padronizada como nos outros métodos."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 167,
+    "justificativa": "No bloco else de addCaixa, a variável $e é referenciada, mas não está definida nesse escopo."
+   }
+  ]
+ },
+ "desvios": []
+}

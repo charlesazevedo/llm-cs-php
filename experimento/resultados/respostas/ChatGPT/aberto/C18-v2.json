@@ -1,0 +1,249 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C18-v2",
+ "cs_id": "C18",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "461a6701c300ef6c380056767b84e69fc46c9ed5a6f6a178b724766551f80c16",
+ "inicio": "2026-10-05T13:37:00+00:00",
+ "duracao_s": 32.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 4109,
+ "tokens_saida": 2295,
+ "tokens_raciocinio": 643,
+ "custo": 0.033221,
+ "id_requisicao": "gen-1791207421-PnqN9NfTmEneYtKmDoyE",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 31534
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe com responsabilidades excessivas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 307,
+    "justificativa": "O controller concentra abertura e fechamento de caixa, sangrias, entradas, histórico, impressão, formatação e indicadores do painel."
+   },
+   {
+    "nome": "Ausência de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 40,
+    "justificativa": "O valor recebido da requisição é convertido e persistido sem validação de presença, formato ou faixa permitida."
+   },
+   {
+    "nome": "Operação não atômica",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 37,
+    "linha_fim": 42,
+    "justificativa": "A configuração global e o registro do caixa são alterados sem transação, podendo ficar inconsistentes se o salvamento falhar."
+   },
+   {
+    "nome": "Booleanos representados como strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 43,
+    "linha_fim": 52,
+    "justificativa": "O campo success da resposta JSON usa as strings \"true\" e \"false\" em vez de valores booleanos."
+   },
+   {
+    "nome": "Tipos de resposta inconsistentes",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 43,
+    "linha_fim": 57,
+    "justificativa": "O mesmo endpoint pode retornar JSON em um fluxo e uma view HTML em outro, dificultando o contrato da API."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método reúne consultas, transformação de coleções, montagem de detalhes, cálculos, formatação monetária e renderização da view."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 83,
+    "justificativa": "Para cada transação são consultadas vendas e, para cada venda, o estoque é novamente consultado."
+   },
+   {
+    "nome": "Lógica de apresentação no controller",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 65,
+    "linha_fim": 96,
+    "justificativa": "O controller traduz códigos, concatena descrições e converte valores numéricos em strings formatadas para exibição."
+   },
+   {
+    "nome": "Consultas redundantes",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 88,
+    "linha_fim": 96,
+    "justificativa": "Caixa::today e os totais de crédito e débito são executados repetidamente dentro da mesma requisição."
+   },
+   {
+    "nome": "Ausência de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 119,
+    "justificativa": "Descrição e valor da sangria são usados diretamente sem validação dos dados da requisição."
+   },
+   {
+    "nome": "Operação não atômica",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 120,
+    "linha_fim": 126,
+    "justificativa": "O registro da sangria e a retirada do saldo são feitos separadamente e sem transação de banco de dados."
+   },
+   {
+    "nome": "Fluxos sem retorno definido",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "O método termina sem resposta quando o caixa está fechado ou quando save retorna falso, produzindo um contrato imprevisível."
+   },
+   {
+    "nome": "Tratamento inconsistente de exceções",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "A exceção é convertida em texto puro e expõe uma mensagem interna do banco, diferentemente das respostas JSON dos demais métodos."
+   },
+   {
+    "nome": "Ausência de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 140,
+    "linha_fim": 148,
+    "justificativa": "O valor e a descrição da entrada de caixa são persistidos sem validação prévia."
+   },
+   {
+    "nome": "Operação não atômica",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 143,
+    "linha_fim": 150,
+    "justificativa": "A criação da entrada e a atualização do saldo do caixa não estão protegidas por uma única transação."
+   },
+   {
+    "nome": "Booleanos representados como strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 151,
+    "linha_fim": 167,
+    "justificativa": "As respostas JSON representam sucesso e falha com strings em vez de booleanos reais."
+   },
+   {
+    "nome": "Variável indefinida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 167,
+    "justificativa": "O ramo else acessa $e embora essa variável só exista no bloco catch de outro ramo."
+   },
+   {
+    "nome": "Conversão duplicada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 144,
+    "linha_fim": 148,
+    "justificativa": "A mesma conversão textual do valor monetário é executada duas vezes em vez de reutilizar o valor já normalizado."
+   },
+   {
+    "nome": "Código residual",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O retorno bruto do valor da requisição funciona como fallback acidental e é incompatível com as respostas JSON esperadas."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método combina seleção por tipo, interpretação de datas, consultas e enriquecimento e formatação dos resultados."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 182,
+    "linha_fim": 220,
+    "justificativa": "Os ramos day e range repetem quase integralmente a montagem e a formatação das transações."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 195,
+    "justificativa": "O histórico diário executa consultas de vendas por transação e de estoque por item dentro de laços."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 216,
+    "justificativa": "O histórico por intervalo executa consultas adicionais de vendas e estoque para cada resultado retornado."
+   },
+   {
+    "nome": "Parâmetro de controle por string",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 221,
+    "justificativa": "O comportamento do método é selecionado por strings mágicas como month, day e range, criando ramificações frágeis e sem validação."
+   },
+   {
+    "nome": "Tipos de retorno inconsistentes",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Os tipos reconhecidos retornam coleções com estruturas diferentes e um tipo desconhecido não produz resposta explícita."
+   },
+   {
+    "nome": "Parsing frágil de dados",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 224,
+    "linha_fim": 230,
+    "justificativa": "O intervalo é separado e convertido diretamente sem verificar quantidade de elementos ou validade das datas."
+   },
+   {
+    "nome": "Switch extenso",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 240,
+    "linha_fim": 307,
+    "justificativa": "Um grande switch associa diversos nomes mágicos a consultas distintas, tornando a inclusão e manutenção de indicadores centralizada e crescente."
+   }
+  ]
+ },
+ "desvios": []
+}

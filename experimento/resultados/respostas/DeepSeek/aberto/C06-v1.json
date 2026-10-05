@@ -1,0 +1,125 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C06-v1",
+ "cs_id": "C06",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "064ae5d337f20de025ae0be8a1c6515672bcc3bf4d41b2ba666f2de3c4ef3076",
+ "inicio": "2026-10-03T23:14:12+00:00",
+ "duracao_s": 46.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 669,
+ "tokens_saida": 6534,
+ "tokens_raciocinio": 5742,
+ "custo": 0.013215532,
+ "id_requisicao": "gen-1791069252-SkMhpQxHTSl6ZO7qi5rE",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 46524
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "CSS inline",
+    "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+    "linha_inicio": 6,
+    "linha_fim": 16,
+    "justificativa": "Estilos são definidos em bloco <style> dentro da view, em vez de arquivo CSS externo."
+   },
+   {
+    "nome": "String hardcoded sem i18n",
+    "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+    "linha_inicio": 3,
+    "linha_fim": 3,
+    "justificativa": "O texto 'Resumo do caixa' está fixo no template, dificultando internacionalização."
+   },
+   {
+    "nome": "String hardcoded sem i18n",
+    "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+    "linha_inicio": 20,
+    "linha_fim": 20,
+    "justificativa": "O texto 'Resumo do caixa' é repetido no cabeçalho sem uso de arquivos de linguagem."
+   },
+   {
+    "nome": "String hardcoded sem i18n",
+    "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+    "linha_inicio": 25,
+    "linha_fim": 25,
+    "justificativa": "Rótulo 'Saldo inicial: R$' está hardcoded, sem suporte a localização."
+   },
+   {
+    "nome": "String hardcoded sem i18n",
+    "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+    "linha_inicio": 26,
+    "linha_fim": 26,
+    "justificativa": "Rótulo 'Total de sangrias: R$ -' está hardcoded, incluindo formatação de moeda e sinal negativo."
+   },
+   {
+    "nome": "String hardcoded sem i18n",
+    "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+    "linha_inicio": 27,
+    "linha_fim": 27,
+    "justificativa": "Rótulo 'Saldo atual: R$' está hardcoded, sem suporte a localização."
+   },
+   {
+    "nome": "Duplicação de string",
+    "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+    "linha_inicio": 3,
+    "linha_fim": 3,
+    "justificativa": "A string 'Resumo do caixa' aparece também na linha 20, duplicando conteúdo."
+   },
+   {
+    "nome": "Duplicação de string",
+    "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+    "linha_inicio": 20,
+    "linha_fim": 20,
+    "justificativa": "A string 'Resumo do caixa' também aparece na linha 3, duplicando conteúdo."
+   },
+   {
+    "nome": "Sinal negativo hardcoded",
+    "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+    "linha_inicio": 26,
+    "linha_fim": 26,
+    "justificativa": "O sinal '-' é fixo no template, assumindo que totalSangrias é positivo e podendo causar dupla negativa."
+   }
+  ]
+ },
+ "desvios": []
+}

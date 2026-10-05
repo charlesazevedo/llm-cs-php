@@ -1,0 +1,216 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C36-v2",
+ "cs_id": "C36",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "2e5223baecfd0ee77b18b0971b0df5202a64d29429846def5ccf75778d95f8ce",
+ "inicio": "2026-10-05T15:35:38+00:00",
+ "duracao_s": 84.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3527,
+ "tokens_saida": 8556,
+ "tokens_raciocinio": 6817,
+ "custo": 0.017063772,
+ "id_requisicao": "gen-1791214538-grbCTCQPqQSGqjKAysXq",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 83760
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Formatação de valor monetário repetida em duas linhas consecutivas."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Formatação de valor monetário duplicada."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 145,
+    "justificativa": "Formatação de valor monetário duplicada."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 148,
+    "linha_fim": 148,
+    "justificativa": "Formatação de valor monetário duplicada."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 85,
+    "justificativa": "Bloco de código que processa transações e vendas é duplicado em outros métodos."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Bloco de código que processa transações e vendas é duplicado do método fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Bloco de código que processa transações e vendas é duplicado do método fecharCaixaView."
+   },
+   {
+    "nome": "N+1 queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 85,
+    "justificativa": "Consultas ao banco dentro de loop causam múltiplas consultas desnecessárias."
+   },
+   {
+    "nome": "N+1 queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Consultas ao banco dentro de loop causam múltiplas consultas desnecessárias."
+   },
+   {
+    "nome": "N+1 queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Consultas ao banco dentro de loop causam múltiplas consultas desnecessárias."
+   },
+   {
+    "nome": "Undefined variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 167,
+    "justificativa": "A variável $e é usada fora do escopo do catch onde foi definida."
+   },
+   {
+    "nome": "Inconsistent return types",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 55,
+    "linha_fim": 56,
+    "justificativa": "O método iniciarCaixa retorna JSON em um caminho e view em outro."
+   },
+   {
+    "nome": "Inconsistent error handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "O catch retorna uma string pura em vez de uma resposta JSON padronizada."
+   },
+   {
+    "nome": "Lack of input validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Os parâmetros $type e $date não são validados antes do uso."
+   },
+   {
+    "nome": "Lack of input validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 224,
+    "linha_fim": 231,
+    "justificativa": "O parâmetro $request->rage não é validado e pode conter typo."
+   },
+   {
+    "nome": "Dead code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 241,
+    "linha_fim": 244,
+    "justificativa": "O método descontarSangria não é utilizado em nenhum lugar do código."
+   },
+   {
+    "nome": "Poor naming",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 21,
+    "linha_fim": 23,
+    "justificativa": "O nome do método 'data' é genérico e não descreve seu propósito."
+   },
+   {
+    "nome": "Long method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 99,
+    "justificativa": "O método fecharCaixaView executa muitas responsabilidades, tornando-o longo e difícil de manter."
+   },
+   {
+    "nome": "Long method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI executa muitas responsabilidades, tornando-o longo e difícil de manter."
+   },
+   {
+    "nome": "Confusing boolean logic",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 35,
+    "linha_fim": 57,
+    "justificativa": "A condição '!Caixa::checkOpen() && $caixa == null' e o else subsequente dificultam o entendimento do fluxo."
+   },
+   {
+    "nome": "Typo in variable name",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 230,
+    "justificativa": "Uso da variável '$request->rage' provavelmente um typo de 'range'."
+   },
+   {
+    "nome": "Missing return",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 201,
+    "linha_fim": 221,
+    "justificativa": "O método historicoAPI não retorna nenhum valor se o tipo não for month, day ou range."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,440 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "forcado",
+ "entrada": "C25-v3",
+ "cs_id": "C25",
+ "variante": "v3",
+ "hash_condicao": "f95b74f9fca5d23d",
+ "sha256_entrada": "2d2bd2371855e5e8bc1b9da05f3dcab39c1f36e3a2e78841b57e0de5805c5632",
+ "inicio": "2026-10-05T14:25:47+00:00",
+ "duracao_s": 55.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4933,
+ "tokens_saida": 7119,
+ "tokens_raciocinio": 4191,
+ "custo": 0.095294,
+ "id_requisicao": "gen-1791210348-vbul4pMcDWp6zrt759jQ",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 55712
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "avaliacoes": [
+   {
+    "item": 1,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 2,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 21,
+      "linha_fim": 23
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 25,
+      "linha_fim": 29
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 31,
+      "linha_fim": 58
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 60,
+      "linha_fim": 100
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 102,
+      "linha_fim": 108
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 110,
+      "linha_fim": 112
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 114,
+      "linha_fim": 134
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 136,
+      "linha_fim": 138
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 140,
+      "linha_fim": 170
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 172,
+      "linha_fim": 176
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 178,
+      "linha_fim": 222
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 224,
+      "linha_fim": 231
+     }
+    ],
+    "justificativa": "As funções públicas da classe não possuem comentários de documentação (PHPDoc)."
+   },
+   {
+    "item": 3,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 4,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 21,
+      "linha_fim": 21
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 25,
+      "linha_fim": 25
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 31,
+      "linha_fim": 31
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 35,
+      "linha_fim": 35
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 48,
+      "linha_fim": 48
+     }
+    ],
+    "justificativa": "A chave de abertura de métodos e estruturas de controle (como 'if' e 'catch') está na mesma linha da declaração, contrariando padrões de codificação comuns do PHP (como a PSR-12)."
+   },
+   {
+    "item": 5,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 6,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 7,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 8,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 9,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 10,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 11,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 12,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 13,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 14,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 15,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 16,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 73,
+      "linha_fim": 73
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 186,
+      "linha_fim": 186
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 207,
+      "linha_fim": 207
+     }
+    ],
+    "justificativa": "A variável '$key' é declarada no 'foreach', mas nunca é utilizada dentro do laço."
+   },
+   {
+    "item": 17,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 18,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 19,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 20,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 21,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 22,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 23,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 17,
+      "linha_fim": 247
+     }
+    ],
+    "justificativa": "A classe expõe 13 métodos públicos, o que excede o limite estabelecido de 10 métodos, indicando que ela expõe funcionalidades em excesso."
+   },
+   {
+    "item": 24,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 25,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 26,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 27,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 28,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 29,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 27,
+      "linha_fim": 27
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 39,
+      "linha_fim": 40
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 75,
+      "linha_fim": 76
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 98,
+      "linha_fim": 98
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 178,
+      "linha_fim": 178
+     }
+    ],
+    "justificativa": "Em diversas partes do arquivo, listas de argumentos de função ou definições de arrays não possuem espaço após a vírgula."
+   },
+   {
+    "item": 30,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 238,
+      "linha_fim": 238
+     }
+    ],
+    "justificativa": "O atributo privado '$dataDeAbertura' recebe um valor no construtor, mas nunca é lido ou utilizado pelo restante da classe."
+   },
+   {
+    "item": 31,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 32,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 33,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 34,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 35,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 36,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 186,
+      "linha_fim": 198
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 207,
+      "linha_fim": 219
+     }
+    ],
+    "justificativa": "O bloco de código 'foreach ($tr as $key=>$value)' que itera formatando detalhes da venda é idêntico em dois pontos diferentes no mesmo método 'historicoAPI'."
+   },
+   {
+    "item": 37,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 38,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,167 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C27-v2",
+ "cs_id": "C27",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "e1d8e2becca29d557cca9834203bcd99dbf68a965be6845d8cd62b4a4cfadc22",
+ "inicio": "2026-10-05T14:26:55+00:00",
+ "duracao_s": 63.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3501,
+ "tokens_saida": 6394,
+ "tokens_raciocinio": 5186,
+ "custo": 0.012847516,
+ "id_requisicao": "gen-1791210415-5g6WeXMFnGpj89MVoZjQ",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 63164
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de formatação e detalhamento de transações duplicado em múltiplos métodos."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesma lógica de formatação e detalhamento de transações repetida no histórico diário."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Mesma lógica de formatação e detalhamento de transações repetida no histórico por período."
+   },
+   {
+    "nome": "Long method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método fecharCaixaView com muitas responsabilidades e fluxo extenso."
+   },
+   {
+    "nome": "Long method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método historicoAPI com múltiplas ramificações e lógica complexa."
+   },
+   {
+    "nome": "N+1 query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 83,
+    "justificativa": "Consultas a Venda e Estoque dentro de loop causam múltiplas queries no banco."
+   },
+   {
+    "nome": "N+1 query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 194,
+    "justificativa": "Consultas a Venda e Estoque dentro de loop repetem padrão N+1."
+   },
+   {
+    "nome": "N+1 query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 215,
+    "justificativa": "Consultas a Venda e Estoque dentro de loop repetem padrão N+1."
+   },
+   {
+    "nome": "Dead code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Linha inalcançável após os retornos condicionais no método addCaixa."
+   },
+   {
+    "nome": "Inconsistent error handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "Bloco catch retorna string pura em vez de resposta JSON padronizada."
+   },
+   {
+    "nome": "Undefined variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 167,
+    "justificativa": "Uso da variável $e fora do escopo try-catch, potencialmente indefinida."
+   },
+   {
+    "nome": "Magic strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Mapeamento de códigos de pagamento com strings mágicas e typo 'Débido'."
+   },
+   {
+    "nome": "Magic strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Mapeamento de códigos de pagamento com strings mágicas e typo 'Débido'."
+   },
+   {
+    "nome": "Magic strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Mapeamento de códigos de pagamento com strings mágicas e typo 'Débido'."
+   },
+   {
+    "nome": "Inefficient counting",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 238,
+    "linha_fim": 245,
+    "justificativa": "Contagem de vendas feita com loop manual em vez de usar count() ou query builder."
+   }
+  ]
+ },
+ "desvios": []
+}

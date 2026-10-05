@@ -1,0 +1,123 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C38-v1",
+ "cs_id": "C38",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "aa7357d4e6562bdefbfca016fb10e26694c6892d52ddcee71869d56526aabfc2",
+ "inicio": "2026-10-05T15:20:53+00:00",
+ "duracao_s": 10.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5276,
+ "tokens_saida": 1063,
+ "tokens_raciocinio": 0,
+ "custo": 0.042364,
+ "id_requisicao": "gen-1791213653-NPgCx5aAYWPSiEUrYeYL",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 10012
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 219,
+    "justificativa": "Os laços que formatam as transações e montam os detalhes nos ramos 'day' e 'range' são praticamente idênticos e também repetem o laço de fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "A formatação de transações e a montagem de detalhes repetem a mesma lógica de historicoAPI, em vez de ficarem num método reutilizável."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView busca dados, formata valores, faz consultas aninhadas e monta a view, tudo num único método extenso."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI concentra três fluxos distintos, com consultas e formatação, em um método longo controlado por condicionais."
+   },
+   {
+    "nome": "Switch Statements",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 221,
+    "justificativa": "O comportamento é escolhido por uma cadeia de if/else sobre a string $type, o que dificulta a extensão."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de moeda com str_replace([\".\",\",\"],[\"\",\".\"]) é repetida em vários métodos (linhas 39, 40, 119, 145 e 148) em vez de ficar num helper."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 89,
+    "linha_fim": 96,
+    "justificativa": "O controller manipula e formata extensivamente os atributos de Caixa e Transacoes, lógica que pertence aos modelos ou a presenters."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return final é inalcançável, pois todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 240,
+    "linha_fim": 243,
+    "justificativa": "descontarSangria não é usado em nenhum lugar do controller."
+   }
+  ]
+ },
+ "desvios": []
+}

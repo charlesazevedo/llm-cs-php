@@ -1,0 +1,116 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C28-v1",
+ "cs_id": "C28",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "9480f784ff608dc5e6245dffaf7e4ce7d5309a4b652cfdeed1adec1d74a0142c",
+ "inicio": "2026-10-05T14:22:45+00:00",
+ "duracao_s": 35.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4089,
+ "tokens_saida": 4531,
+ "tokens_raciocinio": 3767,
+ "custo": 0.06255,
+ "id_requisicao": "gen-1791210166-IStDgD7eeKZ7y61lQW1A",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 34847
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "A realização de consultas aos modelos Venda e Estoque dentro de um laço de repetição gera múltiplas chamadas ao banco de dados, prejudicando o desempenho."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "As buscas no banco de dados para os modelos Venda e Estoque estão sendo executadas repetidamente dentro de um foreach."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "As buscas no banco de dados para os modelos Venda e Estoque estão sendo executadas repetidamente dentro de um foreach."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O bloco inteiro de iteração, manipulação de strings e consultas associadas a formatação de transações é exatamente idêntico ao bloco que itera as transações por intervalo de datas."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "O bloco inteiro de iteração, manipulação de strings e consultas associadas a formatação de transações é exatamente idêntico ao bloco que itera as transações por dia."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "O código tenta acessar as propriedades da variável de exceção $e em um bloco else, onde ela nunca foi declarada ou capturada."
+   },
+   {
+    "nome": "Unreachable Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Esta instrução de retorno nunca será alcançada, pois todos os fluxos de execução anteriores (if/try/catch e else) já possuem retornos explícitos que encerram o método."
+   },
+   {
+    "nome": "Unused Parameter",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 253,
+    "linha_fim": 256,
+    "justificativa": "O parâmetro $valor foi declarado na assinatura do método privado, mas nunca é manipulado ou retornado em seu corpo."
+   }
+  ]
+ },
+ "desvios": []
+}

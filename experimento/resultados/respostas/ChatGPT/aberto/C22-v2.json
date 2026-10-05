@@ -1,0 +1,123 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C22-v2",
+ "cs_id": "C22",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "d02d9a4f0f7dc6ef348d2fde61f792c5f0cc6adf44d56376be736f21b1ad6a15",
+ "inicio": "2026-10-05T13:40:59+00:00",
+ "duracao_s": 30.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 4002,
+ "tokens_saida": 2180,
+ "tokens_raciocinio": 1552,
+ "custo": 0.0318035,
+ "id_requisicao": "gen-1791207659-8zQVbPhoS4QMhONJrByu",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 29802
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Hierarquia de herança profunda",
+    "arquivo": "app/Pdv/RelatorioDeFechamento.php",
+    "linha_inicio": 10,
+    "linha_fim": 10,
+    "justificativa": "A classe concreta depende de uma cadeia de doze níveis de herança, tornando o comportamento difícil de compreender, alterar e reutilizar."
+   },
+   {
+    "nome": "Abuso de herança para composição",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComEstoque.php",
+    "linha_inicio": 10,
+    "linha_fim": 10,
+    "justificativa": "As seções opcionais do relatório são compostas por subclasses intermediárias em vez de colaboradores ou decoradores, forçando uma ordem rígida de funcionalidades."
+   },
+   {
+    "nome": "Consultas excessivas ao banco de dados",
+    "arquivo": "app/Pdv/Relatorio.php",
+    "linha_inicio": 33,
+    "linha_fim": 39,
+    "justificativa": "A chamada a secoes percorre toda a hierarquia e executa uma consulta independente para quase cada métrica do relatório, produzindo numerosos acessos sequenciais ao banco."
+   },
+   {
+    "nome": "Primitive Obsession",
+    "arquivo": "app/Pdv/Relatorio.php",
+    "linha_inicio": 16,
+    "linha_fim": 25,
+    "justificativa": "A data do relatório é mantida como uma string sem tipagem ou validação, permitindo valores inválidos e espalhando sua interpretação pelas consultas."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+    "linha_inicio": 21,
+    "linha_fim": 23,
+    "justificativa": "Os códigos de pagamento 'CR' e 'DE' são literais opacos que deveriam ser constantes ou valores de um enum."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+    "linha_inicio": 20,
+    "linha_fim": 22,
+    "justificativa": "O código de pagamento 'DI' é um literal opaco cujo significado e consistência não são garantidos pelo código."
+   },
+   {
+    "nome": "Consulta intermediária desnecessária",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComItens.php",
+    "linha_inicio": 21,
+    "linha_fim": 23,
+    "justificativa": "Os identificadores das transações são carregados em memória com pluck antes da soma, quando uma subconsulta ou relacionamento permitiria realizar a operação integralmente no banco."
+   },
+   {
+    "nome": "Duplicação de lógica de consulta",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComClientes.php",
+    "linha_inicio": 20,
+    "linha_fim": 21,
+    "justificativa": "O filtro de transações pela data é repetido em várias classes, fazendo com que mudanças nessa regra precisem ser propagadas por diversos arquivos."
+   },
+   {
+    "nome": "Inconsistência na regra de data",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComEntradas.php",
+    "linha_inicio": 20,
+    "linha_fim": 22,
+    "justificativa": "Esta seção filtra por created_at com whereDate enquanto as demais usam uma coluna data, introduzindo uma regra temporal inconsistente no mesmo relatório."
+   }
+  ]
+ },
+ "desvios": []
+}

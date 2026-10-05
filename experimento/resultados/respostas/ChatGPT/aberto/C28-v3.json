@@ -1,0 +1,67 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C28-v3",
+ "cs_id": "C28",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5356420ec2a3813ef1dcb2f8c7ae2512f7f10a061d32bad393f93feaad155dce",
+ "inicio": "2026-10-05T14:25:15+00:00",
+ "duracao_s": 3.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 647,
+ "tokens_saida": 186,
+ "tokens_raciocinio": 110,
+ "custo": 0.003154,
+ "id_requisicao": "gen-1791210315-QYZF82nXL2hsSROwPmCi",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 3461
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Parâmetro não utilizado",
+    "arquivo": "app/Pdv/ConferenciaDeCaixa.php",
+    "linha_inicio": 25,
+    "linha_fim": 28,
+    "justificativa": "O parâmetro $operador é recebido e documentado pelo construtor, mas nunca é armazenado nem utilizado."
+   }
+  ]
+ },
+ "desvios": []
+}

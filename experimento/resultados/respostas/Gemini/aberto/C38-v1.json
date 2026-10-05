@@ -1,0 +1,116 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C38-v1",
+ "cs_id": "C38",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "aa7357d4e6562bdefbfca016fb10e26694c6892d52ddcee71869d56526aabfc2",
+ "inicio": "2026-10-05T15:26:08+00:00",
+ "duracao_s": 25.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 3926,
+ "tokens_saida": 3198,
+ "tokens_raciocinio": 2474,
+ "custo": 0.046228,
+ "id_requisicao": "gen-1791213968-Xyxi7mYOsyvbVtSSXHO6",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 25360
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A lógica de substituição de caracteres para conversão de valores (str_replace) está duplicada consecutivamente."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas ao banco de dados (Venda::where e Estoque::where) estão sendo executadas dentro de laços de repetição iterativos, afetando gravemente a performance."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "A lógica de formatação de string para valores monetários é repetida novamente neste método."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 168,
+    "justificativa": "O bloco tenta retornar a propriedade errorInfo de uma variável '$e' de exceção que não foi definida neste escopo (else)."
+   },
+   {
+    "nome": "Unreachable Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Esta linha nunca será executada pois ambos os blocos da condicional (if e else) acima já possuem instruções de retorno."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Consultas aos models Venda e Estoque estão sendo realizadas dentro de dois laços de repetição (foreach) aninhados."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Este bloco de processamento e formatação de transações é uma cópia exata do trecho das linhas 186 a 198."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Consultas aos models Venda e Estoque executadas dentro de laços de repetição aninhados, copiadas do bloco anterior."
+   }
+  ]
+ },
+ "desvios": []
+}

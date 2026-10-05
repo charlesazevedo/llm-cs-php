@@ -1,0 +1,59 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C33-v3",
+ "cs_id": "C33",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5aff547f417e2d304cc80655578b0c6a039224a283af63dca7add0f049639195",
+ "inicio": "2026-10-05T15:19:32+00:00",
+ "duracao_s": 2.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 1055,
+ "tokens_saida": 9,
+ "tokens_raciocinio": 0,
+ "custo": 0.0044,
+ "id_requisicao": "gen-1791213572-3PM7pLq9tl2ij5AMd1Fc",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 1897
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": []
+ },
+ "desvios": []
+}

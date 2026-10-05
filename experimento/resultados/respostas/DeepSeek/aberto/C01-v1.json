@@ -1,0 +1,202 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C01-v1",
+ "cs_id": "C01",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "a9af3c6549b9268eedd3205d026726b4872cc5d513debbf549886967c0a1cb74",
+ "inicio": "2026-10-02T18:40:48+00:00",
+ "duracao_s": 70.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3565,
+ "tokens_saida": 8421,
+ "tokens_raciocinio": 6601,
+ "custo": 0.016903216,
+ "id_requisicao": "gen-1790966449-52QtcKdc8mEuTFKKBwez",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 70070
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "A lógica de processar transações, substituir pagamentos, formatar valores e buscar detalhes de venda/estoque é repetida em três locais."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Trecho duplicado de processamento de transações; a mesma lógica aparece também nas linhas 73-86 e 207-219."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Trecho duplicado de processamento de transações; a mesma lógica aparece também nas linhas 73-86 e 186-198."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método fecharCaixaView tem 41 linhas e múltiplas responsabilidades (consultas, formatação, montagem de detalhes), dificultando a manutenção."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI tem 45 linhas e muitas ramificações, com lógica duplicada e consultas complexas."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Dentro do loop de transações, são executadas consultas Venda::where e Estoque::where para cada transação, causando problema N+1."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Dentro do loop de transações, são executadas consultas Venda::where e Estoque::where para cada transação, causando problema N+1."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Dentro do loop de transações, são executadas consultas Venda::where e Estoque::where para cada transação, causando problema N+1."
+   },
+   {
+    "nome": "Classe Deus",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 249,
+    "justificativa": "O controlador acumula regras de negócio, formatação, persistência e apresentação, além de métodos não relacionados, caracterizando uma classe Deus."
+   },
+   {
+    "nome": "Código morto",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 239,
+    "linha_fim": 248,
+    "justificativa": "O método somarSangriasDoDia não é chamado em nenhum lugar do controlador e contém apenas lógica de depuração."
+   },
+   {
+    "nome": "Comando de depuração",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 245,
+    "linha_fim": 245,
+    "justificativa": "A instrução var_dump exibe dados brutos em produção e deve ser removida."
+   },
+   {
+    "nome": "Validação ausente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 58,
+    "justificativa": "O método iniciarCaixa não valida o campo $request->valor antes de usá-lo, permitindo entradas inválidas."
+   },
+   {
+    "nome": "Validação ausente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "O método sangriaPost não valida os campos descricao e valor antes de persistir."
+   },
+   {
+    "nome": "Validação ausente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 140,
+    "linha_fim": 170,
+    "justificativa": "O método addCaixa não valida os campos valor e descricao antes de salvar."
+   },
+   {
+    "nome": "Variável indefinida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 167,
+    "justificativa": "No bloco else, a variável $e não está definida, causando erro ao acessar $e->errorInfo[2]."
+   },
+   {
+    "nome": "Código inalcançável",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A linha após o bloco else é inalcançável porque o else sempre retorna uma resposta JSON."
+   },
+   {
+    "nome": "Tratamento de erro inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "O catch em sangriaPost retorna $e->errorInfo[2] diretamente, sem envolvê-lo em uma resposta JSON consistente."
+   },
+   {
+    "nome": "Exposição de informações",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 52,
+    "justificativa": "O catch em iniciarCaixa expõe detalhes do erro de banco de dados ($e->errorInfo[2]) diretamente ao cliente."
+   },
+   {
+    "nome": "Exposição de informações",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "O catch em sangriaPost expõe detalhes do erro de banco de dados diretamente ao cliente."
+   },
+   {
+    "nome": "Exposição de informações",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 160,
+    "justificativa": "O catch em addCaixa expõe detalhes do erro de banco de dados diretamente ao cliente."
+   }
+  ]
+ },
+ "desvios": []
+}

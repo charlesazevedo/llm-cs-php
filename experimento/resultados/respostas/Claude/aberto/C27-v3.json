@@ -1,0 +1,95 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C27-v3",
+ "cs_id": "C27",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "054eb50d31adf5538508ad018be64a2eebdf340649d82ad38fe1d4e6ec7676d2",
+ "inicio": "2026-10-05T14:21:01+00:00",
+ "duracao_s": 6.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5306,
+ "tokens_saida": 618,
+ "tokens_raciocinio": 0,
+ "custo": 0.033584,
+ "id_requisicao": "gen-1791210061-wPWjnJWlLqSabXWJ9glM",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 6524
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 182,
+    "linha_fim": 221,
+    "justificativa": "Os ramos 'day' e 'range' repetem quase integralmente o mesmo laço de formatação de transações e detalhes de venda, também semelhante ao de fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O laço de formatação de transações e busca de itens de venda é duplicado em historicoAPI em vez de ser extraído para um método reutilizável."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView acumula consultas, formatação monetária, montagem de detalhes e cálculo de totais em um único método extenso."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI concentra três fluxos distintos de consulta e formatação em um único método longo com condicionais encadeadas."
+   },
+   {
+    "nome": "Comments",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 233,
+    "linha_fim": 244,
+    "justificativa": "O docblock afirma que o período tem data inicial e final, mas a implementação ignora a data final, tornando o comentário enganoso em relação ao comportamento real."
+   }
+  ]
+ },
+ "desvios": []
+}

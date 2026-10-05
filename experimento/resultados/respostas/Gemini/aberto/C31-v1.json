@@ -1,0 +1,109 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C31-v1",
+ "cs_id": "C31",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "6179b3fa427d2fe35794f9cbf7ab78b1715de92ce39810a9c98b9002afb0d9d3",
+ "inicio": "2026-10-05T15:18:28+00:00",
+ "duracao_s": 25.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 3949,
+ "tokens_saida": 3127,
+ "tokens_raciocinio": 2411,
+ "custo": 0.045422,
+ "id_requisicao": "gen-1791213508-XfquZYx16jCpmBt068dK",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 25241
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A lógica de substituição de caracteres para formatar o valor monetário é repetida em linhas consecutivas e deveria ser atribuída a uma variável."
+   },
+   {
+    "nome": "Problema N+1 (Consultas em Loop)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas aos modelos Venda e Estoque estão sendo realizadas dentro de um ou mais loops de iteração, o que degrada severamente a performance do banco de dados."
+   },
+   {
+    "nome": "Chamadas Redundantes",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 88,
+    "linha_fim": 97,
+    "justificativa": "Métodos estáticos que acessam o banco de dados, como Caixa::today(), totalCreditoDay() e totalDebitoDay(), são chamados múltiplas vezes em vez de terem seus retornos armazenados em variáveis."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "O trecho de código que limpa a formatação de valor do request é repetido, desrespeitando o princípio DRY (Don't Repeat Yourself)."
+   },
+   {
+    "nome": "Variável Indefinida (Bug Potencial)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 168,
+    "justificativa": "O bloco 'else' tenta utilizar a variável de exceção '$e', a qual não está declarada neste escopo, o que resultará em um erro fatal em tempo de execução."
+   },
+   {
+    "nome": "Código Morto",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A instrução de retorno no final da função nunca será atingida, pois todos os caminhos do fluxo condicional (if/else) acima dela já possuem retornos."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 182,
+    "linha_fim": 221,
+    "justificativa": "A lógica complexa para formatar histórico, incluindo loops e consultas N+1, foi inteiramente copiada e colada entre as condições 'day' e 'range', necessitando de extração para um método auxiliar."
+   }
+  ]
+ },
+ "desvios": []
+}

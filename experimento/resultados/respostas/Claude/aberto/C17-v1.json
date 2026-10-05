@@ -1,0 +1,67 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C17-v1",
+ "cs_id": "C17",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "80b257bd38c4baaa5bf2aff6c5fc63fff27099f9ca936223e4abecc62c7c57a0",
+ "inicio": "2026-10-05T12:49:33+00:00",
+ "duracao_s": 7.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 6308,
+ "tokens_saida": 530,
+ "tokens_raciocinio": 349,
+ "custo": 0.035832,
+ "id_requisicao": "gen-1791204573-eO0p6JbnDXCEp0XBal43",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 7708
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 13,
+    "linha_fim": 431,
+    "justificativa": "A classe acumula cerca de 35 atributos públicos e dez métodos de carga que cobrem responsabilidades distintas (vendas, pagamentos, descontos, parcelamentos, caixa, sangrias, entradas, mês e ano) e poderiam ser divididas em classes coesas por grupo de indicadores."
+   }
+  ]
+ },
+ "desvios": []
+}

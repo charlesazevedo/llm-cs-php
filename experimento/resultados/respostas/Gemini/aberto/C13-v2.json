@@ -1,0 +1,137 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C13-v2",
+ "cs_id": "C13",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "c44bba312cb088f313aa67ea9de7ca0a820c918cd4a49df5bbab2b95f6806224",
+ "inicio": "2026-10-05T12:50:22+00:00",
+ "duracao_s": 30.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 5100,
+ "tokens_saida": 4317,
+ "tokens_raciocinio": 3263,
+ "custo": 0.062004,
+ "id_requisicao": "gen-1791204622-qSsJ733SlQDixoXvr7M7",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 30237
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Long Parameter List",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 261,
+    "linha_fim": 282,
+    "justificativa": "O método possui 20 parâmetros, o que dificulta sua leitura, chamada e manutenção; seria ideal agrupar os dados num objeto de transferência (DTO) ou array."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "A lógica de iteração, formatação de valores e concatenação de detalhes de transações e vendas está repetida."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "A lógica de iteração, formatação de valores e concatenação de detalhes de transações e vendas está repetida de forma quase idêntica."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "A lógica de iteração, formatação de valores e concatenação de detalhes de transações e vendas está repetida de forma quase idêntica."
+   },
+   {
+    "nome": "N+1 Queries Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 74,
+    "linha_fim": 83,
+    "justificativa": "Consultas ao banco de dados (Venda e Estoque) sendo realizadas dentro de um laço de repetição, prejudicando o desempenho em vez de usar Eager Loading."
+   },
+   {
+    "nome": "N+1 Queries Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 187,
+    "linha_fim": 195,
+    "justificativa": "Consultas ao banco de dados (Venda e Estoque) sendo realizadas dentro de um laço de repetição, prejudicando o desempenho."
+   },
+   {
+    "nome": "N+1 Queries Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 208,
+    "linha_fim": 216,
+    "justificativa": "Consultas ao banco de dados (Venda e Estoque) sendo realizadas dentro de um laço de repetição, prejudicando o desempenho."
+   },
+   {
+    "nome": "Information Exposure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 53,
+    "justificativa": "Exposição de detalhes de erro direto do banco de dados ($e->errorInfo[2]) na resposta, o que pode representar uma falha de segurança."
+   },
+   {
+    "nome": "Information Exposure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "Exposição de detalhes de erro direto do banco de dados ($e->errorInfo[2]) na resposta, o que pode representar uma falha de segurança."
+   },
+   {
+    "nome": "Information Exposure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 161,
+    "justificativa": "Exposição de detalhes de erro direto do banco de dados ($e->errorInfo[2]) na resposta, o que pode representar uma falha de segurança."
+   },
+   {
+    "nome": "Undefined Variable / Bug",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "Uso da variável de exceção ($e) em um bloco 'else' onde ela não foi definida, o que causará um erro fatal."
+   }
+  ]
+ },
+ "desvios": []
+}

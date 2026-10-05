@@ -1,0 +1,181 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C29-v1",
+ "cs_id": "C29",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "cc206eb5398361528c702a451f23cd8884a8b0cafbbdd9c1c76d749c63194e9b",
+ "inicio": "2026-10-02T18:48:21+00:00",
+ "duracao_s": 57.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3587,
+ "tokens_saida": 7448,
+ "tokens_raciocinio": 5841,
+ "custo": 0.014991196,
+ "id_requisicao": "gen-1790966901-zN0mPupOtvzNUj6gFUgL",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 57389
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O trecho de formatação de transações e construção de detalhes é repetido em historicoAPI para os tipos 'day' e 'range'."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O trecho de formatação de transações e construção de detalhes é repetido em fecharCaixaView e no ramo 'range' de historicoAPI."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "O trecho de formatação de transações e construção de detalhes é repetido em fecharCaixaView e no ramo 'day' de historicoAPI."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Dentro do loop sobre transações são executadas consultas adicionais a Venda e Estoque para cada item, causando problema de performance N+1."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Dentro do loop sobre transações são executadas consultas adicionais a Venda e Estoque para cada item, causando problema de performance N+1."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Dentro do loop sobre transações são executadas consultas adicionais a Venda e Estoque para cada item, causando problema de performance N+1."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A instrução 'return $request->valor;' é inalcançável porque todos os caminhos do if-else já retornam."
+   },
+   {
+    "nome": "Empty Catch Block",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 245,
+    "linha_fim": 248,
+    "justificativa": "O bloco catch captura QueryException mas não executa nenhuma ação, engolindo o erro silenciosamente."
+   },
+   {
+    "nome": "Inconsistent Return Types",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "O método retorna response()->json em caso de sucesso, string com erro na exceção, ou null se o caixa estiver fechado, resultando em tipos de retorno inconsistentes."
+   },
+   {
+    "nome": "Inconsistent Return Types",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método retorna coleção nos casos reconhecidos, mas retorna null se $type não corresponder a nenhum caso, levando a tipo de retorno inconsistente."
+   },
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 251,
+    "justificativa": "A classe CaixaController concentra responsabilidades de abertura/fechamento de caixa, sangria, entradas, histórico e impressão, caracterizando uma Large Class."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 167,
+    "justificativa": "A variável $e é usada no bloco else sem estar definida (pertence ao catch anterior), causando erro se o caixa não estiver aberto."
+   },
+   {
+    "nome": "Typo in Parameter Name",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 229,
+    "justificativa": "O código acessa $request->rage, mas o parâmetro esperado é 'range', podendo causar erro de índice indefinido."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 54,
+    "justificativa": "O método não valida a presença ou o formato do campo 'valor' antes de processá-lo, podendo causar exceções ou dados inconsistentes."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "O método não valida a presença ou o formato do campo 'valor' antes de processá-lo, podendo causar exceções ou dados inconsistentes."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 140,
+    "linha_fim": 170,
+    "justificativa": "O método não valida a presença ou o formato do campo 'valor' antes de processá-lo, podendo causar exceções ou dados inconsistentes."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 240,
+    "linha_fim": 250,
+    "justificativa": "O método não valida a presença ou o formato do campo 'valor' antes de processá-lo, podendo causar exceções ou dados inconsistentes."
+   }
+  ]
+ },
+ "desvios": []
+}

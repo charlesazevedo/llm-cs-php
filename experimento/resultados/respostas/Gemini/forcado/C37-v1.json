@@ -1,0 +1,405 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "forcado",
+ "entrada": "C37-v1",
+ "cs_id": "C37",
+ "variante": "v1",
+ "hash_condicao": "f95b74f9fca5d23d",
+ "sha256_entrada": "99f9942f72b5e864cd82545484ceb2e03221bdc10c574962db5119d09282820a",
+ "inicio": "2026-10-05T15:45:49+00:00",
+ "duracao_s": 109.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4977,
+ "tokens_saida": 15515,
+ "tokens_raciocinio": 13753,
+ "custo": 0.196134,
+ "id_requisicao": "gen-1791215149-GK66MDvCRCPKbb3oJtOq",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 108668
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "avaliacoes": [
+   {
+    "item": 1,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 2,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 21,
+      "linha_fim": 23
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 25,
+      "linha_fim": 29
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 31,
+      "linha_fim": 58
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 60,
+      "linha_fim": 100
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 102,
+      "linha_fim": 108
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 110,
+      "linha_fim": 112
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 114,
+      "linha_fim": 134
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 136,
+      "linha_fim": 138
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 140,
+      "linha_fim": 170
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 172,
+      "linha_fim": 176
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 178,
+      "linha_fim": 222
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 224,
+      "linha_fim": 231
+     }
+    ],
+    "justificativa": "Varias funcoes publicas nao possuem comentarios de documentacao."
+   },
+   {
+    "item": 3,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 4,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 17,
+      "linha_fim": 230
+     }
+    ],
+    "justificativa": "Chaves de abertura de metodos e de estruturas de controle estao posicionadas na mesma linha da declaracao e frequentemente sem espacamento adequado, desrespeitando os padroes de colocacao de chaves."
+   },
+   {
+    "item": 5,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 6,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 7,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 8,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 9,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 10,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 11,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 12,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 13,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 14,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 15,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 16,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 73,
+      "linha_fim": 73
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 186,
+      "linha_fim": 186
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 207,
+      "linha_fim": 207
+     }
+    ],
+    "justificativa": "A variavel $key e declarada nos lacos foreach mas nunca e utilizada no corpo do laco."
+   },
+   {
+    "item": 17,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 18,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 19,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 243,
+      "linha_fim": 247
+     }
+    ],
+    "justificativa": "Uso inadequado de parenteses em chamadas de funcao com multiplas linhas, o parentese de fechamento encontra-se na mesma linha do ultimo argumento."
+   },
+   {
+    "item": 20,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 21,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 22,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 23,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 17,
+      "linha_fim": 248
+     }
+    ],
+    "justificativa": "A classe possui 13 metodos publicos, excedendo o limite considerado aceitavel para uma unica classe (ex.: mais de 10)."
+   },
+   {
+    "item": 24,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 25,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 26,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 27,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 28,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 29,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 27,
+      "linha_fim": 230
+     }
+    ],
+    "justificativa": "Falta de espacamento adequado apos diversas virgulas em argumentos, chamadas de funcoes e arrays ao longo de todo o arquivo."
+   },
+   {
+    "item": 30,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 31,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 32,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 33,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 34,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 35,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 36,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 73,
+      "linha_fim": 86
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 186,
+      "linha_fim": 198
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 207,
+      "linha_fim": 219
+     }
+    ],
+    "justificativa": "Logica e formatacao das transacoes repetidas exatamente do mesmo modo em tres metodos distintos, caracterizando duplicidade de codigo."
+   },
+   {
+    "item": 37,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 38,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   }
+  ]
+ },
+ "desvios": []
+}

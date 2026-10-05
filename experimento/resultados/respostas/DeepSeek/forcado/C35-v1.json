@@ -1,0 +1,643 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "forcado",
+ "entrada": "C35-v1",
+ "cs_id": "C35",
+ "variante": "v1",
+ "hash_condicao": "f95b74f9fca5d23d",
+ "sha256_entrada": "5da99460198790352db4e94804b4a8379a532aed88ba0602275267872a8acc2c",
+ "inicio": "2026-10-02T19:05:38+00:00",
+ "duracao_s": 125.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 4532,
+ "tokens_saida": 20080,
+ "tokens_raciocinio": 15048,
+ "custo": 0.039972944,
+ "id_requisicao": "gen-1790967939-9lPU2PrMDo6eGfkstaJb",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 125215
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "avaliacoes": [
+   {
+    "item": 1,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 2,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 21,
+      "linha_fim": 21,
+      "justificativa": "Função sem comentário de documentação."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 25,
+      "linha_fim": 25,
+      "justificativa": "Função sem comentário de documentação."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 31,
+      "linha_fim": 31,
+      "justificativa": "Função sem comentário de documentação."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 60,
+      "linha_fim": 60,
+      "justificativa": "Função sem comentário de documentação."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 102,
+      "linha_fim": 102,
+      "justificativa": "Função sem comentário de documentação."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 110,
+      "linha_fim": 110,
+      "justificativa": "Função sem comentário de documentação."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 114,
+      "linha_fim": 114,
+      "justificativa": "Função sem comentário de documentação."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 136,
+      "linha_fim": 136,
+      "justificativa": "Função sem comentário de documentação."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 140,
+      "linha_fim": 140,
+      "justificativa": "Função sem comentário de documentação."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 172,
+      "linha_fim": 172,
+      "justificativa": "Função sem comentário de documentação."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 178,
+      "linha_fim": 178,
+      "justificativa": "Função sem comentário de documentação."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 224,
+      "linha_fim": 224,
+      "justificativa": "Função sem comentário de documentação."
+     }
+    ],
+    "justificativa": "Métodos públicos sem docblock de documentação."
+   },
+   {
+    "item": 3,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 4,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 21,
+      "linha_fim": 21,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 25,
+      "linha_fim": 25,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 31,
+      "linha_fim": 31,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 60,
+      "linha_fim": 60,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 102,
+      "linha_fim": 102,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 110,
+      "linha_fim": 110,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 114,
+      "linha_fim": 114,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 136,
+      "linha_fim": 136,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 140,
+      "linha_fim": 140,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 172,
+      "linha_fim": 172,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 178,
+      "linha_fim": 178,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 224,
+      "linha_fim": 224,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 241,
+      "linha_fim": 241,
+      "justificativa": "Chave de abertura de método na mesma linha, fora do padrão."
+     }
+    ],
+    "justificativa": "Métodos com chave de abertura na mesma linha da declaração."
+   },
+   {
+    "item": 5,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 6,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 7,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 8,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 9,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 10,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 11,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 12,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 13,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 14,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 15,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 16,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 17,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 18,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 19,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 20,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 21,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 22,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 23,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 17,
+      "linha_fim": 244,
+      "justificativa": "Classe possui 13 métodos públicos, excedendo o limite de 10."
+     }
+    ],
+    "justificativa": "Muitos métodos públicos na classe."
+   },
+   {
+    "item": 24,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 25,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 26,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 27,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 28,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 29,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 27,
+      "linha_fim": 27,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função e entre itens de array."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 39,
+      "linha_fim": 39,
+      "justificativa": "Ausência de espaço após vírgula em str_replace e entre itens de array."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 40,
+      "linha_fim": 40,
+      "justificativa": "Ausência de espaço após vírgula em str_replace e entre itens de array."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 41,
+      "linha_fim": 41,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 56,
+      "linha_fim": 56,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 75,
+      "linha_fim": 75,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 76,
+      "linha_fim": 76,
+      "justificativa": "Ausência de espaço após vírgula em str_replace e entre itens de array."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 81,
+      "linha_fim": 81,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 89,
+      "linha_fim": 89,
+      "justificativa": "Ausência de espaço após vírgula entre itens de array."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 98,
+      "linha_fim": 98,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função e entre itens de array."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 103,
+      "linha_fim": 103,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 111,
+      "linha_fim": 111,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 119,
+      "linha_fim": 119,
+      "justificativa": "Ausência de espaço após vírgula em str_replace e entre itens de array."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 137,
+      "linha_fim": 137,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 145,
+      "linha_fim": 145,
+      "justificativa": "Ausência de espaço após vírgula em str_replace e entre itens de array."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 148,
+      "linha_fim": 148,
+      "justificativa": "Ausência de espaço após vírgula em str_replace e entre itens de array."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 178,
+      "linha_fim": 178,
+      "justificativa": "Ausência de espaço após vírgula na lista de parâmetros."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 180,
+      "linha_fim": 180,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 183,
+      "linha_fim": 183,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 188,
+      "linha_fim": 188,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 189,
+      "linha_fim": 189,
+      "justificativa": "Ausência de espaço após vírgula em str_replace e entre itens de array."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 193,
+      "linha_fim": 193,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 202,
+      "linha_fim": 202,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 206,
+      "linha_fim": 206,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função e entre itens de array."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 209,
+      "linha_fim": 209,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 210,
+      "linha_fim": 210,
+      "justificativa": "Ausência de espaço após vírgula em str_replace e entre itens de array."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 214,
+      "linha_fim": 214,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 225,
+      "linha_fim": 225,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 230,
+      "linha_fim": 230,
+      "justificativa": "Ausência de espaço após vírgula em chamada de função."
+     }
+    ],
+    "justificativa": "Diversas ocorrências de vírgulas sem espaço posterior."
+   },
+   {
+    "item": 30,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 31,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 32,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 33,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 34,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 35,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 36,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 73,
+      "linha_fim": 86,
+      "justificativa": "Bloco de código para detalhar transações, duplicado em historicoAPI."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 186,
+      "linha_fim": 198,
+      "justificativa": "Bloco de código para detalhar transações, duplicado de fecharCaixaView e entre os tipos de historicoAPI."
+     },
+     {
+      "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+      "linha_inicio": 207,
+      "linha_fim": 219,
+      "justificativa": "Bloco de código para detalhar transações, duplicado de fecharCaixaView e entre os tipos de historicoAPI."
+     }
+    ],
+    "justificativa": "Lógica de detalhamento de transações repetida em múltiplos pontos."
+   },
+   {
+    "item": 37,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 38,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   }
+  ]
+ },
+ "desvios": []
+}

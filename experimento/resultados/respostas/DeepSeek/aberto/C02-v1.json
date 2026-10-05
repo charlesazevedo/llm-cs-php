@@ -1,0 +1,202 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C02-v1",
+ "cs_id": "C02",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "26dcc2cfa2711e2c1655617e479262c2e446cfa0129b7e43ed7c61c7b84ffc85",
+ "inicio": "2026-10-03T23:08:46+00:00",
+ "duracao_s": 68.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3634,
+ "tokens_saida": 10256,
+ "tokens_raciocinio": 8679,
+ "custo": 0.020582056,
+ "id_requisicao": "gen-1791068926-gYEescGgrPlCPBKsC7qB",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 68000
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 197,
+    "justificativa": "Bloco de formatação e construção de detalhes duplicado no branch 'day'."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 218,
+    "justificativa": "Bloco duplicado do branch 'day' no branch 'range'."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Uso de strings mágicas para tipos de pagamento sem constantes."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Uso de strings mágicas para tipos de pagamento sem constantes."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Uso de strings mágicas para tipos de pagamento sem constantes."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 83,
+    "justificativa": "Consultas a Venda e Estoque são executadas dentro de loops, causando múltiplas queries."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 195,
+    "justificativa": "Consultas a Venda e Estoque são executadas dentro de loops, causando múltiplas queries."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 216,
+    "justificativa": "Consultas a Venda e Estoque são executadas dentro de loops, causando múltiplas queries."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método fecharCaixaView realiza muitas responsabilidades e é extenso."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método historicoAPI contém lógica extensa e múltiplas responsabilidades."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Linha de retorno inalcançável após todos os caminhos do if/else retornarem."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "Método pode retornar JSON, string ou null, dependendo do fluxo."
+   },
+   {
+    "nome": "Use of GOTO",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 247,
+    "linha_fim": 251,
+    "justificativa": "Uso de goto para sair de loops aninhados, quebrando a estrutura do código."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 167,
+    "justificativa": "Referência à variável $e no bloco else, onde ela não está definida."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 53,
+    "justificativa": "Falta validação dos dados de entrada antes de processar o valor."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "Falta validação dos dados de entrada antes de processar descrição e valor."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 140,
+    "linha_fim": 170,
+    "justificativa": "Falta validação dos dados de entrada antes de processar valor e descrição."
+   },
+   {
+    "nome": "Redundant Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 88,
+    "linha_fim": 91,
+    "justificativa": "Caixa::today() é chamada duas vezes, resultando em consulta redundante."
+   },
+   {
+    "nome": "Fat Controller",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 254,
+    "justificativa": "Controlador acumula responsabilidades de apresentação, regras de negócio e persistência."
+   },
+   {
+    "nome": "Typo in Variable Name",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 225,
+    "justificativa": "Uso de 'rage' em vez de 'range' provavelmente é erro de digitação."
+   }
+  ]
+ },
+ "desvios": []
+}

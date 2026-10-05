@@ -1,0 +1,209 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C24-v1",
+ "cs_id": "C24",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "a1f91c050df2caeb7ca5ff1fc8088507218b8cf60f585297067799b4130f7b82",
+ "inicio": "2026-10-02T18:45:28+00:00",
+ "duracao_s": 54.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 4146,
+ "tokens_saida": 6496,
+ "tokens_raciocinio": 4636,
+ "custo": 0.013475176,
+ "id_requisicao": "gen-1790966729-OZIS974mL6s9Mvw4owTK",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 54397
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 238,
+    "linha_fim": 257,
+    "justificativa": "Método resumoParaFechamento duplicado em resumoParaConferencia (linhas 264-283)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 264,
+    "linha_fim": 283,
+    "justificativa": "Método resumoParaConferencia duplicado de resumoParaFechamento (linhas 238-257)."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas Venda::where e Estoque::where executadas dentro de loop causam múltiplas queries desnecessárias."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Consultas Venda::where e Estoque::where executadas dentro de loop no branch 'day' de historicoAPI causam N+1 queries."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Consultas Venda::where e Estoque::where executadas dentro de loop no branch 'range' de historicoAPI causam N+1 queries."
+   },
+   {
+    "nome": "Duplicated String Mapping",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Mapeamento de tipos de pagamento com str_replace duplicado em outros trechos e com erro de digitação ('Débido')."
+   },
+   {
+    "nome": "Duplicated String Mapping",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Mapeamento de tipos de pagamento com str_replace duplicado em outros trechos e com erro de digitação ('Débido')."
+   },
+   {
+    "nome": "Duplicated String Mapping",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Mapeamento de tipos de pagamento com str_replace duplicado em outros trechos e com erro de digitação ('Débido')."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 167,
+    "justificativa": "Uso da variável $e no bloco else sem definição prévia, causando erro caso o caixa não esteja aberto."
+   },
+   {
+    "nome": "Unreachable Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Código inalcançável após retornos anteriores nos blocos if e else."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 57,
+    "justificativa": "Método iniciarCaixa retorna JSON em try/catch mas retorna View no else, inconsistente."
+   },
+   {
+    "nome": "Exposing Internal Errors",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 52,
+    "justificativa": "Bloco catch retorna $e->errorInfo[2], expondo detalhes internos do banco de dados."
+   },
+   {
+    "nome": "Exposing Internal Errors",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 160,
+    "justificativa": "Bloco catch retorna $e->errorInfo[2], expondo detalhes internos do banco de dados."
+   },
+   {
+    "nome": "Exposing Internal Errors",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "Bloco catch retorna diretamente $e->errorInfo[2] (não JSON), expondo detalhes internos e quebrando consistência da resposta."
+   },
+   {
+    "nome": "Lack of Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 41,
+    "justificativa": "Valor $request->valor utilizado sem validação de formato numérico antes de str_replace e salvamento."
+   },
+   {
+    "nome": "Lack of Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 119,
+    "justificativa": "Valor $request->valor utilizado sem validação de formato numérico antes de str_replace e salvamento."
+   },
+   {
+    "nome": "Lack of Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 140,
+    "linha_fim": 148,
+    "justificativa": "Valor $request->valor utilizado sem validação de formato numérico antes de str_replace e salvamento."
+   },
+   {
+    "nome": "God Class",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 284,
+    "justificativa": "Controller acumula responsabilidades de caixa, sangria, entradas, histórico e resumos, violando o princípio de responsabilidade única."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 99,
+    "justificativa": "Método fecharCaixaView é extenso e realiza múltiplas tarefas: busca dados, formata, monta detalhes e calcula totais."
+   },
+   {
+    "nome": "Use of date() instead of Carbon",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 21,
+    "linha_fim": 23,
+    "justificativa": "Método data() usa date('Y-m-d') diretamente em vez de utilizar o helper now() ou Carbon do Laravel."
+   },
+   {
+    "nome": "Use of date() instead of Carbon",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 38,
+    "linha_fim": 38,
+    "justificativa": "Uso direto de date('Y-m-d') em vez de Carbon, inconsistente com o framework."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,340 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C11-v1",
+ "cs_id": "C11",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "007d7c1a231ddd641cf769eb1c4d032a1e360d1a4cc23955da3c80f3d4b26b6b",
+ "inicio": "2026-10-02T18:41:30+00:00",
+ "duracao_s": 49.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 11408,
+ "tokens_saida": 3731,
+ "tokens_raciocinio": 1294,
+ "custo": 0.0658285,
+ "id_requisicao": "gen-1790966491-cliKPMBZYpmliFTkGa6c",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 48526
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe excessivamente grande",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 18,
+    "linha_fim": 1018,
+    "justificativa": "A classe concentra mais de mil linhas e a construção de onze seções distintas, dificultando manutenção, testes e evolução isolada."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 53,
+    "linha_fim": 138,
+    "justificativa": "O método monta uma extensa estrutura com muitos indicadores de vendas e deveria ser decomposto em unidades menores."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 148,
+    "linha_fim": 234,
+    "justificativa": "O método reúne muitos cálculos e definições de apresentação de itens vendidos em um único bloco extenso."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 244,
+    "linha_fim": 332,
+    "justificativa": "O método concentra numerosos indicadores de sangria em uma estrutura extensa e difícil de alterar isoladamente."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 342,
+    "linha_fim": 418,
+    "justificativa": "O método possui uma longa lista de métricas de entradas de caixa e mistura consulta, cálculo e montagem da saída."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 428,
+    "linha_fim": 504,
+    "justificativa": "O método agrega muitos indicadores de caixa em um único bloco declarativo extenso."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 511,
+    "linha_fim": 598,
+    "justificativa": "O método concentra consulta e grande quantidade de métricas de estoque em uma única unidade."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 605,
+    "linha_fim": 661,
+    "justificativa": "O método contém uma extensa montagem de indicadores de variações que poderia ser dividida ou parametrizada."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 668,
+    "linha_fim": 734,
+    "justificativa": "O método reúne consulta, agregações e formatação de muitos indicadores de clientes em um único bloco."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 744,
+    "linha_fim": 829,
+    "justificativa": "O método concentra numerosos cálculos de vendas em dinheiro e a montagem da apresentação em uma unidade extensa."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 839,
+    "linha_fim": 924,
+    "justificativa": "O método reúne muitos indicadores de vendas no crédito em um único bloco extenso."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 934,
+    "linha_fim": 1017,
+    "justificativa": "O método reúne muitos indicadores de vendas no débito em um único bloco extenso."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 744,
+    "linha_fim": 1017,
+    "justificativa": "As três seções por forma de pagamento repetem consulta, estrutura de saída e diversos cálculos, podendo ser substituídas por um método parametrizado."
+   },
+   {
+    "nome": "Consultas redundantes",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 30,
+    "linha_fim": 42,
+    "justificativa": "A montagem consulta novamente as transações gerais e cada forma de pagamento para o mesmo período, repetindo acesso e carregamento de dados."
+   },
+   {
+    "nome": "Agregação em memória",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 55,
+    "linha_fim": 135,
+    "justificativa": "Todas as transações do período são materializadas para executar filtros e agregações que poderiam ser delegados ao banco de dados."
+   },
+   {
+    "nome": "Consulta com lista potencialmente grande",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 150,
+    "linha_fim": 152,
+    "justificativa": "Todos os IDs de transações são carregados para formar um whereIn potencialmente muito grande, elevando consumo de memória e custo da consulta."
+   },
+   {
+    "nome": "Agregação em memória",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 152,
+    "linha_fim": 230,
+    "justificativa": "Todos os itens encontrados são materializados antes de executar contagens, somas, médias e filtros que poderiam ocorrer no banco."
+   },
+   {
+    "nome": "Agregação em memória",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 246,
+    "linha_fim": 328,
+    "justificativa": "Todas as sangrias do período são carregadas para memória para calcular as métricas do relatório."
+   },
+   {
+    "nome": "Agregação em memória",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 344,
+    "linha_fim": 413,
+    "justificativa": "Todas as entradas do período são materializadas e posteriormente filtradas e agregadas pela coleção PHP."
+   },
+   {
+    "nome": "Agregação em memória",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 430,
+    "linha_fim": 499,
+    "justificativa": "Todos os registros de caixa do período são carregados para efetuar agregações em memória."
+   },
+   {
+    "nome": "Carregamento integral de tabela",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 513,
+    "linha_fim": 594,
+    "justificativa": "Estoque::all carrega a tabela inteira e realiza todas as estatísticas em memória, o que não escala com o volume de produtos."
+   },
+   {
+    "nome": "Carregamento integral de tabela",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 607,
+    "linha_fim": 657,
+    "justificativa": "Estoque_aux::all carrega todas as variações cadastradas para calcular agregações em memória."
+   },
+   {
+    "nome": "Carregamento integral de tabela",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 670,
+    "linha_fim": 730,
+    "justificativa": "Cliente::all materializa todos os clientes apenas para produzir contagens e agregações, causando consumo crescente de memória."
+   },
+   {
+    "nome": "Agregação em memória",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 746,
+    "linha_fim": 825,
+    "justificativa": "Todas as transações em dinheiro são carregadas antes de executar filtros e estatísticas que poderiam ser calculados no banco."
+   },
+   {
+    "nome": "Agregação em memória",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 841,
+    "linha_fim": 920,
+    "justificativa": "Todas as transações no crédito são materializadas para realizar agregações em PHP."
+   },
+   {
+    "nome": "Agregação em memória",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 936,
+    "linha_fim": 1013,
+    "justificativa": "Todas as transações no débito são materializadas para realizar agregações em PHP."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 74,
+    "linha_fim": 134,
+    "justificativa": "Limites de parcelas, valores e descontos como 1, 20, 100 e 10 estão embutidos diretamente nas regras do relatório."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 167,
+    "linha_fim": 230,
+    "justificativa": "Limites monetários e de quantidade como 50, 10 e 1 estão codificados diretamente no método."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 256,
+    "linha_fim": 300,
+    "justificativa": "Os limites monetários de 100 e 50 são repetidos diretamente nos filtros de sangria."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 374,
+    "linha_fim": 413,
+    "justificativa": "Os limites de 50 e 100 estão embutidos nos cálculos de entradas e deveriam ser constantes ou regras nomeadas."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 758,
+    "linha_fim": 817,
+    "justificativa": "Limites de desconto, parcelamento e valor são codificados diretamente e repetem regras presentes em outras seções."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 853,
+    "linha_fim": 920,
+    "justificativa": "Limites como 10, 1 e 100 estão codificados diretamente nos indicadores de vendas no crédito."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 968,
+    "linha_fim": 1008,
+    "justificativa": "Limites como 3, 100 e 0 estão embutidos nos indicadores de vendas no débito."
+   },
+   {
+    "nome": "Códigos de domínio mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 89,
+    "linha_fim": 102,
+    "justificativa": "Os códigos de pagamento DI e CR são usados sem constantes ou enumeração que expressem seu significado."
+   },
+   {
+    "nome": "Códigos de domínio mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 680,
+    "linha_fim": 695,
+    "justificativa": "Os códigos I, F e M para sexo estão embutidos diretamente no relatório sem enumeração ou constantes nomeadas."
+   },
+   {
+    "nome": "Códigos de domínio mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 746,
+    "linha_fim": 748,
+    "justificativa": "O código DI da forma de pagamento é utilizado diretamente como string literal."
+   },
+   {
+    "nome": "Códigos de domínio mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 841,
+    "linha_fim": 843,
+    "justificativa": "O código CR da forma de pagamento é utilizado diretamente como string literal."
+   },
+   {
+    "nome": "Códigos de domínio mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 936,
+    "linha_fim": 938,
+    "justificativa": "O código DE da forma de pagamento é utilizado diretamente como string literal."
+   },
+   {
+    "nome": "Ausência de tipagem explícita",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 28,
+    "linha_fim": 28,
+    "justificativa": "O método público não declara tipos dos parâmetros nem tipo de retorno, reduzindo as garantias de contrato da API."
+   },
+   {
+    "nome": "Convenção de nomes inconsistente",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 7,
+    "linha_fim": 9,
+    "justificativa": "Os nomes Entrada_caixa e Estoque_aux usam sublinhados em classes e destoam da convenção StudlyCase adotada pelo PSR-12."
+   }
+  ]
+ },
+ "desvios": []
+}

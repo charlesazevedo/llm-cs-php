@@ -1,0 +1,202 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C25-v2",
+ "cs_id": "C25",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "fcaadde7b172d11e3dbd0b8d900c540dbc8afeec2f0b257edc9e2db0f993fc07",
+ "inicio": "2026-10-05T14:19:41+00:00",
+ "duracao_s": 89.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3449,
+ "tokens_saida": 8401,
+ "tokens_raciocinio": 6625,
+ "custo": 0.016787056,
+ "id_requisicao": "gen-1791209982-lJrWOcmsShrEoPWtOg6a",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 88358
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de moeda com str_replace é repetida, podendo ser extraída para um método utilitário."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "A conversão de moeda com str_replace é repetida, podendo ser extraída para um método utilitário."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 145,
+    "justificativa": "A conversão de moeda com str_replace é repetida, podendo ser extraída para um método utilitário."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 148,
+    "linha_fim": 148,
+    "justificativa": "A conversão de moeda com str_replace é repetida, podendo ser extraída para um método utilitário."
+   },
+   {
+    "nome": "Side Effect Before Save",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 41,
+    "linha_fim": 42,
+    "justificativa": "A flag 'caixa_aberto' é definida como true antes de salvar o caixa, sem transação, podendo deixar estado inconsistente se a persistência falhar."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Este bloco de processamento de transações é repetido em historicoAPI, violando DRY."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 83,
+    "justificativa": "Dentro do loop, são feitas consultas adicionais a Venda e Estoque para cada transação, resultando em problema de performance."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Os códigos de pagamento 'DI', 'CR', 'DE' são strings mágicas usadas diretamente, dificultando manutenção."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 98,
+    "justificativa": "O método fecharCaixaView tem muitas responsabilidades e linhas, dificultando leitura e manutenção."
+   },
+   {
+    "nome": "Inconsistent Error Handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "O catch retorna $e->errorInfo[2] diretamente, sem JSON, inconsistente com outros métodos que retornam respostas estruturadas."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 170,
+    "justificativa": "A instrução return é inalcançável porque todos os caminhos anteriores já retornam, sendo código morto."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 206,
+    "justificativa": "Os parâmetros $type e $date não são validados em nenhum dos blocos condicionais, podendo causar erros se inválidos ou mal formatados."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Este bloco de processamento de transações é repetido em fecharCaixaView e no trecho de range, violando DRY."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 195,
+    "justificativa": "Dentro do loop, são feitas consultas adicionais a Venda e Estoque para cada transação, resultando em problema de performance."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Os códigos de pagamento 'DI', 'CR', 'DE' são strings mágicas usadas diretamente, dificultando manutenção."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Este bloco de processamento de transações é repetido em fecharCaixaView e no trecho de day, violando DRY."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 216,
+    "justificativa": "Dentro do loop, são feitas consultas adicionais a Venda e Estoque para cada transação, resultando em problema de performance."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Os códigos de pagamento 'DI', 'CR', 'DE' são strings mágicas usadas diretamente, dificultando manutenção."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI tem muitas responsabilidades e linhas, dificultando leitura e manutenção."
+   },
+   {
+    "nome": "Typo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 229,
+    "justificativa": "O nome da propriedade 'rage' provavelmente é um erro de digitação para 'range', indicando má nomeação."
+   }
+  ]
+ },
+ "desvios": []
+}

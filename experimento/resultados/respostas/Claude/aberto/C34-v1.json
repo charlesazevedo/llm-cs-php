@@ -1,0 +1,130 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C34-v1",
+ "cs_id": "C34",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "bfd392b8be38ef01a91066058caa06b6031f2a52f967ce5b07b6d7dbf04aaf57",
+ "inicio": "2026-10-05T15:19:34+00:00",
+ "duracao_s": 11.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5267,
+ "tokens_saida": 1230,
+ "tokens_raciocinio": 0,
+ "custo": 0.045668,
+ "id_requisicao": "gen-1791213574-tyBnXHrS1O6ATiuJL33D",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 11040
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 219,
+    "justificativa": "Os laços que formatam transações e montam os detalhes dos produtos são repetidos quase idênticos nos ramos 'day' e 'range' (e também em fecharCaixaView)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O mesmo processamento de transações (pagamento, desconto, total e detalhes) é repetido em historicoAPI."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método fecharCaixaView acumula consultas, formatação monetária, tradução de códigos e montagem de detalhes em um único bloco extenso."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI trata três tipos de consulta com lógica extensa e duplicada em uma cadeia de condicionais."
+   },
+   {
+    "nome": "Switch Statements",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 221,
+    "justificativa": "A cadeia if/else sobre a string $type escolhe o comportamento em vez de usar métodos ou estratégias separadas."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de valor monetário com str_replace([\".\",\",\"],[\"\",\".\"]) é repetida em vários métodos (linhas 39-40, 119, 145, 148) em vez de estar em um helper."
+   },
+   {
+    "nome": "Primitive Obsession",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 89,
+    "linha_fim": 96,
+    "justificativa": "Valores monetários são manipulados como strings e floats formatados manualmente com number_format repetido, sem um objeto de valor para dinheiro."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return $request->valor nunca é alcançado, pois todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 43,
+    "linha_fim": 52,
+    "justificativa": "A montagem das respostas JSON de sucesso/erro com 'success' em string se repete em vários métodos (também nas linhas 104-107, 123-126 e 151-167)."
+   },
+   {
+    "nome": "Inconsistent Comment",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 233,
+    "linha_fim": 240,
+    "justificativa": "O docblock tem uma tag @param float sem nome nem descrição para $retirada, ficando incompleto em relação à assinatura."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,65 @@
+entrada,cs_id,modelo,modo,nome_dado,cs_possiveis,trechos
+C09-v1,C09,ChatGPT,aberto,Código duplicado,C09,resources/views/admin/caixa/nova-entrada.blade.php:9-19
+C09-v1,C09,ChatGPT,aberto,Código duplicado,C09,resources/views/admin/caixa/nova-sangria.blade.php:9-19
+C09-v1,C09,ChatGPT,aberto,Código duplicado,C09,resources/views/admin/caixa/nova-entrada.blade.php:21-40
+C09-v1,C09,ChatGPT,aberto,Código duplicado,C09,resources/views/admin/caixa/nova-sangria.blade.php:21-40
+C09-v2,C09,ChatGPT,aberto,Código duplicado,C09,app/Http/Controllers/Admin/CaixaController.php:243-298
+C11-v1,C11,ChatGPT,aberto,Classe excessivamente grande,"C11,C14,C16,C17",app/Pdv/RelatorioGerencialDeCaixa.php:18-1018
+C14-v2,C14,ChatGPT,aberto,Classe Deus,"C11,C14,C15,C17,C20,C21",app/Pdv/PainelGerencial.php:18-570
+C17-v1,C17,ChatGPT,aberto,Classe grande,"C11,C14,C16,C17",app/Pdv/PainelDoCaixa.php:13-430
+C17-v2,C17,ChatGPT,aberto,Classe Deus,"C11,C14,C15,C17,C20,C21",app/Pdv/PainelDoCaixa.php:17-830
+C18-v1,C18,ChatGPT,aberto,Switch extenso por código de tipo,C18,app/Http/Controllers/Admin/CaixaController.php:240-277
+C18-v2,C18,ChatGPT,aberto,Switch extenso,C18,app/Http/Controllers/Admin/CaixaController.php:240-307
+C20-v2,C20,ChatGPT,aberto,Classe Deus (God Class),"C11,C14,C15,C17,C20,C21",app/Pdv/AnalisadorDeVendas.php:14-527
+C20-v2,C20,ChatGPT,aberto,Complexidade ciclomática elevada,"C19,C20",app/Pdv/AnalisadorDeVendas.php:100-120
+C20-v2,C20,ChatGPT,aberto,Complexidade ciclomática elevada,"C19,C20",app/Pdv/AnalisadorDeVendas.php:132-159
+C25-v1,C25,ChatGPT,aberto,Código morto,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:233-238
+C25-v2,C25,ChatGPT,aberto,Código morto,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:233-238
+C09-v1,C09,Claude,aberto,Duplicated Code,C09,resources/views/admin/caixa/nova-entrada.blade.php:21-40
+C09-v1,C09,Claude,aberto,Duplicated Code,C09,resources/views/admin/caixa/nova-sangria.blade.php:21-40
+C09-v2,C09,Claude,aberto,Duplicated Code,C09,app/Http/Controllers/Admin/CaixaController.php:278-298
+C11-v2,C11,Claude,aberto,Large Class,"C11,C14,C16,C17",app/Pdv/RelatorioGerencialDeCaixa.php:18-2017
+C14-v1,C14,Claude,aberto,Large Class,"C11,C14,C16,C17",app/Pdv/PainelGerencial.php:14-301
+C14-v2,C14,Claude,aberto,Large Class,"C11,C14,C16,C17",app/Pdv/PainelGerencial.php:18-571
+C16-v2,C16,Claude,aberto,Large Class,"C11,C14,C16,C17",app/Pdv/ResumoDoFechamento.php:13-315
+C17-v1,C17,Claude,aberto,Large Class,"C11,C14,C16,C17",app/Pdv/PainelDoCaixa.php:13-431
+C17-v2,C17,Claude,aberto,Large Class,"C11,C14,C16,C17",app/Pdv/PainelDoCaixa.php:17-830
+C18-v1,C18,Claude,aberto,Switch Statements,C18,app/Http/Controllers/Admin/CaixaController.php:240-278
+C18-v2,C18,Claude,aberto,Switch Statements,C18,app/Http/Controllers/Admin/CaixaController.php:240-307
+C25-v1,C25,Claude,aberto,Dead Code,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:233-238
+C25-v2,C25,Claude,aberto,Dead Code,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:238-238
+C25-v3,C25,Claude,aberto,Dead Code,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:233-246
+C26-v1,C26,Claude,aberto,Dead Code,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:240-243
+C26-v2,C26,Claude,aberto,Dead Code,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:241-244
+C27-v1,C27,Claude,aberto,Dead Code,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:241-241
+C08-v2,C08,Gemini,aberto,Improper Separation of Concerns,"C05,C06,C07,C08",app/Pdv/FormularioDeSangria.php:33-44
+C08-v2,C08,Gemini,aberto,Improper Separation of Concerns,"C05,C06,C07,C08",app/Pdv/ScriptDoFormularioDeSangria.php:15-26
+C09-v1,C09,Gemini,aberto,Duplicate Code,C09,resources/views/admin/caixa/nova-entrada.blade.php:21-40
+C09-v1,C09,Gemini,aberto,Duplicate Code,C09,resources/views/admin/caixa/nova-sangria.blade.php:21-40
+C11-v1,C11,Gemini,aberto,Large Class,"C11,C14,C16,C17",app/Pdv/RelatorioGerencialDeCaixa.php:18-1018
+C11-v2,C11,Gemini,aberto,God Class (Large Class),"C11,C14,C15,C16,C17,C20,C21",app/Pdv/RelatorioGerencialDeCaixa.php:18-2017
+C14-v2,C14,Gemini,aberto,God Class,"C11,C14,C15,C17,C20,C21",app/Pdv/PainelGerencial.php:18-571
+C16-v1,C16,Gemini,aberto,Data Class (Classe de Dados),"C16,C17",app/Pdv/ResumoDoFechamento.php:10-181
+C17-v1,C17,Gemini,aberto,God Class (Classe Deus),"C11,C14,C15,C17,C20,C21",app/Pdv/PainelDoCaixa.php:13-431
+C17-v1,C17,Gemini,aberto,Violação de Encapsulamento (Data Class),"C16,C17",app/Pdv/PainelDoCaixa.php:20-265
+C17-v2,C17,Gemini,aberto,Large Class,"C11,C14,C16,C17",app/Pdv/PainelDoCaixa.php:17-830
+C18-v1,C18,Gemini,aberto,Switch Statement,C18,app/Http/Controllers/Admin/CaixaController.php:242-275
+C18-v2,C18,Gemini,aberto,Switch Statements,C18,app/Http/Controllers/Admin/CaixaController.php:242-304
+C20-v2,C20,Gemini,aberto,God Class,"C11,C14,C15,C17,C20,C21",app/Pdv/AnalisadorDeVendas.php:14-527
+C25-v3,C25,Gemini,aberto,Dead Code,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:233-246
+C26-v2,C26,Gemini,aberto,Dead Code,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:241-245
+C09-v1,C09,DeepSeek,aberto,Código Duplicado,C09,resources/views/admin/caixa/nova-entrada.blade.php:9-40
+C09-v1,C09,DeepSeek,aberto,Código Duplicado,C09,resources/views/admin/caixa/nova-sangria.blade.php:9-40
+C11-v1,C11,DeepSeek,aberto,Large Class,"C11,C14,C16,C17",app/Pdv/RelatorioGerencialDeCaixa.php:18-1018
+C11-v2,C11,DeepSeek,aberto,Large Class,"C11,C14,C16,C17",app/Pdv/RelatorioGerencialDeCaixa.php:18-2017
+C14-v1,C14,DeepSeek,aberto,Classe Grande,"C11,C14,C16,C17",app/Pdv/PainelGerencial.php:14-301
+C14-v2,C14,DeepSeek,aberto,God Class,"C11,C14,C15,C17,C20,C21",app/Pdv/PainelGerencial.php:18-571
+C17-v1,C17,DeepSeek,aberto,Large Class,"C11,C14,C16,C17",app/Pdv/PainelDoCaixa.php:13-431
+C17-v2,C17,DeepSeek,aberto,Large Class,"C11,C14,C16,C17",app/Pdv/PainelDoCaixa.php:17-830
+C20-v1,C20,DeepSeek,aberto,God Class,"C11,C14,C15,C17,C20,C21",app/Pdv/AnalisadorDeVendas.php:12-250
+C20-v2,C20,DeepSeek,aberto,Large Class (God Class),"C11,C14,C15,C16,C17,C20,C21",app/Pdv/AnalisadorDeVendas.php:14-527
+C25-v1,C25,DeepSeek,aberto,Dead Code,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:238-238
+C25-v3,C25,DeepSeek,aberto,Código Morto,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:233-246
+C26-v1,C26,DeepSeek,aberto,Código morto,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:240-243
+C26-v2,C26,DeepSeek,aberto,Dead Code,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:241-244
+C27-v1,C27,DeepSeek,aberto,Dead Code,"C25,C26,C27,C28",app/Http/Controllers/Admin/CaixaController.php:241-241

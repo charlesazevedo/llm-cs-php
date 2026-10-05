@@ -1,0 +1,88 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C04-v2",
+ "cs_id": "C04",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5f474615c20c3e513c8e6c74d3099d353f98dbc297c8467d2b97c82761d9e994",
+ "inicio": "2026-10-03T23:09:41+00:00",
+ "duracao_s": 17.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 1531,
+ "tokens_saida": 2229,
+ "tokens_raciocinio": 1945,
+ "custo": 0.02981,
+ "id_requisicao": "gen-1791068981-sp1OODB6qxOAhuPH5cxU",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 16936
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/ConsultaDeCaixaController.php",
+    "linha_inicio": 11,
+    "linha_fim": 31,
+    "justificativa": "O código deste controller é estruturalmente idêntico ao de outros controllers do sistema, alterando apenas o modelo injetado e a permissão do middleware."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/ConsultaDeClientesController.php",
+    "linha_inicio": 11,
+    "linha_fim": 31,
+    "justificativa": "O código deste controller é estruturalmente idêntico ao de outros controllers do sistema, alterando apenas o modelo injetado e a permissão do middleware."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/ConsultaDeEstoqueController.php",
+    "linha_inicio": 11,
+    "linha_fim": 31,
+    "justificativa": "O código deste controller é estruturalmente idêntico ao de outros controllers do sistema, alterando apenas o modelo injetado e a permissão do middleware."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/ConsultaDeVendasController.php",
+    "linha_inicio": 11,
+    "linha_fim": 31,
+    "justificativa": "O código deste controller é estruturalmente idêntico ao de outros controllers do sistema, alterando apenas o modelo injetado e a permissão do middleware."
+   }
+  ]
+ },
+ "desvios": []
+}

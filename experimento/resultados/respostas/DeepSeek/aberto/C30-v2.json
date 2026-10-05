@@ -1,0 +1,174 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C30-v2",
+ "cs_id": "C30",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "6626da370d57abbada5318b5b99021bf6378f0608efb9bd32568dd02718661c3",
+ "inicio": "2026-10-05T15:18:06+00:00",
+ "duracao_s": 53.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3582,
+ "tokens_saida": 5044,
+ "tokens_raciocinio": 3674,
+ "custo": 0.010227976,
+ "id_requisicao": "gen-1791213487-YJJOnV9dQH02ZTrp1gwY",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 53290
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Trecho duplica a lógica de construção dos detalhes da transação com consultas aninhadas e formatação, repetida em historicoAPI."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesma lógica de construção de detalhes de transação duplicada do método fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Mesma lógica de construção de detalhes duplicada novamente, podendo ser extraída para um método auxiliar."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método extenso que realiza múltiplas responsabilidades: buscar transações, formatar valores, iterar vendas e montar view."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método longo com várias ramificações e loops aninhados, difícil de manter e testar."
+   },
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 250,
+    "justificativa": "Controlador acumula muitas responsabilidades (abertura, fechamento, sangria, adição, histórico), indicando baixa coesão."
+   },
+   {
+    "nome": "Magic Numbers/Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Códigos de pagamento 'DI','CR','DE' são strings mágicas espalhadas pelo código, dificultando manutenção."
+   },
+   {
+    "nome": "Magic Numbers/Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Uso repetido de strings mágicas para tipos de pagamento, sem constantes."
+   },
+   {
+    "nome": "Magic Numbers/Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Novamente strings mágicas para pagamento, duplicando valores literais."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Loop executa consultas ao banco a cada iteração para vendas e estoque, causando N+1 queries."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Dentro do loop, consultas Venda e Estoque são realizadas por transação, gerando N+1."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Mesmo problema N+1 ao buscar vendas e estoque dentro do loop de transações."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 170,
+    "justificativa": "Código inalcançável após bloco if/else que sempre retorna em ambos os caminhos."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 241,
+    "linha_fim": 249,
+    "justificativa": "Métodos formatarSaldo e formatarEmReais não utilizados em nenhum ponto do controlador, indicando código morto."
+   },
+   {
+    "nome": "Inconsistent Error Handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "Bloco catch retorna string pura em vez de JSON, inconsistente com os demais métodos."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "Uso de $e->errorInfo[2] fora do escopo do catch, pois $e não está definido no else."
+   }
+  ]
+ },
+ "desvios": []
+}

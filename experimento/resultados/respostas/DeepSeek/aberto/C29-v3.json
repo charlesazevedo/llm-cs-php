@@ -1,0 +1,76 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C29-v3",
+ "cs_id": "C29",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "02e2186ff8b285a633e7aa1f3825ddc749f4b464ee5baa147ffe761fb9a0c5d2",
+ "inicio": "2026-10-05T14:34:20+00:00",
+ "duracao_s": 53.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 663,
+ "tokens_saida": 4126,
+ "tokens_raciocinio": 3950,
+ "custo": 0.008443732,
+ "id_requisicao": "gen-1791210860-XjOk5XAxF8sA8JsjiVJ9",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 53303
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Empty catch block",
+    "arquivo": "app/Pdv/ExportadorDeFechamento.php",
+    "linha_inicio": 28,
+    "linha_fim": 29,
+    "justificativa": "A exceção genérica é capturada e ignorada, ocultando possíveis erros."
+   },
+   {
+    "nome": "Ignored return value",
+    "arquivo": "app/Pdv/ExportadorDeFechamento.php",
+    "linha_inicio": 25,
+    "linha_fim": 25,
+    "justificativa": "O retorno de file_put_contents não é verificado, podendo mascarar falha na escrita do arquivo."
+   }
+  ]
+ },
+ "desvios": []
+}

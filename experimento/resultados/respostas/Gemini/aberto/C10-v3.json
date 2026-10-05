@@ -1,0 +1,67 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C10-v3",
+ "cs_id": "C10",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "7641c5e47a050955be289e4d912570967b455e3f379bd61de70f389b97f73a4f",
+ "inicio": "2026-10-03T23:13:23+00:00",
+ "duracao_s": 6.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 375,
+ "tokens_saida": 658,
+ "tokens_raciocinio": 573,
+ "custo": 0.008646,
+ "id_requisicao": "gen-1791069204-wX3u5fMGlTkLEGEhT0ZP",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 6583
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Tags HTML mal aninhadas",
+    "arquivo": "resources/views/admin/caixa/aviso.blade.php",
+    "linha_inicio": 11,
+    "linha_fim": 11,
+    "justificativa": "A tag <strong> é fechada antes da tag <em> que foi aberta dentro dela, quebrando a estrutura do HTML."
+   }
+  ]
+ },
+ "desvios": []
+}

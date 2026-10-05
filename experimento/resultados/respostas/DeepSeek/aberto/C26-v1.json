@@ -1,0 +1,237 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C26-v1",
+ "cs_id": "C26",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "17538b6276dde297a03e95e8a668369926a2e4eba309fcb5a18d5a0cb77cc5d3",
+ "inicio": "2026-10-05T14:22:45+00:00",
+ "duracao_s": 77.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3495,
+ "tokens_saida": 8036,
+ "tokens_raciocinio": 5854,
+ "custo": 0.016094716,
+ "id_requisicao": "gen-1791210165-RkeGe5xxvLvSjVxiCkbF",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 77093
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicação de código",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Conversão de moeda duplicada com str_replace nas linhas 39-40, 119, 145 e 148."
+   },
+   {
+    "nome": "Duplicação de código",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Conversão de moeda duplicada com str_replace nas linhas 39-40, 119, 145 e 148."
+   },
+   {
+    "nome": "Duplicação de código",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 145,
+    "justificativa": "Conversão de moeda duplicada com str_replace nas linhas 39-40, 119, 145 e 148."
+   },
+   {
+    "nome": "Duplicação de código",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 148,
+    "linha_fim": 148,
+    "justificativa": "Conversão de moeda duplicada com str_replace nas linhas 39-40, 119, 145 e 148."
+   },
+   {
+    "nome": "Duplicação de código",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de processamento de transações duplicado em fecharCaixaView e historicoAPI (linhas 186-198 e 207-219)."
+   },
+   {
+    "nome": "Duplicação de código",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Bloco de processamento de transações duplicado do método fecharCaixaView (linhas 73-86) e também em 207-219."
+   },
+   {
+    "nome": "Duplicação de código",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Bloco de processamento de transações duplicado do método fecharCaixaView (linhas 73-86) e também em 186-198."
+   },
+   {
+    "nome": "Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Loop sobre transações executa consultas a Venda e Estoque repetidamente, causando N+1 queries."
+   },
+   {
+    "nome": "Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Loop sobre transações executa consultas a Venda e Estoque repetidamente, causando N+1 queries."
+   },
+   {
+    "nome": "Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Loop sobre transações executa consultas a Venda e Estoque repetidamente, causando N+1 queries."
+   },
+   {
+    "nome": "Tratamento de exceção inadequado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 49,
+    "linha_fim": 52,
+    "justificativa": "Retorna mensagem de erro do banco de dados diretamente ao usuário, vazando informações sensíveis."
+   },
+   {
+    "nome": "Tratamento de exceção inadequado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 129,
+    "justificativa": "Retorna mensagem de erro do banco de dados sem formato JSON consistente com o restante da API."
+   },
+   {
+    "nome": "Tratamento de exceção inadequado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 160,
+    "justificativa": "Retorna mensagem de erro do banco de dados diretamente ao usuário, vazando informações sensíveis."
+   },
+   {
+    "nome": "Uso de variável não definida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 166,
+    "justificativa": "No bloco else, tenta acessar $e->errorInfo[2] mas $e não existe nesse escopo."
+   },
+   {
+    "nome": "Código morto",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Linha de retorno inacessível após o else, nunca executada."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método fecharCaixaView executa múltiplas responsabilidades (consultas, formatação, lógica) e é extenso."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método historicoAPI contém lógica duplicada para diferentes tipos e é extenso."
+   },
+   {
+    "nome": "Erro de digitação em string",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Usa 'Débido' em vez de 'Débito' na substituição de pagamento."
+   },
+   {
+    "nome": "Erro de digitação em string",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Usa 'Débido' em vez de 'Débito' na substituição de pagamento."
+   },
+   {
+    "nome": "Erro de digitação em string",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Usa 'Débido' em vez de 'Débito' na substituição de pagamento."
+   },
+   {
+    "nome": "Erro de digitação em nome de campo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 225,
+    "justificativa": "Acessa $request->rage, provavelmente erro de digitação para $request->range."
+   },
+   {
+    "nome": "Código morto",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 240,
+    "linha_fim": 243,
+    "justificativa": "Função privada formatarEmReais não é utilizada em nenhum lugar do controller."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 58,
+    "justificativa": "Não valida dados do request (ex: valor monetário) antes de usar."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "Não valida dados do request (ex: valor monetário) antes de usar."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 140,
+    "linha_fim": 170,
+    "justificativa": "Não valida dados do request (ex: valor monetário) antes de usar."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,123 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C26-v2",
+ "cs_id": "C26",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "faa1a3c5a20fa1840dda72ff65faa73bbf9dc0f520ca56100bf2f7fca99ff1a6",
+ "inicio": "2026-10-05T14:20:26+00:00",
+ "duracao_s": 9.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5293,
+ "tokens_saida": 1015,
+ "tokens_raciocinio": 0,
+ "custo": 0.041472,
+ "id_requisicao": "gen-1791210027-ydHhqd2CMtySSGlk6Tsi",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 9418
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O laço que formata transações e monta os detalhes das vendas está repetido quase idêntico nos ramos 'day' e 'range' e em fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Cópia do mesmo bloco de formatação de transações do ramo 'day', em vez de extrair um método reutilizável."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Mesma lógica de formatação de transações e consulta de vendas/estoque repetida em historicoAPI."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 241,
+    "linha_fim": 244,
+    "justificativa": "O método privado converterValorDigitado nunca é usado, embora a mesma conversão com str_replace esteja espalhada pelo controller."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão str_replace([\".\",\",\"],[\"\",\".\"]) do valor digitado é repetida em vários métodos (linhas 39-40, 119, 145, 148) em vez de usar um helper."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView acumula consultas, formatação de valores, montagem de detalhes e cálculo de totais em um único método."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI trata três tipos de consulta com lógica extensa e repetida em um único método condicional."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return final é inalcançável porque todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 92,
+    "linha_fim": 96,
+    "justificativa": "A formatação number_format($x, 2, ',', '.') é repetida diversas vezes ao longo da classe sem um método auxiliar."
+   }
+  ]
+ },
+ "desvios": []
+}

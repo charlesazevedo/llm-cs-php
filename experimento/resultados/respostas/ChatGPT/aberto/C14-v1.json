@@ -1,0 +1,165 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C14-v1",
+ "cs_id": "C14",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "b59538a0b53bea438cd5077a06d36d54002a32ccdc829ee650d9c74aa502f432",
+ "inicio": "2026-10-05T12:50:56+00:00",
+ "duracao_s": 27.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 2908,
+ "tokens_saida": 2434,
+ "tokens_raciocinio": 1445,
+ "custo": 0.0316085,
+ "id_requisicao": "gen-1791204656-PDxnhVsX7ZfrxKdwNquK",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 27610
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe com múltiplas responsabilidades",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 14,
+    "linha_fim": 301,
+    "justificativa": "A classe concentra indicadores de vendas, pagamentos, parcelamentos, caixa, movimentações e estoque, acumulando responsabilidades de vários domínios."
+   },
+   {
+    "nome": "Acoplamento forte a implementações de persistência",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 107,
+    "linha_fim": 299,
+    "justificativa": "Os métodos acessam modelos Eloquent estaticamente, dificultando a substituição das fontes de dados e a criação de testes unitários isolados."
+   },
+   {
+    "nome": "Consultas agregadas repetidas",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 107,
+    "linha_fim": 140,
+    "justificativa": "Quatro consultas independentes sobre as transações do dia são executadas para calcular soma, contagem, média e máximo, embora possam ser consolidadas em uma única agregação."
+   },
+   {
+    "nome": "Consultas agregadas repetidas",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 147,
+    "linha_fim": 170,
+    "justificativa": "Os totais por forma de pagamento são obtidos por chamadas separadas, provocando múltiplos acessos às mesmas transações do dia."
+   },
+   {
+    "nome": "Consultas agregadas repetidas",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 177,
+    "linha_fim": 200,
+    "justificativa": "Contagem e soma das vendas parceladas e contagem das vendas à vista são calculadas em três consultas independentes à mesma fonte."
+   },
+   {
+    "nome": "Consultas duplicadas",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 207,
+    "linha_fim": 220,
+    "justificativa": "O mesmo registro de caixa da data atual é consultado duas vezes separadamente para recuperar os campos inicial e valor."
+   },
+   {
+    "nome": "Consultas agregadas repetidas",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 237,
+    "linha_fim": 250,
+    "justificativa": "A soma e a contagem das sangrias do dia são obtidas por duas consultas independentes que poderiam ser consolidadas."
+   },
+   {
+    "nome": "Consultas agregadas repetidas",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 257,
+    "linha_fim": 270,
+    "justificativa": "A soma e a contagem das entradas de caixa do dia são obtidas por duas consultas independentes que poderiam ser consolidadas."
+   },
+   {
+    "nome": "Literal mágico",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 147,
+    "linha_fim": 150,
+    "justificativa": "O código de pagamento 'DI' aparece diretamente na consulta sem uma constante ou enumeração que expresse seu significado."
+   },
+   {
+    "nome": "Dependência do relógio global",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 207,
+    "linha_fim": 220,
+    "justificativa": "A data atual é obtida diretamente com date(), tornando o comportamento dependente do relógio e fuso horário globais e dificultando testes determinísticos."
+   },
+   {
+    "nome": "Contrato de retorno impreciso",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 122,
+    "linha_fim": 140,
+    "justificativa": "Os métodos documentam retorno float, mas avg() e max() podem retornar null quando não existem vendas no dia."
+   },
+   {
+    "nome": "Contrato de retorno impreciso",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 202,
+    "linha_fim": 220,
+    "justificativa": "Os métodos documentam retorno float, mas value() pode retornar null quando não há registro de caixa para a data atual."
+   },
+   {
+    "nome": "Mistura de apresentação com regra de negócio",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 282,
+    "linha_fim": 290,
+    "justificativa": "O valor do estoque é devolvido já formatado em reais, introduzindo formatação de apresentação no serviço e tornando seu tipo inconsistente com os demais valores monetários."
+   },
+   {
+    "nome": "Nomenclatura inconsistente",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 5,
+    "linha_fim": 9,
+    "justificativa": "O nome de classe Entrada_caixa usa underscore enquanto os demais modelos seguem PascalCase, contrariando a convenção de nomenclatura PSR."
+   },
+   {
+    "nome": "Nomenclatura inconsistente",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 277,
+    "linha_fim": 280,
+    "justificativa": "A chamada Estoque::Total() começa com letra maiúscula, diferindo da convenção camelCase usada pelos demais métodos."
+   }
+  ]
+ },
+ "desvios": []
+}

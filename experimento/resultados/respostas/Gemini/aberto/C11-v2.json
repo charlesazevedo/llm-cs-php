@@ -1,0 +1,123 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C11-v2",
+ "cs_id": "C11",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "a0d5f31fe8b06d657e7b824904a9bac53766d58e156c15157800fe572e70cf8d",
+ "inicio": "2026-10-05T12:48:11+00:00",
+ "duracao_s": 39.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 28198,
+ "tokens_saida": 4895,
+ "tokens_raciocinio": 4019,
+ "custo": 0.115136,
+ "id_requisicao": "gen-1791204491-Ek9INWQCUQBph4gfhRAk",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 39042
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "God Class (Large Class)",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 18,
+    "linha_fim": 2017,
+    "justificativa": "A classe possui milhares de linhas e lida com domínios distintos como vendas, estoque, clientes e caixa, violando o Princípio da Responsabilidade Única."
+   },
+   {
+    "nome": "In-Memory Aggregation (Performance Smell)",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 65,
+    "linha_fim": 141,
+    "justificativa": "O método carrega todas as transações em memória com o método get() para realizar cálculos (count, max, sum) que deveriam ser processados no banco de dados."
+   },
+   {
+    "nome": "In-Memory Aggregation (Performance Smell)",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 495,
+    "linha_fim": 574,
+    "justificativa": "Carrega todos os registros na memória através do método Estoque::all() para extrair métricas estatísticas, comprometendo severamente a performance."
+   },
+   {
+    "nome": "In-Memory Aggregation (Performance Smell)",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 648,
+    "linha_fim": 719,
+    "justificativa": "Utiliza Cliente::all() para carregar todos os clientes em memória e realizar contagens na coleção do Laravel em vez de usar agregações SQL."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 729,
+    "linha_fim": 810,
+    "justificativa": "A estrutura de array e as lógicas de cálculo das métricas estão duplicadas em relação a outros métodos de listagem de vendas, alterando apenas os filtros iniciais."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 820,
+    "linha_fim": 901,
+    "justificativa": "Repetição excessiva da estrutura de construção do relatório, evidenciando a falta de abstração das métricas que se aplicam a diferentes filtros."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 911,
+    "linha_fim": 989,
+    "justificativa": "O código é estruturalmente idêntico aos demais métodos de relatórios de transações, ferindo o princípio DRY (Don't Repeat Yourself)."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 170,
+    "linha_fim": 176,
+    "justificativa": "Utilização de valores literais numéricos (como 50 e 10) diretamente no código, dificultando a manutenção e a clareza sobre suas regras de negócio."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 757,
+    "linha_fim": 764,
+    "justificativa": "Uso de números arbitrários para regras de negócio de parcelas e valores (3 e 100) sem estarem definidos como constantes semânticas na classe."
+   }
+  ]
+ },
+ "desvios": []
+}

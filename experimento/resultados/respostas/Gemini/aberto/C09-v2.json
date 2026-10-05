@@ -1,0 +1,123 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C09-v2",
+ "cs_id": "C09",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "fa92ddedbd0759c15b06fe55e44c8743c8bb5d7fe14e12e79dbd7f13e07f4aac",
+ "inicio": "2026-10-03T23:12:27+00:00",
+ "duracao_s": 24.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4681,
+ "tokens_saida": 3506,
+ "tokens_raciocinio": 2683,
+ "custo": 0.051434,
+ "id_requisicao": "gen-1791069147-fVMpFoZG2WNizrrm5qIq",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 24747
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas aos modelos Venda e Estoque são realizadas dentro de um laço de repetição de transações, o que gera sobrecarga no banco de dados."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "As consultas iterativas para Venda e Estoque ocorrem dentro de um loop, causando N+1 queries desnecessárias."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Da mesma forma que no método diário, executar queries para cada transação dentro do laço causa problema de desempenho via N+1."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Este bloco de formatação é uma cópia funcional do trecho utilizado no histórico por intervalo de datas e no fechamento de caixa."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "A lógica do laço repete integralmente as transformações do bloco superior, recomendando sua abstração para um método auxiliar."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 168,
+    "justificativa": "A variável de erro '$e' não existe no escopo deste bloco else, o que lançará um erro em tempo de execução."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A instrução return é inatingível porque as cláusulas if e else que a precedem sempre finalizam o fluxo com um retorno próprio."
+   },
+   {
+    "nome": "MVC Violation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 243,
+    "linha_fim": 263,
+    "justificativa": "A classe lida com a montagem direta de marcação HTML e JavaScript, responsabilidade que pertence exclusivamente à camada de visualização (Views)."
+   },
+   {
+    "nome": "MVC Violation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 278,
+    "linha_fim": 298,
+    "justificativa": "Construir e retornar templates HTML a partir do controlador quebra a separação de interesses adotada pelo padrão MVC."
+   }
+  ]
+ },
+ "desvios": []
+}

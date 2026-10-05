@@ -1,0 +1,123 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C26-v1",
+ "cs_id": "C26",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "17538b6276dde297a03e95e8a668369926a2e4eba309fcb5a18d5a0cb77cc5d3",
+ "inicio": "2026-10-05T14:20:06+00:00",
+ "duracao_s": 20.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5251,
+ "tokens_saida": 1025,
+ "tokens_raciocinio": 0,
+ "custo": 0.041504,
+ "id_requisicao": "gen-1791210006-6UiAvDphHSnfk4mED5RP",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 20682
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 219,
+    "justificativa": "Os blocos de 'day' e 'range' repetem praticamente o mesmo laço de formatação de transações e montagem de detalhes, também semelhante ao de fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O laço de formatação de transações e montagem de detalhes é duplicado do que aparece em historicoAPI."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView acumula consultas, formatação de vários modelos e montagem de dados para a view em um único método extenso."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI trata três tipos de consulta com lógica de formatação embutida em um único método longo baseado em condicionais."
+   },
+   {
+    "nome": "Switch Statements",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 221,
+    "justificativa": "A cadeia de if/else sobre a string $type seleciona comportamentos distintos que poderiam ser separados em métodos ou estratégias."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return $request->valor nunca é alcançado, pois todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 240,
+    "linha_fim": 243,
+    "justificativa": "O método privado formatarEmReais nunca é utilizado, enquanto a formatação é repetida manualmente em todo o controller."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de valor monetário com str_replace é repetida em vários métodos (linhas 39, 40, 119, 145, 148) em vez de centralizada."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 88,
+    "linha_fim": 97,
+    "justificativa": "O controller manipula e formata extensivamente atributos de Caixa e Transacoes, lógica que pertence aos modelos ou a uma camada de apresentação."
+   }
+  ]
+ },
+ "desvios": []
+}

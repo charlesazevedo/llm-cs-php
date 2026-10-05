@@ -1,0 +1,41 @@
+modelo,modo,cs_id,nome,trechos
+ChatGPT,aberto,C12,Método longo,60-100
+ChatGPT,aberto,C24,Código duplicado,145-148
+ChatGPT,aberto,C12,Método longo e condicional complexo,178-222
+ChatGPT,aberto,C24,Código duplicado,182-220
+ChatGPT,forcado,C30,item 2: Missing Function Comments,21-23; 25-29; 31-58; 60-100; 102-108; 110-112; 114-134; 136-138; 140-170; 172-176; 178-222; 224-231
+ChatGPT,forcado,C35,item 4: Brace Placement Rules,21-21; 25-25; 31-31; 60-60; 102-102; 110-110; 114-114; 136-136; 140-140; 172-172; 178-178; 224-224
+ChatGPT,forcado,C27,item 16: Unused Local Variable,73-86; 186-198; 207-219
+ChatGPT,forcado,C15,item 23: Too Many Public Methods,17-232
+ChatGPT,forcado,C36,item 29: Incorrect Spacing After Commas,27-27; 39-41; 56-56; 75-76; 81-81; 89-89; 98-98; 103-103; 111-111; 119-119; 137-137; 145-148; 178-180; 183-183; 188-189; 193-193; 202-206; 209-210; 214-214; 225-225; 230-230
+ChatGPT,forcado,C24,item 36: Duplicate Code,183-199; 205-220
+Claude,aberto,C24,Duplicated Code,186-219
+Claude,aberto,C24,Duplicated Code,73-86
+Claude,aberto,C12,Long Method,178-222
+Claude,aberto,C12,Long Method,60-100
+Claude,aberto,C24,Duplicated Code,39-40
+Claude,aberto,C24,Duplicated Code,92-96
+Claude,forcado,C30,item 2: Missing Function Comments,21-231
+Claude,forcado,C35,item 4: Brace Placement Rules,21-21; 25-25; 31-31; 60-60; 102-102; 110-110; 114-114; 136-136; 140-140; 172-172; 178-178; 224-224
+Claude,forcado,C27,item 16: Unused Local Variable,73-73; 186-186; 207-207
+Claude,forcado,C15,item 23: Too Many Public Methods,17-232
+Claude,forcado,C36,item 29: Incorrect Spacing After Commas,27-27; 39-41; 75-76; 81-81; 89-89; 98-98; 103-103; 111-111; 119-119; 137-137; 145-148; 178-183; 188-189; 193-193; 202-202; 206-206; 209-210; 214-214; 225-225; 230-230
+Claude,forcado,C24,item 36: Duplicate Code,73-86; 186-198; 207-219; 43-52; 151-167
+Gemini,aberto,C24,Duplicate Code,207-219
+Gemini,forcado,C30,item 2: Missing Function Comments,21-23; 25-29; 31-58; 60-100; 102-108; 110-112; 114-134; 136-138; 140-170; 172-176; 178-222; 224-231
+Gemini,forcado,C35,item 4: Brace Placement Rules,21-21; 25-25; 31-31; 60-60; 102-102; 110-110; 114-114; 136-136; 140-140; 172-172; 178-178; 224-224
+Gemini,forcado,C27,item 16: Unused Local Variable,73-73; 186-186; 207-207
+Gemini,forcado,C15,item 23: Too Many Public Methods,17-232
+Gemini,forcado,C36,item 29: Incorrect Spacing After Commas,27-27; 39-40; 75-76; 81-81; 98-98; 119-119; 145-148; 178-183; 188-194; 202-215; 225-225; 230-230
+Gemini,forcado,C24,item 36: Duplicate Code,73-86; 186-198; 207-219
+DeepSeek,aberto,C24,Código duplicado,73-86
+DeepSeek,aberto,C24,Código duplicado,186-198
+DeepSeek,aberto,C24,Código duplicado,207-219
+DeepSeek,aberto,C12,Método longo,60-100
+DeepSeek,aberto,C12,Método longo,178-222
+DeepSeek,forcado,C30,item 2: Missing Function Comments,21-23; 25-29; 31-58; 60-100; 102-108; 110-112; 114-134; 136-138; 140-170; 172-176; 178-222; 224-231
+DeepSeek,forcado,C35,item 4: Brace Placement Rules,1-232
+DeepSeek,forcado,C27,item 16: Unused Local Variable,73-86; 186-198; 207-219
+DeepSeek,forcado,C15,item 23: Too Many Public Methods,17-232
+DeepSeek,forcado,C36,item 29: Incorrect Spacing After Commas,27-27; 39-39; 40-40; 41-41; 56-56; 75-75; 76-76; 81-81; 89-89; 98-98; 111-111; 119-119; 137-137; 145-145; 148-148; 180-180; 183-183; 188-188; 189-189; 193-193; 203-203; 206-206; 209-209; 210-210; 214-214; 225-225; 230-230
+DeepSeek,forcado,C24,item 36: Duplicate Code,73-86; 186-198; 207-219

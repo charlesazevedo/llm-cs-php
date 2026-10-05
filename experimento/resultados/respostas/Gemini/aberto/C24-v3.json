@@ -1,0 +1,123 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C24-v3",
+ "cs_id": "C24",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "4cc73d36a9decf7633724404c2c3749c4bdb007e0c42e43519cc00c92ec55734",
+ "inicio": "2026-10-02T18:43:19+00:00",
+ "duracao_s": 21.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4795,
+ "tokens_saida": 3002,
+ "tokens_raciocinio": 2158,
+ "custo": 0.045614,
+ "id_requisicao": "gen-1790966599-EoMfrZdY3gZBQReOqBki",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 21563
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O bloco que busca e formata as vendas e estoques atrelados a uma transação está duplicado em vários métodos deste controlador."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Este bloco que formata detalhes e busca dependências de transação é idêntico ao encontrado nos métodos fecharCaixaView e na condição 'range'."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Código duplicado para formatar transações, consultar vendas e estoque associados, que também aparece em outros locais da classe."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas aos modelos Venda e Estoque são realizadas de forma iterativa dentro de um loop, o que gera o problema de N+1 queries."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O loop realiza chamadas ao banco de dados repetidas vezes (Venda::where e Estoque::where) em vez de usar eager loading."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Múltiplas consultas de Venda e Estoque dentro do loop prejudicam a performance da aplicação e sobrecarregam o banco de dados."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 240,
+    "linha_fim": 253,
+    "justificativa": "O cálculo do saldo esperado do dia e a formatação do resumo contêm exatamente a mesma lógica presente em ConferenciaDeFechamento."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/ConferenciaDeFechamento.php",
+    "linha_inicio": 24,
+    "linha_fim": 37,
+    "justificativa": "Esta lógica de cálculo de caixa e resumo de balanço está duplicada no método saldoEsperadoDoDia do CaixaController."
+   },
+   {
+    "nome": "Long Method / Switch Statement",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI verifica o tipo de intervalo por múltiplas condicionais if/else e tem responsabilidades em excesso, o que fere o princípio de responsabilidade única."
+   }
+  ]
+ },
+ "desvios": []
+}

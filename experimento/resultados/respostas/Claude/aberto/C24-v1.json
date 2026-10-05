@@ -1,0 +1,137 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C24-v1",
+ "cs_id": "C24",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "a1f91c050df2caeb7ca5ff1fc8088507218b8cf60f585297067799b4130f7b82",
+ "inicio": "2026-10-02T18:41:19+00:00",
+ "duracao_s": 12.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 6179,
+ "tokens_saida": 1252,
+ "tokens_raciocinio": 0,
+ "custo": 0.049756,
+ "id_requisicao": "gen-1790966480-xngVRZfiWnGIvKPXbrVc",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 12213
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 238,
+    "linha_fim": 283,
+    "justificativa": "Os métodos resumoParaFechamento e resumoParaConferencia são idênticos, com o mesmo cálculo de totais e a mesma resposta JSON."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 183,
+    "linha_fim": 220,
+    "justificativa": "Os ramos 'day' e 'range' repetem o mesmo laço que formata transações e monta os detalhes; o mesmo laço também aparece em fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Este laço de formatação de transações e montagem de detalhes é praticamente igual ao de historicoAPI."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView acumula consultas, formatação de valores, montagem de detalhes e cálculo de totais em um único método."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI trata três tipos de consulta com lógica extensa e repetida em cadeia de if/else dentro de um mesmo método."
+   },
+   {
+    "nome": "Switch Statements",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 221,
+    "justificativa": "O comportamento é escolhido por uma cadeia de condicionais sobre a string $type, em vez de usar polimorfismo ou métodos separados."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 238,
+    "linha_fim": 257,
+    "justificativa": "O controller calcula totais por forma de pagamento manipulando os dados de Transacoes, lógica que pertence ao próprio modelo."
+   },
+   {
+    "nome": "Primitive Obsession",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Valores monetários são tratados como strings convertidas com str_replace repetido em vários pontos, em vez de um objeto de valor Dinheiro."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "A conversão de moeda com str_replace é repetida duas vezes na mesma função e também em outros métodos."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return final é inalcançável, pois todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Os códigos de pagamento 'DI', 'CR' e 'DE' são strings mágicas espalhadas pelo código sem constantes que as nomeiem."
+   }
+  ]
+ },
+ "desvios": []
+}

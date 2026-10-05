@@ -1,0 +1,398 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C23-v1",
+ "cs_id": "C23",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "f77ae490ae976c9be1364583e757d899684970aa79752ca844fc739a8937a9b4",
+ "inicio": "2026-10-05T13:47:42+00:00",
+ "duracao_s": 86.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 5546,
+ "tokens_saida": 8921,
+ "tokens_raciocinio": 4941,
+ "custo": 0.02132394,
+ "id_requisicao": "gen-1791208063-DhHtZx9X95EKSNC6yLoO",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 86464
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/BoletoBancario.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/BoletoBancario.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/BoletoBancario.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/CartaoDeCredito.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/CartaoDeCredito.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/CartaoDeCredito.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/CartaoDeDebito.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/CartaoDeDebito.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/CartaoDeDebito.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/CarteiraDigital.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/CarteiraDigital.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/CarteiraDigital.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/Cashback.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/Cashback.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/Cashback.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/Cheque.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/Cheque.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/Cheque.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/ChequePreDatado.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/ChequePreDatado.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/ChequePreDatado.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/Crediario.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/Crediario.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/Crediario.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/CreditoDaLoja.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/CreditoDaLoja.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/CreditoDaLoja.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/Dinheiro.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/Dinheiro.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/Dinheiro.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/LinkDePagamento.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/LinkDePagamento.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/LinkDePagamento.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/Pix.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/Pix.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/Pix.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/TransferenciaBancaria.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/TransferenciaBancaria.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/TransferenciaBancaria.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/ValeAlimentacao.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/ValeAlimentacao.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/ValeAlimentacao.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/ValePresente.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/ValePresente.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/ValePresente.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/ValeRefeicao.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "Os métodos codigo(), nome() e taxa() são duplicados em todas as subclasses de FormaDePagamento, mudando apenas os valores retornados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/ValeRefeicao.php",
+    "linha_inicio": 35,
+    "linha_fim": 38,
+    "justificativa": "O valor da taxa é um número mágico hardcoded, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/ValeRefeicao.php",
+    "linha_inicio": 15,
+    "linha_fim": 18,
+    "justificativa": "O código da forma de pagamento é uma string mágica literal, devendo ser definida como constante."
+   }
+  ]
+ },
+ "desvios": []
+}

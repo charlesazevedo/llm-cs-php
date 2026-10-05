@@ -1,0 +1,90 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C15-v1",
+ "cs_id": "C15",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "cb12d25ecdc5d716e2a364bcfe7ea1d5c3334bf320e1d9fd61814a7ceeb20278",
+ "inicio": "2026-10-05T12:56:26+00:00",
+ "duracao_s": 99.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 1341,
+ "tokens_saida": 8180,
+ "tokens_raciocinio": 7793,
+ "custo": 0.016918132,
+ "id_requisicao": "gen-1791204986-19r2SfrszQh4Ex25PbSM",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 99161
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 19,
+    "linha_fim": 119,
+    "justificativa": "Vários métodos repetem a chamada Transacoes::today() para obter a base de consulta do dia, podendo ser extraída para um método auxiliar ou escopo."
+   },
+   {
+    "nome": "Inconsistent Abstraction",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 17,
+    "linha_fim": 40,
+    "justificativa": "O método totalEmDinheiro filtra por pagamento diretamente na query, enquanto totalNoCredito e totalNoDebito usam escopos do model, gerando inconsistência na abstração."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 19,
+    "linha_fim": 119,
+    "justificativa": "Valores como 'DI', 'pagamento', 'total', 'desconto' e 'parcelas' são usados como strings literais, devendo ser constantes ou métodos do model."
+   },
+   {
+    "nome": "Redundant Comments",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 12,
+    "linha_fim": 116,
+    "justificativa": "Comentários docblock apenas repetem o nome dos métodos, adicionando pouco valor e poluindo o código."
+   }
+  ]
+ },
+ "desvios": []
+}

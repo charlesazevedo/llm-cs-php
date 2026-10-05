@@ -1,0 +1,228 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C20-v2",
+ "cs_id": "C20",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5143e7811b19b1083628d7aab8b669fcf3ed06093f9b0a42208c297b2c7fd606",
+ "inicio": "2026-10-05T13:39:08+00:00",
+ "duracao_s": 31.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 5952,
+ "tokens_saida": 2741,
+ "tokens_raciocinio": 1195,
+ "custo": 0.0422885,
+ "id_requisicao": "gen-1791207548-7BBZpLf32CZCNEMFOexf",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 31628
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe Deus (God Class)",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 14,
+    "linha_fim": 527,
+    "justificativa": "A classe concentra acesso a dados, validação de vendas, análise de caixa, estoque, clientes, pagamentos e formatação, violando o princípio da responsabilidade única."
+   },
+   {
+    "nome": "Cadeia condicional extensa",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 23,
+    "linha_fim": 46,
+    "justificativa": "A classificação do ticket usa uma longa sequência de condições e limites embutidos, tornando a regra difícil de alterar e estender."
+   },
+   {
+    "nome": "Switch redundante",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 55,
+    "linha_fim": 84,
+    "justificativa": "Os sete casos usados apenas para traduzir o dia da semana poderiam ser substituídos por um mapa ou mecanismo de localização."
+   },
+   {
+    "nome": "Acoplamento direto à persistência",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 93,
+    "linha_fim": 97,
+    "justificativa": "O método consulta modelos Eloquent estaticamente, misturando regras de análise com acesso ao banco e dificultando testes isolados."
+   },
+   {
+    "nome": "Complexidade ciclomática elevada",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 100,
+    "linha_fim": 120,
+    "justificativa": "O método reúne numerosas verificações independentes e regras de negócio em um único fluxo."
+   },
+   {
+    "nome": "Processamento excessivo em memória",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 96,
+    "linha_fim": 118,
+    "justificativa": "Todas as transações e sangrias do dia são materializadas para executar contagens, somas, máximos e filtros que poderiam ser feitos no banco."
+   },
+   {
+    "nome": "Acesso inseguro a estrutura de dados",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 136,
+    "linha_fim": 155,
+    "justificativa": "O método acessa várias chaves do array sem verificar sua existência, podendo gerar avisos de chave indefinida para entradas incompletas."
+   },
+   {
+    "nome": "Complexidade ciclomática elevada",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 132,
+    "linha_fim": 159,
+    "justificativa": "A validação acumula muitas regras condicionais distintas em um único método."
+   },
+   {
+    "nome": "Códigos mágicos de pagamento",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 139,
+    "linha_fim": 140,
+    "justificativa": "As formas de pagamento são representadas por literais como DI, CR e DE em vez de enumerações ou constantes de domínio."
+   },
+   {
+    "nome": "Códigos mágicos de pagamento",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 180,
+    "linha_fim": 189,
+    "justificativa": "A lógica de totalização repete comparações com códigos literais de pagamento, espalhando conhecimento de domínio pela classe."
+   },
+   {
+    "nome": "Códigos mágicos de pagamento",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 213,
+    "linha_fim": 227,
+    "justificativa": "O cálculo de taxas depende diretamente dos códigos literais DE e CR, criando duplicação e risco de alterações inconsistentes."
+   },
+   {
+    "nome": "Cadeia condicional extensa",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 209,
+    "linha_fim": 230,
+    "justificativa": "O cálculo de taxa contém vários níveis e faixas condicionais que poderiam ser modelados como uma tabela de tarifas ou objetos de estratégia."
+   },
+   {
+    "nome": "Acoplamento direto à persistência",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 262,
+    "linha_fim": 264,
+    "justificativa": "A obtenção das compras do cliente é realizada diretamente pelo analisador por meio de uma chamada estática ao modelo."
+   },
+   {
+    "nome": "Retorno com formato inconsistente",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 265,
+    "linha_fim": 278,
+    "justificativa": "A chave ultimo_trimestre somente existe quando há compras, obrigando consumidores a tratar dois formatos diferentes do mesmo retorno."
+   },
+   {
+    "nome": "Códigos mágicos de pagamento",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 291,
+    "linha_fim": 301,
+    "justificativa": "A decisão de oferecer parcelas depende do literal CR em vez de uma abstração para a forma de pagamento."
+   },
+   {
+    "nome": "Responsabilidades não relacionadas no mesmo método",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 313,
+    "linha_fim": 327,
+    "justificativa": "O método combina a conferência de sangrias de uma data com a auditoria global do cadastro de produtos, que são operações independentes."
+   },
+   {
+    "nome": "Consulta sem limite",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 321,
+    "linha_fim": 324,
+    "justificativa": "Estoque::all() carrega todos os produtos na memória de uma vez, podendo causar degradação de desempenho e consumo excessivo de memória."
+   },
+   {
+    "nome": "Cadeia condicional extensa",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 337,
+    "linha_fim": 354,
+    "justificativa": "A classificação do cliente codifica várias faixas de valores e precedências em uma longa sequência de condicionais."
+   },
+   {
+    "nome": "Cadeia condicional extensa",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 363,
+    "linha_fim": 382,
+    "justificativa": "As faixas de desconto estão implementadas como uma extensa sequência de limites numéricos embutidos."
+   },
+   {
+    "nome": "Cadeia condicional extensa",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 413,
+    "linha_fim": 432,
+    "justificativa": "A quantidade de parcelas permitidas é determinada por várias faixas rígidas em vez de uma configuração declarativa."
+   },
+   {
+    "nome": "Códigos mágicos de pagamento",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 441,
+    "linha_fim": 458,
+    "justificativa": "A descrição das formas de pagamento repete os códigos DI, CR e DE já usados em outros métodos da classe."
+   },
+   {
+    "nome": "Dependência de relógio global",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 484,
+    "linha_fim": 486,
+    "justificativa": "O uso direto de date() faz a validação depender da data atual do ambiente e dificulta testes determinísticos."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 467,
+    "linha_fim": 492,
+    "justificativa": "O método conhece e valida numerosos campos internos de Sangria, indicando que essa regra deveria estar em um validador ou serviço específico do domínio."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 501,
+    "linha_fim": 526,
+    "justificativa": "O método inspeciona diversos atributos de Estoque e concentra regras próprias de produto em uma classe genérica de análise de vendas."
+   }
+  ]
+ },
+ "desvios": []
+}

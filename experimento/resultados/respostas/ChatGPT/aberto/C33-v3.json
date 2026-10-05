@@ -1,0 +1,74 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C33-v3",
+ "cs_id": "C33",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5aff547f417e2d304cc80655578b0c6a039224a283af63dca7add0f049639195",
+ "inicio": "2026-10-05T15:23:05+00:00",
+ "duracao_s": 5.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 510,
+ "tokens_saida": 310,
+ "tokens_raciocinio": 176,
+ "custo": 0.00412,
+ "id_requisicao": "gen-1791213785-1fUtVY0XrknMgfkg8ffR",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 5080
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Uso de ponto flutuante para valores monetários",
+    "arquivo": "app/Pdv/TotalizadorDeVenda.php",
+    "linha_inicio": 13,
+    "linha_fim": 20,
+    "justificativa": "Representar preço e total com float pode introduzir erros de precisão em cálculos financeiros."
+   },
+   {
+    "nome": "Número mágico",
+    "arquivo": "app/Pdv/TotalizadorDeVenda.php",
+    "linha_inicio": 20,
+    "linha_fim": 20,
+    "justificativa": "A precisão de duas casas decimais está fixada diretamente no cálculo, sem uma constante que expresse a regra monetária."
+   }
+  ]
+ },
+ "desvios": []
+}

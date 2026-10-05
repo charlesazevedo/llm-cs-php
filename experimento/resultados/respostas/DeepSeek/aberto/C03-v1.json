@@ -1,0 +1,174 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C03-v1",
+ "cs_id": "C03",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "a9bf2fc950aecd4ebe0498b8af0a02766d867be8817f1f006d66d477e711eaef",
+ "inicio": "2026-10-03T23:10:37+00:00",
+ "duracao_s": 40.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3996,
+ "tokens_saida": 6020,
+ "tokens_raciocinio": 4727,
+ "custo": 0.012433696,
+ "id_requisicao": "gen-1791069037-aZXVyvJ2yzvbqfk9o7y6",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 39908
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de código para formatar transações e buscar detalhes de venda/estoque duplicado em historicoAPI."
+   },
+   {
+    "nome": "N+1 Queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas SQL dentro de loop para cada transação causam múltiplas execuções."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesma lógica de formatação e detalhamento de transações repetida no método historicoAPI."
+   },
+   {
+    "nome": "N+1 Queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Loop com consultas adicionais a Venda e Estoque para cada transação."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Repetição do mesmo código de formatação e consulta de detalhes de vendas."
+   },
+   {
+    "nome": "N+1 Queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Consultas repetitivas dentro de loop para compor detalhes das transações."
+   },
+   {
+    "nome": "Large Class (Fat Controller)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 281,
+    "justificativa": "Controller acumula muitas responsabilidades como abertura, fechamento, sangria, entrada, histórico e impressão."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Comando return inalcançável após todos os fluxos anteriores retornarem."
+   },
+   {
+    "nome": "Inconsistent Error Handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 129,
+    "justificativa": "Catch retorna diretamente a string de erro, diferente de outros métodos que retornam JSON."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método historicoAPI é longo com várias ramificações e lógica de formatação."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método fecharCaixaView é extenso, realizando múltiplas consultas e formatações."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Conversão de moeda com str_replace repetida em vários pontos do controller."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Conversão de moeda com str_replace repetida em sangriaPost."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 145,
+    "justificativa": "Conversão de moeda com str_replace repetida em addCaixa."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 148,
+    "linha_fim": 148,
+    "justificativa": "Conversão de moeda com str_replace repetida em addCaixa para atualizar o caixa."
+   },
+   {
+    "nome": "Inconsistent Return Types",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 58,
+    "justificativa": "Método iniciarCaixa retorna JSON em caso de sucesso/falha, mas view no else, misturando API e UI."
+   }
+  ]
+ },
+ "desvios": []
+}

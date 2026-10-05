@@ -1,0 +1,130 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C29-v1",
+ "cs_id": "C29",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "cc206eb5398361528c702a451f23cd8884a8b0cafbbdd9c1c76d749c63194e9b",
+ "inicio": "2026-10-02T18:41:56+00:00",
+ "duracao_s": 12.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5390,
+ "tokens_saida": 1228,
+ "tokens_raciocinio": 0,
+ "custo": 0.04612,
+ "id_requisicao": "gen-1790966516-1fwTSoYxpjvZ8tmM1W2t",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 12046
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 219,
+    "justificativa": "O laço que formata transações e monta os detalhes de venda é repetido quase idêntico nos ramos 'day' e 'range' (e também em fecharCaixaView)."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView acumula consultas, formatação monetária, montagem de detalhes e cálculo de totais em um único método extenso."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI concentra três fluxos distintos com lógica de consulta e formatação duplicada em um único método."
+   },
+   {
+    "nome": "Switch Statements",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 221,
+    "justificativa": "Cadeia de if/else sobre a string $type decide o comportamento, em vez de usar métodos ou estratégias separadas."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de valor monetário via str_replace([\".\",\",\"],[\"\",\".\"]) é repetida em vários métodos (linhas 39, 40, 119, 145, 148) sem extração para um helper."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 92,
+    "linha_fim": 96,
+    "justificativa": "Chamadas a number_format(..., 2, ',', '.') espalhadas por todo o controller indicam formatação de moeda duplicada que deveria ser centralizada."
+   },
+   {
+    "nome": "Empty Catch Block",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 247,
+    "linha_fim": 248,
+    "justificativa": "A QueryException é capturada e ignorada, retornando sucesso mesmo quando a gravação falha."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return $request->valor é inalcançável, pois todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Códigos de pagamento 'DI','CR','DE' e seus rótulos são literais repetidos (também nas linhas 189 e 210) sem constantes ou enum."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O controller manipula extensivamente dados de Transacoes, Venda e Estoque para montar detalhes, lógica que pertence aos modelos ou a um serviço/presenter."
+   }
+  ]
+ },
+ "desvios": []
+}

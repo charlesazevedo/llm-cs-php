@@ -1,0 +1,125 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C21-v1",
+ "cs_id": "C21",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "d52a6cc09e29d7d8e6aa134b299c89236de1f73c0b4581d93e0d63c2072d92e5",
+ "inicio": "2026-10-02T18:44:25+00:00",
+ "duracao_s": 63.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 1684,
+ "tokens_saida": 7576,
+ "tokens_raciocinio": 6796,
+ "custo": 0.015948592,
+ "id_requisicao": "gen-1790966665-fFZCHHSurcwQUOoXQdFG",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 62959
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Exposição de informações internas",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 57,
+    "linha_fim": 57,
+    "justificativa": "Retorna a mensagem da exceção diretamente ao cliente, expondo detalhes internos do banco de dados."
+   },
+   {
+    "nome": "Captura de exceção muito específica",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 52,
+    "linha_fim": 52,
+    "justificativa": "Captura apenas QueryException, mas a transação pode lançar outras exceções, deixando erros sem tratamento adequado."
+   },
+   {
+    "nome": "Uso de string para booleano",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 38,
+    "linha_fim": 38,
+    "justificativa": "Utiliza a string 'false' em vez do booleano false no campo success."
+   },
+   {
+    "nome": "Uso de string para booleano",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 56,
+    "linha_fim": 56,
+    "justificativa": "Utiliza a string 'false' em vez do booleano false no campo success."
+   },
+   {
+    "nome": "Uso de string para booleano",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 64,
+    "linha_fim": 64,
+    "justificativa": "Utiliza a string 'true' em vez do booleano true no campo success."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 43,
+    "linha_fim": 44,
+    "justificativa": "Não valida se o campo 'contado' está presente e é um valor monetário válido antes de convertê-lo."
+   },
+   {
+    "nome": "Retorno de método ignorado",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 49,
+    "linha_fim": 49,
+    "justificativa": "O resultado booleano de $caixa->save() não é verificado, podendo falhar silenciosamente."
+   },
+   {
+    "nome": "String mágica",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 50,
+    "linha_fim": 50,
+    "justificativa": "Utiliza a string literal 'caixa_aberto' em vez de uma constante nomeada, dificultando a manutenção."
+   },
+   {
+    "nome": "Conversão frágil de moeda",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 44,
+    "linha_fim": 44,
+    "justificativa": "Substitui caracteres para converter moeda sem validar o formato, o que pode causar erros com entradas inesperadas."
+   }
+  ]
+ },
+ "desvios": []
+}

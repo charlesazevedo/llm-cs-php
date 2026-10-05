@@ -1,0 +1,67 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C21-v2",
+ "cs_id": "C21",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "cf64caf11808cd47031b51b0b63441e80319d3a00e935f78351dd8be1f1df028",
+ "inicio": "2026-10-05T13:37:45+00:00",
+ "duracao_s": 7.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 3840,
+ "tokens_saida": 502,
+ "tokens_raciocinio": 268,
+ "custo": 0.0254,
+ "id_requisicao": "gen-1791207465-CdUntK8g5hc7bPffLgtW",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 7587
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Acoplamento excessivo (alto fan-out)",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 5,
+    "linha_fim": 195,
+    "justificativa": "A classe de fechamento de caixa depende diretamente de muitas classes concretas (Caixa, Cliente, Entrada_caixa, Estoque, Categoria, Estoque_aux, Fornecedor, Marca, Unidade, Sangria, Sistema, Transacoes, Venda, User e várias facades), inclusive modelos de estoque sem relação com o fechamento, o que a torna frágil e difícil de testar."
+   }
+  ]
+ },
+ "desvios": []
+}

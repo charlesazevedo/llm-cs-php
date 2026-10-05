@@ -1,0 +1,195 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C27-v1",
+ "cs_id": "C27",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "e386fe2a9a06910c65cf7ac664aeb62929aaee2214a84574a57ac7755989546b",
+ "inicio": "2026-10-05T14:25:47+00:00",
+ "duracao_s": 67.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3496,
+ "tokens_saida": 6287,
+ "tokens_raciocinio": 4645,
+ "custo": 0.012632356,
+ "id_requisicao": "gen-1791210347-MD8CWeF1wD4uTd4lOkmi",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 67599
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 85,
+    "justificativa": "Bloco de formatação de transações e construção de detalhes é duplicado em historicoAPI para os tipos 'day' e 'range'."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesmo bloco de formatação e consulta de estoque aparece em fecharCaixaView e no tipo 'range'."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Repetição do processamento de transações, incluindo query a Estoque, já presente em fecharCaixaView e no tipo 'day'."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 99,
+    "justificativa": "Método fecharCaixaView é extenso, com múltiplas responsabilidades: busca, formatação e montagem de dados para a view."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método historicoAPI contém três ramificações com lógica repetida, tornando-o longo e de difícil manutenção."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Instrução return $request->valor é inalcançável, pois todos os caminhos anteriores já retornam uma resposta."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 241,
+    "linha_fim": 241,
+    "justificativa": "Variável $quantidade é atribuída mas nunca utilizada."
+   },
+   {
+    "nome": "Inconsistent Error Handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 129,
+    "justificativa": "Bloco catch retorna diretamente o array de erro do banco, enquanto outros métodos retornam JSON padronizado."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 166,
+    "linha_fim": 166,
+    "justificativa": "Utiliza $e->errorInfo[2] no bloco else, mas a variável $e não existe nesse escopo."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 79,
+    "linha_fim": 82,
+    "justificativa": "Consulta a tabela Estoque dentro de um loop, gerando múltiplas queries (uma por item de venda)."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 192,
+    "linha_fim": 194,
+    "justificativa": "Mesmo padrão de query dentro de loop, causando N+1 no ramo 'day' do historicoAPI."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 213,
+    "linha_fim": 215,
+    "justificativa": "Repetição do N+1 query no ramo 'range' do historicoAPI."
+   },
+   {
+    "nome": "Magic String/Typo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Uso do termo 'Débido' (erro de digitação) em substituição de forma de pagamento, deveria ser 'Débito'."
+   },
+   {
+    "nome": "Magic String/Typo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Mesmo erro de digitação 'Débido' e também 'Cartão de Credito' sem acento, repetindo magic strings."
+   },
+   {
+    "nome": "Magic String/Typo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Repetição do erro 'Débido' e 'Cartão de Credito', evidenciando duplicação de strings mágicas."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Conversão de string de valor (str_replace) é duplicada nas duas atribuições consecutivas e em outros métodos."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "A mesma lógica de conversão de moeda é repetida em sangriaPost."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 145,
+    "justificativa": "Conversão de valor repetida em addCaixa na criação da entrada."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 148,
+    "linha_fim": 148,
+    "justificativa": "A conversão é novamente repetida ao chamar Caixa::add, indicando falta de reutilização."
+   }
+  ]
+ },
+ "desvios": []
+}

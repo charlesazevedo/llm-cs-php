@@ -1,0 +1,74 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C08-v2",
+ "cs_id": "C08",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "ceadac21c684b8b1c95609fd43f301e576094da22b28a2b2c8599252b0331c25",
+ "inicio": "2026-10-03T23:12:06+00:00",
+ "duracao_s": 15.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 1095,
+ "tokens_saida": 1860,
+ "tokens_raciocinio": 1730,
+ "custo": 0.02451,
+ "id_requisicao": "gen-1791069126-AMB4DDikDnDabtYnQkEh",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 15381
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Improper Separation of Concerns",
+    "arquivo": "app/Pdv/FormularioDeSangria.php",
+    "linha_inicio": 33,
+    "linha_fim": 44,
+    "justificativa": "Geração de código HTML diretamente em uma classe PHP usando concatenação de strings, violando o princípio da separação de responsabilidades (deveria utilizar templates Blade)."
+   },
+   {
+    "nome": "Improper Separation of Concerns",
+    "arquivo": "app/Pdv/ScriptDoFormularioDeSangria.php",
+    "linha_inicio": 15,
+    "linha_fim": 26,
+    "justificativa": "Geração de código JavaScript e marcação diretamente dentro de uma classe PHP, o que mistura regras de back-end com apresentação do front-end."
+   }
+  ]
+ },
+ "desvios": []
+}

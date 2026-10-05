@@ -1,0 +1,165 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C21-v1",
+ "cs_id": "C21",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "d52a6cc09e29d7d8e6aa134b299c89236de1f73c0b4581d93e0d63c2072d92e5",
+ "inicio": "2026-10-02T18:42:50+00:00",
+ "duracao_s": 29.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 1647,
+ "tokens_saida": 1982,
+ "tokens_raciocinio": 973,
+ "custo": 0.023936,
+ "id_requisicao": "gen-1790966570-r8Z4EsC6wZhW7a3iOZdL",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 29633
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Responsabilidades múltiplas",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 33,
+    "linha_fim": 121,
+    "justificativa": "A classe combina tratamento HTTP, persistência, controle de estado do sistema, consultas e cálculos de domínio, dificultando manutenção e testes isolados."
+   },
+   {
+    "nome": "Ausência de validação de entrada",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 43,
+    "linha_fim": 44,
+    "justificativa": "O valor informado é convertido diretamente sem verificar presença, formato, faixa ou se realmente representa um número válido."
+   },
+   {
+    "nome": "Conversão monetária frágil",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 43,
+    "linha_fim": 44,
+    "justificativa": "A substituição manual de pontos e vírgulas presume um formato regional específico e pode interpretar incorretamente valores em outros formatos."
+   },
+   {
+    "nome": "Booleano representado como string",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 37,
+    "linha_fim": 40,
+    "justificativa": "O campo success usa a string 'false' em vez do valor booleano false, tornando o contrato da API propenso a interpretações incorretas."
+   },
+   {
+    "nome": "Booleano representado como string",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 55,
+    "linha_fim": 58,
+    "justificativa": "O campo success usa a string 'false' em vez do valor booleano false, tornando o contrato da API propenso a interpretações incorretas."
+   },
+   {
+    "nome": "Booleano representado como string",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 63,
+    "linha_fim": 67,
+    "justificativa": "O campo success usa a string 'true' em vez do valor booleano true, tornando o contrato da API propenso a interpretações incorretas."
+   },
+   {
+    "nome": "Status HTTP inadequado",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 37,
+    "linha_fim": 40,
+    "justificativa": "A resposta de erro não define um status HTTP apropriado e, portanto, tende a ser enviada com status 200."
+   },
+   {
+    "nome": "Status HTTP inadequado",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 55,
+    "linha_fim": 58,
+    "justificativa": "A falha de banco de dados é devolvida sem um status HTTP de erro, dificultando o tratamento correto pelo cliente."
+   },
+   {
+    "nome": "Exposição de detalhes internos",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 52,
+    "linha_fim": 58,
+    "justificativa": "A mensagem original da exceção de banco de dados é enviada ao cliente e pode revelar detalhes sensíveis da implementação."
+   },
+   {
+    "nome": "String mágica",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 47,
+    "linha_fim": 51,
+    "justificativa": "A chave de sistema 'caixa_aberto' está embutida diretamente no método em vez de ser representada por uma constante ou abstração de domínio."
+   },
+   {
+    "nome": "String mágica",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 118,
+    "linha_fim": 121,
+    "justificativa": "O código de pagamento 'DI' está embutido no cálculo e não comunica claramente seu significado nem centraliza os valores válidos."
+   },
+   {
+    "nome": "Uso de ponto flutuante para valores monetários",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 75,
+    "linha_fim": 96,
+    "justificativa": "O valor contado é documentado como float e usado em subtração monetária, o que pode introduzir erros de precisão."
+   },
+   {
+    "nome": "Uso de ponto flutuante para valores monetários",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 110,
+    "linha_fim": 121,
+    "justificativa": "O saldo monetário é declarado como float e calculado por operações aritméticas suscetíveis a imprecisões binárias."
+   },
+   {
+    "nome": "Dependência direta do relógio do sistema",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 61,
+    "linha_fim": 65,
+    "justificativa": "A instanciação direta de DateTime torna o horário não determinístico e dificulta testes automatizados."
+   },
+   {
+    "nome": "Agregação em memória",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 81,
+    "linha_fim": 97,
+    "justificativa": "Transações, sangrias e entradas são carregadas como coleções para realizar somas, o que pode consumir memória desnecessariamente em vez de agregar no banco de dados."
+   }
+  ]
+ },
+ "desvios": []
+}

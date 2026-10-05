@@ -1,0 +1,123 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C16-v1",
+ "cs_id": "C16",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "deb195f0336326fcdf39c6ef16cf0185b46797174e96fa533aa934c94c687a6d",
+ "inicio": "2026-10-05T12:52:51+00:00",
+ "duracao_s": 17.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 2156,
+ "tokens_saida": 1425,
+ "tokens_raciocinio": 798,
+ "custo": 0.0196385,
+ "id_requisicao": "gen-1791204771-iT9DsgMPDWrAZKVH8qCs",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 17824
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Construtor custoso",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 127,
+    "linha_fim": 153,
+    "justificativa": "O construtor executa diversas consultas ao banco, tornando a simples instanciação do objeto lenta, sujeita a falhas externas e difícil de testar."
+   },
+   {
+    "nome": "Consultas redundantes ao banco",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 129,
+    "linha_fim": 152,
+    "justificativa": "O escopo Transacoes::today() é consultado repetidamente para cada indicador, gerando várias viagens ao banco que poderiam ser consolidadas em poucas consultas agregadas."
+   },
+   {
+    "nome": "Acoplamento forte com persistência",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 129,
+    "linha_fim": 152,
+    "justificativa": "A classe de resumo depende diretamente de métodos estáticos do model Transacoes, misturando cálculo de indicadores com acesso a dados e dificultando substituição e testes isolados."
+   },
+   {
+    "nome": "Dependência temporal oculta",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 129,
+    "linha_fim": 152,
+    "justificativa": "O uso fixo de today() vincula o objeto à data corrente global, impedindo calcular explicitamente o resumo de outra data e reduzindo a previsibilidade dos testes."
+   },
+   {
+    "nome": "Consulta ineficiente em memória",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 147,
+    "linha_fim": 149,
+    "justificativa": "Todos os clientes do dia são carregados para a aplicação antes de aplicar unique e count, embora a contagem distinta possa ser executada diretamente pelo banco."
+   },
+   {
+    "nome": "String mágica",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 129,
+    "linha_fim": 130,
+    "justificativa": "O código de pagamento 'DI' está embutido na consulta sem uma constante ou enumeração que documente seu significado."
+   },
+   {
+    "nome": "String mágica",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 150,
+    "linha_fim": 152,
+    "justificativa": "O código de pagamento 'CR' está embutido na consulta sem uma constante ou enumeração que centralize e valide os tipos de pagamento."
+   },
+   {
+    "nome": "Número mágico",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 140,
+    "linha_fim": 145,
+    "justificativa": "O valor 1 é repetido como regra implícita para distinguir vendas à vista de parceladas, sem uma constante ou abstração de domínio."
+   },
+   {
+    "nome": "Excesso de estado derivado",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 12,
+    "linha_fim": 122,
+    "justificativa": "A classe mantém dezesseis campos escalares derivados apenas para posteriormente copiá-los para um array, aumentando a verbosidade e o custo de manutenção."
+   }
+  ]
+ },
+ "desvios": []
+}

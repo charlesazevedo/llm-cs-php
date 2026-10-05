@@ -1,0 +1,104 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C08-v2",
+ "cs_id": "C08",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "ceadac21c684b8b1c95609fd43f301e576094da22b28a2b2c8599252b0331c25",
+ "inicio": "2026-10-03T23:17:31+00:00",
+ "duracao_s": 46.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 1151,
+ "tokens_saida": 5896,
+ "tokens_raciocinio": 5292,
+ "custo": 0.01243374,
+ "id_requisicao": "gen-1791069451-SRGgCzdUL85U74Soh4gi",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 46586
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "HTML embutido no código PHP",
+    "arquivo": "app/Pdv/FormularioDeSangria.php",
+    "linha_inicio": 35,
+    "linha_fim": 41,
+    "justificativa": "A classe gera HTML concatenando strings, misturando lógica de apresentação com PHP, dificultando manutenção e reutilização."
+   },
+   {
+    "nome": "Saída não escapada (possível XSS)",
+    "arquivo": "app/Pdv/FormularioDeSangria.php",
+    "linha_inicio": 38,
+    "linha_fim": 38,
+    "justificativa": "O valor de $saldo é inserido diretamente no atributo data-saldo sem escape, podendo causar XSS se a variável for manipulada."
+   },
+   {
+    "nome": "Falta de type hint no parâmetro",
+    "arquivo": "app/Pdv/FormularioDeSangria.php",
+    "linha_inicio": 33,
+    "linha_fim": 33,
+    "justificativa": "O parâmetro $saldo não possui declaração de tipo, permitindo valores inesperados e reduzindo a clareza do código."
+   },
+   {
+    "nome": "Acoplamento por IDs hard-coded (magic strings)",
+    "arquivo": "app/Pdv/FormularioDeSangria.php",
+    "linha_inicio": 37,
+    "linha_fim": 39,
+    "justificativa": "Os IDs 'valor-sangria' e 'saldo-restante' são definidos como strings mágicas, que precisam ser replicadas em outra classe para o script funcionar, criando acoplamento."
+   },
+   {
+    "nome": "JavaScript embutido no código PHP",
+    "arquivo": "app/Pdv/ScriptDoFormularioDeSangria.php",
+    "linha_inicio": 17,
+    "linha_fim": 25,
+    "justificativa": "O JavaScript é retornado como string dentro de uma classe PHP, impossibilitando linting, cache e separação de concerns."
+   },
+   {
+    "nome": "Acoplamento por IDs hard-coded (magic strings)",
+    "arquivo": "app/Pdv/ScriptDoFormularioDeSangria.php",
+    "linha_inicio": 19,
+    "linha_fim": 22,
+    "justificativa": "O script depende de IDs específicos do DOM que são definidos em outra classe, tornando o código frágil a mudanças."
+   }
+  ]
+ },
+ "desvios": []
+}

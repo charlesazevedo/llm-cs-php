@@ -1,0 +1,244 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C05-v3",
+ "cs_id": "C05",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "c873ba0c7fb684dbf5d4c02c0fe1d35be2f0ee89e3df14c7a4e9ef3b0ce9d630",
+ "inicio": "2026-10-03T23:13:06+00:00",
+ "duracao_s": 65.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3606,
+ "tokens_saida": 9272,
+ "tokens_raciocinio": 7016,
+ "custo": 0.018615256,
+ "id_requisicao": "gen-1791069186-GL8OlUWXjXstPBawAODv",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 65621
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 65,
+    "linha_fim": 70,
+    "justificativa": "Formatação de valores de sangria e entradas é repetida em dois loops separados."
+   },
+   {
+    "nome": "N+1 Queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas Venda::where e Estoque::where são executadas dentro de loops, causando múltiplas consultas ao banco."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Lógica de montagem de detalhes da transação é idêntica à de historicoAPI, repetindo consultas e formatações."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método fecharCaixaView possui muitas responsabilidades e é extenso, dificultando manutenção."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Bloco de formatação de transações é copiado do fecharCaixaView, duplicando lógica."
+   },
+   {
+    "nome": "N+1 Queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Consultas dentro de loops aninhados geram N+1 queries, degradando performance."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Mesma lógica de detalhamento de transações repetida pela terceira vez, com consultas e formatações idênticas."
+   },
+   {
+    "nome": "N+1 Queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Presença de consultas Venda e Estoque dentro de foreach, gerando N+1 queries."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método historicoAPI é extenso e contém múltiplos blocos condicionais com lógica repetida."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Formatação de moeda com str_replace é repetida em outros métodos, violando DRY."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Mesma formatação de moeda aparece em sangriaPost, sem reutilização de função."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "Formatação de moeda repetida duas vezes no mesmo método, em linhas 145 e 148."
+   },
+   {
+    "nome": "Fat Controller",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 252,
+    "justificativa": "Controlador acumula responsabilidades de regras de negócio, formatação, consultas e retorno de HTML, tornando-se inchado."
+   },
+   {
+    "nome": "Tipo de retorno inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 58,
+    "justificativa": "Método iniciarCaixa retorna JSON em um caminho e View em outro, gerando inconsistência."
+   },
+   {
+    "nome": "Tipo de retorno inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "sangriaPost retorna JSON, string bruta ou nada dependendo do fluxo, sem padronização."
+   },
+   {
+    "nome": "Tipo de retorno inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 140,
+    "linha_fim": 170,
+    "justificativa": "addCaixa mistura JSON, erro indefinido e código inalcançável, quebrando consistência de resposta."
+   },
+   {
+    "nome": "Código inalcançável",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Linha return $request->valor nunca é executada, pois todos os fluxos anteriores retornam."
+   },
+   {
+    "nome": "Vazamento de informação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 52,
+    "justificativa": "Mensagem de erro do banco ($e->errorInfo[2]) é exposta diretamente ao cliente."
+   },
+   {
+    "nome": "Vazamento de informação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 129,
+    "justificativa": "Detalhe interno de erro do banco é retornado como resposta, revelando informações sensíveis."
+   },
+   {
+    "nome": "Vazamento de informação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 160,
+    "justificativa": "Exceção QueryException é enviada ao cliente com detalhes internos do banco."
+   },
+   {
+    "nome": "HTML inline no controlador",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 238,
+    "linha_fim": 251,
+    "justificativa": "Método exibirAvisoDeCaixaFechado gera HTML e JavaScript diretamente no controlador, misturando camadas."
+   },
+   {
+    "nome": "Variável indefinida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "Uso de $e->errorInfo[2] no bloco else sem que $e tenha sido definida nesse escopo."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 58,
+    "justificativa": "Dados de $request são utilizados sem validação, permitindo entradas inválidas ou maliciosas."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "Campos como valor e descricao não são validados antes de persistir no banco."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 140,
+    "linha_fim": 170,
+    "justificativa": "Requisição não passa por validação, podendo causar erros ou dados inconsistentes."
+   },
+   {
+    "nome": "Erro de digitação em propriedade",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 225,
+    "justificativa": "Uso de $request->rage provavelmente deveria ser $request->range, indicando typo."
+   }
+  ]
+ },
+ "desvios": []
+}

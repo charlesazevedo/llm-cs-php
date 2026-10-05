@@ -1,0 +1,151 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C22-v2",
+ "cs_id": "C22",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "d02d9a4f0f7dc6ef348d2fde61f792c5f0cc6adf44d56376be736f21b1ad6a15",
+ "inicio": "2026-10-05T13:40:36+00:00",
+ "duracao_s": 49.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4203,
+ "tokens_saida": 6721,
+ "tokens_raciocinio": 5486,
+ "custo": 0.089058,
+ "id_requisicao": "gen-1791207636-Dgkk2axOQ9MexhKIcxUQ",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 49101
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Herança Inadequada (Deep Inheritance)",
+    "arquivo": "app/Pdv/RelatorioDeVendas.php",
+    "linha_inicio": 10,
+    "linha_fim": 25,
+    "justificativa": "Inicia um antipadrão de uso de herança apenas para acumular informações extras em vez de usar composição."
+   },
+   {
+    "nome": "Herança Inadequada (Deep Inheritance)",
+    "arquivo": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+    "linha_inicio": 10,
+    "linha_fim": 26,
+    "justificativa": "Estende a classe anterior apenas para adicionar uma seção, aumentando o acoplamento rígido."
+   },
+   {
+    "nome": "Herança Inadequada (Quebra de LSP)",
+    "arquivo": "app/Pdv/RelatorioDeCaixa.php",
+    "linha_inicio": 10,
+    "linha_fim": 25,
+    "justificativa": "Um relatório de caixa herda de relatório de vendas em dinheiro, violando o princípio de substituição de Liskov (LSP)."
+   },
+   {
+    "nome": "Herança Inadequada (Deep Inheritance)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComSangrias.php",
+    "linha_inicio": 10,
+    "linha_fim": 24,
+    "justificativa": "Aumenta a cadeia de herança para adicionar atributos, tornando a manutenção frágil e inflexível."
+   },
+   {
+    "nome": "Herança Inadequada (Deep Inheritance)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComEntradas.php",
+    "linha_inicio": 10,
+    "linha_fim": 26,
+    "justificativa": "Aumenta a cadeia de herança para adicionar atributos, tornando a manutenção frágil e inflexível."
+   },
+   {
+    "nome": "Herança Inadequada (Deep Inheritance)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+    "linha_inicio": 11,
+    "linha_fim": 27,
+    "justificativa": "Aumenta a cadeia de herança para adicionar atributos, tornando a manutenção frágil e inflexível."
+   },
+   {
+    "nome": "Herança Inadequada (Deep Inheritance)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComDescontos.php",
+    "linha_inicio": 10,
+    "linha_fim": 25,
+    "justificativa": "Aumenta a cadeia de herança para adicionar atributos, tornando a manutenção frágil e inflexível."
+   },
+   {
+    "nome": "Herança Inadequada (Deep Inheritance)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComParcelamentos.php",
+    "linha_inicio": 10,
+    "linha_fim": 26,
+    "justificativa": "Aumenta a cadeia de herança para adicionar atributos, tornando a manutenção frágil e inflexível."
+   },
+   {
+    "nome": "Herança Inadequada (Deep Inheritance)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComItens.php",
+    "linha_inicio": 11,
+    "linha_fim": 27,
+    "justificativa": "Aumenta a cadeia de herança para adicionar atributos, tornando a manutenção frágil e inflexível."
+   },
+   {
+    "nome": "Consulta Ineficiente (N+1 / Join Manual)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComItens.php",
+    "linha_inicio": 21,
+    "linha_fim": 23,
+    "justificativa": "Realiza duas consultas separadas (pluck e whereIn) quando um simples JOIN no banco de dados seria mais eficiente."
+   },
+   {
+    "nome": "Herança Inadequada (Deep Inheritance)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComClientes.php",
+    "linha_inicio": 10,
+    "linha_fim": 25,
+    "justificativa": "Aumenta a cadeia de herança para adicionar atributos, tornando a manutenção frágil e inflexível."
+   },
+   {
+    "nome": "Herança Inadequada (Deep Inheritance)",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComEstoque.php",
+    "linha_inicio": 10,
+    "linha_fim": 24,
+    "justificativa": "Aumenta a cadeia de herança para adicionar atributos, tornando a manutenção frágil e inflexível."
+   },
+   {
+    "nome": "Herança Inadequada (Deep Inheritance)",
+    "arquivo": "app/Pdv/RelatorioDeFechamento.php",
+    "linha_inicio": 10,
+    "linha_fim": 35,
+    "justificativa": "Finaliza uma árvore de herança exageradamente profunda (12 níveis), configurando um grave problema de design arquitetural (Yo-Yo Problem)."
+   }
+  ]
+ },
+ "desvios": []
+}

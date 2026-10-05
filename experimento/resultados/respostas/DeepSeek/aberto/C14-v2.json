@@ -1,0 +1,132 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C14-v2",
+ "cs_id": "C14",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "7891f327aedc190878a3660c6b13172dc37021ba02937a7ab3e0f07f8c063c60",
+ "inicio": "2026-10-05T12:55:08+00:00",
+ "duracao_s": 77.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 5534,
+ "tokens_saida": 7014,
+ "tokens_raciocinio": 6104,
+ "custo": 0.017376832,
+ "id_requisicao": "gen-1791204908-4eh4WAFU3mXO5NaB1hNG",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 77696
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "God Class",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 18,
+    "linha_fim": 571,
+    "justificativa": "A classe centraliza inúmeras responsabilidades (vendas, descontos, pagamentos, caixa, estoque, clientes), tornando-se grande e difícil de manter."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 175,
+    "linha_fim": 198,
+    "justificativa": "Os três métodos repetem a mesma consulta base Transacoes::today(), alterando apenas a operação de agregação (sum, count, avg)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 267,
+    "linha_fim": 300,
+    "justificativa": "Ambos os métodos duplicam a condição where('pagamento', 'DI') sobre a mesma consulta base, variando apenas entre sum e count."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 387,
+    "linha_fim": 400,
+    "justificativa": "Os métodos repetem a consulta base Sangria::today(), mudando apenas a operação (sum vs count)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 407,
+    "linha_fim": 420,
+    "justificativa": "Os métodos repetem a consulta base Entrada_caixa::today(), mudando apenas a operação (sum vs count)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 447,
+    "linha_fim": 470,
+    "justificativa": "Os três métodos duplicam o padrão Transacoes::month()->where('pagamento', ...)->sum('total'), alterando apenas o valor da string de pagamento."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 267,
+    "linha_fim": 300,
+    "justificativa": "A string 'DI' é usada diretamente para representar a forma de pagamento em dinheiro, em vez de uma constante nomeada."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 447,
+    "linha_fim": 470,
+    "justificativa": "Strings mágicas 'CR', 'DE' e 'DI' são usadas para representar formas de pagamento, propensas a erros de digitação e difíceis de manter."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 357,
+    "linha_fim": 370,
+    "justificativa": "Os nomes de colunas 'data', 'inicial' e 'valor' são usados como strings mágicas em consultas, em vez de constantes ou métodos do modelo."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 527,
+    "linha_fim": 549,
+    "justificativa": "Os nomes de colunas 'estoque' e 'lucro' são usados diretamente como strings nas consultas, em vez de constantes ou métodos dedicados."
+   }
+  ]
+ },
+ "desvios": []
+}

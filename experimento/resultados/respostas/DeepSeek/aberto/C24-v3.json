@@ -1,0 +1,195 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C24-v3",
+ "cs_id": "C24",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "4cc73d36a9decf7633724404c2c3749c4bdb007e0c42e43519cc00c92ec55734",
+ "inicio": "2026-10-02T18:46:23+00:00",
+ "duracao_s": 63.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 4320,
+ "tokens_saida": 8116,
+ "tokens_raciocinio": 6502,
+ "custo": 0.01892088,
+ "id_requisicao": "gen-1790966783-FO7GB98IbCx8EpU6aMnK",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 63197
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O loop executa consultas a Venda e Estoque dentro de cada iteração, gerando múltiplas consultas ao banco."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O loop executa consultas a Venda e Estoque dentro de cada iteração, gerando múltiplas consultas ao banco."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "O loop executa consultas a Venda e Estoque dentro de cada iteração, gerando múltiplas consultas ao banco."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Este bloco de formatação e consultas é duplicado nos métodos historicoAPI day e range."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Este bloco de formatação e consultas é duplicado do método fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Este bloco de formatação e consultas é duplicado do método fecharCaixaView."
+   },
+   {
+    "nome": "Missing Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 58,
+    "justificativa": "Não valida a entrada 'valor' antes de usá-la, o que pode causar erros ou inconsistências."
+   },
+   {
+    "nome": "Missing Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "Não valida os campos 'descricao' e 'valor' antes de processar a sangria."
+   },
+   {
+    "nome": "Missing Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 140,
+    "linha_fim": 170,
+    "justificativa": "Não valida os campos 'valor' e 'descricao' antes de adicionar entrada ao caixa."
+   },
+   {
+    "nome": "Inconsistent Error Handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 129,
+    "justificativa": "Retorna uma string pura em vez de uma resposta JSON consistente com os outros métodos."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "A variável $e não está definida neste escopo, causando erro se a condição for verdadeira."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Utiliza strings mágicas 'DI','CR','DE' para representar formas de pagamento, sem constantes."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Utiliza strings mágicas 'DI','CR','DE' para representar formas de pagamento, sem constantes."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Utiliza strings mágicas 'DI','CR','DE' para representar formas de pagamento, sem constantes."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 244,
+    "linha_fim": 244,
+    "justificativa": "Utiliza string mágica 'DI' para representar pagamento em dinheiro, sem constante."
+   },
+   {
+    "nome": "Duplicated Logic",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 238,
+    "linha_fim": 255,
+    "justificativa": "Duplica a lógica de cálculo de saldo esperado presente em ConferenciaDeFechamento::compararComContado."
+   },
+   {
+    "nome": "Duplicated Logic",
+    "arquivo": "app/Pdv/ConferenciaDeFechamento.php",
+    "linha_inicio": 22,
+    "linha_fim": 41,
+    "justificativa": "Duplica a lógica de cálculo de saldo esperado presente em CaixaController::saldoEsperadoDoDia."
+   },
+   {
+    "nome": "Null Check Missing",
+    "arquivo": "app/Pdv/ConferenciaDeFechamento.php",
+    "linha_inicio": 24,
+    "linha_fim": 30,
+    "justificativa": "Assume que Caixa::today() retorna um objeto não nulo, podendo causar erro se não houver caixa aberto."
+   },
+   {
+    "nome": "Business Logic in Controller",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método contém lógica de negócio (cálculos, consultas, formatação) que deveria estar em uma camada de serviço."
+   }
+  ]
+ },
+ "desvios": []
+}

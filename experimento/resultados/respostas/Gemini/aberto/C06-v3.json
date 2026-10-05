@@ -1,0 +1,123 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C06-v3",
+ "cs_id": "C06",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "b18e61dbed87a061e04cab2019096a96c0859453c33e179de9642038af1291d1",
+ "inicio": "2026-10-03T23:11:16+00:00",
+ "duracao_s": 24.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 3993,
+ "tokens_saida": 3190,
+ "tokens_raciocinio": 2301,
+ "custo": 0.046266,
+ "id_requisicao": "gen-1791069076-2hjc9TZs3LfID2f7wLcd",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 24129
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A lógica de substituição de strings para tratar o formato do valor monetário está duplicada em linhas consecutivas e também repetida em outras partes do código."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas ao banco de dados (Venda e Estoque) estão sendo executadas de forma iterativa dentro de loops (foreach), o que degrada a performance (deveria usar Eager Loading)."
+   },
+   {
+    "nome": "Undefined Variable / Bug",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "O bloco 'else' tenta acessar a variável '$e' ($e->errorInfo), que só existe no escopo do bloco 'catch' acima, o que causará um erro fatal de variável indefinida."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Este retorno nunca será alcançado, pois todas as ramificações anteriores (try, catch e else) já possuem cláusulas de 'return'."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 197,
+    "justificativa": "Este bloco de processamento, formatação e iteração de transações é idêntico à lógica presente entre as linhas 207 e 218, violando o princípio DRY."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 197,
+    "justificativa": "Novamente, consultas a Venda e Estoque estão sendo feitas dentro do loop de processamento das transações ao invés de usar relacionamentos pré-carregados."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 218,
+    "justificativa": "Este trecho repete exatamente a mesma lógica de manipulação e iteração presente nas linhas 186-197."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 218,
+    "justificativa": "Idem às ocorrências anteriores: chamadas ao banco de dados ocorrem dentro do laço de repetição (Venda e Estoque)."
+   },
+   {
+    "nome": "View Logic in Controller",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 239,
+    "linha_fim": 246,
+    "justificativa": "A geração de tags e estilos HTML diretamente no Controller viola o padrão MVC e a separação de responsabilidades (deveria estar na View ou Presenter)."
+   }
+  ]
+ },
+ "desvios": []
+}

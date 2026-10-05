@@ -1,0 +1,104 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C09-v1",
+ "cs_id": "C09",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "fe313af2ea43205a79be83263c33b8f3f6dbd4f4de9b81909bc537f7350d01d0",
+ "inicio": "2026-10-03T23:18:18+00:00",
+ "duracao_s": 25.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 1345,
+ "tokens_saida": 3240,
+ "tokens_raciocinio": 2621,
+ "custo": 0.0073029,
+ "id_requisicao": "gen-1791069498-st7g8yPx5zGZ8PPbj5vD",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 25530
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "resources/views/admin/caixa/nova-entrada.blade.php",
+    "linha_inicio": 9,
+    "linha_fim": 40,
+    "justificativa": "O formulário e o script são quase idênticos aos de nova-sangria.blade.php, indicando duplicação que poderia ser extraída para um partial/componente."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "resources/views/admin/caixa/nova-sangria.blade.php",
+    "linha_inicio": 9,
+    "linha_fim": 40,
+    "justificativa": "O formulário e o script são quase idênticos aos de nova-entrada.blade.php, indicando duplicação que poderia ser extraída para um partial/componente."
+   },
+   {
+    "nome": "JavaScript Inline",
+    "arquivo": "resources/views/admin/caixa/nova-entrada.blade.php",
+    "linha_inicio": 21,
+    "linha_fim": 40,
+    "justificativa": "O código JavaScript está embutido na view, misturando lógica de apresentação e comportamento, dificultando reutilização e testes."
+   },
+   {
+    "nome": "JavaScript Inline",
+    "arquivo": "resources/views/admin/caixa/nova-sangria.blade.php",
+    "linha_inicio": 21,
+    "linha_fim": 40,
+    "justificativa": "O código JavaScript está embutido na view, misturando lógica de apresentação e comportamento, dificultando reutilização e testes."
+   },
+   {
+    "nome": "Comparação Booleana Stringly Typed",
+    "arquivo": "resources/views/admin/caixa/nova-entrada.blade.php",
+    "linha_inicio": 28,
+    "linha_fim": 28,
+    "justificativa": "A comparação 'resposta.success === 'true'' compara um booleano com uma string, podendo sempre resultar em falso se o servidor retornar booleano verdadeiro."
+   },
+   {
+    "nome": "Comparação Booleana Stringly Typed",
+    "arquivo": "resources/views/admin/caixa/nova-sangria.blade.php",
+    "linha_inicio": 28,
+    "linha_fim": 28,
+    "justificativa": "A comparação 'resposta.success === 'true'' compara um booleano com uma string, podendo sempre resultar em falso se o servidor retornar booleano verdadeiro."
+   }
+  ]
+ },
+ "desvios": []
+}

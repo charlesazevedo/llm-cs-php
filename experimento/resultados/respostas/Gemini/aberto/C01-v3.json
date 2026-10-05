@@ -1,0 +1,109 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C01-v3",
+ "cs_id": "C01",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "1c775d42a379a65319ab52c76d260f1c6b12f7525b60fc73b598391376dddf7e",
+ "inicio": "2026-10-03T23:07:19+00:00",
+ "duracao_s": 30.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 3945,
+ "tokens_saida": 4064,
+ "tokens_raciocinio": 3332,
+ "custo": 0.056658,
+ "id_requisicao": "gen-1791068839-HyYpABWRMvJXQfws4bYm",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 30352
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Problema de Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas de banco de dados para os models Venda e Estoque estão sendo feitas dentro de um loop iterativo, resultando em múltiplas requisições e degradação de desempenho."
+   },
+   {
+    "nome": "Problema de Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Consultas iterativas aos models Venda e Estoque feitas dentro de um loop 'foreach', caracterizando um gargalo de consultas N+1."
+   },
+   {
+    "nome": "Problema de Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Da mesma forma que as iterações anteriores, as consultas a Venda e Estoque estão ocorrendo dentro do loop 'foreach'."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Esse trecho inteiro que repassa transações, vendas e estoque é uma cópia idêntica da lógica presente entre as linhas 186 e 198, violando o princípio DRY."
+   },
+   {
+    "nome": "Variável Indefinida / Lógica com Bug",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "O bloco 'else' está tentando acessar a variável de exceção '$e' (linha 166), mas ela está fora de escopo, pois só existe dentro do 'catch' precedente."
+   },
+   {
+    "nome": "Código Inatingível (Dead Code)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Este 'return' nunca será alcançado, pois todas as ramificações do bloco de if-else acima dele já garantem um retorno para o fluxo."
+   },
+   {
+    "nome": "Código de Depuração Remanescente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 242,
+    "linha_fim": 242,
+    "justificativa": "A função nativa 'debug_print_backtrace()' foi deixada ativa dentro do método, sendo uma prática indesejada em ambientes de produção."
+   }
+  ]
+ },
+ "desvios": []
+}

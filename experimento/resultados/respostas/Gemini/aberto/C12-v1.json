@@ -1,0 +1,116 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C12-v1",
+ "cs_id": "C12",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "c390ce29153ef6689422c3f0933bd20eb15ae50642ca87f47203b904a3c0534d",
+ "inicio": "2026-10-05T12:48:50+00:00",
+ "duracao_s": 22.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 5526,
+ "tokens_saida": 3021,
+ "tokens_raciocinio": 2299,
+ "custo": 0.047304,
+ "id_requisicao": "gen-1791204531-ohP7sCgZlywSZY6UZIQD",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 22802
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "A formatação de detalhes e meios de pagamento das transações está duplicada em outros métodos do controlador."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 75,
+    "linha_fim": 83,
+    "justificativa": "Consultas aos modelos de Venda e Estoque estão sendo executadas dentro de um loop (N+1), prejudicando o desempenho."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 167,
+    "justificativa": "A variável '$e' (exceção) está sendo chamada no bloco 'else' onde não foi declarada, causando um erro em tempo de execução."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O bloco de busca e formatação de Venda/Estoque repete o mesmo código contido nos métodos fecharCaixaView e na outra condicional de historicoAPI."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 188,
+    "linha_fim": 195,
+    "justificativa": "Novamente consultas ao banco estão acopladas iterativamente num laço foreach (N+1)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Terceira repetição da lógica idêntica para processar e formatar as transações e o relacionamento com estoque."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 209,
+    "linha_fim": 216,
+    "justificativa": "Repetição do problema de consultas banco de dados (Venda e Estoque) executadas dentro do loop principal."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 240,
+    "linha_fim": 340,
+    "justificativa": "O método é muito extenso e acumula muitas responsabilidades, misturando consultas variadas, cálculos agregados e formatação de arrays multidimensionais."
+   }
+  ]
+ },
+ "desvios": []
+}

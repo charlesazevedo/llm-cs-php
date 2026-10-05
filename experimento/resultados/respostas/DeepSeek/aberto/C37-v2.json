@@ -1,0 +1,202 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C37-v2",
+ "cs_id": "C37",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "8408786b6e27dbe0f9892d0d791aec7168f479651d97b9c30f537c48f7fb496b",
+ "inicio": "2026-10-05T15:39:56+00:00",
+ "duracao_s": 105.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3556,
+ "tokens_saida": 10509,
+ "tokens_raciocinio": 8658,
+ "custo": 0.020949852,
+ "id_requisicao": "gen-1791214797-1ZpOyJbWU6ydco1zJiXO",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 104986
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O bloco que percorre transações, consulta Venda/Estoque e formata detalhes é duplicado em fecharCaixaView e historicoAPI."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesmo bloco duplicado de fecharCaixaView, repetido no método historicoAPI para o tipo day."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Mesmo bloco duplicado de fecharCaixaView, repetido no método historicoAPI para o tipo range."
+   },
+   {
+    "nome": "N+1 query problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 75,
+    "linha_fim": 82,
+    "justificativa": "Para cada transação é feita uma consulta Venda::where e para cada venda uma consulta Estoque::where, causando N+1 queries."
+   },
+   {
+    "nome": "N+1 query problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 188,
+    "linha_fim": 194,
+    "justificativa": "Para cada transação é feita uma consulta Venda::where e para cada venda uma consulta Estoque::where, causando N+1 queries."
+   },
+   {
+    "nome": "N+1 query problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 209,
+    "linha_fim": 215,
+    "justificativa": "Para cada transação é feita uma consulta Venda::where e para cada venda uma consulta Estoque::where, causando N+1 queries."
+   },
+   {
+    "nome": "Duplicação de lógica de conversão de moeda",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de formato monetário com str_replace é repetida duas vezes na mesma função, sem extração para um helper."
+   },
+   {
+    "nome": "Duplicação de lógica de conversão de moeda",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "A conversão de formato monetário com str_replace é repetida, sem extração para um helper."
+   },
+   {
+    "nome": "Duplicação de lógica de conversão de moeda",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 145,
+    "justificativa": "A conversão de formato monetário com str_replace é repetida, sem extração para um helper."
+   },
+   {
+    "nome": "Duplicação de lógica de conversão de moeda",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 148,
+    "linha_fim": 148,
+    "justificativa": "A conversão de formato monetário com str_replace é repetida, sem extração para um helper."
+   },
+   {
+    "nome": "Tipo de retorno inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 43,
+    "linha_fim": 56,
+    "justificativa": "O método iniciarCaixa retorna response()->json() em alguns casos e view() em outro, misturando formatos de resposta."
+   },
+   {
+    "nome": "Tratamento de erro inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "No catch de sangriaPost é retornado diretamente $e->errorInfo[2], uma string crua, em vez de uma resposta JSON padronizada."
+   },
+   {
+    "nome": "Variável indefinida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 167,
+    "justificativa": "No bloco else de addCaixa é utilizada a variável $e->errorInfo[2], mas $e não está definida nesse escopo."
+   },
+   {
+    "nome": "Código inalcançável",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A instrução return $request->valor; é inalcançável porque os blocos if e else anteriores sempre retornam."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 99,
+    "justificativa": "O método fecharCaixaView concentra muitas responsabilidades: consultas, formatação, montagem de detalhes e retorno de view."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI possui múltiplos branches com lógica duplicada e diversas responsabilidades, tornando-o longo e complexo."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 38,
+    "linha_fim": 40,
+    "justificativa": "O valor $request->valor é utilizado sem nenhuma validação de formato ou obrigatoriedade."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 118,
+    "linha_fim": 119,
+    "justificativa": "Os campos $request->descricao e $request->valor são atribuídos sem validação de entrada."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 146,
+    "justificativa": "Os campos $request->valor e $request->descricao são atribuídos sem validação de entrada."
+   },
+   {
+    "nome": "Lógica de apresentação no controlador",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 65,
+    "linha_fim": 78,
+    "justificativa": "Formatação de valores com number_format e construção de strings de detalhes são feitas no controlador, misturando apresentação com lógica de negócio."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,188 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C34-v1",
+ "cs_id": "C34",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "bfd392b8be38ef01a91066058caa06b6031f2a52f967ce5b07b6d7dbf04aaf57",
+ "inicio": "2026-10-05T15:29:07+00:00",
+ "duracao_s": 89.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3515,
+ "tokens_saida": 8641,
+ "tokens_raciocinio": 7014,
+ "custo": 0.017305816,
+ "id_requisicao": "gen-1791214147-29CUPe5cKIrh5cOeaqVq",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 88679
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Loop de construção de detalhes duplicado nos métodos historicoAPI (linhas 186-198 e 207-219)."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Loop de construção de detalhes duplicado no método fecharCaixaView (linhas 73-86) e no trecho range (linhas 207-219)."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Loop de construção de detalhes duplicado no método fecharCaixaView (linhas 73-86) e no trecho day (linhas 186-198)."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Realiza consultas a Venda e Estoque dentro de loop, causando múltiplas consultas ao banco."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Realiza consultas a Venda e Estoque dentro de loop, causando múltiplas consultas ao banco."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Realiza consultas a Venda e Estoque dentro de loop, causando múltiplas consultas ao banco."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método fecharCaixaView tem muitas responsabilidades e é extenso, dificultando a manutenção."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método historicoAPI contém múltiplas ramificações e loops, tornando-o longo e complexo."
+   },
+   {
+    "nome": "Strings mágicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Usa strings fixas 'DI','CR','DE' e traduções sem constantes, violando o princípio de evitar strings mágicas."
+   },
+   {
+    "nome": "Strings mágicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Usa strings fixas 'DI','CR','DE' e traduções sem constantes, violando o princípio de evitar strings mágicas."
+   },
+   {
+    "nome": "Strings mágicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Usa strings fixas 'DI','CR','DE' e traduções sem constantes, violando o princípio de evitar strings mágicas."
+   },
+   {
+    "nome": "Variável indefinida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 167,
+    "justificativa": "Utiliza $e->errorInfo[2] fora do bloco catch, onde a variável $e não está definida."
+   },
+   {
+    "nome": "Tipo de retorno inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 43,
+    "linha_fim": 56,
+    "justificativa": "Método iniciarCaixa pode retornar JSON ou View, dificultando o uso por chamadores."
+   },
+   {
+    "nome": "Formato de resposta inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 129,
+    "justificativa": "No catch, retorna string pura ($e->errorInfo[2]) em vez de JSON como nos demais métodos."
+   },
+   {
+    "nome": "Código morto",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Linha inalcançável após todos os ramos do if/else retornarem."
+   },
+   {
+    "nome": "Erro de digitação / Índice indefinido",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 225,
+    "justificativa": "Acessa $request->rage, provável erro de digitação para 'range', podendo causar índice indefinido."
+   },
+   {
+    "nome": "Lógica de negócio no controller",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 65,
+    "linha_fim": 97,
+    "justificativa": "Controller formata valores, monta detalhes e calcula totais, responsabilidades que deveriam estar em modelos ou presenters."
+   },
+   {
+    "nome": "Lógica de negócio no controller",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 180,
+    "linha_fim": 221,
+    "justificativa": "Controller monta strings de detalhes, formata valores e traduz códigos, quando deveria delegar a outras camadas."
+   }
+  ]
+ },
+ "desvios": []
+}

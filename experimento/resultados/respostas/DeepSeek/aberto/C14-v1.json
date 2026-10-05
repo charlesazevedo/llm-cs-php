@@ -1,0 +1,132 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C14-v1",
+ "cs_id": "C14",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "b59538a0b53bea438cd5077a06d36d54002a32ccdc829ee650d9c74aa502f432",
+ "inicio": "2026-10-05T12:54:09+00:00",
+ "duracao_s": 58.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 2999,
+ "tokens_saida": 5120,
+ "tokens_raciocinio": 4212,
+ "custo": 0.011953612,
+ "id_requisicao": "gen-1791204849-V4ofHpgEj0EAW8cehZl5",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 58029
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 107,
+    "linha_fim": 140,
+    "justificativa": "Os métodos totalVendido, quantidadeDeVendas, ticketMedio e maiorVenda repetem a mesma consulta base Transacoes::today(), diferindo apenas na função agregada."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 177,
+    "linha_fim": 200,
+    "justificativa": "Os métodos vendasParceladas, totalParcelado e vendasAVista repetem consultas similares com cláusulas where sobre o campo parcelas."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 237,
+    "linha_fim": 270,
+    "justificativa": "Os métodos totalDeSangrias, quantidadeDeSangrias, totalDeEntradas e quantidadeDeEntradas apresentam padrão repetido de consulta today() com sum/count em modelos diferentes."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 207,
+    "linha_fim": 220,
+    "justificativa": "Os métodos saldoInicial e saldoAtual repetem a mesma condição Caixa::where('data', date('Y-m-d')) para obter um campo."
+   },
+   {
+    "nome": "String Mágica",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 149,
+    "linha_fim": 149,
+    "justificativa": "O valor 'DI' para forma de pagamento é uma string mágica que deveria ser uma constante ou enum."
+   },
+   {
+    "nome": "Número Mágico",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 179,
+    "linha_fim": 179,
+    "justificativa": "O número 1 usado para definir parcelas acima de 1 é um número mágico sem nome descritivo."
+   },
+   {
+    "nome": "Número Mágico",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "O número 1 usado para definir parcelas acima de 1 é um número mágico sem nome descritivo."
+   },
+   {
+    "nome": "Número Mágico",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 199,
+    "linha_fim": 199,
+    "justificativa": "O número 1 usado para definir venda à vista é um número mágico sem nome descritivo."
+   },
+   {
+    "nome": "Classe Grande",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 14,
+    "linha_fim": 301,
+    "justificativa": "A classe acumula múltiplas responsabilidades de relatórios distintos (vendas, pagamentos, caixa, estoque), violando o princípio da responsabilidade única."
+   },
+   {
+    "nome": "Comentários Redundantes",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 102,
+    "linha_fim": 300,
+    "justificativa": "Os comentários docblock nos métodos privados apenas repetem o nome do método, adicionando ruído sem informação adicional."
+   }
+  ]
+ },
+ "desvios": []
+}

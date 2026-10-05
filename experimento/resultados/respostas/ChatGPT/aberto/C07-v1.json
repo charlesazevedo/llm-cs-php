@@ -1,0 +1,81 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C07-v1",
+ "cs_id": "C07",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "6311009611746a1c1473c0dff35334d9d1c7ae1cdcfa4c11cd37196d5584e74e",
+ "inicio": "2026-10-03T23:12:54+00:00",
+ "duracao_s": 5.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 678,
+ "tokens_saida": 359,
+ "tokens_raciocinio": 139,
+ "custo": 0.004946,
+ "id_requisicao": "gen-1791069174-xbdtpqz8tk5LW12EpFDj",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 5002
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Lógica de apresentação na view",
+    "arquivo": "resources/views/admin/caixa/movimentacoes.blade.php",
+    "linha_inicio": 21,
+    "linha_fim": 21,
+    "justificativa": "A decisão condicional sobre a classe CSS está embutida no template, misturando a renderização HTML com lógica de apresentação."
+   },
+   {
+    "nome": "JavaScript inline",
+    "arquivo": "resources/views/admin/caixa/movimentacoes.blade.php",
+    "linha_inicio": 28,
+    "linha_fim": 34,
+    "justificativa": "O script embutido na view dificulta reutilização, manutenção, testes e aplicação de políticas de segurança de conteúdo."
+   },
+   {
+    "nome": "Estilização imperativa via JavaScript",
+    "arquivo": "resources/views/admin/caixa/movimentacoes.blade.php",
+    "linha_inicio": 31,
+    "linha_fim": 31,
+    "justificativa": "Propriedades visuais são aplicadas com jQuery e valores hardcoded quando deveriam ser declaradas em uma regra CSS para a classe saldo-negativo."
+   }
+  ]
+ },
+ "desvios": []
+}

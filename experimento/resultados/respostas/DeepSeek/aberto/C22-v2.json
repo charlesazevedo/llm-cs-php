@@ -1,0 +1,174 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C22-v2",
+ "cs_id": "C22",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "d02d9a4f0f7dc6ef348d2fde61f792c5f0cc6adf44d56376be736f21b1ad6a15",
+ "inicio": "2026-10-05T13:46:15+00:00",
+ "duracao_s": 87.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3889,
+ "tokens_saida": 8867,
+ "tokens_raciocinio": 7348,
+ "custo": 0.0201234,
+ "id_requisicao": "gen-1791207975-nU7gOYwRrSGUo38H5Ogg",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 87367
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeCaixa.php",
+    "linha_inicio": 17,
+    "linha_fim": 24,
+    "justificativa": "Método secoes() segue o mesmo padrão: chama parent::secoes(), adiciona uma entrada e retorna, duplicando a estrutura."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+    "linha_inicio": 18,
+    "linha_fim": 26,
+    "justificativa": "Método secoes() segue o mesmo padrão: chama parent::secoes(), adiciona uma entrada e retorna, duplicando a estrutura."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComClientes.php",
+    "linha_inicio": 17,
+    "linha_fim": 24,
+    "justificativa": "Método secoes() segue o mesmo padrão: chama parent::secoes(), adiciona uma entrada e retorna, duplicando a estrutura."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComDescontos.php",
+    "linha_inicio": 17,
+    "linha_fim": 24,
+    "justificativa": "Método secoes() segue o mesmo padrão: chama parent::secoes(), adiciona uma entrada e retorna, duplicando a estrutura."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComEntradas.php",
+    "linha_inicio": 17,
+    "linha_fim": 25,
+    "justificativa": "Método secoes() segue o mesmo padrão: chama parent::secoes(), adiciona uma entrada e retorna, duplicando a estrutura."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComEstoque.php",
+    "linha_inicio": 17,
+    "linha_fim": 23,
+    "justificativa": "Método secoes() segue o mesmo padrão: chama parent::secoes(), adiciona uma entrada e retorna, duplicando a estrutura."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComItens.php",
+    "linha_inicio": 18,
+    "linha_fim": 26,
+    "justificativa": "Método secoes() segue o mesmo padrão: chama parent::secoes(), adiciona uma entrada e retorna, duplicando a estrutura."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComParcelamentos.php",
+    "linha_inicio": 17,
+    "linha_fim": 24,
+    "justificativa": "Método secoes() segue o mesmo padrão: chama parent::secoes(), adiciona uma entrada e retorna, duplicando a estrutura."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComSangrias.php",
+    "linha_inicio": 17,
+    "linha_fim": 24,
+    "justificativa": "Método secoes() segue o mesmo padrão: chama parent::secoes(), adiciona uma entrada e retorna, duplicando a estrutura."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeFechamento.php",
+    "linha_inicio": 27,
+    "linha_fim": 34,
+    "justificativa": "Método secoes() segue o mesmo padrão: chama parent::secoes(), adiciona uma entrada e retorna, duplicando a estrutura."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeVendas.php",
+    "linha_inicio": 17,
+    "linha_fim": 24,
+    "justificativa": "Método secoes() segue o mesmo padrão: chama parent::secoes(), adiciona uma entrada e retorna, duplicando a estrutura."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+    "linha_inicio": 17,
+    "linha_fim": 24,
+    "justificativa": "Método secoes() segue o mesmo padrão: chama parent::secoes(), adiciona uma entrada e retorna, duplicando a estrutura."
+   },
+   {
+    "nome": "Deep Inheritance Hierarchy",
+    "arquivo": "app/Pdv/RelatorioDeFechamento.php",
+    "linha_inicio": 10,
+    "linha_fim": 10,
+    "justificativa": "A classe RelatorioDeFechamento está no final de uma cadeia de herança com mais de 10 níveis, dificultando a compreensão e manutenção."
+   },
+   {
+    "nome": "Inheritance Instead of Composition",
+    "arquivo": "app/Pdv/RelatorioDeFechamento.php",
+    "linha_inicio": 10,
+    "linha_fim": 10,
+    "justificativa": "O uso de herança para adicionar seções ao relatório, em vez de composição, acopla fortemente as classes e limita a reutilização."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+    "linha_inicio": 22,
+    "linha_fim": 22,
+    "justificativa": "Os códigos de pagamento 'CR' e 'DE' são strings mágicas que deveriam ser constantes nomeadas."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+    "linha_inicio": 21,
+    "linha_fim": 21,
+    "justificativa": "O código de pagamento 'DI' é uma string mágica que deveria ser uma constante nomeada."
+   }
+  ]
+ },
+ "desvios": []
+}

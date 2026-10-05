@@ -1,0 +1,75 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C08-v1",
+ "cs_id": "C08",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "85867c70944782ab4d5227cecaec591481ab3b30d3a9ee924ef9e83d449beec9",
+ "inicio": "2026-10-03T23:09:01+00:00",
+ "duracao_s": 3.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 1781,
+ "tokens_saida": 9,
+ "tokens_raciocinio": 0,
+ "custo": 0.007304,
+ "id_requisicao": "gen-1791068941-OBvRKyJV8ixTnmcpy2xA",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 2706,
+  "pipeline": [
+   {
+    "type": "guardrail",
+    "name": "moderation",
+    "summary": "Content passed OpenAI moderation",
+    "data": {
+     "engine": "openai-moderations",
+     "flagged": false,
+     "moderator_ids": [
+      "OpenAIOmniModerator"
+     ]
+    }
+   }
+  ]
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": []
+ },
+ "desvios": [
+  "plugin moderation"
+ ]
+}

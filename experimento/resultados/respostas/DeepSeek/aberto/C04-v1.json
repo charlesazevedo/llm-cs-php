@@ -1,0 +1,97 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C04-v1",
+ "cs_id": "C04",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "d77fa7d0e40363906d91d88fb5eaab474eee6e6005102e12f99042c0a7bd0906",
+ "inicio": "2026-10-03T23:11:56+00:00",
+ "duracao_s": 23.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 765,
+ "tokens_saida": 2857,
+ "tokens_raciocinio": 2368,
+ "custo": 0.00616176,
+ "id_requisicao": "gen-1791069116-anoMXki4JN1wBGLoU8RI",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 23488
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/PrivilegiosDeExclusao.php",
+    "linha_inicio": 21,
+    "linha_fim": 24,
+    "justificativa": "O mesmo callback [$this, 'permitirGerente'] é repetido em todas as definições, podendo ser extraído para um loop ou configuração."
+   },
+   {
+    "nome": "String mágica",
+    "arquivo": "app/Pdv/PrivilegiosDeExclusao.php",
+    "linha_inicio": 21,
+    "linha_fim": 24,
+    "justificativa": "Os nomes das habilidades ('caixa.excluir', 'venda.excluir', etc.) são strings soltas no código, sem constantes ou configuração centralizada."
+   },
+   {
+    "nome": "String mágica",
+    "arquivo": "app/Pdv/PrivilegiosDeExclusao.php",
+    "linha_inicio": 35,
+    "linha_fim": 35,
+    "justificativa": "A chave de configuração 'pdv.gerentes' é uma string mágica acessada diretamente, sem constante ou helper."
+   },
+   {
+    "nome": "Falta de declaração de tipo de retorno",
+    "arquivo": "app/Pdv/PrivilegiosDeExclusao.php",
+    "linha_inicio": 19,
+    "linha_fim": 19,
+    "justificativa": "O método registrar() não declara tipo de retorno (void), reduzindo clareza e segurança de tipos."
+   },
+   {
+    "nome": "Falta de declaração de tipo de retorno",
+    "arquivo": "app/Pdv/PrivilegiosDeExclusao.php",
+    "linha_inicio": 33,
+    "linha_fim": 33,
+    "justificativa": "O método permitirGerente() não declara tipo de retorno (bool), reduzindo clareza e segurança de tipos."
+   }
+  ]
+ },
+ "desvios": []
+}

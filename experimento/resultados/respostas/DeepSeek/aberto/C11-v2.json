@@ -1,0 +1,237 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C11-v2",
+ "cs_id": "C11",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "a0d5f31fe8b06d657e7b824904a9bac53766d58e156c15157800fe572e70cf8d",
+ "inicio": "2026-10-05T12:48:11+00:00",
+ "duracao_s": 81.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 23519,
+ "tokens_saida": 7997,
+ "tokens_raciocinio": 5831,
+ "custo": 0.0313566,
+ "id_requisicao": "gen-1791204491-R8S5VURmfXaVtFzcAs4f",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 81215
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 18,
+    "linha_fim": 2017,
+    "justificativa": "A classe possui muitas responsabilidades e métodos, tornando-a grande e difícil de manter."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 65,
+    "linha_fim": 141,
+    "justificativa": "Método duplica a lógica de consulta e agregação de transações usada em outras seções."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 729,
+    "linha_fim": 809,
+    "justificativa": "Método duplica a lógica de consulta e agregação de transações com filtro de pagamento em dinheiro."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 820,
+    "linha_fim": 900,
+    "justificativa": "Método duplica a lógica de consulta e agregação de transações com filtro de pagamento em crédito."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 911,
+    "linha_fim": 988,
+    "justificativa": "Método duplica a lógica de consulta e agregação de transações com filtro de pagamento em débito."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1258,
+    "linha_fim": 1336,
+    "justificativa": "Método duplica a lógica de consulta e agregação de transações com filtro de parcelas maiores que 1."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1346,
+    "linha_fim": 1425,
+    "justificativa": "Método duplica a lógica de consulta e agregação de transações com filtro de parcelas igual a 1."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1688,
+    "linha_fim": 1763,
+    "justificativa": "Método duplica a lógica de consulta e agregação de transações com filtro de desconto maior que 0."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1774,
+    "linha_fim": 1845,
+    "justificativa": "Método duplica a lógica de consulta e agregação de transações com filtro de desconto igual a 0."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1858,
+    "linha_fim": 1930,
+    "justificativa": "Método duplica a lógica de consulta e agregação de transações com filtro de total maior que 100."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1941,
+    "linha_fim": 2014,
+    "justificativa": "Método duplica a lógica de consulta e agregação de transações com filtro de total menor ou igual a 20."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 151,
+    "linha_fim": 229,
+    "justificativa": "Método duplica a lógica de consulta e agregação de itens vendidos."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 999,
+    "linha_fim": 1077,
+    "justificativa": "Método duplica a lógica de consulta e agregação de itens vendidos com filtro de pagamento em dinheiro."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1436,
+    "linha_fim": 1514,
+    "justificativa": "Método duplica a lógica de consulta e agregação de itens vendidos com filtro de pagamento em cartão."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 495,
+    "linha_fim": 573,
+    "justificativa": "Método duplica a lógica de consulta e agregação de produtos do estoque."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1085,
+    "linha_fim": 1163,
+    "justificativa": "Método duplica a lógica de consulta e agregação de produtos do estoque com filtro de estoque zerado."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1522,
+    "linha_fim": 1598,
+    "justificativa": "Método duplica a lógica de consulta e agregação de produtos do estoque com filtro de estoque positivo."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 648,
+    "linha_fim": 718,
+    "justificativa": "Método duplica a lógica de consulta e agregação de dados de clientes."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1175,
+    "linha_fim": 1246,
+    "justificativa": "Método duplica a lógica de consulta e agregação de dados de clientes atendidos no período."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1609,
+    "linha_fim": 1677,
+    "justificativa": "Método duplica a lógica de consulta e agregação de dados de clientes cadastrados no período."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 407,
+    "linha_fim": 487,
+    "justificativa": "Método muito longo, com 81 linhas, dificultando a leitura e manutenção."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 239,
+    "linha_fim": 316,
+    "justificativa": "Método muito longo, com 78 linhas, dificultando a leitura e manutenção."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 327,
+    "linha_fim": 396,
+    "justificativa": "Método muito longo, com 70 linhas, dificultando a leitura e manutenção."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 91,
+    "linha_fim": 92,
+    "justificativa": "Uso de número mágico 100 para filtrar transações sem nomeação simbólica."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 102,
+    "linha_fim": 103,
+    "justificativa": "Uso de string mágica 'DI' para identificar pagamento em dinheiro sem constante."
+   }
+  ]
+ },
+ "desvios": []
+}

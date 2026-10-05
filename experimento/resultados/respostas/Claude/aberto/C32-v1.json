@@ -1,0 +1,130 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C32-v1",
+ "cs_id": "C32",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "7cbd56a232e1948e93aacb8a2bc2503147aca747833563b5f7ea2bbd88ac3e5a",
+ "inicio": "2026-10-05T15:18:36+00:00",
+ "duracao_s": 11.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5290,
+ "tokens_saida": 1240,
+ "tokens_raciocinio": 0,
+ "custo": 0.04596,
+ "id_requisicao": "gen-1791213516-JuVe3WSjfGw6pSDS7CuN",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 11628
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 219,
+    "justificativa": "Os laços que formatam transações e montam os detalhes nos ramos 'day' e 'range' são praticamente idênticos e também repetem a lógica de fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "A formatação de transações e a montagem de detalhes repetem o mesmo bloco usado em historicoAPI."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView mistura consultas, formatação de valores, montagem de detalhes e cálculo de totais em um único método extenso."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI concentra três fluxos distintos com lógica repetida em um método longo controlado por condicionais de tipo."
+   },
+   {
+    "nome": "Switch Statements",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 221,
+    "justificativa": "A cadeia de if/else sobre a string $type seleciona comportamentos distintos que poderiam ser separados em estratégias ou métodos próprios."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de moeda com str_replace([\".\",\",\"],[\"\",\".\"]) é repetida em vários métodos (linhas 39-40, 119, 145, 148) em vez de ser extraída para um helper."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 89,
+    "linha_fim": 97,
+    "justificativa": "O controller manipula e formata diretamente diversos atributos de Caixa e totais de Transacoes, lógica que pertence aos modelos ou a presenters."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return $request->valor é inalcançável porque todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Primitive Obsession",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Códigos de pagamento 'DI','CR','DE' são strings mágicas traduzidas inline (e de forma inconsistente em vários pontos) em vez de um tipo/enum."
+   },
+   {
+    "nome": "Middle Man",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 21,
+    "linha_fim": 23,
+    "justificativa": "O método público data() apenas delega para date('Y-m-d'), e não é sequer usado de forma consistente no controller (linha 38 usa date diretamente)."
+   }
+  ]
+ },
+ "desvios": []
+}

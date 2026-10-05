@@ -1,0 +1,345 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "forcado",
+ "entrada": "C11-v2",
+ "cs_id": "C11",
+ "variante": "v2",
+ "hash_condicao": "f95b74f9fca5d23d",
+ "sha256_entrada": "a0d5f31fe8b06d657e7b824904a9bac53766d58e156c15157800fe572e70cf8d",
+ "inicio": "2026-10-05T12:54:20+00:00",
+ "duracao_s": 56.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 29195,
+ "tokens_saida": 7732,
+ "tokens_raciocinio": 6359,
+ "custo": 0.151174,
+ "id_requisicao": "gen-1791204860-oacyFcGcDlmZCvAbwhlN",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 55811
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "avaliacoes": [
+   {
+    "item": 1,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 2,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 3,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 4,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 5,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 6,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 7,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 8,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 9,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 10,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 11,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 12,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 13,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 14,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 15,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 16,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 17,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 18,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 19,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 20,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+      "linha_inicio": 18,
+      "linha_fim": 2017
+     }
+    ],
+    "justificativa": "A classe possui mais de 2.000 linhas, superando amplamente o limite indicado de 1.000 linhas, assumindo a responsabilidade excessiva de construir multiplas secoes de relatorio em um unico arquivo."
+   },
+   {
+    "item": 21,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 22,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 23,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 24,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 25,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 26,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 27,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 28,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 29,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 30,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 31,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 32,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 33,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 34,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 35,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 36,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+      "linha_inicio": 65,
+      "linha_fim": 141
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+      "linha_inicio": 729,
+      "linha_fim": 810
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+      "linha_inicio": 820,
+      "linha_fim": 901
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+      "linha_inicio": 911,
+      "linha_fim": 989
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+      "linha_inicio": 1258,
+      "linha_fim": 1336
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+      "linha_inicio": 1346,
+      "linha_fim": 1426
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+      "linha_inicio": 1688,
+      "linha_fim": 1764
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+      "linha_inicio": 1774,
+      "linha_fim": 1848
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+      "linha_inicio": 1858,
+      "linha_fim": 1931
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+      "linha_inicio": 1941,
+      "linha_fim": 2016
+     }
+    ],
+    "justificativa": "Ha uma repeticao macica da mesma estrutura de codigo para montar os blocos de array e calcular as mesmas metricas, alterando praticamente apenas a clausula de filtro inicial nos models."
+   },
+   {
+    "item": 37,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 38,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   }
+  ]
+ },
+ "desvios": []
+}

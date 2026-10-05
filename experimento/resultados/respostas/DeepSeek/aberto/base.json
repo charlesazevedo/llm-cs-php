@@ -1,0 +1,213 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "base",
+ "cs_id": null,
+ "variante": null,
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "c63c188e34eb1aa66716929c9814da3e9d037be6592bb6f1ad5e2d5e4f2f0c7c",
+ "inicio": "2026-10-02T17:43:38+00:00",
+ "duracao_s": 56.9,
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3383,
+ "tokens_saida": 7005,
+ "tokens_raciocinio": 5112,
+ "custo": 0.013979416,
+ "id_requisicao": "gen-1790963018-eNaNJNORIU0PmKSKAq00",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 56515
+ },
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco que percorre vendas e formata detalhes é repetido em outros métodos."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Repete a lógica de detalhamento e formatação de transações presente em fecharCaixaView."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Terceira ocorrência da mesma lógica de detalhamento, com pequenas variações."
+   },
+   {
+    "nome": "N+1 Queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Dentro do loop, são feitas consultas a Venda e Estoque para cada transação, gerando múltiplas queries."
+   },
+   {
+    "nome": "N+1 Queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Cada iteração do loop realiza consultas adicionais a Venda e Estoque, resultando em muitas queries."
+   },
+   {
+    "nome": "N+1 Queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Mesmo problema de N+1 ocorre neste bloco de loop com consultas internas."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método acumula múltiplas responsabilidades: obter transações, formatar dados, montar detalhes e retornar view."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método extenso com várias condicionais e blocos que duplicam lógica, difícil de manter."
+   },
+   {
+    "nome": "Uso de strings para booleanos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 43,
+    "linha_fim": 52,
+    "justificativa": "Retorna 'true'/'false' como strings no JSON em vez de booleanos nativos."
+   },
+   {
+    "nome": "Uso de strings para booleanos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 104,
+    "linha_fim": 107,
+    "justificativa": "Retorna 'true' como string em resposta JSON."
+   },
+   {
+    "nome": "Uso de strings para booleanos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 123,
+    "linha_fim": 126,
+    "justificativa": "Novamente usa string 'true' em JSON."
+   },
+   {
+    "nome": "Uso de strings para booleanos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 151,
+    "linha_fim": 160,
+    "justificativa": "Mantém o padrão de string boolean em respostas de sucesso e erro."
+   },
+   {
+    "nome": "Uso de strings para booleanos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 167,
+    "justificativa": "Retorna 'false' como string também no bloco else."
+   },
+   {
+    "nome": "Tratamento inadequado de exceções",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 129,
+    "justificativa": "Retorna diretamente $e->errorInfo[2] sem estruturar resposta JSON, expondo detalhes do banco."
+   },
+   {
+    "nome": "Código morto",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Instrução return nunca é alcançada, pois todos os caminhos anteriores já retornam."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 58,
+    "justificativa": "Não valida $request->valor quanto a formato, presença ou valor numérico antes de usar."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "Verifica caixa aberto, mas não valida campos obrigatórios como descricao e valor."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 140,
+    "linha_fim": 170,
+    "justificativa": "Não valida $request->valor e descricao, podendo causar erros de conversão."
+   },
+   {
+    "nome": "Acesso estático excessivo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 26,
+    "linha_fim": 27,
+    "justificativa": "Chama métodos estáticos Caixa::today() e Caixa::checkOpen() diretamente, dificultando testes e acoplando o controller."
+   },
+   {
+    "nome": "Conversão manual de moeda",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Uso repetido de str_replace para converter formato de moeda, suscetível a erros e duplicado (também nas linhas 119, 145, 148)."
+   },
+   {
+    "nome": "Nomes de variáveis pouco descritivos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 62,
+    "linha_fim": 97,
+    "justificativa": "Variáveis como $sang, $entrada, $val, $detalhes não expressam claramente seu propósito no contexto."
+   },
+   {
+    "nome": "Controller inchado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 232,
+    "justificativa": "O controller concentra lógica de negócio, acesso a dados, formatação e controle de fluxo, violando o princípio de responsabilidade única."
+   }
+  ]
+ },
+ "desvios": []
+}

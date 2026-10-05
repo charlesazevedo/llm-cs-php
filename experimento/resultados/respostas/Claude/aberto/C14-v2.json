@@ -1,0 +1,67 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C14-v2",
+ "cs_id": "C14",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "7891f327aedc190878a3660c6b13172dc37021ba02937a7ab3e0f07f8c063c60",
+ "inicio": "2026-10-05T12:49:00+00:00",
+ "duracao_s": 6.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 8043,
+ "tokens_saida": 336,
+ "tokens_raciocinio": 181,
+ "custo": 0.038892,
+ "id_requisicao": "gen-1791204540-Ey8FuiGluMpiVnuj72O5",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 6351
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 18,
+    "linha_fim": 571,
+    "justificativa": "A classe concentra dezenas de métodos e indicadores de domínios distintos (vendas, pagamentos, parcelamentos, caixa, movimentações, estoque e clientes), acumulando responsabilidades que deveriam estar em classes separadas."
+   }
+  ]
+ },
+ "desvios": []
+}

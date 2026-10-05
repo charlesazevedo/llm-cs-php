@@ -1,0 +1,380 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "forcado",
+ "entrada": "C22-v2",
+ "cs_id": "C22",
+ "variante": "v2",
+ "hash_condicao": "f95b74f9fca5d23d",
+ "sha256_entrada": "d02d9a4f0f7dc6ef348d2fde61f792c5f0cc6adf44d56376be736f21b1ad6a15",
+ "inicio": "2026-10-05T13:46:06+00:00",
+ "duracao_s": 26.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 4940,
+ "tokens_saida": 2065,
+ "tokens_raciocinio": 758,
+ "custo": 0.0329985,
+ "id_requisicao": "gen-1791207966-vrkWI91sXEmSzEDJEwHf",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 25857
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "avaliacoes": [
+   {
+    "item": 1,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 2,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 3,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 4,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 5,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 6,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 7,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 8,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 9,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 10,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 11,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 12,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 13,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 14,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 15,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 16,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 17,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 18,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 19,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 20,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 21,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 22,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 23,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 24,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 25,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 26,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 27,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComDescontos.php",
+      "linha_inicio": 10,
+      "linha_fim": 10
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComParcelamentos.php",
+      "linha_inicio": 10,
+      "linha_fim": 10
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComItens.php",
+      "linha_inicio": 11,
+      "linha_fim": 11
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComClientes.php",
+      "linha_inicio": 10,
+      "linha_fim": 10
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComEstoque.php",
+      "linha_inicio": 10,
+      "linha_fim": 10
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeFechamento.php",
+      "linha_inicio": 10,
+      "linha_fim": 10
+     }
+    ],
+    "justificativa": "A cadeia de herança é excessivamente profunda. A partir de RelatorioDeCaixaComDescontos, as classes possuem mais de seis ancestrais, chegando a doze níveis entre RelatorioDeFechamento e Relatorio."
+   },
+   {
+    "item": 28,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 29,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 30,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 31,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 32,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 33,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 34,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 35,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 36,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixa.php",
+      "linha_inicio": 17,
+      "linha_fim": 24
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+      "linha_inicio": 18,
+      "linha_fim": 26
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComClientes.php",
+      "linha_inicio": 17,
+      "linha_fim": 24
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComDescontos.php",
+      "linha_inicio": 17,
+      "linha_fim": 24
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComEntradas.php",
+      "linha_inicio": 17,
+      "linha_fim": 25
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComEstoque.php",
+      "linha_inicio": 17,
+      "linha_fim": 23
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComItens.php",
+      "linha_inicio": 18,
+      "linha_fim": 26
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComParcelamentos.php",
+      "linha_inicio": 17,
+      "linha_fim": 25
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeCaixaComSangrias.php",
+      "linha_inicio": 17,
+      "linha_fim": 23
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeFechamento.php",
+      "linha_inicio": 27,
+      "linha_fim": 34
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeVendas.php",
+      "linha_inicio": 17,
+      "linha_fim": 24
+     },
+     {
+      "arquivo": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+      "linha_inicio": 17,
+      "linha_fim": 25
+     }
+    ],
+    "justificativa": "As implementações de secoes() repetem a mesma estrutura: obtêm as seções do método pai, acrescentam uma entrada ao array e devolvem o resultado. Apenas a consulta e a chave adicionada variam."
+   },
+   {
+    "item": 37,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 38,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   }
+  ]
+ },
+ "desvios": []
+}

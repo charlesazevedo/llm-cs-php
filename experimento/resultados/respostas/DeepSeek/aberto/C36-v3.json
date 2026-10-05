@@ -1,0 +1,230 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C36-v3",
+ "cs_id": "C36",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "fea8e3615e301108dc02f815d647ff8ef6bb161bac3cd6de8abab4b6bb1aff91",
+ "inicio": "2026-10-05T15:37:02+00:00",
+ "duracao_s": 92.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3505,
+ "tokens_saida": 8561,
+ "tokens_raciocinio": 6520,
+ "custo": 0.017140816,
+ "id_requisicao": "gen-1791214622-xHWup6G0U1whsQeN1raX",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 92399
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 244,
+    "justificativa": "Classe controladora assume múltiplas responsabilidades (abertura/fechamento de caixa, sangria, entradas, histórico, impressão)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Trecho duplicado em fecharCaixaView com loop para formatar transações e detalhes de venda."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Trecho duplicado no ramo 'day' de historicoAPI com loop e formatação semelhante a fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Trecho duplicado no ramo 'range' de historicoAPI com loop e formatação semelhante ao ramo 'day'."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 83,
+    "justificativa": "Consultas ao banco são executadas dentro de loop para cada transação/venda, causando problema N+1."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 195,
+    "justificativa": "Consultas ao banco são executadas dentro de loop para cada transação/venda, causando problema N+1."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 216,
+    "justificativa": "Consultas ao banco são executadas dentro de loop para cada transação/venda, causando problema N+1."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 98,
+    "justificativa": "Método fecharCaixaView é longo e realiza múltiplas responsabilidades (consultas, formatação, preparação de view)."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método historicoAPI é longo e contém branches complexos com loops duplicados."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Conversão de string de moeda repetida em linhas adjacentes no método iniciarCaixa."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Conversão de string de moeda repetida no método sangriaPost."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "Conversão de string de moeda repetida duas vezes no método addCaixa."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 35,
+    "linha_fim": 57,
+    "justificativa": "Método iniciarCaixa pode retornar JSON (sucesso ou erro) ou uma view, dependendo do fluxo."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "Método sangriaPost pode retornar JSON, string de erro ou null (sem return), inconsistente."
+   },
+   {
+    "nome": "Unreachable Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Código após bloco if/else com retornos em todos os caminhos é inalcançável."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 35,
+    "linha_fim": 40,
+    "justificativa": "Dados de entrada ($request->valor) não são validados antes de uso em iniciarCaixa."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 116,
+    "linha_fim": 119,
+    "justificativa": "Dados de entrada ($request->descricao e valor) não são validados antes de uso em sangriaPost."
+   },
+   {
+    "nome": "Missing Input Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 144,
+    "linha_fim": 148,
+    "justificativa": "Dados de entrada ($request->valor e descricao) não são validados antes de uso em addCaixa."
+   },
+   {
+    "nome": "Improper Error Handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 52,
+    "justificativa": "Catch de QueryException expõe detalhes internos do banco ($e->errorInfo[2]) ao cliente."
+   },
+   {
+    "nome": "Improper Error Handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "Catch de QueryException retorna string de erro com detalhes do banco, sem JSON e expondo informações internas."
+   },
+   {
+    "nome": "Improper Error Handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 160,
+    "justificativa": "Catch de QueryException expõe detalhes internos do banco ($e->errorInfo[2]) ao cliente."
+   },
+   {
+    "nome": "Improper Error Handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 167,
+    "justificativa": "Else utiliza variável $e não definida e tenta acessar errorInfo, causando erro e vazamento de informação."
+   },
+   {
+    "nome": "Missing Return",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 221,
+    "justificativa": "Método historicoAPI não retorna nada se $type não corresponder a 'month', 'day' ou 'range'."
+   },
+   {
+    "nome": "Unclear Method Name",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 21,
+    "linha_fim": 23,
+    "justificativa": "Nome do método data() é genérico e não indica que retorna apenas a data atual."
+   }
+  ]
+ },
+ "desvios": []
+}

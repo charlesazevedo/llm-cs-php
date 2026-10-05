@@ -1,0 +1,291 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C23-v1",
+ "cs_id": "C23",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "f77ae490ae976c9be1364583e757d899684970aa79752ca844fc739a8937a9b4",
+ "inicio": "2026-10-05T13:41:29+00:00",
+ "duracao_s": 26.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 5894,
+ "tokens_saida": 2962,
+ "tokens_raciocinio": 940,
+ "custo": 0.0443535,
+ "id_requisicao": "gen-1791207689-dBVwDEd0lIcKq2zwFfCL",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 26759
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/BoletoBancario.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/BoletoBancario.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/CartaoDeCredito.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/CartaoDeCredito.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/CartaoDeDebito.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/CartaoDeDebito.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/CarteiraDigital.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/CarteiraDigital.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/Cashback.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/Cashback.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/Cheque.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/Cheque.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/ChequePreDatado.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/ChequePreDatado.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/Crediario.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/Crediario.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/CreditoDaLoja.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/CreditoDaLoja.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/Dinheiro.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/Dinheiro.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Obsessão por primitivos",
+    "arquivo": "app/Pdv/FormaDePagamento.php",
+    "linha_inicio": 38,
+    "linha_fim": 40,
+    "justificativa": "O valor monetário e a taxa são manipulados diretamente como números de ponto flutuante, o que expõe o cálculo financeiro a problemas de precisão e ausência de validações de domínio."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/LinkDePagamento.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/LinkDePagamento.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/Pix.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/Pix.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/TransferenciaBancaria.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/TransferenciaBancaria.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/ValeAlimentacao.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/ValeAlimentacao.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/ValePresente.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/ValePresente.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   },
+   {
+    "nome": "Classe preguiçosa",
+    "arquivo": "app/Pdv/ValeRefeicao.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A classe não possui comportamento próprio e apenas retorna três valores constantes, podendo ser substituída por dados de configuração ou um enum."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/ValeRefeicao.php",
+    "linha_inicio": 10,
+    "linha_fim": 38,
+    "justificativa": "A implementação repete integralmente a estrutura de métodos presente nas demais formas de pagamento, variando somente os literais retornados."
+   }
+  ]
+ },
+ "desvios": []
+}

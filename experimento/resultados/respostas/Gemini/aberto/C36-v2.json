@@ -1,0 +1,130 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C36-v2",
+ "cs_id": "C36",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "2e5223baecfd0ee77b18b0971b0df5202a64d29429846def5ccf75778d95f8ce",
+ "inicio": "2026-10-05T15:24:08+00:00",
+ "duracao_s": 30.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 3934,
+ "tokens_saida": 3965,
+ "tokens_raciocinio": 3027,
+ "custo": 0.055448,
+ "id_requisicao": "gen-1791213848-EGkQpl4MCT4sHlxGjw50",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 30385
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A lógica de formatação de strings monetárias com str_replace é repetida aqui e em outros métodos, devendo ser isolada em um helper ou mutator."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas ao banco de dados (Venda e Estoque) são realizadas dentro de um loop foreach, o que causa gargalos de performance."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Lógica repetida para conversão de valores monetários utilizando str_replace."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "Lógica repetida para conversão de valores monetários utilizando str_replace."
+   },
+   {
+    "nome": "Undefined Variable / Bug",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 167,
+    "justificativa": "O bloco 'else' tenta acessar a variável '$e' (linha 166), que não está definida neste escopo, pois pertence apenas ao bloco 'catch'."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Esta linha de retorno nunca será executada porque os blocos 'if' e 'else' anteriores já encerram o fluxo do método com comandos return."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Consultas repetidas aos modelos Venda e Estoque dentro de um loop foreach durante a busca de histórico por dia."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O bloco inteiro de iteração e formatação de dados é idêntico ao bloco de processamento de datas do tipo 'range'."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Consultas repetidas aos modelos Venda e Estoque dentro de um loop foreach durante a busca de histórico por intervalo (range)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "O bloco de formatação e consultas é uma cópia exata da rotina de iteração da verificação por dia ('day')."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,445 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "forcado",
+ "entrada": "C23-v2",
+ "cs_id": "C23",
+ "variante": "v2",
+ "hash_condicao": "f95b74f9fca5d23d",
+ "sha256_entrada": "05686eaecbd9c2adb7eb6a4b6ca1bbadcd373a15795182131f0d92a4165b91df",
+ "inicio": "2026-10-05T13:46:49+00:00",
+ "duracao_s": 23.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 11447,
+ "tokens_saida": 2144,
+ "tokens_raciocinio": 632,
+ "custo": 0.050056,
+ "id_requisicao": "gen-1791208009-T8Ymhx6AaNdtkOMrTNaA",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 22992
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "avaliacoes": [
+   {
+    "item": 1,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 2,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 3,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 4,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 5,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 6,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 7,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 8,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 9,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 10,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 11,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 12,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 13,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 14,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Pdv/FormaDePagamento.php",
+      "linha_inicio": 8,
+      "linha_fim": 29
+     }
+    ],
+    "justificativa": "A classe abstrata FormaDePagamento possui 30 subclasses diretas no código fornecido, ultrapassando o exemplo de limite de 15 filhos."
+   },
+   {
+    "item": 15,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 16,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 17,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 18,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 19,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 20,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 21,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 22,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 23,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 24,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 25,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 26,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 27,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 28,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 29,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 30,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 31,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 32,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 33,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 34,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 35,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 36,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Pdv/BoletoBancario.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/CartaoDaLoja.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/CartaoDeCredito.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/CartaoDeCreditoInternacional.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/CartaoDeDebito.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/CartaoPrePago.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/CarteiraDigital.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/Cashback.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/Cheque.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/ChequePreDatado.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/ConvenioEmpresa.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/Crediario.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/CreditoDaLoja.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/Criptomoeda.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/DebitoEmConta.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/DepositoBancario.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/Dinheiro.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/FinanciamentoBancario.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/LinkDePagamento.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/NotaPromissoria.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/PagamentoPorAproximacao.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/Permuta.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/Pix.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/PontosDeFidelidade.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/TransferenciaBancaria.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/ValeAlimentacao.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/ValeCombustivel.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/ValeCultura.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/ValePresente.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/ValeRefeicao.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     }
+    ],
+    "justificativa": "As 30 subclasses repetem a mesma estrutura de três métodos e seus blocos de documentação, variando essencialmente apenas os valores retornados por codigo(), nome() e taxa()."
+   },
+   {
+    "item": 37,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 38,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   }
+  ]
+ },
+ "desvios": []
+}

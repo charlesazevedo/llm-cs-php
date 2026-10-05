@@ -1,0 +1,202 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C02-v2",
+ "cs_id": "C02",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "b478dbc44bb418032f83c5bbc2538083483ae8b7935b61bf4599a26b1e171efe",
+ "inicio": "2026-10-03T23:09:55+00:00",
+ "duracao_s": 42.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3601,
+ "tokens_saida": 5933,
+ "tokens_raciocinio": 4285,
+ "custo": 0.012000736,
+ "id_requisicao": "gen-1791068995-3nNfpw7ECzbbHAIh6P6z",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 41889
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de formatação de transações e detalhes duplicado em múltiplos métodos."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Bloco de formatação de transações e detalhes duplicado em múltiplos métodos."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Bloco de formatação de transações e detalhes duplicado em múltiplos métodos."
+   },
+   {
+    "nome": "Problema de N+1 queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 83,
+    "justificativa": "Consultas ao banco executadas dentro de loop, causando N+1 queries."
+   },
+   {
+    "nome": "Problema de N+1 queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 195,
+    "justificativa": "Consultas ao banco executadas dentro de loop, causando N+1 queries."
+   },
+   {
+    "nome": "Problema de N+1 queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 216,
+    "justificativa": "Consultas ao banco executadas dentro de loop, causando N+1 queries."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método extenso com múltiplas responsabilidades, dificultando manutenção."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método extenso com múltiplas responsabilidades, dificultando manutenção."
+   },
+   {
+    "nome": "Uso de goto",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 243,
+    "linha_fim": 248,
+    "justificativa": "Uso de goto para controle de fluxo, tornando o código difícil de ler e manter."
+   },
+   {
+    "nome": "String mágica",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 41,
+    "linha_fim": 41,
+    "justificativa": "String 'caixa_aberto' usada como chave de configuração sem constante."
+   },
+   {
+    "nome": "String mágica",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 103,
+    "linha_fim": 103,
+    "justificativa": "String 'caixa_aberto' usada como chave de configuração sem constante."
+   },
+   {
+    "nome": "String mágica",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Códigos de pagamento 'DI','CR','DE' embutidos diretamente no código."
+   },
+   {
+    "nome": "String mágica",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Códigos de pagamento 'DI','CR','DE' embutidos diretamente no código."
+   },
+   {
+    "nome": "String mágica",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Códigos de pagamento 'DI','CR','DE' embutidos diretamente no código."
+   },
+   {
+    "nome": "Variável indefinida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 167,
+    "justificativa": "Variável $e não definida no escopo else, provavelmente erro."
+   },
+   {
+    "nome": "Tratamento de erro inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 129,
+    "justificativa": "Retorno de string de erro em vez de JSON consistente com os demais métodos."
+   },
+   {
+    "nome": "Retorno de tipo inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 43,
+    "linha_fim": 57,
+    "justificativa": "Método retorna JSON no sucesso e view no erro, misturando formatos de resposta."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Dados de entrada não validados antes de uso, risco de dados inválidos ou injeção."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 118,
+    "linha_fim": 119,
+    "justificativa": "Dados de entrada não validados antes de uso, risco de dados inválidos ou injeção."
+   },
+   {
+    "nome": "Falta de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "Dados de entrada não validados antes de uso, risco de dados inválidos ou injeção."
+   }
+  ]
+ },
+ "desvios": []
+}

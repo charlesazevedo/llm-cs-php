@@ -1,0 +1,223 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C37-v1",
+ "cs_id": "C37",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "99f9942f72b5e864cd82545484ceb2e03221bdc10c574962db5119d09282820a",
+ "inicio": "2026-10-05T15:38:34+00:00",
+ "duracao_s": 82.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3556,
+ "tokens_saida": 7592,
+ "tokens_raciocinio": 5547,
+ "custo": 0.015255856,
+ "id_requisicao": "gen-1791214715-47K74AHg7jau0o8WqwDr",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 81829
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O trecho de processamento de transações é repetido em fecharCaixaView, historicoAPI (day) e historicoAPI (range), violando o princípio DRY."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "A lógica de formatar transações e montar detalhes é idêntica à de fecharCaixaView, causando duplicação desnecessária."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "O mesmo bloco de processamento de transações aparece novamente no tipo 'range', repetindo código já existente."
+   },
+   {
+    "nome": "Método Longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método fecharCaixaView possui muitas responsabilidades e linhas, dificultando a manutenção e o entendimento."
+   },
+   {
+    "nome": "Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 83,
+    "justificativa": "Realiza consultas ao banco dentro de loops (Venda e Estoque), gerando múltiplas queries desnecessárias."
+   },
+   {
+    "nome": "Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 195,
+    "justificativa": "Dentro do foreach de transações, são feitas consultas para cada venda e estoque, causando o problema N+1."
+   },
+   {
+    "nome": "Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 216,
+    "justificativa": "O mesmo padrão de consulta em loop se repete no tipo 'range', prejudicando a performance."
+   },
+   {
+    "nome": "Falta de Validação de Entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "O valor recebido do request é usado diretamente em str_replace sem nenhuma validação prévia."
+   },
+   {
+    "nome": "Falta de Validação de Entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "O campo 'valor' de sangriaPost não é validado antes de ser processado."
+   },
+   {
+    "nome": "Falta de Validação de Entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "Os campos 'valor' e 'descricao' são utilizados sem validação, permitindo dados inválidos."
+   },
+   {
+    "nome": "Tratamento de Erro Inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "O catch retorna diretamente uma string, enquanto outros catchs retornam JSON, quebrando a consistência da API."
+   },
+   {
+    "nome": "Lógica de Conversão de Moeda Duplicada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de vírgula para ponto é feita duas vezes no mesmo método, podendo ser extraída."
+   },
+   {
+    "nome": "Lógica de Conversão de Moeda Duplicada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "A mesma conversão de formato de moeda aparece novamente em sangriaPost."
+   },
+   {
+    "nome": "Lógica de Conversão de Moeda Duplicada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "A conversão é repetida em addCaixa, tanto para a entrada quanto para a atualização do caixa."
+   },
+   {
+    "nome": "Strings Mágicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Substituição de códigos de pagamento por strings fixas, dificultando a manutenção caso os códigos mudem."
+   },
+   {
+    "nome": "Strings Mágicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "A mesma substituição de strings mágicas é repetida no histórico diário."
+   },
+   {
+    "nome": "Strings Mágicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Repetição das strings mágicas no histórico por intervalo, aumentando o acoplamento."
+   },
+   {
+    "nome": "Possível Acesso a Propriedade de Objeto Nulo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 82,
+    "linha_fim": 82,
+    "justificativa": "Acessa $estoque->nome sem verificar se $estoque é null, podendo causar erro fatal."
+   },
+   {
+    "nome": "Possível Acesso a Propriedade de Objeto Nulo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 194,
+    "linha_fim": 194,
+    "justificativa": "O mesmo risco ocorre no histórico diário: $estoque pode ser null."
+   },
+   {
+    "nome": "Possível Acesso a Propriedade de Objeto Nulo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 215,
+    "linha_fim": 215,
+    "justificativa": "No histórico por intervalo, também não há verificação de null para $estoque."
+   },
+   {
+    "nome": "Erro de Digitação em Nome de Parâmetro",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 225,
+    "justificativa": "Utiliza $request->rage em vez de $request->range, provavelmente um erro de digitação."
+   },
+   {
+    "nome": "Nomes de Variáveis Não Descritivos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 183,
+    "linha_fim": 183,
+    "justificativa": "Variáveis como $tr são pouco descritivas e dificultam a leitura do código."
+   },
+   {
+    "nome": "Nomes de Variáveis Não Descritivos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 202,
+    "linha_fim": 202,
+    "justificativa": "A variável $tmp é usada para armazenar datas, mas o nome não revela seu propósito."
+   }
+  ]
+ },
+ "desvios": []
+}

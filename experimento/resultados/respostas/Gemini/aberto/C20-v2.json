@@ -1,0 +1,116 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C20-v2",
+ "cs_id": "C20",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5143e7811b19b1083628d7aab8b669fcf3ed06093f9b0a42208c297b2c7fd606",
+ "inicio": "2026-10-05T13:38:50+00:00",
+ "duracao_s": 31.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 7400,
+ "tokens_saida": 4109,
+ "tokens_raciocinio": 3325,
+ "custo": 0.064108,
+ "id_requisicao": "gen-1791207530-g56ymvOcazh5uCU62BXU",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 31733
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "God Class",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 14,
+    "linha_fim": 527,
+    "justificativa": "A classe concentra múltiplas responsabilidades (vendas, caixa, estoque, clientes e taxas), violando o Princípio da Responsabilidade Única (SRP)."
+   },
+   {
+    "nome": "Complex Conditional",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 25,
+    "linha_fim": 43,
+    "justificativa": "Cadeia longa de if-elseif que poderia ser simplificada usando uma estrutura de dados de configuração, como um array de mapeamento."
+   },
+   {
+    "nome": "Switch Statement",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 57,
+    "linha_fim": 81,
+    "justificativa": "Uso de switch muito longo para mapear dias da semana, o que poderia ser resolvido com um array simples ou funções nativas de formatação de data."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 106,
+    "linha_fim": 119,
+    "justificativa": "Uso de números fixos (5, 1000, 20, 6, 5000) espalhados no código sem a definição de constantes, o que dificulta a manutenção e compreensão das regras."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 213,
+    "linha_fim": 226,
+    "justificativa": "As taxas de operação de cartão (1.5, 2.5, 3.5, etc.) estão injetadas diretamente no código (hardcoded), prejudicando eventuais atualizações financeiras."
+   },
+   {
+    "nome": "Performance / Memory Smell",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 321,
+    "linha_fim": 324,
+    "justificativa": "O método Estoque::all() carrega todos os registros do banco de dados na memória ao mesmo tempo, o que pode causar falha de falta de memória em tabelas muito grandes."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 467,
+    "linha_fim": 492,
+    "justificativa": "O método expõe intensa dependência dos detalhes internos e atributos do objeto Sangria; essa lógica de validação deveria pertencer ao próprio modelo Sangria."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 501,
+    "linha_fim": 526,
+    "justificativa": "O método consulta excessivamente os atributos internos do modelo Estoque (produto); sendo assim, este comportamento deveria estar encapsulado no respectivo modelo."
+   }
+  ]
+ },
+ "desvios": []
+}

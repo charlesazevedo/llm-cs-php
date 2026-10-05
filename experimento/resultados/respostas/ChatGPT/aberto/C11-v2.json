@@ -1,0 +1,340 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C11-v2",
+ "cs_id": "C11",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "a0d5f31fe8b06d657e7b824904a9bac53766d58e156c15157800fe572e70cf8d",
+ "inicio": "2026-10-05T12:48:11+00:00",
+ "duracao_s": 42.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 22299,
+ "tokens_saida": 4167,
+ "tokens_raciocinio": 1853,
+ "custo": 0.097416,
+ "id_requisicao": "gen-1791204491-lgiIV6KQsBfReNBZ0jmv",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 41943
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe muito grande (God Class)",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 18,
+    "linha_fim": 2017,
+    "justificativa": "A classe possui cerca de duas mil linhas e concentra a geração de 23 seções relativas a vendas, caixa, estoque e clientes."
+   },
+   {
+    "nome": "Nomenclatura inconsistente",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 7,
+    "linha_fim": 9,
+    "justificativa": "Os nomes Entrada_caixa e Estoque_aux usam underscores em classes, contrariando o padrão StudlyCase adotado normalmente em PHP e Laravel."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 65,
+    "linha_fim": 141,
+    "justificativa": "O método reúne consulta e montagem de quinze indicadores em um único bloco extenso."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 151,
+    "linha_fim": 229,
+    "justificativa": "O método concentra a busca dos itens e a construção de quinze métricas distintas."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 239,
+    "linha_fim": 317,
+    "justificativa": "O método monta uma grande quantidade de indicadores de sangria em um único bloco."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 327,
+    "linha_fim": 397,
+    "justificativa": "O método combina consulta e cálculo de treze indicadores de entradas de caixa."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 407,
+    "linha_fim": 488,
+    "justificativa": "O método contém uma extensa montagem de métricas sobre aberturas e saldos de caixa."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 495,
+    "linha_fim": 574,
+    "justificativa": "O método agrega quinze métricas diferentes de estoque em uma única rotina."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 581,
+    "linha_fim": 641,
+    "justificativa": "O método concentra consulta, filtragem e montagem de doze indicadores de variações de estoque."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 648,
+    "linha_fim": 719,
+    "justificativa": "O método constrói quatorze indicadores de clientes cadastrados em um único bloco."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 729,
+    "linha_fim": 810,
+    "justificativa": "O método reúne consulta e quinze métricas de vendas em dinheiro."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 820,
+    "linha_fim": 901,
+    "justificativa": "O método concentra quinze indicadores de vendas no cartão de crédito."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 911,
+    "linha_fim": 989,
+    "justificativa": "O método concentra quinze indicadores de vendas no cartão de débito."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 999,
+    "linha_fim": 1078,
+    "justificativa": "O método combina duas consultas e quinze métricas sobre itens vendidos em dinheiro."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1085,
+    "linha_fim": 1165,
+    "justificativa": "O método monta quinze indicadores de produtos sem estoque em uma única rotina."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1175,
+    "linha_fim": 1248,
+    "justificativa": "O método combina consultas e quatorze métricas dos clientes atendidos."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1258,
+    "linha_fim": 1336,
+    "justificativa": "O método concentra quinze métricas de vendas parceladas em um único bloco."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1346,
+    "linha_fim": 1426,
+    "justificativa": "O método concentra quinze métricas de vendas à vista em uma única rotina."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1436,
+    "linha_fim": 1515,
+    "justificativa": "O método combina duas consultas e quinze indicadores de itens vendidos no cartão."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1522,
+    "linha_fim": 1599,
+    "justificativa": "O método reúne quinze indicadores de produtos disponíveis em um único bloco."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1609,
+    "linha_fim": 1678,
+    "justificativa": "O método concentra consulta e treze indicadores de clientes novos."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1688,
+    "linha_fim": 1764,
+    "justificativa": "O método reúne quatorze métricas de vendas com desconto em uma única rotina."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1774,
+    "linha_fim": 1848,
+    "justificativa": "O método concentra quatorze métricas de vendas sem desconto."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1858,
+    "linha_fim": 1931,
+    "justificativa": "O método reúne quatorze métricas de vendas acima de cem reais."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1941,
+    "linha_fim": 2016,
+    "justificativa": "O método concentra quatorze métricas de vendas de até vinte reais."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 151,
+    "linha_fim": 229,
+    "justificativa": "A estrutura de consulta e agregação de itens é repetida nas demais seções de itens vendidos."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 495,
+    "linha_fim": 574,
+    "justificativa": "A montagem das métricas de produtos é repetida com pequenas variações nas seções de disponibilidade e falta."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 648,
+    "linha_fim": 719,
+    "justificativa": "A lista de métricas demográficas e cadastrais é repetida nas outras seções de clientes."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 729,
+    "linha_fim": 989,
+    "justificativa": "As seções por forma de pagamento repetem a mesma estrutura de consulta e diversas métricas de transações."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 999,
+    "linha_fim": 1078,
+    "justificativa": "A consulta de transações seguida da consulta de itens e das mesmas agregações repete a seção geral de itens vendidos."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1085,
+    "linha_fim": 1165,
+    "justificativa": "A seção repete grande parte das métricas e da estrutura usadas na seção geral de estoque."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1175,
+    "linha_fim": 1248,
+    "justificativa": "A seção repete quase todas as métricas cadastrais já construídas para o conjunto geral de clientes."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1258,
+    "linha_fim": 1426,
+    "justificativa": "As seções de vendas parceladas e à vista repetem o formato e várias agregações das demais seções de transações."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1436,
+    "linha_fim": 1515,
+    "justificativa": "A seção repete a busca de itens e praticamente as mesmas agregações presentes nas outras seções de itens vendidos."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1522,
+    "linha_fim": 1599,
+    "justificativa": "A seção repete a estrutura e várias métricas das seções de estoque geral e produtos em falta."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1609,
+    "linha_fim": 1678,
+    "justificativa": "A seção repete a maior parte dos indicadores e da montagem das outras seções de clientes."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 1688,
+    "linha_fim": 2016,
+    "justificativa": "As seções filtradas por desconto e valor repetem extensivamente consultas, rótulos e agregações de transações."
+   },
+   {
+    "nome": "Consultas redundantes ao banco de dados",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 28,
+    "linha_fim": 54,
+    "justificativa": "A montagem chama sequencialmente seções que consultam repetidas vezes os mesmos conjuntos de transações, produtos e clientes."
+   },
+   {
+    "nome": "Agregação excessiva em memória",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 67,
+    "linha_fim": 2012,
+    "justificativa": "As consultas carregam coleções completas com get ou all e executam contagens, filtros, somas e médias em PHP que poderiam ser agregadas no banco."
+   },
+   {
+    "nome": "Valores mágicos",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 67,
+    "linha_fim": 2002,
+    "justificativa": "Códigos como DI, CR, DE, F, M e I e limites como 10, 20, 50 e 100 são repetidos diretamente sem constantes ou objetos de domínio."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,202 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C11-v1",
+ "cs_id": "C11",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "007d7c1a231ddd641cf769eb1c4d032a1e360d1a4cc23955da3c80f3d4b26b6b",
+ "inicio": "2026-10-02T18:41:59+00:00",
+ "duracao_s": 51.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 11968,
+ "tokens_saida": 6300,
+ "tokens_raciocinio": 4651,
+ "custo": 0.02037288,
+ "id_requisicao": "gen-1790966519-s5pZq8JBRl184uNpiv5Y",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 51027
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 18,
+    "linha_fim": 1018,
+    "justificativa": "A classe acumula a responsabilidade de gerar todas as seções do relatório, com muitos métodos e lógica variada."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 53,
+    "linha_fim": 138,
+    "justificativa": "Método muito longo que monta uma extensa lista de indicadores."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 148,
+    "linha_fim": 234,
+    "justificativa": "Método muito longo que monta uma extensa lista de indicadores."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 244,
+    "linha_fim": 332,
+    "justificativa": "Método muito longo que monta uma extensa lista de indicadores."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 342,
+    "linha_fim": 418,
+    "justificativa": "Método muito longo que monta uma extensa lista de indicadores."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 428,
+    "linha_fim": 504,
+    "justificativa": "Método muito longo que monta uma extensa lista de indicadores."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 511,
+    "linha_fim": 598,
+    "justificativa": "Método muito longo que monta uma extensa lista de indicadores."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 605,
+    "linha_fim": 661,
+    "justificativa": "Método muito longo que monta uma extensa lista de indicadores."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 668,
+    "linha_fim": 734,
+    "justificativa": "Método muito longo que monta uma extensa lista de indicadores."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 744,
+    "linha_fim": 829,
+    "justificativa": "Método muito longo que monta uma extensa lista de indicadores."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 839,
+    "linha_fim": 924,
+    "justificativa": "Método muito longo que monta uma extensa lista de indicadores."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 934,
+    "linha_fim": 1017,
+    "justificativa": "Método muito longo que monta uma extensa lista de indicadores."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 744,
+    "linha_fim": 829,
+    "justificativa": "Este método é quase idêntico aos outros métodos de pagamento, mudando apenas o filtro de pagamento e o título."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 839,
+    "linha_fim": 924,
+    "justificativa": "Este método é quase idêntico aos outros métodos de pagamento, mudando apenas o filtro de pagamento e o título."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 934,
+    "linha_fim": 1017,
+    "justificativa": "Este método é quase idêntico aos outros métodos de pagamento, mudando apenas o filtro de pagamento e o título."
+   },
+   {
+    "nome": "Magic Numbers and Strings",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 18,
+    "linha_fim": 1018,
+    "justificativa": "O código usa muitos literais numéricos e strings (como 100, 50, 'DI', 'CR', 'DE') sem constantes nomeadas, dificultando a manutenção."
+   },
+   {
+    "nome": "Over-Fetching",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 18,
+    "linha_fim": 1018,
+    "justificativa": "Os métodos carregam todos os registros com get() e aplicam filtros em coleções em memória, em vez de realizar consultas eficientes no banco de dados."
+   },
+   {
+    "nome": "Inconsistent Period Filtering",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 511,
+    "linha_fim": 598,
+    "justificativa": "Esta seção não filtra por período, contrariando a expectativa de um relatório gerencial de caixa para um intervalo de datas."
+   },
+   {
+    "nome": "Inconsistent Period Filtering",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 605,
+    "linha_fim": 661,
+    "justificativa": "Esta seção não filtra por período, contrariando a expectativa de um relatório gerencial de caixa para um intervalo de datas."
+   },
+   {
+    "nome": "Inconsistent Period Filtering",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 668,
+    "linha_fim": 734,
+    "justificativa": "Esta seção não filtra por período, contrariando a expectativa de um relatório gerencial de caixa para um intervalo de datas."
+   }
+  ]
+ },
+ "desvios": []
+}

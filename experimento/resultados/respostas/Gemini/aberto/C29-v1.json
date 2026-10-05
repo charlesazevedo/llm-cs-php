@@ -1,0 +1,151 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C29-v1",
+ "cs_id": "C29",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "cc206eb5398361528c702a451f23cd8884a8b0cafbbdd9c1c76d749c63194e9b",
+ "inicio": "2026-10-02T18:44:06+00:00",
+ "duracao_s": 36.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4013,
+ "tokens_saida": 4481,
+ "tokens_raciocinio": 3520,
+ "custo": 0.061798,
+ "id_requisicao": "gen-1790966647-od7eOm4LXagtliNf0SaG",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 36270
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Lógica de formatação de valores monetários (substituição de caracteres) repetida manualmente."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas aos modelos Venda e Estoque estão sendo executadas dentro de um laço de repetição, comprometendo o desempenho."
+   },
+   {
+    "nome": "Duplicated Code / Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Tradução de códigos de pagamento implementada usando hardcoded arrays em vez de usar accessor no model ou um enum."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Lógica de formatação de valores monetários (substituição de caracteres) repetida manualmente."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "Lógica de formatação de valores monetários (substituição de caracteres) repetida manualmente em duas linhas diferentes."
+   },
+   {
+    "nome": "Undefined Variable / Bug",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 168,
+    "justificativa": "Retorno de erro referenciando a variável $e que não está definida neste escopo, pois está fora do bloco catch."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Consultas aos modelos Venda e Estoque estão sendo executadas dentro de um laço de repetição."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O bloco que itera sobre transações e formata as vendas é idêntico ao bloco da condição 'range', violando DRY."
+   },
+   {
+    "nome": "Duplicated Code / Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Tradução de códigos de pagamento repetida manualmente através de strings mágicas."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Consultas aos modelos Venda e Estoque estão sendo executadas dentro de um laço de repetição."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "O bloco que itera e constrói a string de detalhes é idêntico ao da condição 'day'."
+   },
+   {
+    "nome": "Duplicated Code / Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Tradução de códigos de pagamento repetida manualmente através de strings mágicas."
+   },
+   {
+    "nome": "Empty Catch Block",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 247,
+    "linha_fim": 248,
+    "justificativa": "Bloco catch vazio está ocultando exceções do banco de dados, falhando silenciosamente caso o salvamento dê errado."
+   }
+  ]
+ },
+ "desvios": []
+}

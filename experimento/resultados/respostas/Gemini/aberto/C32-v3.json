@@ -1,0 +1,109 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C32-v3",
+ "cs_id": "C32",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "531cd78178725b2722bb167189e12d7f5a3f1a7db4b2759ff1ebd05916c9452d",
+ "inicio": "2026-10-05T15:20:13+00:00",
+ "duracao_s": 22.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 3936,
+ "tokens_saida": 2873,
+ "tokens_raciocinio": 2143,
+ "custo": 0.042348,
+ "id_requisicao": "gen-1791213613-tk2Ki582dMJb4PG3saQN",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 22704
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "As consultas aos modelos Venda e Estoque estão sendo executadas dentro de um laço de repetição, o que gera o problema N+1 degradando a performance."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Consultas ao banco de dados (Venda e Estoque) sendo realizadas dentro do laço de repetição 'foreach'."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "O bloco de código que itera sobre as transações e as formata é uma duplicata exata do bloco acima presente nas linhas 186 a 198."
+   },
+   {
+    "nome": "Variável Indefinida (Erro)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 168,
+    "justificativa": "A variável $e é utilizada na linha 166 fora do bloco catch onde ela foi declarada, o que causará um erro fatal de variável não definida na execução."
+   },
+   {
+    "nome": "Código Inatingível (Dead Code)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A instrução de retorno nunca será executada, pois tanto o bloco 'if' (com try/catch retornando em ambos os fluxos) quanto o 'else' anteriores já encerram a execução."
+   },
+   {
+    "nome": "Lógica de Apresentação no Controller (Fat Controller)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 65,
+    "linha_fim": 97,
+    "justificativa": "O controller está formatando valores monetários com number_format e manipulando strings ativamente, responsabilidade que deveria pertencer a uma camada de Apresentação (Views ou Presenters)."
+   },
+   {
+    "nome": "Código Duplicado / Lógica Espalhada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A lógica de conversão de string para decimal com str_replace está repetida aqui e em outros trechos (linhas 119, 145 e 148) no lugar de ser isolada em um helper ou mutator."
+   }
+  ]
+ },
+ "desvios": []
+}

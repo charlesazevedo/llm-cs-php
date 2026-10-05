@@ -1,0 +1,102 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C06-v3",
+ "cs_id": "C06",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "b18e61dbed87a061e04cab2019096a96c0859453c33e179de9642038af1291d1",
+ "inicio": "2026-10-03T23:08:41+00:00",
+ "duracao_s": 8.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5359,
+ "tokens_saida": 718,
+ "tokens_raciocinio": 0,
+ "custo": 0.035796,
+ "id_requisicao": "gen-1791068921-va3VJ0DHmdbexbwDVudF",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 8204
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 219,
+    "justificativa": "O laço que formata transações e monta os detalhes das vendas é repetido quase idêntico nos ramos 'day' e 'range' (e de forma semelhante em fecharCaixaView)."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView acumula consulta de dados, formatação monetária, tradução de códigos de pagamento e montagem de detalhes em um único método extenso."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI usa condicionais por tipo, cada uma com lógica extensa de consulta e formatação, tornando o método longo e difícil de manter."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "A formatação de transações e montagem de detalhes é duplicada em relação a historicoAPI."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return final em addCaixa nunca é alcançado, pois todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Inappropriate Intimacy",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 239,
+    "linha_fim": 246,
+    "justificativa": "O controller monta HTML com estilos inline, misturando responsabilidade de apresentação que deveria estar na view."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,102 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C03-v1",
+ "cs_id": "C03",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "a9bf2fc950aecd4ebe0498b8af0a02766d867be8817f1f006d66d477e711eaef",
+ "inicio": "2026-10-03T23:07:42+00:00",
+ "duracao_s": 8.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5930,
+ "tokens_saida": 772,
+ "tokens_raciocinio": 0,
+ "custo": 0.03916,
+ "id_requisicao": "gen-1791068862-EwDKUEcO1jznBOOlLmTg",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 8614
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O laço que formata transações e monta os detalhes das vendas no caso 'day' é praticamente idêntico ao do caso 'range' (linhas 207-219) e ao de fecharCaixaView (linhas 73-86)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Repete a mesma lógica de formatação e montagem de detalhes das transações já presente no caso 'day' do mesmo método."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Formata as transações e monta os detalhes das vendas com a mesma lógica repetida em historicoAPI."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Em um único método, fecharCaixaView busca dados, formata valores monetários, monta detalhes de vendas com consultas aninhadas e calcula totais."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI concentra três fluxos distintos selecionados por um parâmetro de tipo e repete lógica extensa de formatação."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 272,
+    "linha_fim": 280,
+    "justificativa": "gravarRetiradaDoCaixa repete a criação e gravação de Sangria já feita em sangriaPost (linhas 116-121), e as duas versões divergem: só a de sangriaPost abate o valor do caixa."
+   }
+  ]
+ },
+ "desvios": []
+}

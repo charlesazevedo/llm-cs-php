@@ -1,0 +1,237 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C32-v1",
+ "cs_id": "C32",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "7cbd56a232e1948e93aacb8a2bc2503147aca747833563b5f7ea2bbd88ac3e5a",
+ "inicio": "2026-10-05T15:21:44+00:00",
+ "duracao_s": 78.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3522,
+ "tokens_saida": 7646,
+ "tokens_raciocinio": 5656,
+ "custo": 0.015340336,
+ "id_requisicao": "gen-1791213704-6whc2Zba32jeW1XdkqpF",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 78777
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de formatação de transações e detalhes de venda é duplicado em outros métodos."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesmo código de formatação de transações e detalhes de venda repetido no branch 'day' do historicoAPI."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Mesmo código de formatação de transações e detalhes de venda repetido no branch 'range' do historicoAPI."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método fecharCaixaView é muito longo e acumula múltiplas responsabilidades."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método historicoAPI é longo e contém lógica condicional complexa e duplicada."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 79,
+    "linha_fim": 83,
+    "justificativa": "Realiza uma consulta ao banco para cada venda dentro do loop, causando N+1."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 192,
+    "linha_fim": 195,
+    "justificativa": "Consulta Estoque dentro de loop aninhado no branch 'day', causando N+1."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 213,
+    "linha_fim": 216,
+    "justificativa": "Consulta Estoque dentro de loop aninhado no branch 'range', causando N+1."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Uso de strings mágicas 'DI','CR','DE' e rótulos sem constantes ou enumeração."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Uso de strings mágicas repetidas para formas de pagamento no branch 'day'."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Uso de strings mágicas repetidas para formas de pagamento no branch 'range'."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Conversão de moeda com str_replace repetida; deveria ser extraída para função."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Conversão de moeda repetida em sangriaPost."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 145,
+    "justificativa": "Conversão de moeda repetida em addCaixa."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 148,
+    "linha_fim": 148,
+    "justificativa": "Conversão de moeda repetida novamente em addCaixa."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 55,
+    "linha_fim": 57,
+    "justificativa": "Retorna view em um caminho e JSON em outro, inconsistente."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "Captura exceção mas retorna string de erro diretamente, em vez de JSON padronizado."
+   },
+   {
+    "nome": "Unreachable Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Return final inalcançável pois todos os ramos do if/else já retornam."
+   },
+   {
+    "nome": "Bad Naming",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 230,
+    "justificativa": "Uso do nome de variável 'rage' (erro de digitação) em vez de 'range'."
+   },
+   {
+    "nome": "Missing Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 37,
+    "linha_fim": 40,
+    "justificativa": "Falta validação dos dados recebidos do request em iniciarCaixa."
+   },
+   {
+    "nome": "Missing Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 115,
+    "linha_fim": 119,
+    "justificativa": "Falta validação dos dados recebidos do request em sangriaPost."
+   },
+   {
+    "nome": "Missing Validation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 144,
+    "linha_fim": 148,
+    "justificativa": "Falta validação dos dados recebidos do request em addCaixa."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "Referencia a variável $e no else, que não existe nesse escopo, causando erro."
+   },
+   {
+    "nome": "Missing Return",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 132,
+    "linha_fim": 134,
+    "justificativa": "Se o caixa não estiver aberto, sangriaPost não retorna nenhuma resposta."
+   },
+   {
+    "nome": "Missing Return",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Se $type não for 'month', 'day' ou 'range', historicoAPI não retorna valor."
+   }
+  ]
+ },
+ "desvios": []
+}

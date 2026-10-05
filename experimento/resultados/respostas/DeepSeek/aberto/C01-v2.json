@@ -1,0 +1,160 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C01-v2",
+ "cs_id": "C01",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "af4a80bffd0fa79e49bb94475764bfccb9a7be2f059d06555611836e4bcf71b0",
+ "inicio": "2026-10-03T23:06:56+00:00",
+ "duracao_s": 50.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3624,
+ "tokens_saida": 6960,
+ "tokens_raciocinio": 5748,
+ "custo": 0.01617264,
+ "id_requisicao": "gen-1791068817-Gq5h3nJpjnidBGIf3uym",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 50203
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O bloco de formatação de transações é duplicado no método historicoAPI."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesmo bloco de formatação do fecharCaixaView é repetido para o tipo day."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Mesmo bloco de formatação é repetido para o tipo range."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Dentro do loop são realizadas consultas a Venda e Estoque para cada transação, causando N+1 queries."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Loop executa consultas a Venda e Estoque sem eager loading, resultando em N+1 queries."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Loop similar com consultas a Venda e Estoque dentro de cada iteração."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 99,
+    "justificativa": "fecharCaixaView tem 40 linhas e mistura consultas, formatação e lógica de negócio."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI tem 45 linhas e contém ramificações e formatação que dificultam a manutenção."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 66,
+    "linha_fim": 96,
+    "justificativa": "Parâmetros de formatação monetária (2, ',', '.') são repetidos em várias linhas sem constante ou helper."
+   },
+   {
+    "nome": "Strings mágicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Os arrays ['DI','CR','DE'] e rótulos de pagamento são literais repetidos, propensos a erro."
+   },
+   {
+    "nome": "Código morto",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Instrução return $request->valor é inalcançável após todos os caminhos terem retornado."
+   },
+   {
+    "nome": "Depuração residual",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 247,
+    "linha_fim": 247,
+    "justificativa": "print_r($resumo) foi deixado no código, provavelmente de depuração."
+   },
+   {
+    "nome": "Tratamento inconsistente de erros",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "No catch de QueryException é retornada a string pura $e->errorInfo[2] enquanto outros métodos retornam JSON."
+   },
+   {
+    "nome": "Falta de resposta em caminho condicional",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 132,
+    "linha_fim": 134,
+    "justificativa": "Se Caixa::checkOpen() for falso, sangriaPost termina sem retornar resposta, causando erro ou resposta vazia."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,181 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C19-v2",
+ "cs_id": "C19",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5099b6aa1bc1a793e17d277cb3a12d59d54ee9eac0b62d2df6d4a506447161dc",
+ "inicio": "2026-10-05T13:39:44+00:00",
+ "duracao_s": 79.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3941,
+ "tokens_saida": 7587,
+ "tokens_raciocinio": 6061,
+ "custo": 0.0151734,
+ "id_requisicao": "gen-1791207585-Tjxws1QKWDX72TrmQ5Ds",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 79118
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método fecharCaixaView tem muitas responsabilidades: busca transações, sangrias, entradas, formata valores e monta detalhes, dificultando manutenção."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI é longo e contém lógica duplicada e múltiplos branches, violando o princípio de responsabilidade única."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de formatação e construção de detalhes de transações é duplicado em historicoAPI e fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Bloco de formatação e construção de detalhes é duplicado entre os métodos fecharCaixaView e historicoAPI."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Bloco de formatação e construção de detalhes é duplicado entre os métodos fecharCaixaView e historicoAPI."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 83,
+    "justificativa": "Dentro do loop de transações, são executadas consultas adicionais para Venda e Estoque, causando N+1 queries."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 195,
+    "justificativa": "Dentro do loop de transações, são executadas consultas adicionais para Venda e Estoque, causando N+1 queries."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 216,
+    "justificativa": "Dentro do loop de transações, são executadas consultas adicionais para Venda e Estoque, causando N+1 queries."
+   },
+   {
+    "nome": "Unreachable Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Linha de retorno após o if-else nunca será executada porque todos os caminhos anteriores já retornam resposta."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 166,
+    "linha_fim": 166,
+    "justificativa": "A variável $e é referenciada fora do bloco catch onde não está definida, causando erro em tempo de execução."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "O método sangriaPost pode retornar uma resposta JSON, uma string de erro ou null (quando o caixa não está aberto), inconsistente para o chamador."
+   },
+   {
+    "nome": "Error Information Leak",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "O bloco catch retorna a mensagem de erro do banco de dados diretamente, expondo detalhes internos do sistema."
+   },
+   {
+    "nome": "Error Information Leak",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 52,
+    "justificativa": "O bloco catch inclui a mensagem de erro do banco de dados na resposta JSON, vazando informações sensíveis."
+   },
+   {
+    "nome": "Error Information Leak",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 160,
+    "justificativa": "O bloco catch inclui a mensagem de erro do banco de dados na resposta JSON, vazando informações sensíveis."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Códigos de pagamento 'DI', 'CR', 'DE' são usados diretamente como strings mágicas sem constantes."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Códigos de pagamento 'DI', 'CR', 'DE' são usados diretamente como strings mágicas sem constantes."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Códigos de pagamento 'DI', 'CR', 'DE' são usados diretamente como strings mágicas sem constantes."
+   }
+  ]
+ },
+ "desvios": []
+}

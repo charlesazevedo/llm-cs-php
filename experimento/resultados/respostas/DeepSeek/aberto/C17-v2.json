@@ -1,0 +1,188 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C17-v2",
+ "cs_id": "C17",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5e4cb4054d2b17ad6726cb58b3d83806d9fee3623d1104c8e89c3407fca46499",
+ "inicio": "2026-10-05T13:02:30+00:00",
+ "duracao_s": 95.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 8666,
+ "tokens_saida": 8569,
+ "tokens_raciocinio": 7047,
+ "custo": 0.022522852,
+ "id_requisicao": "gen-1791205351-jmRxHxAtluEDvQsHmW7o",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 95175
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 17,
+    "linha_fim": 830,
+    "justificativa": "A classe possui muitas responsabilidades e atributos, violando o princípio da responsabilidade única."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 587,
+    "linha_fim": 603,
+    "justificativa": "Chamadas repetidas a Transacoes::today() sem armazenar o resultado, duplicando a construção da consulta."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 620,
+    "linha_fim": 632,
+    "justificativa": "Múltiplas consultas semelhantes a Transacoes::today() com filtros de pagamento, passíveis de consolidação."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 647,
+    "linha_fim": 654,
+    "justificativa": "Chamadas repetidas a Transacoes::today() para obter parcelamentos, duplicando a consulta base."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 685,
+    "linha_fim": 690,
+    "justificativa": "Padrão repetido de chamadas a Sangria::today() e Entrada_caixa::today() para sum, count e max."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 706,
+    "linha_fim": 712,
+    "justificativa": "Consultas repetidas a Transacoes::month() e outras entidades para obter indicadores do mês."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 727,
+    "linha_fim": 732,
+    "justificativa": "Chamadas repetidas a Transacoes::month() com filtros de pagamento, similares entre si."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 747,
+    "linha_fim": 753,
+    "justificativa": "Consultas repetidas a Transacoes::year() e outras entidades para obter indicadores do ano."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 771,
+    "linha_fim": 778,
+    "justificativa": "Chamadas repetidas a Estoque:: para obter métricas de estoque, sem reutilizar resultados."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 620,
+    "linha_fim": 632,
+    "justificativa": "Uso de strings literais 'DI', 'CR' e 'DE' para identificar formas de pagamento, que deveriam ser constantes."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 727,
+    "linha_fim": 732,
+    "justificativa": "Uso de strings literais 'CR', 'DE' e 'DI' para formas de pagamento no contexto mensal."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 647,
+    "linha_fim": 651,
+    "justificativa": "Uso do número 1 como valor mágico para indicar parcelamento único ou mais de uma parcela."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 773,
+    "linha_fim": 773,
+    "justificativa": "Uso do número 0 como valor mágico na comparação de estoque."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 622,
+    "linha_fim": 623,
+    "justificativa": "A classe chama métodos estáticos de Transacoes (totalCreditoDay e totalDebitoDay) em vez de encapsular essa lógica no próprio modelo."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 671,
+    "linha_fim": 671,
+    "justificativa": "Chamada estática a Caixa::checkOpen() acopla a classe a um método de serviço externo."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 748,
+    "linha_fim": 748,
+    "justificativa": "Chamada estática a Transacoes::Faturamento() para obter faturamento do ano anterior, delegando cálculo a outro lugar."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 771,
+    "linha_fim": 772,
+    "justificativa": "Chamadas estáticas a Estoque::Total() e Estoque::valorTotalRS() que poderiam ser encapsuladas como métodos de instância ou serviços."
+   },
+   {
+    "nome": "Data Clumps",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 24,
+    "linha_fim": 123,
+    "justificativa": "Propriedades de valor bruto e sua versão formatada (ex: totalVendido e totalVendidoFormatado) formam um data clump repetido em toda a classe."
+   }
+  ]
+ },
+ "desvios": []
+}

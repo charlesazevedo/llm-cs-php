@@ -1,0 +1,188 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C20-v2",
+ "cs_id": "C20",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5143e7811b19b1083628d7aab8b669fcf3ed06093f9b0a42208c297b2c7fd606",
+ "inicio": "2026-10-05T13:42:01+00:00",
+ "duracao_s": 106.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 6248,
+ "tokens_saida": 10065,
+ "tokens_raciocinio": 8446,
+ "custo": 0.023889052,
+ "id_requisicao": "gen-1791207721-v8sVQWYQV3mKs5iNvkvs",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 106372
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large Class (God Class)",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 14,
+    "linha_fim": 527,
+    "justificativa": "A classe concentra responsabilidades de análise de vendas, validação, cálculo de taxas, status de estoque, perfil do cliente e conferência de movimentações, dificultando a manutenção e os testes."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 25,
+    "linha_fim": 42,
+    "justificativa": "Os limites das faixas de ticket (10, 20, 50, 100, 200, 500, 1000, 2000) são números mágicos sem nomes descritivos."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 106,
+    "linha_fim": 118,
+    "justificativa": "Os limites para alertas (5 sangrias, R$ 1000, 20% desconto, 6 parcelas, R$ 5000) são números mágicos espalhados."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 142,
+    "linha_fim": 154,
+    "justificativa": "Valores numéricos de validação (1, 12, 0, 100, 0) são números mágicos, dificultando a compreensão das regras."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 213,
+    "linha_fim": 225,
+    "justificativa": "Percentuais de taxa (1.5, 2.5, 3.5, 4.5, 5.5, 6.5) e limites de parcelas são números mágicos."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 241,
+    "linha_fim": 248,
+    "justificativa": "Os limiares de estoque (0, 5, 20) são números mágicos."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 339,
+    "linha_fim": 350,
+    "justificativa": "Os valores de total gasto (5000, 2000, 500) e número de compras (10) são números mágicos."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 365,
+    "linha_fim": 378,
+    "justificativa": "Os limites percentuais de desconto (0, 5, 10, 15, 20, 30) são números mágicos."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 393,
+    "linha_fim": 400,
+    "justificativa": "Os meses que definem os trimestres (3, 6, 9) são números mágicos."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 415,
+    "linha_fim": 428,
+    "justificativa": "Os limites de valor para parcelamento (100, 200, 300, 500, 1000, 2000) e o número máximo de parcelas são números mágicos."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 475,
+    "linha_fim": 481,
+    "justificativa": "Os limites de valor (500) e comprimento da descrição (200) são números mágicos."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 509,
+    "linha_fim": 515,
+    "justificativa": "Os limites de estoque (1000) e margem de lucro (10) são números mágicos."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 93,
+    "linha_fim": 123,
+    "justificativa": "Método longo com múltiplas verificações que poderiam ser extraídas para melhor legibilidade e manutenção."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 132,
+    "linha_fim": 159,
+    "justificativa": "Método extenso com várias regras de validação que pode ser dividido ou substituído por um validador dedicado."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 169,
+    "linha_fim": 199,
+    "justificativa": "Método com loop que acumula múltiplas responsabilidades, podendo ser simplificado com agregações do banco."
+   },
+   {
+    "nome": "Switch Statement",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 57,
+    "linha_fim": 81,
+    "justificativa": "Switch para mapear número do dia para nome pode ser substituído por um array, reduzindo complexidade."
+   },
+   {
+    "nome": "Switch Statement",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 443,
+    "linha_fim": 455,
+    "justificativa": "Switch para mapear código de pagamento para descrição pode ser substituído por um array associativo."
+   },
+   {
+    "nome": "Dependency on current date",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 484,
+    "linha_fim": 484,
+    "justificativa": "Uso direto de date('Y-m-d') torna o método dependente do relógio do sistema, dificultando testes."
+   }
+  ]
+ },
+ "desvios": []
+}

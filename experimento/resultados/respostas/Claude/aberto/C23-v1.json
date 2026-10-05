@@ -1,0 +1,172 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C23-v1",
+ "cs_id": "C23",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "f77ae490ae976c9be1364583e757d899684970aa79752ca844fc739a8937a9b4",
+ "inicio": "2026-10-05T13:38:05+00:00",
+ "duracao_s": 16.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 8162,
+ "tokens_saida": 2254,
+ "tokens_raciocinio": 181,
+ "custo": 0.077728,
+ "id_requisicao": "gen-1791207485-ujwpg418pkTnM45BgjP4",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 16411
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/BoletoBancario.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/CartaoDeCredito.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/CartaoDeDebito.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/CarteiraDigital.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/Cashback.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/Cheque.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/ChequePreDatado.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/Crediario.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/CreditoDaLoja.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/Dinheiro.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/LinkDePagamento.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/Pix.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/TransferenciaBancaria.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/ValeAlimentacao.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/ValePresente.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   },
+   {
+    "nome": "Lazy Class",
+    "arquivo": "app/Pdv/ValeRefeicao.php",
+    "linha_inicio": 8,
+    "linha_fim": 39,
+    "justificativa": "A subclasse só devolve três constantes (código, nome e taxa) e não tem comportamento próprio, então poderia ser um conjunto de dados de FormaDePagamento em vez de uma classe."
+   }
+  ]
+ },
+ "desvios": []
+}

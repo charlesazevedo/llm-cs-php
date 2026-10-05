@@ -1,0 +1,144 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C02-v2",
+ "cs_id": "C02",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "b478dbc44bb418032f83c5bbc2538083483ae8b7935b61bf4599a26b1e171efe",
+ "inicio": "2026-10-03T23:07:27+00:00",
+ "duracao_s": 15.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5389,
+ "tokens_saida": 1478,
+ "tokens_raciocinio": 0,
+ "custo": 0.051116,
+ "id_requisicao": "gen-1791068847-Yj2M30bOCUyuZxT5htPL",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 15446
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O laço que formata transações e monta os detalhes das vendas no tipo 'day' é praticamente idêntico ao do tipo 'range' (linhas 207-219) e ao de fecharCaixaView (linhas 73-86)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Este laço repete integralmente a lógica de formatação e de montagem de detalhes das linhas 186-198."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "A mesma lógica de formatação de transações e de consulta de vendas/estoque é replicada em historicoAPI."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método fecharCaixaView acumula consultas, formatação de valores, montagem de detalhes e cálculo de totais em um único bloco extenso."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI trata três tipos de consulta com lógica extensa e duplicada dentro de condicionais encadeadas."
+   },
+   {
+    "nome": "Switch Statements",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 221,
+    "justificativa": "A cadeia de if/else sobre a string $type seleciona o comportamento, quando poderia usar métodos ou estratégias separadas."
+   },
+   {
+    "nome": "Primitive Obsession",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Valores monetários são tratados como strings convertidas via str_replace e number_format espalhados pelo código, em vez de um objeto ou helper de dinheiro."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "A conversão str_replace([\".\",\",\"],[\"\",\".\"],$request->valor) é repetida aqui, inclusive duas vezes no mesmo trecho, além de nas linhas 39, 40 e 119."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return $request->valor nunca é alcançado, pois todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Inconsistent Error Handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "O ramo else usa a variável $e, que não está definida fora do catch, o que gera erro em vez de uma resposta coerente."
+   },
+   {
+    "nome": "Goto Statement",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 240,
+    "linha_fim": 251,
+    "justificativa": "Usa goto para implementar repetição em vez de um laço estruturado, dificultando a leitura do fluxo."
+   },
+   {
+    "nome": "Inconsistent Error Handling",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "sangriaPost retorna uma string crua no erro e nada quando o caixa está fechado ou o save falha, diferente dos demais métodos que retornam JSON."
+   }
+  ]
+ },
+ "desvios": []
+}

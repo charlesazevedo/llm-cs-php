@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Julgamento manual</title>
+<!-- Modelo da página do julgamento manual (L10). O experimento/julgamento/montar.py
+     troca o marcador DADOS pelos casos e grava julgamento.html; não edite a página
+     gerada. Funciona sem internet: nada sai do navegador além do CSV que o juiz baixa. -->
+<style>
+  :root {
+    --fundo: #f6f5f2; --cartao: #ffffff; --texto: #1d1d1b; --suave: #5f5e5a; --borda: #dcdad3;
+    --codigo: #ffffff; --destaque: #2b5ea7; --sim: #2e7d4f; --nao: #b23b3b; --duvida: #a46b00;
+    /* realce do código: cores do tema Light+ do VS Code */
+    --c-texto: #000000; --c-comentario: #008000; --c-string: #a31515; --c-controle: #af00db; --c-palavra: #0000ff;
+    --c-variavel: #001080; --c-funcao: #795e26; --c-tipo: #267f99; --c-numero: #098658; --c-tag: #800000;
+    --c-atributo: #e50000; --c-diretiva: #af00db; --c-citada: rgba(43, 94, 167, .12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fundo: #161615; --cartao: #1f1f1d; --texto: #ecebe6; --suave: #a8a69e; --borda: #3a3936;
+      --codigo: #1e1e1e; --destaque: #7aa7e6; --sim: #5cbf86; --nao: #e07a7a; --duvida: #e0b050;
+      /* realce do código: cores do tema Dark+ do VS Code */
+      --c-texto: #d4d4d4; --c-comentario: #6a9955; --c-string: #ce9178; --c-controle: #c586c0; --c-palavra: #569cd6;
+      --c-variavel: #9cdcfe; --c-funcao: #dcdcaa; --c-tipo: #4ec9b0; --c-numero: #b5cea8; --c-tag: #569cd6;
+      --c-atributo: #9cdcfe; --c-diretiva: #c586c0; --c-citada: rgba(122, 167, 230, .16);
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--fundo); color: var(--texto);
+         font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 1.3rem; margin: 8px 0 4px; }
+  h2 { font-size: 1.05rem; margin: 0 0 8px; }
+  .cartao { background: var(--cartao); border: 1px solid var(--borda); border-radius: 8px; padding: 16px; margin: 12px 0; }
+  .suave { color: var(--suave); }
+  .rotulo { font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: var(--suave); margin-bottom: 2px; }
+  .arquivo { font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--suave); margin-top: 6px; }
+  pre { background: var(--codigo); color: var(--c-texto); border: 1px solid var(--borda); border-radius: 6px; padding: 8px 0; margin: 6px 0 12px; overflow: auto;
+        max-height: 420px; font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  pre .l { display: block; padding: 0 12px; white-space: pre; }
+  pre .n { display: inline-block; width: 4.2em; color: var(--suave); user-select: none; }
+  pre .l.citada { background: var(--c-citada); box-shadow: inset 3px 0 0 var(--destaque); }
+  .t-comentario { color: var(--c-comentario); font-style: italic; } .t-string { color: var(--c-string); }
+  .t-controle { color: var(--c-controle); } .t-palavra { color: var(--c-palavra); } .t-variavel { color: var(--c-variavel); }
+  .t-funcao { color: var(--c-funcao); } .t-tipo { color: var(--c-tipo); } .t-numero { color: var(--c-numero); }
+  .t-tag { color: var(--c-tag); } .t-atributo { color: var(--c-atributo); } .t-diretiva { color: var(--c-diretiva); }
+  .legenda { font-size: .85rem; color: var(--suave); margin: 4px 0 8px; }
+  .citacao { border-left: 3px solid var(--destaque); padding: 4px 0 4px 12px; margin: 10px 0; }
+  .citacao b { font-weight: 600; }
+  .botoes { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+  button { font: inherit; padding: 8px 14px; border-radius: 6px; border: 1px solid var(--borda);
+           background: var(--cartao); color: var(--texto); cursor: pointer; }
+  button:hover { border-color: var(--destaque); }
+  button.voto.escolhido[data-v="sim"] { background: var(--sim); color: #fff; border-color: var(--sim); }
+  button.voto.escolhido[data-v="nao"] { background: var(--nao); color: #fff; border-color: var(--nao); }
+  button.voto.escolhido[data-v="duvida"] { background: var(--duvida); color: #fff; border-color: var(--duvida); }
+  textarea, input[type=text] { width: 100%; font: inherit; padding: 8px; border-radius: 6px; border: 1px solid var(--borda);
+                               background: var(--cartao); color: var(--texto); }
+  textarea { min-height: 64px; }
+  .grade { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .grade button { padding: 2px 6px; font-size: .78rem; min-width: 44px; }
+  .grade .sim { border-color: var(--sim); color: var(--sim); }
+  .grade .nao { border-color: var(--nao); color: var(--nao); }
+  .grade .duvida { border-color: var(--duvida); color: var(--duvida); }
+  .grade .atual { outline: 2px solid var(--destaque); }
+  .barra { height: 6px; background: var(--borda); border-radius: 3px; overflow: hidden; }
+  .barra div { height: 100%; background: var(--destaque); }
+  .topo { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .oculto { display: none; }
+  .gabarito { border-left: 3px solid var(--sim); padding: 4px 0 4px 12px; }
+  .gabarito.nao { border-left-color: var(--nao); }
+  .escolha { display: flex; gap: 16px; margin: 4px 0 8px; }
+  .escolha label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+  ol.orientacoes li { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="topo">
+    <h1>Julgamento manual dos casos</h1>
+    <span id="quem" class="suave"></span>
+  </div>
+
+  <section id="inicio" class="cartao">
+    <h2>Antes de começar</h2>
+    <p>Cada caso é a resposta de um modelo de linguagem a uma variante em que um <i>code smell</i> (CS) foi injetado. Você vê a definição do CS, o código injetado e as citações da resposta que apontam esse código. O modelo que respondeu não é mostrado.</p>
+    <p><b>Pergunta de cada caso:</b> alguma das citações aponta, no código injetado, o CS descrito? Responda <b>Sim</b>, <b>Não</b> ou <b>Dúvida</b>, e use o comentário quando ajudar a discussão das divergências. Julgue sem consultar o outro juiz.</p>
+    <p><b>Como decidir:</b></p>
+    <ol class="orientacoes">
+      <li>Julgue a resposta, não o código: o CS foi injetado e está lá; a pergunta é se alguma citação da resposta o aponta.</li>
+      <li><b>Sim:</b> a citação aponta as linhas injetadas (ou o arquivo novo), e o nome ou a justificativa descreve o CS mostrado, mesmo com outras palavras.</li>
+      <li><b>Não:</b> as citações no código injetado tratam de outro problema (outro CS, segurança, desempenho, arquitetura), ainda que apontem as linhas certas.</li>
+      <li><b>Nome genérico</b> (como <i>Large Class</i>, código morto ou <i>Switch Statements</i>): decida pela justificativa. Se ela descreve a característica que define o CS mostrado (para <i>Excessive Class Length</i>, o número de linhas), é Sim; se descreve outra (por exemplo, responsabilidades demais), é Não; se não dá para saber, é <b>Dúvida</b>, com um comentário.</li>
+    </ol>
+    <p>Antes dos casos, a página mostra exemplos comentados, que não contam no resultado.</p>
+    <p class="suave">Os votos ficam salvos neste navegador enquanto você julga. De vez em quando, e no fim, clique em <b>Baixar votos (CSV)</b>: o arquivo é a cópia de segurança e é ele que você manda. Se trocar de navegador ou de computador, escolha o seu número de juiz, use <b>Retomar de um CSV baixado</b> e continue de onde parou. Atalhos: S, N e D votam; as setas mudam de caso.</p>
+    <div class="rotulo">Você é</div>
+    <div class="escolha">
+      <label><input type="radio" name="juiz" value="juiz-1"> Juiz 1</label>
+      <label><input type="radio" name="juiz" value="juiz-2"> Juiz 2</label>
+    </div>
+    <div class="botoes">
+      <button id="comecar">Começar</button>
+      <button id="retomar">Retomar de um CSV baixado</button>
+      <input type="file" id="arquivo-votos" accept=".csv,text/csv" class="oculto">
+    </div>
+  </section>
+
+  <section id="julgar" class="oculto">
+    <div class="cartao">
+      <div class="topo"><span id="progresso"></span><span id="feitos" class="suave"></span></div>
+      <div class="barra"><div id="barra"></div></div>
+      <div class="grade" id="grade"></div>
+    </div>
+    <div class="cartao">
+      <div class="rotulo">CS injetado</div>
+      <h2 id="cs"></h2>
+      <p id="descricao"></p>
+      <div class="rotulo">Como ele foi injetado nesta variante</div>
+      <p id="forma"></p>
+      <div class="rotulo">Modo da pergunta ao modelo</div>
+      <p id="modo"></p>
+    </div>
+    <div class="cartao">
+      <h2>Código injetado</h2>
+      <p class="legenda">As linhas com fundo destacado e uma barra à esquerda são as que as citações da resposta apontam.</p>
+      <div id="codigo"></div>
+    </div>
+    <div class="cartao">
+      <h2>Citações da resposta no código injetado</h2>
+      <div id="citacoes"></div>
+    </div>
+    <div class="cartao oculto" id="exemplo">
+      <h2>Resposta comentada</h2>
+      <div id="gabarito" class="gabarito"></div>
+      <div class="botoes">
+        <button id="ex-anterior">← Exemplo anterior</button>
+        <button id="ex-proximo">Próximo exemplo →</button>
+        <button id="ir-casos">Ir para os casos</button>
+      </div>
+    </div>
+    <div class="cartao" id="votacao">
+      <h2>Alguma citação aponta, no código injetado, o CS descrito?</h2>
+      <div class="botoes">
+        <button class="voto" data-v="sim">Sim (S)</button>
+        <button class="voto" data-v="nao">Não (N)</button>
+        <button class="voto" data-v="duvida">Dúvida (D)</button>
+      </div>
+      <label for="comentario" class="rotulo">Comentário (opcional)</label>
+      <textarea id="comentario"></textarea>
+      <div class="botoes">
+        <button id="anterior">← Anterior</button>
+        <button id="proximo">Próximo →</button>
+        <button id="baixar">Baixar votos (CSV)</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+const DADOS = /*DADOS*/null;
+const casos = (DADOS && DADOS.casos) || [];
+const exemplos = (DADOS && DADOS.exemplos) || [];
+let juiz = "", atual = 0, votos = {}, exemplo = -1;   // exemplo >= 0: mostrando os exemplos comentados
+
+const $ = (id) => document.getElementById(id);
+const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+
+// Realce de sintaxe próprio, sem biblioteca externa, para a página funcionar sem
+// internet. Cobre o que as variantes têm: PHP e views Blade (HTML, diretivas,
+// JavaScript e CSS embutidos). As cores seguem os temas Light+ e Dark+ do VS Code.
+const CONTROLE = new Set(("if else elseif endif for foreach endforeach while do switch case default break continue " +
+  "return try catch finally throw match yield").split(" "));
+const PALAVRAS_PHP = new Set(("abstract and array as class clone const declare echo empty extends final fn function " +
+  "global implements include instanceof interface isset list namespace new null private protected public readonly " +
+  "require self static trait true false use var unset parent print or xor").split(" "));
+const PALAVRAS_JS = new Set("function var let const new this true false null undefined typeof instanceof".split(" "));
+const CONTROLE_JS = new Set("if else for while return try catch throw switch case break continue".split(" "));
+const REGRAS = {
+  php: [
+    ["comentario", /\/\*[\s\S]*?\*\/|\/\/[^\n]*|#[^\n]*/y],
+    ["string", /'(?:\\[\s\S]|[^'\\])*'|"(?:\\[\s\S]|[^"\\])*"/y],
+    ["palavra", /<\?php|\?>/y],
+    ["variavel", /\$[A-Za-z_]\w*/y],
+    ["numero", /\b\d+(?:\.\d+)?\b/y],
+    ["ident", /[A-Za-z_]\w*/y],
+  ],
+  blade: [
+    ["comentario", /\{\{--[\s\S]*?--\}\}|<!--[\s\S]*?-->|\/\*[\s\S]*?\*\/|\/\/[^\n]*/y],
+    ["diretiva", /@[A-Za-z_]+|\{\{|\}\}|\{!!|!!\}/y],
+    ["string", /'(?:\\.|[^'\\\n])*'|"(?:\\.|[^"\\\n])*"/y],
+    ["tag", /<\/?[A-Za-z][\w:.-]*|\/?>/y],
+    ["atributo", /[A-Za-z_:@][\w:.-]*(?==)/y],
+    ["variavel", /\$[A-Za-z_]\w*/y],
+    ["numero", /\b\d+(?:\.\d+)?\b/y],
+    ["ident", /[A-Za-z_]\w*/y],
+  ],
+};
+function classificarIdent(palavra, modo, resto, antes) {
+  if (modo === "php") {
+    if (CONTROLE.has(palavra.toLowerCase())) return "controle";
+    if (PALAVRAS_PHP.has(palavra.toLowerCase())) return "palavra";
+  } else {
+    if (CONTROLE_JS.has(palavra)) return "controle";
+    if (PALAVRAS_JS.has(palavra)) return "palavra";
+  }
+  if (modo === "php" && /\b(new|extends|implements|instanceof)\s+$/.test(antes)) return "tipo";
+  if (/^\s*\(/.test(resto)) return "funcao";
+  // nome de classe só no PHP: nas views, uma palavra com maiúscula costuma ser texto da página
+  if (modo === "php" && /^[A-Z][A-Za-z0-9_]*$/.test(palavra) && /[a-z]/.test(palavra)) return "tipo";
+  return "";
+}
+// Devolve o HTML de cada linha do texto, com o realce; comentários e strings de
+// várias linhas continuam realçados nas linhas seguintes.
+function realcar(texto, modo) {
+  const regras = REGRAS[modo] || REGRAS.php;
+  const linhas = [""];
+  const emitir = (classe, trecho) => {
+    trecho.split("\n").forEach((pedaco, i) => {
+      if (i > 0) linhas.push("");
+      if (pedaco) linhas[linhas.length - 1] += classe ? `<span class="t-${classe}">${esc(pedaco)}</span>` : esc(pedaco);
+    });
+  };
+  let i = 0, simples = "";
+  while (i < texto.length) {
+    let achou = null;
+    for (const [classe, re] of regras) {
+      re.lastIndex = i;
+      const m = re.exec(texto);
+      if (m && m[0].length) { achou = [classe, m[0]]; break; }
+    }
+    if (!achou) { simples += texto[i]; i += 1; continue; }
+    if (simples) { emitir("", simples); simples = ""; }
+    let [classe, trecho] = achou;
+    if (classe === "ident") classe = classificarIdent(trecho, modo, texto.slice(i + trecho.length, i + trecho.length + 3),
+                                                      texto.slice(Math.max(0, i - 14), i));
+    emitir(classe, trecho);
+    i += trecho.length;
+  }
+  if (simples) emitir("", simples);
+  return linhas;
+}
+function modoDoArquivo(nome) { return /\.blade\.php$|\.html?$/.test(nome) ? "blade" : "php"; }
+
+function chave() { return "julgamento-l10-" + juiz; }
+function salvar() { try { localStorage.setItem(chave(), JSON.stringify({votos, atual})); } catch (e) { /* sem armazenamento: segue */ } }
+function carregar() {
+  try { const s = JSON.parse(localStorage.getItem(chave()) || "null"); if (s) { votos = s.votos || {}; atual = s.atual || 0; } }
+  catch (e) { votos = {}; atual = 0; }
+}
+
+function preencher(c) {
+  $("cs").textContent = `${c.cs.id} ${c.cs.nome}`;
+  $("descricao").textContent = c.cs.descricao;
+  $("forma").textContent = c.variante.forma || "(sem descrição)";
+  $("modo").textContent = c.modo;
+  $("codigo").innerHTML = c.codigo.map((b) => {
+    const citadas = new Set();
+    c.citacoes.forEach((x) => (x.faixas || []).forEach((f) => {
+      if (f.arquivo === b.arquivo) for (let n = f.inicio; n <= f.fim; n++) citadas.add(n);
+    }));
+    const html = realcar(b.linhas.map(([, t]) => t).join("\n"), modoDoArquivo(b.arquivo));
+    return `<div class="arquivo">${esc(b.arquivo)}${b.novo ? " (arquivo novo)" : " (linhas inseridas)"}</div>` +
+      `<pre>${b.linhas.map(([n], k) =>
+        `<span class="l${citadas.has(n) ? " citada" : ""}"><span class="n">${n}</span>${html[k] || ""}</span>`).join("")}</pre>`;
+  }).join("");
+  $("citacoes").innerHTML = c.citacoes.length ? c.citacoes.map((x) =>
+    `<div class="citacao"><b>${esc(x.nome)}</b><br><span class="suave">${esc(x.trechos.join("; "))}</span>` +
+    (x.justificativa ? `<br>${esc(x.justificativa)}` : "") + `</div>`).join("")
+    : `<p class="suave">Nenhuma citação aponta o código injetado.</p>`;
+}
+
+function mostrarExemplo() {
+  const x = exemplos[exemplo];
+  $("progresso").textContent = `Exemplo comentado ${exemplo + 1} de ${exemplos.length} (não conta no resultado)`;
+  $("feitos").textContent = "";
+  $("barra").style.width = "0%";
+  $("grade").innerHTML = "";
+  preencher(x);
+  const sim = x.resposta === "sim";
+  $("gabarito").className = "gabarito" + (sim ? "" : " nao");
+  $("gabarito").innerHTML = `<p><b>Resposta: ${sim ? "Sim" : "Não"}.</b></p><p>${esc(x.explicacao)}</p>`;
+  $("ex-anterior").disabled = exemplo === 0;
+  $("ex-proximo").disabled = exemplo === exemplos.length - 1;
+  $("exemplo").classList.remove("oculto");
+  $("votacao").classList.add("oculto");
+}
+
+function mostrar() {
+  if (exemplo >= 0) { mostrarExemplo(); return; }
+  $("exemplo").classList.add("oculto");
+  $("votacao").classList.remove("oculto");
+  const c = casos[atual];
+  if (!c) return;
+  $("progresso").textContent = `Caso ${atual + 1} de ${casos.length} (${c.id})`;
+  const feitos = casos.filter((x) => votos[x.id] && votos[x.id].voto).length;
+  $("feitos").textContent = `${feitos} votados`;
+  $("barra").style.width = `${100 * feitos / Math.max(1, casos.length)}%`;
+  preencher(c);
+  const v = votos[c.id] || {};
+  document.querySelectorAll("button.voto").forEach((b) => b.classList.toggle("escolhido", b.dataset.v === v.voto));
+  $("comentario").value = v.comentario || "";
+  $("grade").innerHTML = casos.map((x, i) =>
+    `<button data-i="${i}" class="${(votos[x.id] || {}).voto || ""} ${i === atual ? "atual" : ""}">${x.id}</button>`).join("");
+  $("grade").querySelectorAll("button").forEach((b) => b.onclick = () => { guardarComentario(); atual = +b.dataset.i; salvar(); mostrar(); });
+}
+
+function guardarComentario() {
+  const c = casos[atual];
+  if (!c) return;
+  votos[c.id] = {...(votos[c.id] || {}), comentario: $("comentario").value};
+}
+function votar(v) {
+  const c = casos[atual];
+  votos[c.id] = {...(votos[c.id] || {}), voto: v, comentario: $("comentario").value, data: new Date().toISOString()};
+  salvar(); mostrar();
+}
+function ir(d) { guardarComentario(); atual = Math.min(casos.length - 1, Math.max(0, atual + d)); salvar(); mostrar(); window.scrollTo(0, 0); }
+
+function baixar() {
+  guardarComentario(); salvar();
+  const q = (t) => `"${String(t ?? "").replace(/"/g, '""')}"`;
+  const linhas = ["id,voto,comentario,juiz,data"].concat(casos.map((c) => {
+    const v = votos[c.id] || {};
+    return [c.id, v.voto || "", q(v.comentario), juiz, v.data || ""].join(",");
+  }));
+  const blob = new Blob([linhas.join("\n") + "\n"], {type: "text/csv;charset=utf-8"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `votos-${juiz}.csv`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+$("comecar").onclick = () => {
+  const marcado = document.querySelector('input[name="juiz"]:checked');
+  if (!marcado) { alert("Escolha se você é o juiz 1 ou o juiz 2."); return; }
+  juiz = marcado.value;
+  if (!casos.length) { alert("Esta página não tem casos: gere-a com experimento/julgamento/montar.py."); return; }
+  carregar();
+  // os exemplos aparecem antes dos casos, só enquanto nenhum caso foi votado
+  exemplo = exemplos.length && !Object.values(votos).some((v) => v.voto) ? 0 : -1;
+  $("quem").textContent = juiz === "juiz-1" ? "Juiz 1" : "Juiz 2";
+  $("inicio").classList.add("oculto");
+  $("julgar").classList.remove("oculto");
+  mostrar();
+};
+// Retomar: lê um votos-juiz-N.csv baixado antes, do mesmo juiz, e continua do primeiro caso sem voto.
+function lerCsv(texto) {
+  const linhas = [];
+  let campo = "", linha = [], aspas = false;
+  for (let i = 0; i < texto.length; i++) {
+    const c = texto[i];
+    if (aspas) {
+      if (c === '"' && texto[i + 1] === '"') { campo += '"'; i++; }
+      else if (c === '"') aspas = false;
+      else campo += c;
+    } else if (c === '"') aspas = true;
+    else if (c === ",") { linha.push(campo); campo = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && texto[i + 1] === "\n") i++;
+      linha.push(campo); campo = ""; if (linha.some((x) => x !== "")) linhas.push(linha); linha = [];
+    } else campo += c;
+  }
+  if (campo !== "" || linha.length) { linha.push(campo); linhas.push(linha); }
+  return linhas;
+}
+$("retomar").onclick = () => {
+  const marcado = document.querySelector('input[name="juiz"]:checked');
+  if (!marcado) { alert("Escolha antes se você é o juiz 1 ou o juiz 2."); return; }
+  $("arquivo-votos").click();
+};
+$("arquivo-votos").onchange = async (ev) => {
+  const arquivo = ev.target.files[0];
+  if (!arquivo) return;
+  const linhas = lerCsv(await arquivo.text());
+  const cab = linhas.shift() || [];
+  const col = (n) => cab.indexOf(n);
+  if (col("id") < 0 || col("voto") < 0) { alert("Este arquivo não é um CSV de votos baixado desta página."); return; }
+  const escolhido = document.querySelector('input[name="juiz"]:checked').value;
+  const doArquivo = linhas.map((l) => l[col("juiz")]).find((j) => j);
+  if (doArquivo && doArquivo !== escolhido) { alert(`Este arquivo é do ${doArquivo.replace("-", " ")}; escolha esse número ou outro arquivo.`); return; }
+  const ids = new Set(casos.map((c) => c.id));
+  juiz = escolhido;
+  carregar();
+  let n = 0;
+  for (const l of linhas) {
+    const id = l[col("id")];
+    if (!ids.has(id) || !l[col("voto")]) continue;
+    votos[id] = {voto: l[col("voto")], comentario: l[col("comentario")] || "", data: l[col("data")] || ""};
+    n++;
+  }
+  const primeiro = casos.findIndex((c) => !(votos[c.id] && votos[c.id].voto));
+  atual = primeiro < 0 ? casos.length - 1 : primeiro;
+  salvar();
+  alert(`${n} votos retomados; continuando do caso ${atual + 1}.`);
+  $("comecar").click();
+};
+document.querySelectorAll("button.voto").forEach((b) => b.onclick = () => votar(b.dataset.v));
+$("ex-anterior").onclick = () => { exemplo = Math.max(0, exemplo - 1); mostrar(); window.scrollTo(0, 0); };
+$("ex-proximo").onclick = () => { exemplo = Math.min(exemplos.length - 1, exemplo + 1); mostrar(); window.scrollTo(0, 0); };
+$("ir-casos").onclick = () => { exemplo = -1; mostrar(); window.scrollTo(0, 0); };
+$("anterior").onclick = () => ir(-1);
+$("proximo").onclick = () => ir(1);
+$("baixar").onclick = baixar;
+$("comentario").addEventListener("input", () => { guardarComentario(); salvar(); });
+document.addEventListener("keydown", (e) => {
+  if ($("julgar").classList.contains("oculto") || exemplo >= 0 || e.target.tagName === "TEXTAREA" || e.target.tagName === "INPUT") return;
+  const k = e.key.toLowerCase();
+  if (k === "s") votar("sim"); else if (k === "n") votar("nao"); else if (k === "d") votar("duvida");
+  else if (e.key === "ArrowRight") ir(1); else if (e.key === "ArrowLeft") ir(-1);
+});
+</script>
+</body>
+</html>

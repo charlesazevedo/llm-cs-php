@@ -1,0 +1,69 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C35-v2",
+ "cs_id": "C35",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "16b8e6a3646458226988a64461c35743082cc02569fa6017aabff08515b78708",
+ "inicio": "2026-10-05T15:32:13+00:00",
+ "duracao_s": 30.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 568,
+ "tokens_saida": 1942,
+ "tokens_raciocinio": 1840,
+ "custo": 0.004056712,
+ "id_requisicao": "gen-1791214333-2JnDVRQeE8AT8H2VaOgv",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 30263
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Uso de float para valores monetários",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 12,
+    "linha_fim": 19,
+    "justificativa": "Valores monetários não devem ser representados por float devido a possíveis erros de precisão; prefira DECIMAL ou inteiro."
+   }
+  ]
+ },
+ "desvios": []
+}

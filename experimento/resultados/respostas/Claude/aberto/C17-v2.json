@@ -1,0 +1,67 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C17-v2",
+ "cs_id": "C17",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5e4cb4054d2b17ad6726cb58b3d83806d9fee3623d1104c8e89c3407fca46499",
+ "inicio": "2026-10-05T12:49:41+00:00",
+ "duracao_s": 5.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 12314,
+ "tokens_saida": 180,
+ "tokens_raciocinio": 0,
+ "custo": 0.052856,
+ "id_requisicao": "gen-1791204581-kNW9EvwMYbk5rxtuONmS",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 4733
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 17,
+    "linha_fim": 830,
+    "justificativa": "A classe acumula dezenas de atributos públicos e responsabilidades de domínios distintos (vendas, pagamentos, parcelamentos, caixa, movimentações, mês, ano, estoque, clientes), formando um painel inchado que deveria ser dividido em classes menores por grupo de indicadores."
+   }
+  ]
+ },
+ "desvios": []
+}

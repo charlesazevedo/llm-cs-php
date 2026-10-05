@@ -1,0 +1,2821 @@
+{
+ "fontes": {
+  "pdvlaravel_commit": "98cddb84521765c29ff7ed691d7f5ba325cc7edc",
+  "caixacontroller_sha256": "c7fd39edb41ff9c71b4bb7afff5ee815b74c76440a96709ae338be82c3c4dd31",
+  "variantes": "tools-cs-php v1.0",
+  "manifesto": "exemplos.sha256"
+ },
+ "entradas": [
+  {
+   "id": "base",
+   "cs_id": null,
+   "variante": null,
+   "tipo": "base",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 232,
+     "sha256": "c7fd39edb41ff9c71b4bb7afff5ee815b74c76440a96709ae338be82c3c4dd31"
+    }
+   ],
+   "injetado": [],
+   "neutralizacao": [],
+   "sha256_texto": "c63c188e34eb1aa66716929c9814da3e9d037be6592bb6f1ad5e2d5e4f2f0c7c"
+  },
+  {
+   "id": "C01-v1",
+   "cs_id": "C01",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 249,
+     "sha256": "bc4165c01a8490434774912b9404a32317eb8e18207a341113de639f04040cf4"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 248,
+     "deslocamento": 17,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "a9af3c6549b9268eedd3205d026726b4872cc5d513debbf549886967c0a1cb74"
+  },
+  {
+   "id": "C01-v2",
+   "cs_id": "C01",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 251,
+     "sha256": "bbc8c17ef2b86b8efb6fb7e2491398baba7f5f60e41b9cd1a13033c2ae4a5e0e"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 250,
+     "deslocamento": 19,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "af4a80bffd0fa79e49bb94475764bfccb9a7be2f059d06555611836e4bcf71b0"
+  },
+  {
+   "id": "C01-v3",
+   "cs_id": "C01",
+   "variante": "v3",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 246,
+     "sha256": "9b9e5faa8016a9fb69b10bd1cfea6384fc0286c0aaa7fa4bb1017041f4266985"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 245,
+     "deslocamento": 14,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "1c775d42a379a65319ab52c76d260f1c6b12f7525b60fc73b598391376dddf7e"
+  },
+  {
+   "id": "C02-v1",
+   "cs_id": "C02",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 254,
+     "sha256": "7350756b1b18b14d7a09d3bcdfe4d6bb13d0af1fb166a2a26bcb756fe98c541d"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 253,
+     "deslocamento": 22,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "26dcc2cfa2711e2c1655617e479262c2e446cfa0129b7e43ed7c61c7b84ffc85"
+  },
+  {
+   "id": "C02-v2",
+   "cs_id": "C02",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 252,
+     "sha256": "3951eabdb3552eb5d35af66302d7804908d6479a74b8c5e1643c99e46d34011c"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 251,
+     "deslocamento": 20,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "b478dbc44bb418032f83c5bbc2538083483ae8b7935b61bf4599a26b1e171efe"
+  },
+  {
+   "id": "C03-v1",
+   "cs_id": "C03",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 281,
+     "sha256": "a4f2c5a6394604fb5c51fe45f2db7c373186b47e78f94dd507c7d4475749997e"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 280,
+     "deslocamento": 49,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [
+    "N05",
+    "N06",
+    "N07"
+   ],
+   "sha256_texto": "a9bf2fc950aecd4ebe0498b8af0a02766d867be8817f1f006d66d477e711eaef"
+  },
+  {
+   "id": "C03-v2",
+   "cs_id": "C03",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 276,
+     "sha256": "e960919c9cd634a8754a36a227d8245230a8f1cf051aba6c873e2ae61434bd6a"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 275,
+     "deslocamento": 44,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [
+    "N08",
+    "N09"
+   ],
+   "sha256_texto": "a6de7acb8db9acfb6750f57530e3a11c80c851b1be21e381a662b959d6ce09c5"
+  },
+  {
+   "id": "C04-v1",
+   "cs_id": "C04",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/PrivilegiosDeExclusao.php",
+     "linhas": 37,
+     "sha256": "de056652e21bb3e27a6ad7d6e2cf5f0ccf85543e83cba8276f3563d4285a1eb4"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/PrivilegiosDeExclusao.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02",
+    "N10",
+    "N11"
+   ],
+   "sha256_texto": "d77fa7d0e40363906d91d88fb5eaab474eee6e6005102e12f99042c0a7bd0906"
+  },
+  {
+   "id": "C04-v2",
+   "cs_id": "C04",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/ConsultaDeCaixaController.php",
+     "linhas": 31,
+     "sha256": "5fbe1ed3b153b99fe2e38ac8e9c31067ad3a5e20929cdb51a66e5c69c3c45c28"
+    },
+    {
+     "caminho": "app/Pdv/ConsultaDeClientesController.php",
+     "linhas": 31,
+     "sha256": "ca6b49b909e07f5fca5a6261ae748f14c84df028df4056c31ab5feb22d6df086"
+    },
+    {
+     "caminho": "app/Pdv/ConsultaDeEstoqueController.php",
+     "linhas": 31,
+     "sha256": "2a25c1dc80f2660c64b3f7896c402900633943d20fb5ad89403125877e5fd54a"
+    },
+    {
+     "caminho": "app/Pdv/ConsultaDeVendasController.php",
+     "linhas": 31,
+     "sha256": "7304f7ccdfa4ef198014adcace03725df672c40d07b54abbc93694d32e885152"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/ConsultaDeCaixaController.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ConsultaDeClientesController.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ConsultaDeEstoqueController.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ConsultaDeVendasController.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "5f474615c20c3e513c8e6c74d3099d353f98dbc297c8467d2b97c82761d9e994"
+  },
+  {
+   "id": "C05-v1",
+   "cs_id": "C05",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "resources/views/admin/caixa/troco.blade.php",
+     "linhas": 35,
+     "sha256": "2eec1e3c9e2af530ee398988010c5bdc9e25a252cd1d8decf81aff340c67b3b8"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "resources/views/admin/caixa/troco.blade.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N03"
+   ],
+   "sha256_texto": "800051ee6bc197ac4cd4d5a09c027f6f3b427d1311a1c452291981ce567fe903"
+  },
+  {
+   "id": "C05-v2",
+   "cs_id": "C05",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "resources/views/admin/caixa/retirada.blade.php",
+     "linhas": 24,
+     "sha256": "0f6e2453b242545786cae856bbf6ff0a3ca401df1be54307b7d236327bd33a8b"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "resources/views/admin/caixa/retirada.blade.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N03"
+   ],
+   "sha256_texto": "c3f371db1b96b9e32ecac6f2a4c424a956c28030e92cb1ada403e81362e00416"
+  },
+  {
+   "id": "C05-v3",
+   "cs_id": "C05",
+   "variante": "v3",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 252,
+     "sha256": "1a314287840800ea76fc7292d0f5cdff9e1bb1388ce1868daa944bc9dbc0e15e"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 251,
+     "deslocamento": 20,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "c873ba0c7fb684dbf5d4c02c0fe1d35be2f0ee89e3df14c7a4e9ef3b0ce9d630"
+  },
+  {
+   "id": "C06-v1",
+   "cs_id": "C06",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "resources/views/admin/caixa/resumo.blade.php",
+     "linhas": 29,
+     "sha256": "f54acc66d0c01f3c79988c7a004d895a8cf7c23b0d0c174a469a145eb53dcde2"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N03"
+   ],
+   "sha256_texto": "064ae5d337f20de025ae0be8a1c6515672bcc3bf4d41b2ba666f2de3c4ef3076"
+  },
+  {
+   "id": "C06-v2",
+   "cs_id": "C06",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "resources/views/admin/caixa/resumo.blade.php",
+     "linhas": 15,
+     "sha256": "81271299a4eeb43e64d3f2fe9561c4178f8a2ba57aab5bdf75201a59e1f7844a"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N03"
+   ],
+   "sha256_texto": "969d0b7c5c5c8e41e59f39df85d15e8cf02d573a509b8b7d4ac447268b5d8eff"
+  },
+  {
+   "id": "C06-v3",
+   "cs_id": "C06",
+   "variante": "v3",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 247,
+     "sha256": "a28d6ccf009e31e31582601ed86db046c3f740142fb464a3e225d8ea524e9ee4"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 246,
+     "deslocamento": 15,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "b18e61dbed87a061e04cab2019096a96c0859453c33e179de9642038af1291d1"
+  },
+  {
+   "id": "C07-v1",
+   "cs_id": "C07",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "resources/views/admin/caixa/movimentacoes.blade.php",
+     "linhas": 34,
+     "sha256": "8351696861cc5d5c5d885bcf9d228abc95a7d8d42e448e6c3880b9ab5ba15c75"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "resources/views/admin/caixa/movimentacoes.blade.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N03"
+   ],
+   "sha256_texto": "6311009611746a1c1473c0dff35334d9d1c7ae1cdcfa4c11cd37196d5584e74e"
+  },
+  {
+   "id": "C07-v2",
+   "cs_id": "C07",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "resources/views/admin/caixa/aviso.blade.php",
+     "linhas": 20,
+     "sha256": "c477662e87117d08f229bf10f5191ce8eff751c32c704e4501c8e7768c80e9b7"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "resources/views/admin/caixa/aviso.blade.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N03"
+   ],
+   "sha256_texto": "e3aa267dd8e50b8684fe6053be9977f26d7fee4f68652eb7618f42498c515cdd"
+  },
+  {
+   "id": "C08-v1",
+   "cs_id": "C08",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/TabelaDeSangrias.php",
+     "linhas": 64,
+     "sha256": "ab8e6d06458aeafb2174b5ae187359f01fb279560e13d27717e3ada14fcaf24a"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/TabelaDeSangrias.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02",
+    "N13"
+   ],
+   "sha256_texto": "85867c70944782ab4d5227cecaec591481ab3b30d3a9ee924ef9e83d449beec9"
+  },
+  {
+   "id": "C08-v2",
+   "cs_id": "C08",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/FormularioDeSangria.php",
+     "linhas": 45,
+     "sha256": "768995ad3290d3ec91b46ff4fdcaa9d7d71105239a435b410bde3e89192da8e6"
+    },
+    {
+     "caminho": "app/Pdv/ScriptDoFormularioDeSangria.php",
+     "linhas": 27,
+     "sha256": "c82834b969a929cc213b93d2562feeaf603f259d161e050ef5c77e8d47ca932d"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/FormularioDeSangria.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ScriptDoFormularioDeSangria.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02",
+    "N14",
+    "N15"
+   ],
+   "sha256_texto": "ceadac21c684b8b1c95609fd43f301e576094da22b28a2b2c8599252b0331c25"
+  },
+  {
+   "id": "C09-v1",
+   "cs_id": "C09",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "resources/views/admin/caixa/nova-entrada.blade.php",
+     "linhas": 40,
+     "sha256": "ae524f24065470864f7a39e4f65a866039c03728b145902b01f930d8f655eef3"
+    },
+    {
+     "caminho": "resources/views/admin/caixa/nova-sangria.blade.php",
+     "linhas": 40,
+     "sha256": "adac842489c098ec22490b5f945c821cc8ccdb6367908017f3f5bfc5edb03f2c"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "resources/views/admin/caixa/nova-entrada.blade.php",
+     "novo": true
+    },
+    {
+     "arquivo": "resources/views/admin/caixa/nova-sangria.blade.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N03",
+    "N04"
+   ],
+   "sha256_texto": "fe313af2ea43205a79be83263c33b8f3f6dbd4f4de9b81909bc537f7350d01d0"
+  },
+  {
+   "id": "C09-v2",
+   "cs_id": "C09",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 302,
+     "sha256": "9ecfcf67c97bc53f52a0038ce9c4eed4df92aabfa41d40effe1cc84ef3958122"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 301,
+     "deslocamento": 70,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "fa92ddedbd0759c15b06fe55e44c8743c8bb5d7fe14e12e79dbd7f13e07f4aac"
+  },
+  {
+   "id": "C10-v1",
+   "cs_id": "C10",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "resources/views/admin/caixa/saldo.blade.php",
+     "linhas": 16,
+     "sha256": "214b73614802d23fad203b7f025734569f18c05c04235714d8dec04376745500"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "resources/views/admin/caixa/saldo.blade.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N03"
+   ],
+   "sha256_texto": "7a62629d35324e64409742ab53ab21c0c48e4179b3d14c1be4111f711d70d99b"
+  },
+  {
+   "id": "C10-v2",
+   "cs_id": "C10",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 246,
+     "sha256": "162f232aa9c1d12f98a8c8be8b621950160ea622fa6660b76e33f41518657ffb"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 245,
+     "deslocamento": 14,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "80bc8557c9f1d441be898d8c3f3b52698d1749cf93f211edafdc7e231cbe4202"
+  },
+  {
+   "id": "C10-v3",
+   "cs_id": "C10",
+   "variante": "v3",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "resources/views/admin/caixa/aviso.blade.php",
+     "linhas": 13,
+     "sha256": "7f8cc30b69bd1baac02373bde13429d12fc4651745d77bc391117a8731ac7a94"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "resources/views/admin/caixa/aviso.blade.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N03"
+   ],
+   "sha256_texto": "7641c5e47a050955be289e4d912570967b455e3f379bd61de70f389b97f73a4f"
+  },
+  {
+   "id": "C11-v1",
+   "cs_id": "C11",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/RelatorioGerencialDeCaixa.php",
+     "linhas": 1018,
+     "sha256": "b5d1fb4b8c2163423a19ca88f0914549a9fa8af6c13b8e675b46ac86e8c562cc"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "007d7c1a231ddd641cf769eb1c4d032a1e360d1a4cc23955da3c80f3d4b26b6b"
+  },
+  {
+   "id": "C11-v2",
+   "cs_id": "C11",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/RelatorioGerencialDeCaixa.php",
+     "linhas": 2017,
+     "sha256": "6f1b68c13b8fcf275dd972785891787cd1538459854fd3ab9c948d41766160d8"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "a0d5f31fe8b06d657e7b824904a9bac53766d58e156c15157800fe572e70cf8d"
+  },
+  {
+   "id": "C12-v1",
+   "cs_id": "C12",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 341,
+     "sha256": "3618aeaec2dea21ca04eccd85d51b30dca69896b270d7afb484265a7d9b7251a"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 340,
+     "deslocamento": 109,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "c390ce29153ef6689422c3f0933bd20eb15ae50642ca87f47203b904a3c0534d"
+  },
+  {
+   "id": "C12-v2",
+   "cs_id": "C12",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 440,
+     "sha256": "e6bccc015a3320a55888962974556b79876fe0f851ac96993c30b03fd6a04af5"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 439,
+     "deslocamento": 208,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "f6bf30e2bf29c0d288b583f8c9cd9d86600cdc31ac2bb65bad29da89dadb458e"
+  },
+  {
+   "id": "C13-v1",
+   "cs_id": "C13",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 286,
+     "sha256": "0cb49319acc95b2aaeb7b2a9181412e3d5e6f9a3fa70cd685d94282bbfd03a94"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 285,
+     "deslocamento": 54,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "f68337108cfa6fc0c1fafcd657d7ddc70490328904c1119a825332c4e2e8a7fa"
+  },
+  {
+   "id": "C13-v2",
+   "cs_id": "C13",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 318,
+     "sha256": "b6eae0d947a1661a8f1e6e171358f397221b17a1d3f79d192dae18ad03ee4e74"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 317,
+     "deslocamento": 86,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "c44bba312cb088f313aa67ea9de7ca0a820c918cd4a49df5bbab2b95f6806224"
+  },
+  {
+   "id": "C14-v1",
+   "cs_id": "C14",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/PainelGerencial.php",
+     "linhas": 301,
+     "sha256": "0b13cd721b29dc3bf586215ade578c00c4ee04bdd7e44732ac20a03663bc402b"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/PainelGerencial.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "b59538a0b53bea438cd5077a06d36d54002a32ccdc829ee650d9c74aa502f432"
+  },
+  {
+   "id": "C14-v2",
+   "cs_id": "C14",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/PainelGerencial.php",
+     "linhas": 571,
+     "sha256": "2f8f7274ab9f79275ca0da15d3127cc03405fe7b1053a8dfede240cd80e1d4d2"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/PainelGerencial.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "7891f327aedc190878a3660c6b13172dc37021ba02937a7ab3e0f07f8c063c60"
+  },
+  {
+   "id": "C15-v1",
+   "cs_id": "C15",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/ConsultasDoCaixa.php",
+     "linhas": 121,
+     "sha256": "c6a3ae05bec7dce7d8095eb1dc7c812a61b28825e43ab900362d2c1aecf76f01"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "cb12d25ecdc5d716e2a364bcfe7ea1d5c3334bf320e1d9fd61814a7ceeb20278"
+  },
+  {
+   "id": "C15-v2",
+   "cs_id": "C15",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/ConsultasDoCaixa.php",
+     "linhas": 212,
+     "sha256": "c8e007bbd44781a3ff024633bf0b7e22da616933665d16696b273ccac70fbb76"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "b1981c83798f7343fbf037509a13390adca65cb5edce430047ccfcb2fd000453"
+  },
+  {
+   "id": "C16-v1",
+   "cs_id": "C16",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/ResumoDoFechamento.php",
+     "linhas": 181,
+     "sha256": "02cb2caa65a1de1ca851736f96482c276bb9a1b3860237774bb505075ad87807"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/ResumoDoFechamento.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "deb195f0336326fcdf39c6ef16cf0185b46797174e96fa533aa934c94c687a6d"
+  },
+  {
+   "id": "C16-v2",
+   "cs_id": "C16",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/ResumoDoFechamento.php",
+     "linhas": 315,
+     "sha256": "f285f6296cade377d1c542c9f4a2371e5d49e95bf061f6123fb826f043bdb7a4"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/ResumoDoFechamento.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "c93434b0f449f60ba511acfb8a0d571fce970dfe1771b772f7c5510cdd56c774"
+  },
+  {
+   "id": "C17-v1",
+   "cs_id": "C17",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/PainelDoCaixa.php",
+     "linhas": 431,
+     "sha256": "5dabc555b580031275b2c24dd2c0a8e899b151e793ccd2fbead39fc996ab54bc"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/PainelDoCaixa.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02",
+    "N16",
+    "N17"
+   ],
+   "sha256_texto": "80b257bd38c4baaa5bf2aff6c5fc63fff27099f9ca936223e4abecc62c7c57a0"
+  },
+  {
+   "id": "C17-v2",
+   "cs_id": "C17",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/PainelDoCaixa.php",
+     "linhas": 830,
+     "sha256": "6bab984833c39916cd24b8aae35985818e6c2b2a9725d6932a08c898ab0772ec"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/PainelDoCaixa.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02",
+    "N16",
+    "N17"
+   ],
+   "sha256_texto": "5e4cb4054d2b17ad6726cb58b3d83806d9fee3623d1104c8e89c3407fca46499"
+  },
+  {
+   "id": "C18-v1",
+   "cs_id": "C18",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 279,
+     "sha256": "2101e5d162de9e512ea0bc256713ce061afd95cd0a71e7b3e7cc9537e3df314b"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 278,
+     "deslocamento": 47,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "fc4d2584581adfd5c98879a5dff6af10d629c850b207c89fd9b5bbe393dbd490"
+  },
+  {
+   "id": "C18-v2",
+   "cs_id": "C18",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 308,
+     "sha256": "c04b25c388b79e675f3dd1ee577011c73530e3b42bd32dd557f051d78f5aa5e4"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 307,
+     "deslocamento": 76,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "461a6701c300ef6c380056767b84e69fc46c9ed5a6f6a178b724766551f80c16"
+  },
+  {
+   "id": "C19-v1",
+   "cs_id": "C19",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 273,
+     "sha256": "1817549ccc9842d8bfd81b6b58682845fadf18d359da8794da66bfb9306e7ec0"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 272,
+     "deslocamento": 41,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "e9c1fc7f4b87df9bedfc15dd9e024012332cf39de364bac71736db2871af444e"
+  },
+  {
+   "id": "C19-v2",
+   "cs_id": "C19",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 276,
+     "sha256": "b0c84277e5fa5c64e61efb9b46f7a1b3bef509b2c9e80df65c510c2bd24a1209"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 275,
+     "deslocamento": 44,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "5099b6aa1bc1a793e17d277cb3a12d59d54ee9eac0b62d2df6d4a506447161dc"
+  },
+  {
+   "id": "C20-v1",
+   "cs_id": "C20",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/AnalisadorDeVendas.php",
+     "linhas": 251,
+     "sha256": "f5e6c14ddba0fca281e4addea8321105f8b2eae34ea8bc49fe235151595d6f19"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "2f5b6847ce010e189e8996fcb692c02fafb45facca7dad72e4a0afb702c46d90"
+  },
+  {
+   "id": "C20-v2",
+   "cs_id": "C20",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/AnalisadorDeVendas.php",
+     "linhas": 527,
+     "sha256": "540862ddc7cd2de20ef9c3b254179872d56dfa49ac58bc5ef38e4135d8a1507e"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "5143e7811b19b1083628d7aab8b669fcf3ed06093f9b0a42208c297b2c7fd606"
+  },
+  {
+   "id": "C21-v1",
+   "cs_id": "C21",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/FechamentoDeCaixa.php",
+     "linhas": 123,
+     "sha256": "561c63fc07048eac606831664f308e4c47b28790d9e3b7f4a45228a28e6305c4"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "d52a6cc09e29d7d8e6aa134b299c89236de1f73c0b4581d93e0d63c2072d92e5"
+  },
+  {
+   "id": "C21-v2",
+   "cs_id": "C21",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/FechamentoDeCaixa.php",
+     "linhas": 195,
+     "sha256": "4cd8de3acd330c21e459601c7aa3114d31bbda55fd319f581083a9ef268737df"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "cf64caf11808cd47031b51b0b63441e80319d3a00e935f78351dd8be1f1df028"
+  },
+  {
+   "id": "C22-v1",
+   "cs_id": "C22",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/Relatorio.php",
+     "linhas": 58,
+     "sha256": "3fdd7595cba5519fb10faa2a23a57d1ef85d3d306981c158044d3ce8cccc9360"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixa.php",
+     "linhas": 25,
+     "sha256": "5ea9a570fd11be0518faea55c88072ecfda5d4f3fd3546e448d933f81defd79b"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+     "linhas": 27,
+     "sha256": "a4dc25c5fa91d047c8035118b3b05cdeb97c8fc6ecb03ca33aa928140294aed4"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixaComEntradas.php",
+     "linhas": 26,
+     "sha256": "c6573b71e5ba5f617183f9b45d1d317bae620e0c934cb3eb4aa13932880c8849"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixaComSangrias.php",
+     "linhas": 24,
+     "sha256": "e2c804a5877e5fcd8edf07cb08fd49af36aded7818042ea40c56572b9d42f29f"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeFechamento.php",
+     "linhas": 35,
+     "sha256": "db0cfdef42317ecdc67c2022a4208251d8f825fac39ae3a1a319ddc1f767c8ed"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeVendas.php",
+     "linhas": 25,
+     "sha256": "fd8f504b24fd8f755386cbd2b37a21ca9ff85ee8e6d66207e9c4d0df68983076"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+     "linhas": 26,
+     "sha256": "0459636dce1f08cf96360f50edc75ebecb1cbb07202569430791f72548f77778"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/Relatorio.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixa.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixaComEntradas.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixaComSangrias.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeFechamento.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeVendas.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "51ef12c38279a847816d0313e0da8979c87ae3d5892bbc7764a165ad5cf4ef0e"
+  },
+  {
+   "id": "C22-v2",
+   "cs_id": "C22",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/Relatorio.php",
+     "linhas": 58,
+     "sha256": "3fdd7595cba5519fb10faa2a23a57d1ef85d3d306981c158044d3ce8cccc9360"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixa.php",
+     "linhas": 25,
+     "sha256": "5ea9a570fd11be0518faea55c88072ecfda5d4f3fd3546e448d933f81defd79b"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+     "linhas": 27,
+     "sha256": "a4dc25c5fa91d047c8035118b3b05cdeb97c8fc6ecb03ca33aa928140294aed4"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixaComClientes.php",
+     "linhas": 25,
+     "sha256": "ce317feaf0147a36d831f46ee5dbfd6db59783caf4ff0e9b319e2797882cf8cc"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixaComDescontos.php",
+     "linhas": 25,
+     "sha256": "501cad2b4eda336d069b72f7f1376a04beb13c09aa2c2fd8917ae101dd78b083"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixaComEntradas.php",
+     "linhas": 26,
+     "sha256": "c6573b71e5ba5f617183f9b45d1d317bae620e0c934cb3eb4aa13932880c8849"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixaComEstoque.php",
+     "linhas": 24,
+     "sha256": "e59839d45108981968448bbe29f5b8e707844b9c417ef5f79434b23387924fb1"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixaComItens.php",
+     "linhas": 27,
+     "sha256": "fcbce4b18af7ec3802f3d3120118ecaa22cf11d3236a524a75afddf063fa152e"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixaComParcelamentos.php",
+     "linhas": 26,
+     "sha256": "fb003e99778870f4308e69df59a5564ea798f9ec53fe2c3b5e34b9bc2af27a1b"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeCaixaComSangrias.php",
+     "linhas": 24,
+     "sha256": "e2c804a5877e5fcd8edf07cb08fd49af36aded7818042ea40c56572b9d42f29f"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeFechamento.php",
+     "linhas": 35,
+     "sha256": "1fed082ea0e0c519210df5e28eae36ba39ffc95e74738d253d98b0c00dd0ca8a"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeVendas.php",
+     "linhas": 25,
+     "sha256": "fd8f504b24fd8f755386cbd2b37a21ca9ff85ee8e6d66207e9c4d0df68983076"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+     "linhas": 26,
+     "sha256": "0459636dce1f08cf96360f50edc75ebecb1cbb07202569430791f72548f77778"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/Relatorio.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixa.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixaComCartoes.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixaComClientes.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixaComDescontos.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixaComEntradas.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixaComEstoque.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixaComItens.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixaComParcelamentos.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeCaixaComSangrias.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeFechamento.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeVendas.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeVendasEmDinheiro.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "d02d9a4f0f7dc6ef348d2fde61f792c5f0cc6adf44d56376be736f21b1ad6a15"
+  },
+  {
+   "id": "C23-v1",
+   "cs_id": "C23",
+   "variante": "v1",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/BoletoBancario.php",
+     "linhas": 39,
+     "sha256": "4c9035b4c68f1b022c444fa3f796422d8db17e5f17d86deeb14303568a081fda"
+    },
+    {
+     "caminho": "app/Pdv/CartaoDeCredito.php",
+     "linhas": 39,
+     "sha256": "7a484128d4805c5b61c637d64eec703440e86d06bdd1d86e0a7c329b87847af6"
+    },
+    {
+     "caminho": "app/Pdv/CartaoDeDebito.php",
+     "linhas": 39,
+     "sha256": "d9e8256307cdb746450f752976a14ff52ab3ae357bdfcb750964184f979a1b68"
+    },
+    {
+     "caminho": "app/Pdv/CarteiraDigital.php",
+     "linhas": 39,
+     "sha256": "867f59a11ad6d3d2b5f2c8c724eed52f811d9e26343669384752b86bf02e6a33"
+    },
+    {
+     "caminho": "app/Pdv/Cashback.php",
+     "linhas": 39,
+     "sha256": "7429acdeedc3e7ba48c969c0cd1d73ef52d9f0dc146e8f5d29c902170f9f6c75"
+    },
+    {
+     "caminho": "app/Pdv/Cheque.php",
+     "linhas": 39,
+     "sha256": "ea5e90184be7366fd04af7728848cfd6fdcc98ca69ed9e43770b5a6809c7acfe"
+    },
+    {
+     "caminho": "app/Pdv/ChequePreDatado.php",
+     "linhas": 39,
+     "sha256": "3bf6ede3cfdf01ef3f74587d6a8ea15f71e4299210ad4f1c6cfbd6392579b3ab"
+    },
+    {
+     "caminho": "app/Pdv/Crediario.php",
+     "linhas": 39,
+     "sha256": "b3be68b2190facdce3b5e65dd1f0dd9f427cf7149cf20f899ff388a5588d0e13"
+    },
+    {
+     "caminho": "app/Pdv/CreditoDaLoja.php",
+     "linhas": 39,
+     "sha256": "2cff28ce3f6b8a0350bf8bb5511e18b9067847ded6b1933969c7c4cd43b626b3"
+    },
+    {
+     "caminho": "app/Pdv/Dinheiro.php",
+     "linhas": 39,
+     "sha256": "72f4b570b83c8426016066403fc67358cf17e9afcfaa994a46e84539aaaf22b0"
+    },
+    {
+     "caminho": "app/Pdv/FormaDePagamento.php",
+     "linhas": 42,
+     "sha256": "ca45a23f3bdf6930d729ddd3356e6fa96eb40e34231d584de0f97d788895411a"
+    },
+    {
+     "caminho": "app/Pdv/LinkDePagamento.php",
+     "linhas": 39,
+     "sha256": "8bc2f72058be198b9732078769087d819fe7efda6fedc0dc5cb2908987c93284"
+    },
+    {
+     "caminho": "app/Pdv/Pix.php",
+     "linhas": 39,
+     "sha256": "d24ec290d42dd335ff30b46fd15cd2b0a6887234b6e35f19eea59b94ba66c59e"
+    },
+    {
+     "caminho": "app/Pdv/TransferenciaBancaria.php",
+     "linhas": 39,
+     "sha256": "cd74e1dc72cb9c042362fc85bddbc68562f8d8e2227bbd263756ea10ff2a9bfe"
+    },
+    {
+     "caminho": "app/Pdv/ValeAlimentacao.php",
+     "linhas": 39,
+     "sha256": "7f196b1d850bce67b6640875feff636d1ffe937e109ea6647c080dc01431c622"
+    },
+    {
+     "caminho": "app/Pdv/ValePresente.php",
+     "linhas": 39,
+     "sha256": "d50bb717d0ad312632e1067833b9f7653435f8c1fc27a27770945ca7298e42d4"
+    },
+    {
+     "caminho": "app/Pdv/ValeRefeicao.php",
+     "linhas": 39,
+     "sha256": "68de56fe23e2233fdeb060eb64610fe6f1b6d142dc2f5adddd8aa22e0bd2fd20"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/BoletoBancario.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/CartaoDeCredito.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/CartaoDeDebito.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/CarteiraDigital.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/Cashback.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/Cheque.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ChequePreDatado.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/Crediario.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/CreditoDaLoja.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/Dinheiro.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/FormaDePagamento.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/LinkDePagamento.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/Pix.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/TransferenciaBancaria.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ValeAlimentacao.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ValePresente.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ValeRefeicao.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "f77ae490ae976c9be1364583e757d899684970aa79752ca844fc739a8937a9b4"
+  },
+  {
+   "id": "C23-v2",
+   "cs_id": "C23",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/BoletoBancario.php",
+     "linhas": 39,
+     "sha256": "4c9035b4c68f1b022c444fa3f796422d8db17e5f17d86deeb14303568a081fda"
+    },
+    {
+     "caminho": "app/Pdv/CartaoDaLoja.php",
+     "linhas": 39,
+     "sha256": "942f008983b2814302d3da7078b4d88151d2664ff016a4ddaf25852c5a68297e"
+    },
+    {
+     "caminho": "app/Pdv/CartaoDeCredito.php",
+     "linhas": 39,
+     "sha256": "7a484128d4805c5b61c637d64eec703440e86d06bdd1d86e0a7c329b87847af6"
+    },
+    {
+     "caminho": "app/Pdv/CartaoDeCreditoInternacional.php",
+     "linhas": 39,
+     "sha256": "81fe75bd64bf4badb365b795d01c2a90088fd91d2f779809a41e160c9a2718b3"
+    },
+    {
+     "caminho": "app/Pdv/CartaoDeDebito.php",
+     "linhas": 39,
+     "sha256": "d9e8256307cdb746450f752976a14ff52ab3ae357bdfcb750964184f979a1b68"
+    },
+    {
+     "caminho": "app/Pdv/CartaoPrePago.php",
+     "linhas": 39,
+     "sha256": "c660b5b61004901db89f29202153821f23b246e0a66af24a451348dfcf9ed492"
+    },
+    {
+     "caminho": "app/Pdv/CarteiraDigital.php",
+     "linhas": 39,
+     "sha256": "867f59a11ad6d3d2b5f2c8c724eed52f811d9e26343669384752b86bf02e6a33"
+    },
+    {
+     "caminho": "app/Pdv/Cashback.php",
+     "linhas": 39,
+     "sha256": "7429acdeedc3e7ba48c969c0cd1d73ef52d9f0dc146e8f5d29c902170f9f6c75"
+    },
+    {
+     "caminho": "app/Pdv/Cheque.php",
+     "linhas": 39,
+     "sha256": "ea5e90184be7366fd04af7728848cfd6fdcc98ca69ed9e43770b5a6809c7acfe"
+    },
+    {
+     "caminho": "app/Pdv/ChequePreDatado.php",
+     "linhas": 39,
+     "sha256": "3bf6ede3cfdf01ef3f74587d6a8ea15f71e4299210ad4f1c6cfbd6392579b3ab"
+    },
+    {
+     "caminho": "app/Pdv/ConvenioEmpresa.php",
+     "linhas": 39,
+     "sha256": "71b7e9d27f047194692fdeebf6d2f0b168a7361afb1764cd741cbb505134d789"
+    },
+    {
+     "caminho": "app/Pdv/Crediario.php",
+     "linhas": 39,
+     "sha256": "b3be68b2190facdce3b5e65dd1f0dd9f427cf7149cf20f899ff388a5588d0e13"
+    },
+    {
+     "caminho": "app/Pdv/CreditoDaLoja.php",
+     "linhas": 39,
+     "sha256": "2cff28ce3f6b8a0350bf8bb5511e18b9067847ded6b1933969c7c4cd43b626b3"
+    },
+    {
+     "caminho": "app/Pdv/Criptomoeda.php",
+     "linhas": 39,
+     "sha256": "4f1560f4afe37733651007b8305c64524dcab750e4a0536139d344facf68d1fc"
+    },
+    {
+     "caminho": "app/Pdv/DebitoEmConta.php",
+     "linhas": 39,
+     "sha256": "551a62f1724094dd24aec8cbf884069e1443640f48b96e2483ef91cc403fef6e"
+    },
+    {
+     "caminho": "app/Pdv/DepositoBancario.php",
+     "linhas": 39,
+     "sha256": "a15d9397a4b3e63cb59dbf10dbb9f06e0e4639b45aa86301cdaab53e31039293"
+    },
+    {
+     "caminho": "app/Pdv/Dinheiro.php",
+     "linhas": 39,
+     "sha256": "72f4b570b83c8426016066403fc67358cf17e9afcfaa994a46e84539aaaf22b0"
+    },
+    {
+     "caminho": "app/Pdv/FinanciamentoBancario.php",
+     "linhas": 39,
+     "sha256": "ca4f73955276552073045b44d66c3c52ed83cb2160c31fb877831fd4d8b665a7"
+    },
+    {
+     "caminho": "app/Pdv/FormaDePagamento.php",
+     "linhas": 42,
+     "sha256": "ca45a23f3bdf6930d729ddd3356e6fa96eb40e34231d584de0f97d788895411a"
+    },
+    {
+     "caminho": "app/Pdv/LinkDePagamento.php",
+     "linhas": 39,
+     "sha256": "8bc2f72058be198b9732078769087d819fe7efda6fedc0dc5cb2908987c93284"
+    },
+    {
+     "caminho": "app/Pdv/NotaPromissoria.php",
+     "linhas": 39,
+     "sha256": "627423b74f6613ef8633de37fef594f16c089b6b995bcae086b8f3a41e9162bc"
+    },
+    {
+     "caminho": "app/Pdv/PagamentoPorAproximacao.php",
+     "linhas": 39,
+     "sha256": "4e077e9c312b2a14d6d76750732818ceb1854354199e1c6e75aa21945bb961ef"
+    },
+    {
+     "caminho": "app/Pdv/Permuta.php",
+     "linhas": 39,
+     "sha256": "9efe2bddbe3ba8e41816c7f73a2e64070e268925d925b1952ee00f21cb6015dc"
+    },
+    {
+     "caminho": "app/Pdv/Pix.php",
+     "linhas": 39,
+     "sha256": "d24ec290d42dd335ff30b46fd15cd2b0a6887234b6e35f19eea59b94ba66c59e"
+    },
+    {
+     "caminho": "app/Pdv/PontosDeFidelidade.php",
+     "linhas": 39,
+     "sha256": "37135eca189d1af62c5fb624aeeda28cf2d7a22e6d9cc6a4bbfab5431bf58788"
+    },
+    {
+     "caminho": "app/Pdv/TransferenciaBancaria.php",
+     "linhas": 39,
+     "sha256": "cd74e1dc72cb9c042362fc85bddbc68562f8d8e2227bbd263756ea10ff2a9bfe"
+    },
+    {
+     "caminho": "app/Pdv/ValeAlimentacao.php",
+     "linhas": 39,
+     "sha256": "7f196b1d850bce67b6640875feff636d1ffe937e109ea6647c080dc01431c622"
+    },
+    {
+     "caminho": "app/Pdv/ValeCombustivel.php",
+     "linhas": 39,
+     "sha256": "6342e239d7be9ed1b5b8cc0ea9d6530e0816ae5b49499a070a3392efcd3c1edb"
+    },
+    {
+     "caminho": "app/Pdv/ValeCultura.php",
+     "linhas": 39,
+     "sha256": "8d2edb65d9b9c883c4925c1cb94c38e109bf22c9ddd787426be971227f4a8226"
+    },
+    {
+     "caminho": "app/Pdv/ValePresente.php",
+     "linhas": 39,
+     "sha256": "d50bb717d0ad312632e1067833b9f7653435f8c1fc27a27770945ca7298e42d4"
+    },
+    {
+     "caminho": "app/Pdv/ValeRefeicao.php",
+     "linhas": 39,
+     "sha256": "68de56fe23e2233fdeb060eb64610fe6f1b6d142dc2f5adddd8aa22e0bd2fd20"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/BoletoBancario.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/CartaoDaLoja.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/CartaoDeCredito.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/CartaoDeCreditoInternacional.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/CartaoDeDebito.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/CartaoPrePago.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/CarteiraDigital.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/Cashback.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/Cheque.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ChequePreDatado.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ConvenioEmpresa.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/Crediario.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/CreditoDaLoja.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/Criptomoeda.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/DebitoEmConta.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/DepositoBancario.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/Dinheiro.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/FinanciamentoBancario.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/FormaDePagamento.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/LinkDePagamento.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/NotaPromissoria.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/PagamentoPorAproximacao.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/Permuta.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/Pix.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/PontosDeFidelidade.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/TransferenciaBancaria.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ValeAlimentacao.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ValeCombustivel.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ValeCultura.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ValePresente.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/ValeRefeicao.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "05686eaecbd9c2adb7eb6a4b6ca1bbadcd373a15795182131f0d92a4165b91df"
+  },
+  {
+   "id": "C24-v1",
+   "cs_id": "C24",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 284,
+     "sha256": "b4b6d875b771a3d5cb2dd391c47a99059a78f6d54b2a777c554f9f740727807c"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 283,
+     "deslocamento": 52,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "a1f91c050df2caeb7ca5ff1fc8088507218b8cf60f585297067799b4130f7b82"
+  },
+  {
+   "id": "C24-v2",
+   "cs_id": "C24",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/RelatorioDeEntradas.php",
+     "linhas": 37,
+     "sha256": "1078a9b9038b05d9129237383d2075f79b23a96c7276638f22f17564a69793b2"
+    },
+    {
+     "caminho": "app/Pdv/RelatorioDeSangrias.php",
+     "linhas": 37,
+     "sha256": "a3adaff2fa31e2b64f2e9f183d6a1b232925a27878ecf210e6b2688180712c4b"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/RelatorioDeEntradas.php",
+     "novo": true
+    },
+    {
+     "arquivo": "app/Pdv/RelatorioDeSangrias.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "2967fba9021ccfe72d366a028553e867e3e1687c06ffc5596fbd16bb2e7d53d5"
+  },
+  {
+   "id": "C24-v3",
+   "cs_id": "C24",
+   "variante": "v3",
+   "tipo": "membros+arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 256,
+     "sha256": "0600a1ac53b617c627fae6f3d1edd3bd9a5009b78f1a5c2eb98dcdf84767bf32"
+    },
+    {
+     "caminho": "app/Pdv/ConferenciaDeFechamento.php",
+     "linhas": 42,
+     "sha256": "774b4286c69d0c89ef2b36458a30c4bb6e68c96cf9119bebb371475996fcecad"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 255,
+     "deslocamento": 24,
+     "linha_fecha_base": 232
+    },
+    {
+     "arquivo": "app/Pdv/ConferenciaDeFechamento.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "4cc73d36a9decf7633724404c2c3749c4bdb007e0c42e43519cc00c92ec55734"
+  },
+  {
+   "id": "C25-v1",
+   "cs_id": "C25",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 239,
+     "sha256": "50adaaad1cd3fabf938aa77f7dc3065d00b2491413d63deccd8430458df0e70a"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 238,
+     "deslocamento": 7,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "5d747d32f1d3959d729fbb893239de1edb2c273ac97f5b5d87d893bbfb67d587"
+  },
+  {
+   "id": "C25-v2",
+   "cs_id": "C25",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 239,
+     "sha256": "42b431af55fbffe430b8f545e7c5be620dc38703114a044ccc3674bfd45230d2"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 238,
+     "deslocamento": 7,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "fcaadde7b172d11e3dbd0b8d900c540dbc8afeec2f0b257edc9e2db0f993fc07"
+  },
+  {
+   "id": "C25-v3",
+   "cs_id": "C25",
+   "variante": "v3",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 247,
+     "sha256": "193a981dcc3f5e677db2c3d8461289db2d27723468f4e2f45645d6a69e269489"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 246,
+     "deslocamento": 15,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "2d2bd2371855e5e8bc1b9da05f3dcab39c1f36e3a2e78841b57e0de5805c5632"
+  },
+  {
+   "id": "C26-v1",
+   "cs_id": "C26",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 244,
+     "sha256": "8bcafe054d175f69ca038ff3b11a1ae65b5c4e3d7bf9846ae51e92862c1d178e"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 243,
+     "deslocamento": 12,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "17538b6276dde297a03e95e8a668369926a2e4eba309fcb5a18d5a0cb77cc5d3"
+  },
+  {
+   "id": "C26-v2",
+   "cs_id": "C26",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 245,
+     "sha256": "ed06163a882a2a410dc16ae6bb5d44c7e35a91e28d912278810fa3f9036c311d"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 244,
+     "deslocamento": 13,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "faa1a3c5a20fa1840dda72ff65faa73bbf9dc0f520ca56100bf2f7fca99ff1a6"
+  },
+  {
+   "id": "C27-v1",
+   "cs_id": "C27",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 244,
+     "sha256": "1ce480e864b9739eb7e77c043b191038946a1eca84367d39da6d622caf1af5e9"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 243,
+     "deslocamento": 12,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "e386fe2a9a06910c65cf7ac664aeb62929aaee2214a84574a57ac7755989546b"
+  },
+  {
+   "id": "C27-v2",
+   "cs_id": "C27",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 246,
+     "sha256": "902332325547646b9b2a688e07ad68cb3ab5a79a18e3afced48ce38e3ff0d2cf"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 245,
+     "deslocamento": 14,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "e1d8e2becca29d557cca9834203bcd99dbf68a965be6845d8cd62b4a4cfadc22"
+  },
+  {
+   "id": "C27-v3",
+   "cs_id": "C27",
+   "variante": "v3",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 245,
+     "sha256": "cb918b710eae5309350a2b1faa482d900c198e2bc216186f8da59e43fcfa1566"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 244,
+     "deslocamento": 13,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "054eb50d31adf5538508ad018be64a2eebdf340649d82ad38fe1d4e6ec7676d2"
+  },
+  {
+   "id": "C28-v1",
+   "cs_id": "C28",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 257,
+     "sha256": "ddf1793cce9678cdace3f84ab1425b3fb77f0567e955eda8bdfbc806548b72f7"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 256,
+     "deslocamento": 25,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "9480f784ff608dc5e6245dffaf7e4ce7d5309a4b652cfdeed1adec1d74a0142c"
+  },
+  {
+   "id": "C28-v2",
+   "cs_id": "C28",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 245,
+     "sha256": "8e37726c579d00ffdcb2e035132dc48a6e72bd66fc1c4f21c43e5777925e5160"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 244,
+     "deslocamento": 13,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "8f3e431d5986bfcdd6a0e44713c3d757348359b6a8b3ba1c2240eb49ff71a62a"
+  },
+  {
+   "id": "C28-v3",
+   "cs_id": "C28",
+   "variante": "v3",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/ConferenciaDeCaixa.php",
+     "linhas": 39,
+     "sha256": "6cbb8aeafcff73e67c176334f2621100f690984140e8c5eca20c2fa863b62a28"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/ConferenciaDeCaixa.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "5356420ec2a3813ef1dcb2f8c7ae2512f7f10a061d32bad393f93feaad155dce"
+  },
+  {
+   "id": "C29-v1",
+   "cs_id": "C29",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 251,
+     "sha256": "41358edeed1013b70991c501a1e055e9ac621cb81d1d245116d4f37fb34b040e"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 250,
+     "deslocamento": 19,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "cc206eb5398361528c702a451f23cd8884a8b0cafbbdd9c1c76d749c63194e9b"
+  },
+  {
+   "id": "C29-v2",
+   "cs_id": "C29",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 247,
+     "sha256": "71417dab629b6f85bb1319feb9116a32d4a39baa91ca7149ef70d6b21913a1c3"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 246,
+     "deslocamento": 15,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "7ab7ed0c47bcd74db5f4e8a736cfae4c50a151eb3413b5495801ba997f73b7e5"
+  },
+  {
+   "id": "C29-v3",
+   "cs_id": "C29",
+   "variante": "v3",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/ExportadorDeFechamento.php",
+     "linhas": 31,
+     "sha256": "7b19099e0a55ecc7447f4d8b5bb21a9c2000153b9666c00c217699dc5293ef2b"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/ExportadorDeFechamento.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "02e2186ff8b285a633e7aa1f3825ddc749f4b464ee5baa147ffe761fb9a0c5d2"
+  },
+  {
+   "id": "C30-v1",
+   "cs_id": "C30",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 237,
+     "sha256": "b133fb85216c763b0d12a5f2f92f997ee4b571a4a4ed8fbe0bb90b8270cbd9d4"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 236,
+     "deslocamento": 5,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "90030b86530527ad3639ee9161c8db371a10f47cf0cec9de38b04019c4d41038"
+  },
+  {
+   "id": "C30-v2",
+   "cs_id": "C30",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 250,
+     "sha256": "1f1c6caabc1a0c109665d78bdd67ef81ea87a31788a38c5256e74c87e710e634"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 249,
+     "deslocamento": 18,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "6626da370d57abbada5318b5b99021bf6378f0608efb9bd32568dd02718661c3"
+  },
+  {
+   "id": "C31-v1",
+   "cs_id": "C31",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 245,
+     "sha256": "36ca51a71aa2c957af17940ee2b5ca12c78f081186b65ba41bd5d0e580cb54de"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 244,
+     "deslocamento": 13,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "6179b3fa427d2fe35794f9cbf7ab78b1715de92ce39810a9c98b9002afb0d9d3"
+  },
+  {
+   "id": "C31-v2",
+   "cs_id": "C31",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 245,
+     "sha256": "48c82f99241619874fba1441c285990df4de99673e23647115df732ed40aa08e"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 244,
+     "deslocamento": 13,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "6ed2566c73b4d7a658b36f52c96db48d6f52813e64b4ccbb87172046cac91bc5"
+  },
+  {
+   "id": "C32-v1",
+   "cs_id": "C32",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 244,
+     "sha256": "23a8b92fcea4cf210935d234a037e1400dae720cee2fbcc146528f3e8424fe01"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 243,
+     "deslocamento": 12,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "7cbd56a232e1948e93aacb8a2bc2503147aca747833563b5f7ea2bbd88ac3e5a"
+  },
+  {
+   "id": "C32-v2",
+   "cs_id": "C32",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 246,
+     "sha256": "476154814ec10f79c6397e6862b00a1aa1deac3fd546c5649c9945437e6963a8"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 245,
+     "deslocamento": 14,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "b554b5d88759f1fc7f206fb969e9b82df9d85f5fdd9a393ce81fdae14edce51c"
+  },
+  {
+   "id": "C32-v3",
+   "cs_id": "C32",
+   "variante": "v3",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 245,
+     "sha256": "28e6fcee39897ebb32515eceec88efacf6a311f4e1eaddadb6d09b6748b02435"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 244,
+     "deslocamento": 13,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "531cd78178725b2722bb167189e12d7f5a3f1a7db4b2759ff1ebd05916c9452d"
+  },
+  {
+   "id": "C33-v1",
+   "cs_id": "C33",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 245,
+     "sha256": "defea8ec085fb3ecc95eb4990b8997993d1d9a872ad85f0426981c292f5a7e60"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 244,
+     "deslocamento": 13,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "05d2d14aa2a9f6bfb7afc22c8572663ce2cc405db7ac8ef147c1135e6882aa4c"
+  },
+  {
+   "id": "C33-v2",
+   "cs_id": "C33",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 239,
+     "sha256": "53b41d0a77facca6448c82e0ba6c2286ae308aca3b0c2a8058c0742228c87cd0"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 238,
+     "deslocamento": 7,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "92fa7efd4c78cf84f25b793706dbc6140f97c7d50e396a6ee98b8e89551c1eaa"
+  },
+  {
+   "id": "C33-v3",
+   "cs_id": "C33",
+   "variante": "v3",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/TotalizadorDeVenda.php",
+     "linhas": 22,
+     "sha256": "6c29d2cd3a093e686e6f3ad9667cc4b87949b14455bd250fa65d3436b0e871c0"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/TotalizadorDeVenda.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "5aff547f417e2d304cc80655578b0c6a039224a283af63dca7add0f049639195"
+  },
+  {
+   "id": "C34-v1",
+   "cs_id": "C34",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 245,
+     "sha256": "f60a89fb63c8effb1236570e8594dd755abb657ac50fff3e38c9e79da25170c6"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 244,
+     "deslocamento": 13,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "bfd392b8be38ef01a91066058caa06b6031f2a52f967ce5b07b6d7dbf04aaf57"
+  },
+  {
+   "id": "C34-v2",
+   "cs_id": "C34",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 245,
+     "sha256": "b0441b6b20a488f08125561ac9e0e96a9a30027016bb98c235ff918195ae0b3b"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 244,
+     "deslocamento": 13,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "e48928adce01f5ef4c198d970a0b752f6394951e26f59bd583a2b5d535249599"
+  },
+  {
+   "id": "C35-v1",
+   "cs_id": "C35",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 244,
+     "sha256": "56d81d397288b1156020e0a042af9a10e58afb64d48f07a89bb451ae1c2e1802"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 243,
+     "deslocamento": 12,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "5da99460198790352db4e94804b4a8379a532aed88ba0602275267872a8acc2c"
+  },
+  {
+   "id": "C35-v2",
+   "cs_id": "C35",
+   "variante": "v2",
+   "tipo": "arquivos",
+   "arquivos": [
+    {
+     "caminho": "app/Pdv/FechamentoDeCaixa.php",
+     "linhas": 21,
+     "sha256": "4e24ef8b11e5b7b9d09888bb109d5e94dbc704fa3f9b1392a0d2d5d931cc5d8a"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+     "novo": true
+    }
+   ],
+   "neutralizacao": [
+    "N01",
+    "N02"
+   ],
+   "sha256_texto": "16b8e6a3646458226988a64461c35743082cc02569fa6017aabff08515b78708"
+  },
+  {
+   "id": "C35-v3",
+   "cs_id": "C35",
+   "variante": "v3",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 251,
+     "sha256": "58c663d778ec9d3115c4cc1d538e9f0d2e65974790f427631c4e9460ea52de2a"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 250,
+     "deslocamento": 19,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "fc5d0fccdf3c1bdf594ba010a4a4090eee7a1cc0bd912e4e38c6b69785f15424"
+  },
+  {
+   "id": "C36-v1",
+   "cs_id": "C36",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 245,
+     "sha256": "3f8f1c446465445809ff8dd2ba49d265ac1c9813d7a2ac0c97ad7e921f13aebd"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 244,
+     "deslocamento": 13,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "9cdb2be0807e697a7ba6a76953a790733121c15ec0fad7851d80cb665904d0a9"
+  },
+  {
+   "id": "C36-v2",
+   "cs_id": "C36",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 245,
+     "sha256": "ad10de61cf4b497551b20155d1de7615d5c80415e22cc246e30c8c7832b7c1ad"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 244,
+     "deslocamento": 13,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "2e5223baecfd0ee77b18b0971b0df5202a64d29429846def5ccf75778d95f8ce"
+  },
+  {
+   "id": "C36-v3",
+   "cs_id": "C36",
+   "variante": "v3",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 244,
+     "sha256": "d4d43e9002cbf73ae3f0a1a7ce1f7a435fce5ad8023fba61886fd26d36904ea6"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 243,
+     "deslocamento": 12,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "fea8e3615e301108dc02f815d647ff8ef6bb161bac3cd6de8abab4b6bb1aff91"
+  },
+  {
+   "id": "C37-v1",
+   "cs_id": "C37",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 249,
+     "sha256": "d0416841bd9d738bf319750921067d6e7300fdb8aa8a5d734147a6afd47a4641"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 248,
+     "deslocamento": 17,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "99f9942f72b5e864cd82545484ceb2e03221bdc10c574962db5119d09282820a"
+  },
+  {
+   "id": "C37-v2",
+   "cs_id": "C37",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 249,
+     "sha256": "5f1717484b5d84153f5b37be2bfd708ca6535fff5509715899a325caa8f8ecf3"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 248,
+     "deslocamento": 17,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "8408786b6e27dbe0f9892d0d791aec7168f479651d97b9c30f537c48f7fb496b"
+  },
+  {
+   "id": "C38-v1",
+   "cs_id": "C38",
+   "variante": "v1",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 244,
+     "sha256": "d4e2c571c5cfc17cf955e65b91fa967c6b886e84734441b05ff92390d00cc95c"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 243,
+     "deslocamento": 12,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "aa7357d4e6562bdefbfca016fb10e26694c6892d52ddcee71869d56526aabfc2"
+  },
+  {
+   "id": "C38-v2",
+   "cs_id": "C38",
+   "variante": "v2",
+   "tipo": "membros",
+   "arquivos": [
+    {
+     "caminho": "app/Http/Controllers/Admin/CaixaController.php",
+     "linhas": 246,
+     "sha256": "55b097182ae23fb1fe14bb884382654661ec0504c2a722b3e38d2e5564c079e2"
+    }
+   ],
+   "injetado": [
+    {
+     "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+     "inicio": 232,
+     "fim": 245,
+     "deslocamento": 14,
+     "linha_fecha_base": 232
+    }
+   ],
+   "neutralizacao": [],
+   "sha256_texto": "70645d725034ea9e6266feab0ab9628169676c6e41e98f41a0d756e57b49acf3"
+  }
+ ]
+}

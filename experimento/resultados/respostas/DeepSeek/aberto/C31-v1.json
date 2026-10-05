@@ -1,0 +1,230 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C31-v1",
+ "cs_id": "C31",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "6179b3fa427d2fe35794f9cbf7ab78b1715de92ce39810a9c98b9002afb0d9d3",
+ "inicio": "2026-10-05T15:19:00+00:00",
+ "duracao_s": 77.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3541,
+ "tokens_saida": 7473,
+ "tokens_raciocinio": 5509,
+ "custo": 0.015010336,
+ "id_requisicao": "gen-1791213540-6QH8MksgkCxUPuSJ2KvE",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 77249
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de montagem de detalhes da transação é duplicado também em historicoAPI (linhas 186-198 e 207-219)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesmo bloco duplicado de fecharCaixaView e do branch range do historicoAPI."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Mesmo bloco duplicado de fecharCaixaView e do branch day do historicoAPI."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas Venda e Estoque são executadas dentro do loop sobre transações, causando problema N+1."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Consultas Venda e Estoque são executadas dentro do loop sobre transações, causando problema N+1."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Consultas Venda e Estoque são executadas dentro do loop sobre transações, causando problema N+1."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Strings mágicas 'DI','CR','DE' usadas para mapear pagamento sem constante ou enumeração."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Strings mágicas 'DI','CR','DE' usadas para mapear pagamento sem constante ou enumeração."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Strings mágicas 'DI','CR','DE' usadas para mapear pagamento sem constante ou enumeração."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 39,
+    "justificativa": "Conversão de moeda com str_replace repetida; deveria ser extraída para função/helper."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 40,
+    "linha_fim": 40,
+    "justificativa": "Conversão de moeda com str_replace repetida; deveria ser extraída para função/helper."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Conversão de moeda com str_replace repetida; deveria ser extraída para função/helper."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 145,
+    "justificativa": "Conversão de moeda com str_replace repetida; deveria ser extraída para função/helper."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 148,
+    "linha_fim": 148,
+    "justificativa": "Conversão de moeda com str_replace repetida; deveria ser extraída para função/helper."
+   },
+   {
+    "nome": "Unreachable Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Código após if-else com retornos em ambos os ramos nunca é executado."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 56,
+    "linha_fim": 56,
+    "justificativa": "Retorna view em método que deveria retornar JSON (usado em requisição AJAX)."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 129,
+    "linha_fim": 129,
+    "justificativa": "Retorna string de erro em catch, inconsistente com JSON retornado em outros pontos do mesmo método."
+   },
+   {
+    "nome": "Use of global date()",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 22,
+    "linha_fim": 22,
+    "justificativa": "Uso de função global date() em vez de Carbon do Laravel."
+   },
+   {
+    "nome": "Use of global date()",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 38,
+    "linha_fim": 38,
+    "justificativa": "Uso de função global date() em vez de Carbon do Laravel."
+   },
+   {
+    "nome": "Spelling Mistake",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Erro de digitação na string 'Débido', deveria ser 'Débito'."
+   },
+   {
+    "nome": "Spelling Mistake",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Erro de digitação na string 'Débido', deveria ser 'Débito'."
+   },
+   {
+    "nome": "Spelling Mistake",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Erro de digitação na string 'Débido', deveria ser 'Débito'."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 239,
+    "linha_fim": 244,
+    "justificativa": "Método descreverSangria nunca é chamado dentro do controller."
+   },
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 245,
+    "justificativa": "Controller acumula responsabilidades de gestão de caixa, histórico, impressão, etc., tornando-se muito grande."
+   }
+  ]
+ },
+ "desvios": []
+}

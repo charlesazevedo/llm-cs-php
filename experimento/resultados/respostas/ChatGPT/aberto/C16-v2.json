@@ -1,0 +1,137 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C16-v2",
+ "cs_id": "C16",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "c93434b0f449f60ba511acfb8a0d571fce970dfe1771b772f7c5510cdd56c774",
+ "inicio": "2026-10-05T12:53:09+00:00",
+ "duracao_s": 16.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 3553,
+ "tokens_saida": 1230,
+ "tokens_raciocinio": 484,
+ "custo": 0.021181,
+ "id_requisicao": "gen-1791204789-hHdw7aR25ktYHuoq2vnu",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 15980
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe grande",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 13,
+    "linha_fim": 315,
+    "justificativa": "A classe concentra dezenas de indicadores e cálculos de vendas, caixa, sangrias, entradas e períodos mensal e anual, acumulando responsabilidades distintas."
+   },
+   {
+    "nome": "Excesso de atributos",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 20,
+    "linha_fim": 223,
+    "justificativa": "A grande quantidade de campos individuais torna o estado da classe difícil de manter e sugere a ausência de objetos menores para agrupar indicadores relacionados."
+   },
+   {
+    "nome": "Trabalho excessivo no construtor",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 228,
+    "linha_fim": 273,
+    "justificativa": "O construtor executa toda a geração do relatório e numerosas consultas ao banco, tornando a instanciação cara, inflexível e sujeita a falhas externas."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 228,
+    "linha_fim": 273,
+    "justificativa": "O construtor calcula sequencialmente muitos grupos de métricas e deveria ser dividido em métodos menores por responsabilidade."
+   },
+   {
+    "nome": "Consultas repetitivas ao banco de dados",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 230,
+    "linha_fim": 259,
+    "justificativa": "O mesmo escopo Transacoes::today() é consultado repetidamente para cada agregação, provocando muitas viagens desnecessárias ao banco."
+   },
+   {
+    "nome": "Consultas repetitivas ao banco de dados",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 260,
+    "linha_fim": 269,
+    "justificativa": "Caixa, sangrias e entradas são consultados separadamente várias vezes, embora seus agregados possam ser obtidos com menos consultas."
+   },
+   {
+    "nome": "Consultas repetitivas ao banco de dados",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 270,
+    "linha_fim": 272,
+    "justificativa": "Os escopos mensal e anual são executados separadamente para agregados relacionados, ampliando desnecessariamente o número de consultas."
+   },
+   {
+    "nome": "Strings mágicas",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 230,
+    "linha_fim": 259,
+    "justificativa": "Os códigos de pagamento DI, CR e DE e os nomes de campos são usados diretamente sem constantes ou tipos que expressem seu significado."
+   },
+   {
+    "nome": "Dependências estáticas e data global",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 230,
+    "linha_fim": 272,
+    "justificativa": "O uso direto de modelos estáticos e de date() oculta dependências e dificulta testes, substituição de fontes de dados e cálculo para uma data específica."
+   },
+   {
+    "nome": "Processamento em memória desnecessário",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 248,
+    "linha_fim": 250,
+    "justificativa": "O código carrega todos os clientes em uma coleção para aplicar unique() e count(), em vez de executar uma contagem distinta no banco."
+   },
+   {
+    "nome": "Lista de dados excessivamente longa",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 282,
+    "linha_fim": 313,
+    "justificativa": "A serialização manual de dezenas de propriedades gera uma estrutura extensa e exige alterações paralelas sempre que um indicador é adicionado ou renomeado."
+   }
+  ]
+ },
+ "desvios": []
+}

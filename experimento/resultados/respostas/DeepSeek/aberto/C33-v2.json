@@ -1,0 +1,202 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C33-v2",
+ "cs_id": "C33",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "92fa7efd4c78cf84f25b793706dbc6140f97c7d50e396a6ee98b8e89551c1eaa",
+ "inicio": "2026-10-05T15:27:18+00:00",
+ "duracao_s": 89.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3479,
+ "tokens_saida": 8880,
+ "tokens_raciocinio": 7216,
+ "custo": 0.017755276,
+ "id_requisicao": "gen-1791214039-6j91nMEgkNhcT0EpSNRI",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 89065
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large class",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 239,
+    "justificativa": "O controller assume múltiplas responsabilidades (caixa, sangria, entradas, histórico, impressão) violando o princípio de responsabilidade única."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de formatação de transações e consultas aninhadas é duplicado em outros métodos (historicoAPI day e range)."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesma lógica de formatação de transações e consultas aninhadas duplicada do método fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Terceira ocorrência da mesma lógica de formatação de transações e consultas aninhadas."
+   },
+   {
+    "nome": "N+1 problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Para cada transação, são executadas consultas a Venda e Estoque dentro do loop, causando múltiplas queries."
+   },
+   {
+    "nome": "N+1 problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesmo problema N+1: consultas a Venda e Estoque dentro do loop de transações."
+   },
+   {
+    "nome": "N+1 problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Repetição do problema N+1 ao iterar transações e consultar Venda e Estoque."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Conversão de moeda manual (str_replace) é repetida em vários pontos; poderia ser centralizada."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Conversão de moeda manual duplicada no método sangriaPost."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 145,
+    "justificativa": "Conversão de moeda manual duplicada no método addCaixa (para Entrada_caixa)."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 148,
+    "linha_fim": 148,
+    "justificativa": "Conversão de moeda manual duplicada no método addCaixa (para Caixa::add)."
+   },
+   {
+    "nome": "Unreachable code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Linha após if/else com retornos em ambos os ramos nunca será executada."
+   },
+   {
+    "nome": "Dead code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 233,
+    "linha_fim": 238,
+    "justificativa": "Método calcularTotalDoItem não é utilizado em nenhum lugar do controller."
+   },
+   {
+    "nome": "Undefined variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "No bloco else, a variável $e não está definida, pois é do catch, causando erro."
+   },
+   {
+    "nome": "Inconsistent return type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 55,
+    "linha_fim": 57,
+    "justificativa": "Método iniciarCaixa retorna JSON em sucesso e falha, mas retorna view no else, inconsistente."
+   },
+   {
+    "nome": "Missing return",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "Se Caixa::checkOpen() for falso, sangriaPost não retorna resposta explícita, resultando em null."
+   },
+   {
+    "nome": "Information disclosure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 52,
+    "justificativa": "Mensagem de erro do banco (errorInfo[2]) é exposta ao cliente, revelando detalhes internos."
+   },
+   {
+    "nome": "Information disclosure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "Retorna diretamente o erro do banco em texto puro, expondo informações sensíveis."
+   },
+   {
+    "nome": "Information disclosure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 160,
+    "justificativa": "Erro do banco é enviado ao cliente sem tratamento, podendo vazar detalhes da base."
+   },
+   {
+    "nome": "Typo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 224,
+    "linha_fim": 230,
+    "justificativa": "Usa $request->rage em vez de $request->range, indicando erro de digitação."
+   }
+  ]
+ },
+ "desvios": []
+}

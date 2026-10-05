@@ -1,0 +1,74 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C16-v1",
+ "cs_id": "C16",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "deb195f0336326fcdf39c6ef16cf0185b46797174e96fa533aa934c94c687a6d",
+ "inicio": "2026-10-05T12:49:21+00:00",
+ "duracao_s": 7.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 3384,
+ "tokens_saida": 576,
+ "tokens_raciocinio": 280,
+ "custo": 0.025056,
+ "id_requisicao": "gen-1791204561-fj5iu0UEwgCLTvlrQqCO",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 7240
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 129,
+    "linha_fim": 152,
+    "justificativa": "O construtor repete dezenas de vezes a mesma consulta Transacoes::today() com pequenas variações, fazendo muitas idas ao banco que poderiam ser uma única consulta agregada ou escopos reutilizáveis."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 129,
+    "linha_fim": 152,
+    "justificativa": "Os códigos de forma de pagamento 'DI' e 'CR' aparecem como literais sem significado explícito, enquanto crédito e débito também são obtidos por métodos próprios do modelo, de forma inconsistente."
+   }
+  ]
+ },
+ "desvios": []
+}

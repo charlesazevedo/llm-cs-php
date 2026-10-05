@@ -1,0 +1,491 @@
+cs_id,sinonimo,origem,tipo
+C01,Development Code Fragment,catalogo,especifico
+C01,Fragmento de Código de Desenvolvimento,rsl,especifico
+C01,ForbiddenCode,regra:Psalm,especifico
+C01,debug code,proposta,especifico
+C01,debugging code,proposta,especifico
+C01,código de depuração,proposta,especifico
+C01,código de debug,proposta,especifico
+C01,debug statement,proposta,especifico
+C01,leftover debug,proposta,especifico
+C01,var_dump,proposta,especifico
+C01,print_r,proposta,especifico
+C01,debug_print_backtrace,proposta,especifico
+C01,discouraged function,proposta,especifico
+C01,função desencorajada,proposta,especifico
+C01,comando de depuração,piloto,especifico
+C01,depuração residual,piloto,especifico
+C01,debug leftover,piloto,especifico
+C02,Goto Statement,catalogo,especifico
+C02,goto,proposta,especifico
+C02,uso de goto,proposta,especifico
+C02,instrução goto,proposta,especifico
+C03,Implicitly Granted Privileges,catalogo,especifico
+C03,privilégio concedido implicitamente,proposta,especifico
+C03,privilégio implícito,proposta,especifico
+C03,implicit privilege,proposta,especifico
+C03,broken access control,proposta,amplo
+C03,controle de acesso,proposta,amplo
+C03,authorization,proposta,amplo
+C03,autorização,proposta,amplo
+C03,permission,proposta,amplo
+C03,permissão,proposta,amplo
+C03,privilégio,proposta,amplo
+C04,Semantically Related Privileges,catalogo,especifico
+C04,privilégios semanticamente relacionados,proposta,especifico
+C04,permissões duplicadas,proposta,especifico
+C04,privilégios duplicados,proposta,especifico
+C04,duplicated permission,proposta,especifico
+C04,duplicate permission,proposta,especifico
+C04,redundant permission,proposta,especifico
+C04,permissões redundantes,proposta,especifico
+C04,broken access control,proposta,amplo
+C04,controle de acesso,proposta,amplo
+C04,authorization,proposta,amplo
+C04,autorização,proposta,amplo
+C04,permission,proposta,amplo
+C04,permissão,proposta,amplo
+C04,privilégio,proposta,amplo
+C05,Embedded/Inline JavaScript,catalogo,especifico
+C05,Embedded JavaScript,catalogo,especifico
+C05,Inline JavaScript,catalogo,especifico
+C05,Embedded JS,rsl,especifico
+C05,Inline JS,rsl,especifico
+C05,JavaScript em HTML,rsl,especifico
+C05,javascript embutido,proposta,especifico
+C05,javascript inline,proposta,especifico
+C05,script inline,proposta,especifico
+C05,inline script,proposta,especifico
+C05,javascript no html,proposta,especifico
+C05,inline event handler,proposta,especifico
+C05,manipulador de evento inline,proposta,especifico
+C05,evento inline,proposta,especifico
+C05,mistura de lógica e apresentação,proposta,amplo
+C05,mixing presentation and logic,proposta,amplo
+C05,separation of concerns,proposta,amplo
+C05,separação de responsabilidades,proposta,amplo
+C06,Embedded/Inline CSS,catalogo,especifico
+C06,Embedded CSS,catalogo,especifico
+C06,Inline CSS,catalogo,especifico
+C06,CSS em HTML,rsl,especifico
+C06,css embutido,proposta,especifico
+C06,css inline,proposta,especifico
+C06,inline style,proposta,especifico
+C06,estilo inline,proposta,especifico
+C06,style attribute,proposta,especifico
+C06,atributo style,proposta,especifico
+C06,css no html,proposta,especifico
+C06,mistura de lógica e apresentação,proposta,amplo
+C06,mixing presentation and logic,proposta,amplo
+C06,separation of concerns,proposta,amplo
+C06,separação de responsabilidades,proposta,amplo
+C07,CSS in JavaScript,catalogo,especifico
+C07,CSS in JS,rsl,especifico
+C07,CSS in JS: jQuery,rsl,especifico
+C07,CSS em JavaScript,rsl,especifico
+C07,css em javascript,proposta,especifico
+C07,estilo em javascript,proposta,especifico
+C07,estilo via javascript,proposta,especifico
+C07,css via javascript,proposta,especifico
+C07,style via javascript,proposta,especifico
+C07,css via jquery,proposta,especifico
+C07,estilo via jquery,proposta,especifico
+C07,mistura de lógica e apresentação,proposta,amplo
+C07,mixing presentation and logic,proposta,amplo
+C07,separation of concerns,proposta,amplo
+C07,separação de responsabilidades,proposta,amplo
+C07,styling via javascript,piloto,especifico
+C07,estilização via javascript,piloto,especifico
+C07,estilos inline via javascript,piloto,especifico
+C08,Fontes dispersas,catalogo,especifico
+C08,código do cliente espalhado,proposta,especifico
+C08,html espalhado,proposta,especifico
+C08,html fragmentado,proposta,especifico
+C08,scattered html,proposta,especifico
+C08,scattered client code,proposta,especifico
+C08,mistura de lógica e apresentação,proposta,amplo
+C08,mixing presentation and logic,proposta,amplo
+C08,separation of concerns,proposta,amplo
+C08,separação de responsabilidades,proposta,amplo
+C09,JavaScript duplicado,catalogo,especifico
+C09,Duplicação de JavaScript,rsl,especifico
+C09,javascript duplicado,proposta,especifico
+C09,duplicated javascript,proposta,especifico
+C09,duplicate javascript,proposta,especifico
+C09,duplicate js,proposta,especifico
+C09,script duplicado,proposta,especifico
+C09,js duplicado,proposta,especifico
+C09,duplicate code,proposta,amplo
+C09,código duplicado,piloto,amplo
+C09,duplicated code,piloto,amplo
+C09,duplicação de código,piloto,amplo
+C09,code duplication,piloto,amplo
+C10,HTML com erro de sintaxe,catalogo,especifico
+C10,Erro de sintaxe em HTML,rsl,especifico
+C10,html syntax error,proposta,especifico
+C10,html inválido,proposta,especifico
+C10,invalid html,proposta,especifico
+C10,malformed html,proposta,especifico
+C10,html malformado,proposta,especifico
+C10,unclosed tag,proposta,especifico
+C10,tag não fechada,proposta,especifico
+C10,tag sem fechamento,proposta,especifico
+C10,improperly nested tag,proposta,especifico
+C10,tags aninhadas incorretamente,proposta,especifico
+C10,tag mal aninhada,proposta,especifico
+C10,aninhamento inválido de tags,piloto,especifico
+C10,aninhamento incorreto de tags,piloto,especifico
+C10,missing closing tag,piloto,especifico
+C11,Excessive Class Length,catalogo,especifico
+C11,Class Length,rsl,especifico
+C11,Classe Excessivamente Longa,rsl,especifico
+C11,long class,proposta,especifico
+C11,classe longa,proposta,especifico
+C11,classe muito longa,proposta,especifico
+C11,classe muito grande,proposta,especifico
+C11,arquivo muito longo,proposta,especifico
+C11,file too long,proposta,especifico
+C11,god class,proposta,amplo
+C11,god object,proposta,amplo
+C11,blob,proposta,amplo
+C11,classe deus,proposta,amplo
+C11,classe faz tudo,proposta,amplo
+C11,large class,proposta,amplo
+C11,classe grande,proposta,amplo
+C12,Excessive Method Length,catalogo,especifico
+C12,Method Length,rsl,especifico
+C12,Método Excessivamente Longo,rsl,especifico
+C12,long method,proposta,especifico
+C12,método longo,proposta,especifico
+C12,método muito longo,proposta,especifico
+C12,long function,proposta,especifico
+C12,função longa,proposta,especifico
+C13,Excessive Parameter List,catalogo,especifico
+C13,Parameter List,rsl,especifico
+C13,Lista de Parâmetros Excessiva,rsl,especifico
+C13,long parameter list,proposta,especifico
+C13,lista de parâmetros longa,proposta,especifico
+C13,lista longa de parâmetros,proposta,especifico
+C13,too many parameters,proposta,especifico
+C13,muitos parâmetros,proposta,especifico
+C13,excesso de parâmetros,proposta,especifico
+C14,Too Many Methods,catalogo,especifico
+C14,Muitos Métodos,rsl,especifico
+C14,excesso de métodos,proposta,especifico
+C14,god class,proposta,amplo
+C14,god object,proposta,amplo
+C14,blob,proposta,amplo
+C14,classe deus,proposta,amplo
+C14,classe faz tudo,proposta,amplo
+C14,large class,proposta,amplo
+C14,classe grande,proposta,amplo
+C15,Too Many Public Methods,catalogo,especifico
+C15,Public Methods,rsl,especifico
+C15,Muitos Métodos Públicos,rsl,especifico
+C15,excesso de métodos públicos,proposta,especifico
+C15,god class,proposta,amplo
+C15,god object,proposta,amplo
+C15,blob,proposta,amplo
+C15,classe deus,proposta,amplo
+C15,classe faz tudo,proposta,amplo
+C16,Too Many Fields,catalogo,especifico
+C16,Muitos Campos,rsl,especifico
+C16,muitos atributos,proposta,especifico
+C16,too many properties,proposta,especifico
+C16,muitas propriedades,proposta,especifico
+C16,excesso de atributos,proposta,especifico
+C16,excesso de campos,proposta,especifico
+C16,large class,proposta,amplo
+C16,classe grande,proposta,amplo
+C16,data class,proposta,amplo
+C16,classe de dados,proposta,amplo
+C17,Excessive Public Count,catalogo,especifico
+C17,Public Count,rsl,especifico
+C17,Contagem Pública Excessiva,rsl,especifico
+C17,too many public members,proposta,especifico
+C17,muitos membros públicos,proposta,especifico
+C17,excesso de membros públicos,proposta,especifico
+C17,muitos atributos públicos,proposta,especifico
+C17,god class,proposta,amplo
+C17,god object,proposta,amplo
+C17,blob,proposta,amplo
+C17,classe deus,proposta,amplo
+C17,classe faz tudo,proposta,amplo
+C17,large class,proposta,amplo
+C17,classe grande,proposta,amplo
+C17,data class,proposta,amplo
+C17,classe de dados,proposta,amplo
+C18,Cyclomatic Complexity,catalogo,especifico
+C18,High Method Complexity,rsl,especifico
+C18,Code complexity,rsl,especifico
+C18,Complexidade Ciclomática,rsl,especifico
+C18,ComplexMethod,regra:Psalm,especifico
+C18,ComplexFunction,regra:Psalm,especifico
+C18,alta complexidade ciclomática,proposta,especifico
+C18,high cyclomatic complexity,proposta,especifico
+C18,método complexo,proposta,especifico
+C18,high complexity,proposta,amplo
+C18,alta complexidade,proposta,amplo
+C18,complexidade elevada,proposta,amplo
+C18,complexidade excessiva,proposta,amplo
+C18,switch statement,proposta,amplo
+C18,switch extenso,proposta,amplo
+C18,long switch,proposta,amplo
+C19,NPath Complexity,catalogo,especifico
+C19,High NPath Complexity,rsl,especifico
+C19,Complexidade de Caminho N,rsl,especifico
+C19,complexidade npath,proposta,especifico
+C19,high npath,proposta,especifico
+C19,npath,proposta,especifico
+C19,caminhos de execução,proposta,especifico
+C19,ComplexMethod,regra:Psalm,amplo
+C19,ComplexFunction,regra:Psalm,amplo
+C19,high complexity,proposta,amplo
+C19,alta complexidade,proposta,amplo
+C19,complexidade elevada,proposta,amplo
+C19,complexidade excessiva,proposta,amplo
+C19,muitos if,proposta,amplo
+C19,many if statement,proposta,amplo
+C19,condicionais em excesso,proposta,amplo
+C20,Excessive Class Complexity,catalogo,especifico
+C20,Class Complexity,rsl,especifico
+C20,Complexidade de Classe Excessiva,rsl,especifico
+C20,complexidade de classe,proposta,especifico
+C20,classe complexa,proposta,especifico
+C20,complex class,proposta,especifico
+C20,god class,proposta,amplo
+C20,god object,proposta,amplo
+C20,blob,proposta,amplo
+C20,classe deus,proposta,amplo
+C20,classe faz tudo,proposta,amplo
+C20,high complexity,proposta,amplo
+C20,alta complexidade,proposta,amplo
+C20,complexidade elevada,proposta,amplo
+C20,complexidade excessiva,proposta,amplo
+C21,Coupling Between Objects,catalogo,especifico
+C21,High Coupling,rsl,especifico
+C21,Acoplamento Entre Objetos,rsl,especifico
+C21,alto acoplamento,proposta,especifico
+C21,acoplamento excessivo,proposta,especifico
+C21,excessive coupling,proposta,especifico
+C21,tight coupling,proposta,especifico
+C21,acoplamento forte,proposta,especifico
+C21,too many dependencies,proposta,especifico
+C21,muitas dependências,proposta,especifico
+C21,god class,proposta,amplo
+C21,god object,proposta,amplo
+C21,blob,proposta,amplo
+C21,classe deus,proposta,amplo
+C21,classe faz tudo,proposta,amplo
+C22,Depth of Inheritance,catalogo,especifico
+C22,Excessive Depth Of Inheritance,rsl,especifico
+C22,Profundidade de Herança,rsl,especifico
+C22,deep inheritance,proposta,especifico
+C22,herança profunda,proposta,especifico
+C22,hierarquia profunda,proposta,especifico
+C22,deep hierarchy,proposta,especifico
+C22,inheritance tree too deep,proposta,especifico
+C23,Number of Children,catalogo,especifico
+C23,Excessive Number Of Children,rsl,especifico
+C23,Número de Filhos,rsl,especifico
+C23,muitas subclasses,proposta,especifico
+C23,too many subclasses,proposta,especifico
+C23,too many children,proposta,especifico
+C23,excessive subclassing,proposta,especifico
+C23,muitos filhos,proposta,especifico
+C24,Duplicate Code,catalogo,especifico
+C24,duplicated code,proposta,especifico
+C24,código duplicado,proposta,especifico
+C24,duplicação de código,proposta,especifico
+C24,code duplication,proposta,especifico
+C24,código repetido,proposta,especifico
+C24,identical implementation,proposta,especifico
+C24,implementações idênticas,proposta,especifico
+C24,clone,proposta,especifico
+C24,duplicated logic,piloto,especifico
+C24,lógica duplicada,piloto,especifico
+C25,Unused Private Field,catalogo,especifico
+C25,Campo Privado Não Utilizado,rsl,especifico
+C25,UnusedProperty,regra:Psalm,especifico
+C25,unused field,proposta,especifico
+C25,campo não utilizado,proposta,especifico
+C25,propriedade não utilizada,proposta,especifico
+C25,atributo não utilizado,proposta,especifico
+C25,unused attribute,proposta,especifico
+C25,propriedade privada não utilizada,proposta,especifico
+C25,atributo privado não utilizado,proposta,especifico
+C25,dead code,proposta,amplo
+C25,código morto,proposta,amplo
+C25,unused code,proposta,amplo
+C25,código não utilizado,proposta,amplo
+C26,Unused Private Method,catalogo,especifico
+C26,Método Privado Não Utilizado,rsl,especifico
+C26,UnusedMethod,regra:Psalm,especifico
+C26,método não utilizado,proposta,especifico
+C26,método privado nunca chamado,proposta,especifico
+C26,método nunca chamado,proposta,especifico
+C26,unused private function,proposta,especifico
+C26,dead code,proposta,amplo
+C26,código morto,proposta,amplo
+C26,unused code,proposta,amplo
+C26,código não utilizado,proposta,amplo
+C27,Unused Local Variable,catalogo,especifico
+C27,Variável Local Não Utilizada,rsl,especifico
+C27,UnusedVariable,regra:Psalm,especifico
+C27,UnusedForeachValue,regra:Psalm,especifico
+C27,variável não utilizada,proposta,especifico
+C27,variável atribuída e não utilizada,proposta,especifico
+C27,dead code,proposta,amplo
+C27,código morto,proposta,amplo
+C27,unused code,proposta,amplo
+C27,código não utilizado,proposta,amplo
+C28,Unused Formal Parameter,catalogo,especifico
+C28,Parâmetro Formal Não Utilizado,rsl,especifico
+C28,UnusedParam,regra:Psalm,especifico
+C28,PossiblyUnusedParam,regra:Psalm,especifico
+C28,UnusedClosureParam,regra:Psalm,especifico
+C28,unused parameter,proposta,especifico
+C28,parâmetro não utilizado,proposta,especifico
+C28,unused argument,proposta,especifico
+C28,argumento não utilizado,proposta,especifico
+C28,unused function parameter,proposta,especifico
+C28,dead code,proposta,amplo
+C28,código morto,proposta,amplo
+C28,unused code,proposta,amplo
+C28,código não utilizado,proposta,amplo
+C29,Empty Catch Block,catalogo,especifico
+C29,empty catch,proposta,especifico
+C29,catch vazio,proposta,especifico
+C29,bloco catch vazio,proposta,especifico
+C29,exceção ignorada,proposta,especifico
+C29,ignored exception,proposta,especifico
+C29,swallowed exception,proposta,especifico
+C29,exception swallowing,proposta,especifico
+C29,exceção engolida,proposta,especifico
+C29,silenciamento de exceção,proposta,especifico
+C29,exceção silenciada,proposta,especifico
+C29,tratamento de exceção vazio,proposta,especifico
+C29,empty block,proposta,amplo
+C29,bloco vazio,proposta,amplo
+C30,Missing Function Comments,catalogo,especifico
+C30,Falta de comentários de função,rsl,especifico
+C30,missing docblock,proposta,especifico
+C30,docblock ausente,proposta,especifico
+C30,falta de docblock,proposta,especifico
+C30,missing phpdoc,proposta,especifico
+C30,phpdoc ausente,proposta,especifico
+C30,método sem documentação,proposta,especifico
+C30,função sem documentação,proposta,especifico
+C30,método não documentado,proposta,especifico
+C30,undocumented method,proposta,especifico
+C30,missing documentation,proposta,especifico
+C30,falta de documentação,proposta,especifico
+C30,docblock,proposta,amplo
+C30,phpdoc,proposta,amplo
+C30,comentário de documentação,proposta,amplo
+C31,Missing @Return Tag in Comments,catalogo,especifico
+C31,Falta de tag @return em comentários,rsl,especifico
+C31,missing return tag,proposta,especifico
+C31,tag return ausente,proposta,especifico
+C31,falta de tag return,proposta,especifico
+C31,sem tag return,proposta,especifico
+C31,missing @return,proposta,especifico
+C31,@return ausente,proposta,especifico
+C31,sem @return,proposta,especifico
+C31,without @return,proposta,especifico
+C31,falta de @return,proposta,especifico
+C31,missing return annotation,proposta,especifico
+C31,MissingReturnType,regra:Psalm,amplo
+C31,docblock,proposta,amplo
+C31,phpdoc,proposta,amplo
+C31,comentário de documentação,proposta,amplo
+C32,Poorly Grouped Parameter Tags,catalogo,especifico
+C32,Tags de parâmetro mal agrupadas,rsl,especifico
+C32,param tags,proposta,especifico
+C32,agrupamento das tags,proposta,especifico
+C32,ordem das tags,proposta,especifico
+C32,tag grouping,proposta,especifico
+C32,parameter tags grouping,proposta,especifico
+C32,docblock,proposta,amplo
+C32,phpdoc,proposta,amplo
+C32,comentário de documentação,proposta,amplo
+C33,Comment Style (/**),catalogo,especifico
+C33,Uso de comentários de estilo /**,rsl,especifico
+C33,wrong comment style,proposta,especifico
+C33,estilo de comentário,proposta,especifico
+C33,comentário de bloco em vez de docblock,proposta,especifico
+C33,comentário fora do padrão docblock,proposta,especifico
+C33,docblock,proposta,amplo
+C33,phpdoc,proposta,amplo
+C33,comentário de documentação,proposta,amplo
+C34,Missing Parameter Name,catalogo,especifico
+C34,nome do parâmetro ausente,proposta,especifico
+C34,param sem nome,proposta,especifico
+C34,parâmetro sem nome,proposta,especifico
+C34,badly formatted param,proposta,especifico
+C34,InvalidDocblock,regra:Psalm,amplo
+C34,docblock,proposta,amplo
+C34,phpdoc,proposta,amplo
+C34,comentário de documentação,proposta,amplo
+C35,Brace Placement Rules,catalogo,especifico
+C35,Opening brace should be on a new line,rsl,especifico
+C35,brace placement,proposta,especifico
+C35,posição da chave,proposta,especifico
+C35,posicionamento de chaves,proposta,especifico
+C35,opening brace,proposta,especifico
+C35,chave de abertura,proposta,especifico
+C35,brace style,proposta,especifico
+C35,estilo de chaves,proposta,especifico
+C35,code style,proposta,amplo
+C35,estilo de código,proposta,amplo
+C35,psr 12,proposta,amplo
+C35,formatação,proposta,amplo
+C35,formatting,proposta,amplo
+C35,violação de estilo,proposta,amplo
+C36,Incorrect Spacing After Commas,catalogo,especifico
+C36,Espaçamento incorreto após vírgulas,rsl,especifico
+C36,spacing after comma,proposta,especifico
+C36,espaço após vírgula,proposta,especifico
+C36,espaçamento após vírgula,proposta,especifico
+C36,missing space after comma,proposta,especifico
+C36,falta de espaço após vírgula,proposta,especifico
+C36,sem espaço após vírgula,proposta,especifico
+C36,no space after comma,proposta,especifico
+C36,code style,proposta,amplo
+C36,estilo de código,proposta,amplo
+C36,psr 12,proposta,amplo
+C36,formatação,proposta,amplo
+C36,formatting,proposta,amplo
+C36,violação de estilo,proposta,amplo
+C37,Functions Parentheses on Multiple Lines,catalogo,especifico
+C37,Parênteses de funções em múltiplas linhas,rsl,especifico
+C37,multi line function call,proposta,especifico
+C37,multiline function call,proposta,especifico
+C37,chamada de função em várias linhas,proposta,especifico
+C37,chamada de função em múltiplas linhas,proposta,especifico
+C37,function call signature,proposta,especifico
+C37,parênteses de fechamento,proposta,especifico
+C37,closing parenthesis,proposta,especifico
+C37,parênteses de função,proposta,especifico
+C37,code style,proposta,amplo
+C37,estilo de código,proposta,amplo
+C37,psr 12,proposta,amplo
+C37,formatação,proposta,amplo
+C37,formatting,proposta,amplo
+C37,violação de estilo,proposta,amplo
+C38,Blank Line Before Tags,catalogo,especifico
+C38,There must be exactly one blank line before,rsl,especifico
+C38,linha em branco antes das tags,proposta,especifico
+C38,spacing before tag,proposta,especifico
+C38,espaçamento antes das tags,proposta,especifico
+C38,linhas em branco no docblock,proposta,especifico
+C38,blank lines in docblock,proposta,especifico
+C38,code style,proposta,amplo
+C38,estilo de código,proposta,amplo
+C38,psr 12,proposta,amplo
+C38,formatação,proposta,amplo
+C38,formatting,proposta,amplo
+C38,violação de estilo,proposta,amplo
+C38,docblock,proposta,amplo
+C38,phpdoc,proposta,amplo
+C38,comentário de documentação,proposta,amplo

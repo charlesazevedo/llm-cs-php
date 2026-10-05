@@ -1,0 +1,74 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C06-v1",
+ "cs_id": "C06",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "064ae5d337f20de025ae0be8a1c6515672bcc3bf4d41b2ba666f2de3c4ef3076",
+ "inicio": "2026-10-03T23:10:54+00:00",
+ "duracao_s": 9.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 560,
+ "tokens_saida": 975,
+ "tokens_raciocinio": 810,
+ "custo": 0.01282,
+ "id_requisicao": "gen-1791069055-CcpEYzeAIw8MKF2DBbqr",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 9350
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Embedded CSS",
+    "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+    "linha_inicio": 6,
+    "linha_fim": 16,
+    "justificativa": "O código CSS embutido diretamente na view deve ser extraído para um arquivo de estilo externo para manter uma melhor separação de responsabilidades."
+   },
+   {
+    "nome": "Hardcoded Currency Formatting",
+    "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+    "linha_inicio": 25,
+    "linha_fim": 27,
+    "justificativa": "A formatação de valores monetários com a string 'R$' fixada na view deve ser evitada, preferindo-se o uso de helpers de formatação adequados."
+   }
+  ]
+ },
+ "desvios": []
+}

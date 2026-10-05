@@ -1,0 +1,361 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C24-v3",
+ "cs_id": "C24",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "4cc73d36a9decf7633724404c2c3749c4bdb007e0c42e43519cc00c92ec55734",
+ "inicio": "2026-10-02T18:43:52+00:00",
+ "duracao_s": 42.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 4188,
+ "tokens_saida": 3385,
+ "tokens_raciocinio": 796,
+ "custo": 0.0443185,
+ "id_requisicao": "gen-1790966632-NTUXzqpSYEQl7GaNxJTi",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 42613
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "God Controller",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 256,
+    "justificativa": "O controlador concentra abertura, fechamento, movimentação, histórico, relatórios, formatação e cálculo financeiro, acumulando responsabilidades excessivas."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método reúne consultas, montagem de detalhes, formatação monetária, cálculos e preparação da view em um único bloco."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método trata diversos tipos de consulta e também transforma detalhadamente os resultados, possuindo múltiplas responsabilidades e ramificações."
+   },
+   {
+    "nome": "Ausência de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 40,
+    "justificativa": "O valor recebido da requisição é convertido e persistido sem validação de presença, formato ou faixa permitida."
+   },
+   {
+    "nome": "Ausência de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 119,
+    "justificativa": "Descrição e valor são usados diretamente da requisição sem qualquer validação."
+   },
+   {
+    "nome": "Ausência de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 140,
+    "linha_fim": 148,
+    "justificativa": "Descrição e valor da entrada de caixa são persistidos sem validação prévia."
+   },
+   {
+    "nome": "Ausência de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 206,
+    "justificativa": "Tipo e datas recebidos são utilizados diretamente na construção das consultas sem validação de formato ou valores aceitos."
+   },
+   {
+    "nome": "Ausência de validação de entrada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 224,
+    "linha_fim": 230,
+    "justificativa": "O intervalo recebido é separado e convertido em datas sem validar sua existência, quantidade de elementos ou formato."
+   },
+   {
+    "nome": "Operações de persistência não atômicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 37,
+    "linha_fim": 42,
+    "justificativa": "A configuração global do caixa e o registro do caixa são alterados sem transação, permitindo estado inconsistente se o salvamento falhar."
+   },
+   {
+    "nome": "Operações de persistência não atômicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 116,
+    "linha_fim": 126,
+    "justificativa": "A sangria é salva e o saldo é reduzido em operações separadas sem transação de banco de dados."
+   },
+   {
+    "nome": "Operações de persistência não atômicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 144,
+    "linha_fim": 154,
+    "justificativa": "A entrada e a atualização do saldo do caixa são executadas separadamente sem garantia de rollback conjunto."
+   },
+   {
+    "nome": "Exposição de detalhes internos de exceção",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 52,
+    "justificativa": "A mensagem bruta do banco de dados é devolvida ao cliente, expondo detalhes internos da aplicação."
+   },
+   {
+    "nome": "Exposição de detalhes internos de exceção",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "O detalhe bruto da exceção de banco é retornado diretamente ao chamador."
+   },
+   {
+    "nome": "Exposição de detalhes internos de exceção",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 160,
+    "justificativa": "A resposta JSON inclui diretamente a mensagem interna produzida pelo banco de dados."
+   },
+   {
+    "nome": "Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 83,
+    "justificativa": "Cada transação consulta suas vendas e cada venda consulta novamente o estoque, multiplicando o número de consultas."
+   },
+   {
+    "nome": "Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 195,
+    "justificativa": "O histórico diário executa consultas de vendas por transação e de estoque por item em vez de carregar os relacionamentos antecipadamente."
+   },
+   {
+    "nome": "Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 216,
+    "justificativa": "O histórico por intervalo faz consultas adicionais para cada transação e cada venda retornada."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "A transformação das transações do histórico diário repete quase integralmente a lógica usada no histórico por intervalo."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "A transformação das transações por intervalo duplica o bloco de processamento do histórico diário."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 240,
+    "linha_fim": 253,
+    "justificativa": "O cálculo e a formatação do saldo esperado repetem a implementação existente em ConferenciaDeFechamento."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/ConferenciaDeFechamento.php",
+    "linha_inicio": 24,
+    "linha_fim": 37,
+    "justificativa": "O cálculo e a montagem do resumo financeiro duplicam a lógica de saldoEsperadoDoDia do controlador."
+   },
+   {
+    "nome": "Conversão monetária duplicada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A normalização textual de valores monetários é repetida manualmente em vez de ser centralizada em um conversor ou value object."
+   },
+   {
+    "nome": "Conversão monetária duplicada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 117,
+    "linha_fim": 119,
+    "justificativa": "O valor da sangria utiliza a mesma substituição manual de separadores presente em outros fluxos."
+   },
+   {
+    "nome": "Conversão monetária duplicada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 144,
+    "linha_fim": 148,
+    "justificativa": "A entrada de caixa repete a conversão monetária e ainda a executa duas vezes para o mesmo valor."
+   },
+   {
+    "nome": "Mistura de domínio e apresentação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 62,
+    "linha_fim": 98,
+    "justificativa": "O controlador altera atributos dos modelos para textos formatados e monta descrições destinadas à interface."
+   },
+   {
+    "nome": "Mistura de domínio e apresentação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 219,
+    "justificativa": "Resultados de domínio são modificados com rótulos, percentuais, moedas e descrições de exibição dentro da consulta da API."
+   },
+   {
+    "nome": "Tipos de retorno inconsistentes",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 31,
+    "linha_fim": 57,
+    "justificativa": "O mesmo método pode devolver JSON em um fluxo e uma view HTML em outro."
+   },
+   {
+    "nome": "Tipos de retorno inconsistentes",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "O método pode retornar JSON, uma string de erro ou nenhum valor dependendo do fluxo executado."
+   },
+   {
+    "nome": "Retorno ausente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "Quando o caixa está fechado ou save retorna falso, o método termina sem produzir uma resposta HTTP explícita."
+   },
+   {
+    "nome": "Variável indefinida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 167,
+    "justificativa": "O ramo else acessa $e embora essa variável só exista no bloco catch de outro ramo."
+   },
+   {
+    "nome": "Código inalcançável",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Todos os fluxos anteriores retornam ou lançam exceção, tornando o retorno final inacessível."
+   },
+   {
+    "nome": "Retorno ausente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método não retorna resposta quando o tipo não corresponde a month, day ou range."
+   },
+   {
+    "nome": "Representação incorreta de booleanos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 43,
+    "linha_fim": 50,
+    "justificativa": "O campo success usa as strings \"true\" e \"false\" em vez de valores booleanos JSON."
+   },
+   {
+    "nome": "Representação incorreta de booleanos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 123,
+    "linha_fim": 126,
+    "justificativa": "O campo success é serializado como texto em vez de booleano."
+   },
+   {
+    "nome": "Representação incorreta de booleanos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 151,
+    "linha_fim": 165,
+    "justificativa": "As respostas representam sucesso e falha com strings, obrigando consumidores a tratar falsos booleanos."
+   },
+   {
+    "nome": "Representação incorreta de booleanos",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 102,
+    "linha_fim": 107,
+    "justificativa": "A resposta de fechamento utiliza a string \"true\" no lugar do booleano true."
+   },
+   {
+    "nome": "Possível desreferência de nulo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 240,
+    "linha_fim": 252,
+    "justificativa": "O resultado de Caixa::today() é acessado sem verificar se existe um caixa para o dia."
+   },
+   {
+    "nome": "Possível desreferência de nulo",
+    "arquivo": "app/Pdv/ConferenciaDeFechamento.php",
+    "linha_inicio": 24,
+    "linha_fim": 39,
+    "justificativa": "O código acessa $caixa->inicial sem tratar a possibilidade de Caixa::today() retornar nulo."
+   },
+   {
+    "nome": "Strings mágicas e mapeamento duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 78,
+    "justificativa": "Códigos de pagamento e seus rótulos são definidos diretamente no método em vez de enumeração ou componente centralizado."
+   },
+   {
+    "nome": "Strings mágicas e mapeamento duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 191,
+    "justificativa": "O mapeamento literal de códigos de pagamento repete regras já presentes em outro método."
+   },
+   {
+    "nome": "Strings mágicas e mapeamento duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 212,
+    "justificativa": "O mesmo conjunto de códigos e rótulos de pagamento é novamente codificado diretamente no fluxo por intervalo."
+   },
+   {
+    "nome": "Dependência de data global não injetável",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 21,
+    "linha_fim": 23,
+    "justificativa": "O método depende diretamente do relógio global por meio de date(), dificultando testes determinísticos."
+   },
+   {
+    "nome": "Dependência de data global não injetável",
+    "arquivo": "app/Pdv/ConferenciaDeFechamento.php",
+    "linha_inicio": 24,
+    "linha_fim": 29,
+    "justificativa": "A consulta usa diretamente a data do sistema, acoplando a regra de negócio ao relógio global."
+   }
+  ]
+ },
+ "desvios": []
+}

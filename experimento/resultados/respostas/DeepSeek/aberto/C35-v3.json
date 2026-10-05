@@ -1,0 +1,195 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C35-v3",
+ "cs_id": "C35",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "fc5d0fccdf3c1bdf594ba010a4a4090eee7a1cc0bd912e4e38c6b69785f15424",
+ "inicio": "2026-10-05T15:32:44+00:00",
+ "duracao_s": 74.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3577,
+ "tokens_saida": 7191,
+ "tokens_raciocinio": 5563,
+ "custo": 0.014475736,
+ "id_requisicao": "gen-1791214364-OWsmx6LZtmeUILiR6PF9",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 74157
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de formatação de transações duplicado em fecharCaixaView e historicoAPI."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Bloco de formatação de transações duplicado da função fecharCaixaView."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Bloco de formatação de transações duplicado da função fecharCaixaView e do branch day."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método fecharCaixaView executa muitas responsabilidades: busca dados, formata valores, monta detalhes e retorna view."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método historicoAPI é longo e contém múltiplos branches com lógica duplicada."
+   },
+   {
+    "nome": "Problema N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 83,
+    "justificativa": "Consulta Venda e Estoque dentro de loop, causando múltiplas consultas adicionais."
+   },
+   {
+    "nome": "Problema N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 195,
+    "justificativa": "Consulta Venda e Estoque dentro de loop, causando múltiplas consultas adicionais."
+   },
+   {
+    "nome": "Problema N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 216,
+    "justificativa": "Consulta Venda e Estoque dentro de loop, causando múltiplas consultas adicionais."
+   },
+   {
+    "nome": "Strings mágicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Mapeamento de tipos de pagamento com strings fixas e erro de digitação ('Débido' em vez de 'Débito')."
+   },
+   {
+    "nome": "Strings mágicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Mapeamento de tipos de pagamento com strings fixas e erro de digitação ('Débido' em vez de 'Débito')."
+   },
+   {
+    "nome": "Strings mágicas",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Mapeamento de tipos de pagamento com strings fixas e erro de digitação ('Débido' em vez de 'Débito')."
+   },
+   {
+    "nome": "Conversão de moeda repetida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Conversão de string para float usando str_replace é repetida em vários métodos."
+   },
+   {
+    "nome": "Conversão de moeda repetida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Conversão de string para float usando str_replace é repetida em vários métodos."
+   },
+   {
+    "nome": "Conversão de moeda repetida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "Conversão de string para float usando str_replace é repetida em duas linhas próximas dentro do mesmo método."
+   },
+   {
+    "nome": "Tratamento de erro inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 116,
+    "linha_fim": 134,
+    "justificativa": "Catch retorna string crua em vez de JSON e método pode retornar null se save falhar."
+   },
+   {
+    "nome": "Código inalcançável",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Linha de retorno após todos os branches de resposta, nunca será executada."
+   },
+   {
+    "nome": "Condição confusa",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 35,
+    "linha_fim": 41,
+    "justificativa": "Condição complexa e chamadas repetidas a Caixa::checkOpen() dificultam a legibilidade."
+   },
+   {
+    "nome": "Erro de digitação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 225,
+    "justificativa": "Uso de $request->rage em vez de $request->range indica possível erro de digitação."
+   },
+   {
+    "nome": "Responsabilidade inadequada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 241,
+    "linha_fim": 250,
+    "justificativa": "Método de lógica de negócio (aplicarDesconto) está no controller em vez de uma camada de serviço ou modelo."
+   }
+  ]
+ },
+ "desvios": []
+}

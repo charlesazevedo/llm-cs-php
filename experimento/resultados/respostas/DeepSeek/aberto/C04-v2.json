@@ -1,0 +1,90 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C04-v2",
+ "cs_id": "C04",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5f474615c20c3e513c8e6c74d3099d353f98dbc297c8467d2b97c82761d9e994",
+ "inicio": "2026-10-03T23:12:20+00:00",
+ "duracao_s": 15.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 1502,
+ "tokens_saida": 1515,
+ "tokens_raciocinio": 1148,
+ "custo": 0.00399102,
+ "id_requisicao": "gen-1791069140-V1k4XOVXBDZu3hfoXdb0",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 14954
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Pdv/ConsultaDeCaixaController.php",
+    "linha_inicio": 11,
+    "linha_fim": 31,
+    "justificativa": "Estrutura idêntica aos demais controladores: construtor com middleware e método exibir retornando JSON do modelo."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Pdv/ConsultaDeClientesController.php",
+    "linha_inicio": 11,
+    "linha_fim": 31,
+    "justificativa": "Estrutura idêntica aos demais controladores: construtor com middleware e método exibir retornando JSON do modelo."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Pdv/ConsultaDeEstoqueController.php",
+    "linha_inicio": 11,
+    "linha_fim": 31,
+    "justificativa": "Estrutura idêntica aos demais controladores: construtor com middleware e método exibir retornando JSON do modelo."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Pdv/ConsultaDeVendasController.php",
+    "linha_inicio": 11,
+    "linha_fim": 31,
+    "justificativa": "Estrutura idêntica aos demais controladores: construtor com middleware e método exibir retornando JSON do modelo."
+   }
+  ]
+ },
+ "desvios": []
+}

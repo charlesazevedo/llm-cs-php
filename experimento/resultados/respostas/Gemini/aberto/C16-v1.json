@@ -1,0 +1,81 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C16-v1",
+ "cs_id": "C16",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "deb195f0336326fcdf39c6ef16cf0185b46797174e96fa533aa934c94c687a6d",
+ "inicio": "2026-10-05T12:52:39+00:00",
+ "duracao_s": 15.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 2434,
+ "tokens_saida": 1815,
+ "tokens_raciocinio": 1476,
+ "custo": 0.026648,
+ "id_requisicao": "gen-1791204759-y0PqCUjsPyugU5aDPKMw",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 15662
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Consultas excessivas ao banco de dados",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 129,
+    "linha_fim": 152,
+    "justificativa": "O código realiza mais de 15 consultas separadas ao banco de dados para agregar informações da mesma tabela e período, o que degrada a performance e poderia ser otimizado para uma única consulta ou uso de coleções (Collections) em memória."
+   },
+   {
+    "nome": "Construtor fazendo trabalho pesado (Heavy Constructor)",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 127,
+    "linha_fim": 153,
+    "justificativa": "O construtor realiza operações custosas, acionando o banco de dados diversas vezes para preencher os atributos da classe, o que dificulta testes unitários e a própria instanciação limpa do objeto."
+   },
+   {
+    "nome": "Data Class (Classe de Dados)",
+    "arquivo": "app/Pdv/ResumoDoFechamento.php",
+    "linha_inicio": 10,
+    "linha_fim": 181,
+    "justificativa": "A classe atua primordialmente como um repositório de atributos de dados e possui apenas um método para transformar esses dados em array, não encapsulando comportamentos ou lógicas de domínio reais."
+   }
+  ]
+ },
+ "desvios": []
+}

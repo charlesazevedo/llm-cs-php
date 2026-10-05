@@ -1,0 +1,67 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C06-v2",
+ "cs_id": "C06",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "969d0b7c5c5c8e41e59f39df85d15e8cf02d573a509b8b7d4ac447268b5d8eff",
+ "inicio": "2026-10-03T23:08:35+00:00",
+ "duracao_s": 5.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 1090,
+ "tokens_saida": 331,
+ "tokens_raciocinio": 188,
+ "custo": 0.01098,
+ "id_requisicao": "gen-1791068915-cm4dJXernLODNGbfJPMb",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 5411
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Estilo CSS inline",
+    "arquivo": "resources/views/admin/caixa/resumo.blade.php",
+    "linha_inicio": 10,
+    "linha_fim": 13,
+    "justificativa": "Os elementos usam atributos style com regras CSS embutidas diretamente no HTML, em vez de classes ou folhas de estilo, o que dificulta a manutenção e a reutilização."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,74 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C24-v2",
+ "cs_id": "C24",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "2967fba9021ccfe72d366a028553e867e3e1687c06ffc5596fbd16bb2e7d53d5",
+ "inicio": "2026-10-05T13:38:47+00:00",
+ "duracao_s": 5.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 1853,
+ "tokens_saida": 262,
+ "tokens_raciocinio": 0,
+ "custo": 0.012652,
+ "id_requisicao": "gen-1791207527-LGs2J4W6kEz00y55d2FC",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 5261
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeEntradas.php",
+    "linha_inicio": 17,
+    "linha_fim": 36,
+    "justificativa": "O método linhasDasEntradas repete quase linha a linha a lógica de linhasDasSangrias, mudando apenas o modelo, o título e os nomes das variáveis."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioDeSangrias.php",
+    "linha_inicio": 17,
+    "linha_fim": 36,
+    "justificativa": "O método linhasDasSangrias duplica a mesma estrutura de iteração, formatação e totalização usada em RelatorioDeEntradas::linhasDasEntradas."
+   }
+  ]
+ },
+ "desvios": []
+}

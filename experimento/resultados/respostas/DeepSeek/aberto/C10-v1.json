@@ -1,0 +1,69 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C10-v1",
+ "cs_id": "C10",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "7a62629d35324e64409742ab53ab21c0c48e4179b3d14c1be4111f711d70d99b",
+ "inicio": "2026-10-03T23:19:36+00:00",
+ "duracao_s": 14.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 543,
+ "tokens_saida": 1563,
+ "tokens_raciocinio": 1457,
+ "custo": 0.003289792,
+ "id_requisicao": "gen-1791069576-5K3cfq8f7hdtrDCHbWze",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 14231
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Tags HTML não fechadas",
+    "arquivo": "resources/views/admin/caixa/saldo.blade.php",
+    "linha_inicio": 10,
+    "linha_fim": 15,
+    "justificativa": "As divs abertas nas linhas 10 e 11 não possuem tags de fechamento correspondentes, resultando em HTML inválido."
+   }
+  ]
+ },
+ "desvios": []
+}

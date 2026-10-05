@@ -1,0 +1,83 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C05-v2",
+ "cs_id": "C05",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "c3f371db1b96b9e32ecac6f2a4c424a956c28030e92cb1ada403e81362e00416",
+ "inicio": "2026-10-03T23:12:55+00:00",
+ "duracao_s": 10.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 704,
+ "tokens_saida": 1223,
+ "tokens_raciocinio": 978,
+ "custo": 0.002722852,
+ "id_requisicao": "gen-1791069175-4NQ8D6Fda6nWVTiwe6IO",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 10631
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Inline JavaScript",
+    "arquivo": "resources/views/admin/caixa/retirada.blade.php",
+    "linha_inicio": 12,
+    "linha_fim": 12,
+    "justificativa": "Uso de JavaScript inline no atributo onsubmit mistura lógica de apresentação com comportamento."
+   },
+   {
+    "nome": "Inline JavaScript",
+    "arquivo": "resources/views/admin/caixa/retirada.blade.php",
+    "linha_inicio": 16,
+    "linha_fim": 16,
+    "justificativa": "Uso de JavaScript inline no atributo onblur para manipular valor do input."
+   },
+   {
+    "nome": "Inline JavaScript",
+    "arquivo": "resources/views/admin/caixa/retirada.blade.php",
+    "linha_inicio": 20,
+    "linha_fim": 21,
+    "justificativa": "Uso de JavaScript inline no atributo onclick para resetar o formulário."
+   }
+  ]
+ },
+ "desvios": []
+}

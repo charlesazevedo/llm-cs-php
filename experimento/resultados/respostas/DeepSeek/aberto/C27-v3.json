@@ -1,0 +1,195 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C27-v3",
+ "cs_id": "C27",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "054eb50d31adf5538508ad018be64a2eebdf340649d82ad38fe1d4e6ec7676d2",
+ "inicio": "2026-10-05T14:27:58+00:00",
+ "duracao_s": 97.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3535,
+ "tokens_saida": 9071,
+ "tokens_raciocinio": 7440,
+ "custo": 0.018170416,
+ "id_requisicao": "gen-1791210478-q1XmXa7HkErV33Ew0fjM",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 97530
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método fecharCaixaView é longo e executa múltiplas tarefas (consultas, formatação e montagem de detalhes)."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI é longo e contém lógica duplicada em suas ramificações."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Este trecho de loop para formatação de transações e construção de detalhes é duplicado em historicoAPI."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Este trecho duplica a lógica de formatação e construção de detalhes presente em fecharCaixaView e na ramificação range."
+   },
+   {
+    "nome": "Duplicated code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Este trecho duplica novamente a mesma lógica de formatação e construção de detalhes."
+   },
+   {
+    "nome": "N+1 queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Dentro do loop, são executadas consultas a Venda e Estoque a cada iteração, causando N+1 queries."
+   },
+   {
+    "nome": "N+1 queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Dentro do loop, são executadas consultas a Venda e Estoque a cada iteração, causando N+1 queries."
+   },
+   {
+    "nome": "N+1 queries",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Dentro do loop, são executadas consultas a Venda e Estoque a cada iteração, causando N+1 queries."
+   },
+   {
+    "nome": "Magic strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Uso de strings fixas 'DI','CR','DE' e rótulos hard-coded, dificultando manutenção."
+   },
+   {
+    "nome": "Magic strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Uso de strings fixas 'DI','CR','DE' e rótulos hard-coded, duplicados."
+   },
+   {
+    "nome": "Magic strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Uso de strings fixas 'DI','CR','DE' e rótulos hard-coded, duplicados."
+   },
+   {
+    "nome": "Inconsistent return type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 43,
+    "linha_fim": 56,
+    "justificativa": "O método iniciarCaixa retorna JSON no sucesso e uma view no else, causando inconsistência no tipo de resposta."
+   },
+   {
+    "nome": "Inconsistent return type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 129,
+    "justificativa": "No catch, sangriaPost retorna string de erro em vez de JSON, inconsistente com a resposta de sucesso."
+   },
+   {
+    "nome": "Missing return statement",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 115,
+    "linha_fim": 134,
+    "justificativa": "Se o caixa estiver fechado, o método sangriaPost não retorna nenhuma resposta, pois não há ramo else após o if."
+   },
+   {
+    "nome": "Dead code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return após o else em addCaixa é inacessível, pois todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Undefined variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "No else de addCaixa, a variável $e é usada sem estar definida, causando erro de variável indefinida."
+   },
+   {
+    "nome": "Unused variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 242,
+    "linha_fim": 243,
+    "justificativa": "A variável $fim é atribuída pela list() mas nunca utilizada, e a soma ignora o fim do período."
+   },
+   {
+    "nome": "Magic strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 41,
+    "linha_fim": 41,
+    "justificativa": "Uso de string literal 'caixa_aberto' como chave, que deveria ser constante."
+   },
+   {
+    "nome": "Magic strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 103,
+    "linha_fim": 103,
+    "justificativa": "Uso de string literal 'caixa_aberto' como chave, duplicado."
+   }
+  ]
+ },
+ "desvios": []
+}

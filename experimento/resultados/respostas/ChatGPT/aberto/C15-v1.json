@@ -1,0 +1,123 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C15-v1",
+ "cs_id": "C15",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "cb12d25ecdc5d716e2a364bcfe7ea1d5c3334bf320e1d9fd61814a7ceeb20278",
+ "inicio": "2026-10-05T12:51:57+00:00",
+ "duracao_s": 20.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 1326,
+ "tokens_saida": 1591,
+ "tokens_raciocinio": 1034,
+ "custo": 0.0192235,
+ "id_requisicao": "gen-1791204717-SUIcpMutstO77UAlaroF",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 20662
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Valor mágico",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 17,
+    "linha_fim": 20,
+    "justificativa": "O código de pagamento literal 'DI' não expressa seu significado e deveria ser representado por uma constante ou enumeração de domínio."
+   },
+   {
+    "nome": "Abstração inconsistente de consultas",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 17,
+    "linha_fim": 40,
+    "justificativa": "A consulta de pagamentos em dinheiro é construída nesta classe, enquanto as consultas de crédito e débito são delegadas a métodos específicos do modelo."
+   },
+   {
+    "nome": "Dependência estática",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 17,
+    "linha_fim": 119,
+    "justificativa": "Todos os métodos acessam diretamente o modelo Eloquent por chamadas estáticas, dificultando a substituição da fonte de dados e o isolamento em testes."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 17,
+    "linha_fim": 119,
+    "justificativa": "A inicialização da consulta diária com Transacoes::today() é repetida em quase todos os métodos em vez de ser centralizada."
+   },
+   {
+    "nome": "Contrato de retorno incorreto",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 62,
+    "linha_fim": 70,
+    "justificativa": "O método declara retorno float, mas avg pode retornar null quando não existem vendas no dia."
+   },
+   {
+    "nome": "Contrato de retorno incorreto",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 72,
+    "linha_fim": 80,
+    "justificativa": "O método declara retorno float, mas max pode retornar null quando a consulta diária está vazia."
+   },
+   {
+    "nome": "Contrato de retorno incorreto",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 82,
+    "linha_fim": 90,
+    "justificativa": "O método declara retorno float, mas min pode retornar null quando a consulta diária está vazia."
+   },
+   {
+    "nome": "Contrato de retorno incorreto",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 92,
+    "linha_fim": 100,
+    "justificativa": "O método declara retorno float, mas avg pode retornar null quando não existem vendas no dia."
+   },
+   {
+    "nome": "Contrato de retorno incorreto",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 102,
+    "linha_fim": 110,
+    "justificativa": "O método declara retorno int, mas max pode retornar null em um dia sem vendas e o desconto pode não ser um valor inteiro."
+   }
+  ]
+ },
+ "desvios": []
+}

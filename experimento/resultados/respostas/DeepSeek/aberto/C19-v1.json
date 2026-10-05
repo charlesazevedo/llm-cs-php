@@ -1,0 +1,209 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C19-v1",
+ "cs_id": "C19",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "e9c1fc7f4b87df9bedfc15dd9e024012332cf39de364bac71736db2871af444e",
+ "inicio": "2026-10-05T13:38:20+00:00",
+ "duracao_s": 84.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3905,
+ "tokens_saida": 8149,
+ "tokens_raciocinio": 6435,
+ "custo": 0.016589056,
+ "id_requisicao": "gen-1791207500-2lmir9CGEwcdjUovPo2l",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 84666
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 272,
+    "justificativa": "Classe com muitas responsabilidades diferentes (caixa, sangria, entrada, histórico, impressão, filtros), caracterizando um God Class."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Lógica de formatação de transações (substituição de pagamento, desconto, total, detalhes) duplicada nos métodos fecharCaixaView e historicoAPI."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 82,
+    "justificativa": "Loop sobre transações executando consultas adicionais a Venda e Estoque para cada transação."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método muito longo com múltiplas responsabilidades: buscar transações, formatar, processar vendas, calcular totais."
+   },
+   {
+    "nome": "Repeated Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 88,
+    "linha_fim": 91,
+    "justificativa": "Caixa::today() chamado duas vezes, causando consulta redundante."
+   },
+   {
+    "nome": "Error Message Exposure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 52,
+    "justificativa": "Retorna detalhes técnicos do banco ($e->errorInfo[2]) diretamente ao cliente."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Conversão de moeda repetida duas vezes no mesmo método (linhas 39 e 40) e em outros métodos."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Conversão de moeda duplicada em sangriaPost."
+   },
+   {
+    "nome": "Inconsistent Return",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "Método sangriaPost não retorna resposta quando caixa não está aberto e retorna string no catch."
+   },
+   {
+    "nome": "Error Message Exposure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "Retorna string com erro técnico do banco diretamente."
+   },
+   {
+    "nome": "Error Message Exposure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 160,
+    "justificativa": "Retorna detalhes técnicos do banco no catch."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 167,
+    "justificativa": "Usa $e->errorInfo[2] dentro do else sem que $e esteja definido nesse escopo."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "Conversão de moeda duplicada em addCaixa (linhas 145 e 148)."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Código inalcançável após o else que já retorna JSON."
+   },
+   {
+    "nome": "Repeated Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 141,
+    "linha_fim": 149,
+    "justificativa": "Caixa::today() chamado duas vezes no mesmo método."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método longo com múltiplas branches e lógica duplicada."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesma lógica de formatação de transações presente em fecharCaixaView e no type 'day'."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 194,
+    "justificativa": "Loop sobre transações com consultas N+1 a Venda e Estoque."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Mesma lógica de formatação de transações presente em fecharCaixaView, type 'day' e 'range'."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 215,
+    "justificativa": "Loop sobre transações com consultas N+1 a Venda e Estoque."
+   },
+   {
+    "nome": "Array Access Without Check",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 224,
+    "linha_fim": 229,
+    "justificativa": "Acessa $data[1] sem verificar se existe, podendo causar erro se a string não tiver vírgula."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,153 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C25-v3",
+ "cs_id": "C25",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "2d2bd2371855e5e8bc1b9da05f3dcab39c1f36e3a2e78841b57e0de5805c5632",
+ "inicio": "2026-10-05T14:21:10+00:00",
+ "duracao_s": 94.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3510,
+ "tokens_saida": 9381,
+ "tokens_raciocinio": 8256,
+ "custo": 0.018767716,
+ "id_requisicao": "gen-1791210070-ffW9KOYEF83GpHftm1sX",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 94287
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de formatação e consulta de vendas e estoque é repetido em historicoAPI."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesma lógica de formatação e consulta presente em fecharCaixaView e no branch range."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Terceira repetição da mesma lógica de processamento de transações, vendas e estoque."
+   },
+   {
+    "nome": "Problema de Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Loop realiza consultas Venda::where e Estoque::where para cada transação, causando N+1 queries."
+   },
+   {
+    "nome": "Problema de Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Loop interno consulta vendas e estoque individualmente, gerando múltiplas queries desnecessárias."
+   },
+   {
+    "nome": "Problema de Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Repetição do padrão N+1 no branch range do histórico."
+   },
+   {
+    "nome": "Método Longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView tem muitas responsabilidades e complexidade, dificultando manutenção."
+   },
+   {
+    "nome": "Método Longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI concentra três fluxos distintos e muita lógica de formatação."
+   },
+   {
+    "nome": "Código Morto",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 233,
+    "linha_fim": 246,
+    "justificativa": "Propriedade $dataDeAbertura é definida no construtor mas nunca é utilizada em nenhum método."
+   },
+   {
+    "nome": "Código Morto",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 170,
+    "justificativa": "Comando return após os blocos if/else que já retornam resposta é inalcançável."
+   },
+   {
+    "nome": "Tratamento de Erro Inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "No catch de sangriaPost retorna string de erro diretamente, diferente dos outros métodos que retornam JSON."
+   },
+   {
+    "nome": "Variável Indefinida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "No else de addCaixa, $e->errorInfo[2] é referenciado sem que $e esteja definido neste escopo."
+   },
+   {
+    "nome": "Erro de Digitação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 224,
+    "linha_fim": 231,
+    "justificativa": "Usa $request->rage em vez de $request->range, provável erro de digitação que pode causar falha."
+   }
+  ]
+ },
+ "desvios": []
+}

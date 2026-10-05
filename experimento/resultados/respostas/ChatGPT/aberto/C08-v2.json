@@ -1,0 +1,123 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C08-v2",
+ "cs_id": "C08",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "ceadac21c684b8b1c95609fd43f301e576094da22b28a2b2c8599252b0331c25",
+ "inicio": "2026-10-03T23:13:28+00:00",
+ "duracao_s": 24.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 1114,
+ "tokens_saida": 1699,
+ "tokens_raciocinio": 1034,
+ "custo": 0.0197735,
+ "id_requisicao": "gen-1791069208-v578t12q3u8ogmLe5Ss1",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 23762
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Construção manual de HTML",
+    "arquivo": "app/Pdv/FormularioDeSangria.php",
+    "linha_inicio": 35,
+    "linha_fim": 43,
+    "justificativa": "O formulário é montado por concatenação de strings em PHP, dificultando manutenção, legibilidade e uso consistente dos recursos de escape do Blade."
+   },
+   {
+    "nome": "Saída não escapada",
+    "arquivo": "app/Pdv/FormularioDeSangria.php",
+    "linha_inicio": 38,
+    "linha_fim": 38,
+    "justificativa": "O valor de $saldo é inserido diretamente em um atributo HTML sem escape, podendo permitir HTML inválido ou injeção caso a entrada não seja estritamente numérica."
+   },
+   {
+    "nome": "Primitive Obsession para valor monetário",
+    "arquivo": "app/Pdv/FormularioDeSangria.php",
+    "linha_inicio": 30,
+    "linha_fim": 39,
+    "justificativa": "O saldo monetário é representado como float em vez de um tipo de domínio ou valor inteiro em centavos, ficando sujeito a erros de precisão e regras de formatação dispersas."
+   },
+   {
+    "nome": "Acoplamento por identificadores DOM",
+    "arquivo": "app/Pdv/FormularioDeSangria.php",
+    "linha_inicio": 35,
+    "linha_fim": 43,
+    "justificativa": "O formulário depende de identificadores literais como valor-sangria e saldo-restante que precisam coincidir implicitamente com os usados pela classe de script."
+   },
+   {
+    "nome": "JavaScript inline gerado pelo servidor",
+    "arquivo": "app/Pdv/ScriptDoFormularioDeSangria.php",
+    "linha_inicio": 17,
+    "linha_fim": 25,
+    "justificativa": "O JavaScript é devolvido como uma string PHP inline, misturando responsabilidades e dificultando cache, testes, empacotamento e políticas CSP."
+   },
+   {
+    "nome": "Acoplamento por identificadores DOM",
+    "arquivo": "app/Pdv/ScriptDoFormularioDeSangria.php",
+    "linha_inicio": 19,
+    "linha_fim": 22,
+    "justificativa": "O script referencia diretamente identificadores definidos em outro componente sem contrato compartilhado, tornando alterações no HTML frágeis."
+   },
+   {
+    "nome": "Aritmética monetária com ponto flutuante",
+    "arquivo": "app/Pdv/ScriptDoFormularioDeSangria.php",
+    "linha_inicio": 20,
+    "linha_fim": 22,
+    "justificativa": "Saldo e retirada são convertidos para números de ponto flutuante e subtraídos diretamente, o que pode produzir erros de precisão em valores monetários."
+   },
+   {
+    "nome": "Formatação monetária duplicada e inconsistente",
+    "arquivo": "app/Pdv/FormularioDeSangria.php",
+    "linha_inicio": 39,
+    "linha_fim": 39,
+    "justificativa": "A formatação inicial do saldo é implementada no PHP com separadores decimal e de milhar, duplicando uma regra também implementada de maneira diferente no JavaScript."
+   },
+   {
+    "nome": "Formatação monetária duplicada e inconsistente",
+    "arquivo": "app/Pdv/ScriptDoFormularioDeSangria.php",
+    "linha_inicio": 22,
+    "linha_fim": 22,
+    "justificativa": "A atualização do saldo replica no cliente a formatação monetária do servidor, mas não aplica separador de milhar, podendo alterar o formato exibido após a digitação."
+   }
+  ]
+ },
+ "desvios": []
+}

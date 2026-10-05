@@ -1,0 +1,116 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C27-v1",
+ "cs_id": "C27",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "e386fe2a9a06910c65cf7ac664aeb62929aaee2214a84574a57ac7755989546b",
+ "inicio": "2026-10-05T14:21:23+00:00",
+ "duracao_s": 29.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 3903,
+ "tokens_saida": 4061,
+ "tokens_raciocinio": 3320,
+ "custo": 0.056538,
+ "id_requisicao": "gen-1791210083-Wbr3MtLWBSRG3ysRL11z",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 29013
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Realização de consultas aos models Venda e Estoque dentro de um loop, sobrecarregando o banco de dados."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Realização de consultas aos models Venda e Estoque repetidas vezes dentro da iteração, gerando consultas N+1."
+   },
+   {
+    "nome": "Consultas N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Realização de consultas no banco de dados dentro de uma estrutura de repetição, comprometendo o desempenho."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Toda a lógica de iteração e tratamento das transações é uma cópia idêntica da rotina presente nas linhas 186 a 198."
+   },
+   {
+    "nome": "Variável Indefinida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 166,
+    "linha_fim": 166,
+    "justificativa": "A variável $e está sendo acessada sem ser declarada na condição ou bloco atual, o que gera um erro na aplicação."
+   },
+   {
+    "nome": "Código Inalcançável (Dead Code)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A linha de retorno nunca será executada, pois todas as condições lógicas anteriores já encerram a execução da função com retornos independentes."
+   },
+   {
+    "nome": "Retorno Inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "A função não prevê fluxo de retorno caso o caixa não esteja aberto ou a tentativa de salvar a transação ($sangria->save()) retorne falso."
+   },
+   {
+    "nome": "Variável Não Utilizada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 241,
+    "linha_fim": 241,
+    "justificativa": "A variável $quantidade é atribuída, mas nunca é utilizada em nenhum lugar do método."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,181 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C01-v3",
+ "cs_id": "C01",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "1c775d42a379a65319ab52c76d260f1c6b12f7525b60fc73b598391376dddf7e",
+ "inicio": "2026-10-03T23:07:47+00:00",
+ "duracao_s": 59.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3532,
+ "tokens_saida": 8447,
+ "tokens_raciocinio": 6901,
+ "custo": 0.01905618,
+ "id_requisicao": "gen-1791068867-DVZXg7TyPvAFmMPsz9jC",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 59177
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O laço para construir os detalhes da venda é duplicado em fecharCaixaView, historicoAPI (day) e historicoAPI (range)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O laço para construir os detalhes da venda é duplicado em fecharCaixaView, historicoAPI (day) e historicoAPI (range)."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "O laço para construir os detalhes da venda é duplicado em fecharCaixaView, historicoAPI (day) e historicoAPI (range)."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas a Venda e Estoque são executadas dentro de um loop para cada transação, causando múltiplas requisições ao banco."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Consultas a Venda e Estoque são executadas dentro de um loop para cada transação, causando múltiplas requisições ao banco."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Consultas a Venda e Estoque são executadas dentro de um loop para cada transação, causando múltiplas requisições ao banco."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "Método fecharCaixaView é muito longo e executa múltiplas responsabilidades: busca dados, formata valores e prepara a view."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "Método historicoAPI é muito longo, com várias ramificações e laços de formatação, dificultando manutenção."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A instrução return após o bloco else é inalcançável, pois todos os caminhos anteriores já retornam."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 166,
+    "linha_fim": 166,
+    "justificativa": "A variável $e é usada no bloco else sem ser definida, causando erro ao tentar acessar errorInfo."
+   },
+   {
+    "nome": "Debug Statement",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 242,
+    "linha_fim": 242,
+    "justificativa": "debug_print_backtrace() é uma chamada de depuração deixada no código de produção."
+   },
+   {
+    "nome": "Inconsistent Return Type",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "O catch de sangriaPost retorna uma string diretamente, enquanto os outros métodos retornam resposta JSON."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Strings mágicas 'DI', 'CR', 'DE' e seus mapeamentos são usados sem constantes, repetidos e com erro de digitação ('Débido')."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Strings mágicas 'DI', 'CR', 'DE' e seus mapeamentos são usados sem constantes, repetidos e com erro de digitação ('Débido')."
+   },
+   {
+    "nome": "Magic String",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Strings mágicas 'DI', 'CR', 'DE' e seus mapeamentos são usados sem constantes, repetidos e com erro de digitação ('Débido')."
+   },
+   {
+    "nome": "Bad Naming",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 225,
+    "justificativa": "A propriedade 'rage' é um erro de digitação para 'range', indicando má nomeação."
+   },
+   {
+    "nome": "Variable Type Mutation",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 229,
+    "justificativa": "A variável $data é reutilizada com tipos diferentes (string, array, DateTime e string formatada), dificultando o entendimento."
+   }
+  ]
+ },
+ "desvios": []
+}

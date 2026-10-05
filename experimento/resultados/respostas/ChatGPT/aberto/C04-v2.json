@@ -1,0 +1,95 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C04-v2",
+ "cs_id": "C04",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "5f474615c20c3e513c8e6c74d3099d353f98dbc297c8467d2b97c82761d9e994",
+ "inicio": "2026-10-03T23:11:08+00:00",
+ "duracao_s": 6.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 1501,
+ "tokens_saida": 500,
+ "tokens_raciocinio": 160,
+ "custo": 0.008751,
+ "id_requisicao": "gen-1791069068-nlfBGmuR7b6jcoYw6w7a",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 6498
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/ConsultaDeCaixaController.php",
+    "linha_inicio": 11,
+    "linha_fim": 30,
+    "justificativa": "A estrutura do controlador, incluindo middleware, método de exibição e serialização JSON, é praticamente idêntica à dos demais controladores de consulta."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/ConsultaDeClientesController.php",
+    "linha_inicio": 11,
+    "linha_fim": 30,
+    "justificativa": "A estrutura do controlador, incluindo middleware, método de exibição e serialização JSON, é praticamente idêntica à dos demais controladores de consulta."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/ConsultaDeEstoqueController.php",
+    "linha_inicio": 11,
+    "linha_fim": 30,
+    "justificativa": "A estrutura do controlador, incluindo middleware, método de exibição e serialização JSON, é praticamente idêntica à dos demais controladores de consulta."
+   },
+   {
+    "nome": "Nomenclatura inconsistente",
+    "arquivo": "app/Pdv/ConsultaDeEstoqueController.php",
+    "linha_inicio": 22,
+    "linha_fim": 29,
+    "justificativa": "O parâmetro tipado como Estoque é chamado de produto, misturando conceitos distintos e reduzindo a clareza do método."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Pdv/ConsultaDeVendasController.php",
+    "linha_inicio": 11,
+    "linha_fim": 30,
+    "justificativa": "A estrutura do controlador, incluindo middleware, método de exibição e serialização JSON, é praticamente idêntica à dos demais controladores de consulta."
+   }
+  ]
+ },
+ "desvios": []
+}

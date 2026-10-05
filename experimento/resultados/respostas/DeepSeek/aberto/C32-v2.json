@@ -1,0 +1,258 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C32-v2",
+ "cs_id": "C32",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "b554b5d88759f1fc7f206fb969e9b82df9d85f5fdd9a393ce81fdae14edce51c",
+ "inicio": "2026-10-05T15:23:03+00:00",
+ "duracao_s": 103.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3530,
+ "tokens_saida": 10658,
+ "tokens_raciocinio": 8348,
+ "custo": 0.021309376,
+ "id_requisicao": "gen-1791213783-zZImcZRRoOH9ZWWBm7r8",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 103645
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Controlador gordo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 17,
+    "linha_fim": 246,
+    "justificativa": "O controlador acumula responsabilidades de acesso a dados, regras de negócio, formatação e renderização de views."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método fecharCaixaView tem muitas linhas e realiza várias tarefas distintas."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI é longo e contém lógica duplicada para diferentes tipos de consulta."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Bloco de formatação de transações e construção de detalhes é duplicado em outros métodos."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Mesmo bloco de formatação de transações presente em fecharCaixaView é replicado para o tipo 'day'."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Bloco duplicado novamente para o tipo 'range', aumentando a manutenção."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "Conversão de formato monetário usando str_replace é repetida em várias partes do código."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "Conversão de formato monetário repetida."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 145,
+    "justificativa": "Conversão de formato monetário repetida."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 148,
+    "linha_fim": 148,
+    "justificativa": "Conversão de formato monetário repetida."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Mapeamento de códigos de pagamento via str_replace é duplicado em historicoAPI."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 189,
+    "linha_fim": 189,
+    "justificativa": "Mapeamento de códigos de pagamento duplicado para o tipo 'day'."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 210,
+    "linha_fim": 210,
+    "justificativa": "Mapeamento de códigos de pagamento duplicado para o tipo 'range'."
+   },
+   {
+    "nome": "Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 79,
+    "linha_fim": 82,
+    "justificativa": "Dentro do loop de vendas, é feita uma consulta ao banco para cada estoque, causando múltiplas queries."
+   },
+   {
+    "nome": "Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 192,
+    "linha_fim": 194,
+    "justificativa": "Consulta individual de estoque dentro do loop de vendas no tipo 'day'."
+   },
+   {
+    "nome": "Consulta N+1",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 213,
+    "linha_fim": 215,
+    "justificativa": "Consulta individual de estoque dentro do loop de vendas no tipo 'range'."
+   },
+   {
+    "nome": "Vazamento de informação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 52,
+    "linha_fim": 52,
+    "justificativa": "A mensagem de erro do banco ($e->errorInfo[2]) é exposta diretamente na resposta JSON."
+   },
+   {
+    "nome": "Vazamento de informação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 129,
+    "linha_fim": 129,
+    "justificativa": "Retorna $e->errorInfo[2] diretamente, expondo detalhes internos do banco."
+   },
+   {
+    "nome": "Vazamento de informação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 159,
+    "linha_fim": 159,
+    "justificativa": "Mensagem de erro do banco é enviada ao cliente."
+   },
+   {
+    "nome": "Vazamento de informação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 166,
+    "linha_fim": 166,
+    "justificativa": "Tentativa de usar $e->errorInfo[2] em um contexto onde $e não está definido, além de vazar erro."
+   },
+   {
+    "nome": "Variável indefinida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 166,
+    "linha_fim": 166,
+    "justificativa": "A variável $e é usada no bloco else sem ter sido definida, causando erro se executado."
+   },
+   {
+    "nome": "Código inalcançável",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A instrução return $request->valor é inalcançável porque todos os caminhos do if-else já retornam."
+   },
+   {
+    "nome": "Nome de variável com erro de digitação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 225,
+    "justificativa": "A propriedade $request->rage provavelmente deveria ser $request->range, indicando um erro de digitação."
+   },
+   {
+    "nome": "Nome de variável com erro de digitação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 230,
+    "linha_fim": 230,
+    "justificativa": "Uso de $request->rage novamente, reforçando a suspeita de erro de digitação."
+   },
+   {
+    "nome": "Falta de retorno",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 114,
+    "linha_fim": 134,
+    "justificativa": "O método sangriaPost não retorna nenhuma resposta quando Caixa::checkOpen() é falso, resultando em resposta vazia."
+   },
+   {
+    "nome": "Variável não utilizada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 73,
+    "justificativa": "A variável $key no foreach não é utilizada, podendo ser omitida."
+   },
+   {
+    "nome": "Variável não utilizada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 186,
+    "justificativa": "Variável $key é declarada mas não usada no loop."
+   },
+   {
+    "nome": "Variável não utilizada",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 207,
+    "justificativa": "Variável $key não utilizada no loop foreach."
+   }
+  ]
+ },
+ "desvios": []
+}

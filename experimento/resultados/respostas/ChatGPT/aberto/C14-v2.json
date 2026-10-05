@@ -1,0 +1,200 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C14-v2",
+ "cs_id": "C14",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "7891f327aedc190878a3660c6b13172dc37021ba02937a7ab3e0f07f8c063c60",
+ "inicio": "2026-10-05T12:51:24+00:00",
+ "duracao_s": 33.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 5274,
+ "tokens_saida": 2804,
+ "tokens_raciocinio": 1546,
+ "custo": 0.0412235,
+ "id_requisicao": "gen-1791204684-7glsyW3W0dtTJnIwpjSG",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 32881
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe Deus",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 18,
+    "linha_fim": 570,
+    "justificativa": "A classe concentra indicadores de vendas, pagamentos, parcelamentos, caixa, estoque e clientes, acumulando responsabilidades demais."
+   },
+   {
+    "nome": "Consultas excessivas ao banco",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 25,
+    "linha_fim": 168,
+    "justificativa": "Cada resumo obtém seus indicadores por métodos independentes, provocando várias consultas ao banco para montar uma única resposta."
+   },
+   {
+    "nome": "Acoplamento forte a modelos estáticos",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 175,
+    "linha_fim": 569,
+    "justificativa": "O uso direto e disseminado de métodos estáticos dos modelos dificulta substituir dependências e testar a classe isoladamente."
+   },
+   {
+    "nome": "Consultas repetidas",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 175,
+    "linha_fim": 349,
+    "justificativa": "Diversas métricas executam separadamente a mesma consulta-base Transacoes::today(), embora pudessem ser agregadas em menos consultas."
+   },
+   {
+    "nome": "Processamento desnecessário em memória",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 225,
+    "linha_fim": 228,
+    "justificativa": "Todos os clientes do dia são carregados com pluck para depois aplicar unique e count em memória, em vez de usar COUNT DISTINCT no banco."
+   },
+   {
+    "nome": "Materialização desnecessária de IDs",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 235,
+    "linha_fim": 240,
+    "justificativa": "Os IDs das transações são carregados em memória antes do whereIn, podendo gerar alto consumo de memória e uma cláusula IN muito grande."
+   },
+   {
+    "nome": "Contrato de retorno impreciso",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 190,
+    "linha_fim": 218,
+    "justificativa": "Os métodos documentam retorno float, mas avg, max e min podem retornar null quando não existem vendas no dia."
+   },
+   {
+    "nome": "Contrato de retorno impreciso",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 242,
+    "linha_fim": 260,
+    "justificativa": "As agregações de desconto podem retornar null na ausência de transações, contrariando os tipos numéricos documentados."
+   },
+   {
+    "nome": "Contrato de retorno impreciso",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 332,
+    "linha_fim": 350,
+    "justificativa": "As agregações de parcelas podem retornar null sem vendas, embora os métodos estejam documentados como retornando float."
+   },
+   {
+    "nome": "Strings mágicas",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 267,
+    "linha_fim": 300,
+    "justificativa": "O código de pagamento 'DI' é repetido diretamente nas consultas sem constante ou enumeração que expresse seu significado."
+   },
+   {
+    "nome": "Consulta duplicada",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 357,
+    "linha_fim": 370,
+    "justificativa": "O mesmo registro de Caixa para a data atual é consultado duas vezes separadamente para obter os campos inicial e valor."
+   },
+   {
+    "nome": "Dependência implícita do relógio global",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 357,
+    "linha_fim": 370,
+    "justificativa": "O uso direto de date() torna o comportamento dependente do relógio e fuso horário globais e dificulta testes determinísticos."
+   },
+   {
+    "nome": "Consultas repetidas",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 387,
+    "linha_fim": 420,
+    "justificativa": "Totais e quantidades de sangrias e entradas executam consultas separadas sobre os mesmos conjuntos de registros do dia."
+   },
+   {
+    "nome": "Consultas repetidas",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 427,
+    "linha_fim": 470,
+    "justificativa": "As métricas mensais repetem Transacoes::month() em cinco consultas que poderiam ser consolidadas com agregação condicional."
+   },
+   {
+    "nome": "Strings mágicas",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 447,
+    "linha_fim": 470,
+    "justificativa": "Os códigos de pagamento 'CR', 'DE' e 'DI' estão embutidos nas consultas sem constantes ou enumeração de domínio."
+   },
+   {
+    "nome": "Dependência implícita do relógio global",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 487,
+    "linha_fim": 500,
+    "justificativa": "O ano corrente é obtido diretamente por date(), acoplando os cálculos anuais ao relógio global do processo."
+   },
+   {
+    "nome": "Mistura de apresentação com regra de negócio",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 512,
+    "linha_fim": 520,
+    "justificativa": "O painel retorna o valor do estoque já formatado em reais, misturando formatação de apresentação com obtenção de indicadores."
+   },
+   {
+    "nome": "Contrato de retorno impreciso",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 532,
+    "linha_fim": 540,
+    "justificativa": "A média de lucro pode ser null quando não há produtos, apesar de o método documentar exclusivamente um retorno float."
+   },
+   {
+    "nome": "Filtro temporal incompleto",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 562,
+    "linha_fim": 570,
+    "justificativa": "A consulta filtra somente o mês de created_at e, sem restringir o ano, contabiliza clientes cadastrados no mesmo mês de anos anteriores."
+   },
+   {
+    "nome": "Dependência implícita do relógio global",
+    "arquivo": "app/Pdv/PainelGerencial.php",
+    "linha_inicio": 567,
+    "linha_fim": 570,
+    "justificativa": "A seleção do mês corrente usa date() diretamente, dificultando controlar a data durante testes e centralizar o fuso horário."
+   }
+  ]
+ },
+ "desvios": []
+}

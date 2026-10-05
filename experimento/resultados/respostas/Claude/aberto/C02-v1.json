@@ -1,0 +1,144 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C02-v1",
+ "cs_id": "C02",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "26dcc2cfa2711e2c1655617e479262c2e446cfa0129b7e43ed7c61c7b84ffc85",
+ "inicio": "2026-10-03T23:07:12+00:00",
+ "duracao_s": 14.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5445,
+ "tokens_saida": 1361,
+ "tokens_raciocinio": 0,
+ "custo": 0.049,
+ "id_requisicao": "gen-1791068832-91tdY2iDqp34DduZU08n",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 14652
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 219,
+    "justificativa": "Os ramos 'day' e 'range' repetem praticamente o mesmo laço de formatação das transações, que também se assemelha ao laço de fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O laço que monta pagamento, desconto, total e detalhes das transações é duplicado em historicoAPI."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView consulta dados, formata valores, monta detalhes e calcula totais em um único método extenso."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI concentra três fluxos distintos com lógica repetida em um só método longo."
+   },
+   {
+    "nome": "Switch Statements",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 221,
+    "justificativa": "A cadeia de if/else sobre a string $type decide o comportamento, em vez de usar métodos ou estratégias separados."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de moeda com str_replace([\".\",\",\"],[\"\",\".\"]) se repete em vários métodos (linhas 39, 40, 119, 145 e 148) sem ter sido extraída para um helper."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 92,
+    "linha_fim": 96,
+    "justificativa": "A chamada number_format(..., 2, ',', '.') é repetida dezenas de vezes no controller em vez de ficar centralizada em um formatador."
+   },
+   {
+    "nome": "Feature Envy",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 91,
+    "linha_fim": 96,
+    "justificativa": "O controller manipula e formata extensivamente os atributos de Caixa e de Transacoes, lógica que pertence aos modelos ou a apresentadores."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Os códigos de pagamento 'DI', 'CR' e 'DE' aparecem como literais espalhados pelo código, sem constantes ou enum."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O return final de addCaixa nunca é alcançado, porque todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Goto Statement",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 247,
+    "linha_fim": 251,
+    "justificativa": "O goto é usado para sair dos laços aninhados, quando bastaria um return direto."
+   },
+   {
+    "nome": "Primitive Obsession",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 89,
+    "linha_fim": 89,
+    "justificativa": "Valores monetários são representados como strings formatadas em um objeto anônimo, em vez de um tipo próprio para dinheiro."
+   }
+  ]
+ },
+ "desvios": []
+}

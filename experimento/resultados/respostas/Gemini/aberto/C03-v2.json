@@ -1,0 +1,116 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C03-v2",
+ "cs_id": "C03",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "a6de7acb8db9acfb6750f57530e3a11c80c851b1be21e381a662b959d6ce09c5",
+ "inicio": "2026-10-03T23:09:05+00:00",
+ "duracao_s": 24.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4330,
+ "tokens_saida": 3541,
+ "tokens_raciocinio": 2788,
+ "custo": 0.051152,
+ "id_requisicao": "gen-1791068945-wwopX2AwgZAdfPDzpAEr",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 24678
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas ao banco de dados (Venda e Estoque) estão sendo executadas repetidamente dentro de um laço de repetição, comprometendo a performance."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 168,
+    "justificativa": "A variável de exceção $e está sendo chamada dentro do bloco else sem ter sido declarada ou inicializada neste escopo."
+   },
+   {
+    "nome": "Unreachable Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A instrução de retorno nunca será atingida, pois todos os fluxos anteriores (if e else) já possuem retornos que encerram o método."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Este bloco de código para processar transações é praticamente idêntico ao bloco utilizado logo abaixo para as datas do tipo 'range'."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Este bloco de código para processar transações é praticamente idêntico ao bloco utilizado logo acima para as datas do tipo 'day'."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Ocorre outro problema N+1 ao realizar consultas de banco de dados (Venda e Estoque) no meio do laço de repetição de transações."
+   },
+   {
+    "nome": "N+1 Query",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Consultas aos modelos de Venda e Estoque são realizadas novamente dentro de laços de repetição, gerando múltiplas requisições ao banco."
+   },
+   {
+    "nome": "Presentation Logic in Controller (Feature Envy)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 65,
+    "linha_fim": 97,
+    "justificativa": "O Controller está assumindo responsabilidades de formatação de exibição visual, como formatar moeda e concatenar strings, o que é responsabilidade da camada View."
+   }
+  ]
+ },
+ "desvios": []
+}

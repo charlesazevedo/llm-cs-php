@@ -1,0 +1,146 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C20-v1",
+ "cs_id": "C20",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "2f5b6847ce010e189e8996fcb692c02fafb45facca7dad72e4a0afb702c46d90",
+ "inicio": "2026-10-05T13:41:04+00:00",
+ "duracao_s": 57.6,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3202,
+ "tokens_saida": 5301,
+ "tokens_raciocinio": 4231,
+ "custo": 0.012445972,
+ "id_requisicao": "gen-1791207664-E5kpUz9c5hDRccf9HaNX",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 57463
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "God Class",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 12,
+    "linha_fim": 250,
+    "justificativa": "A classe concentra múltiplas responsabilidades distintas, como análise de ticket, alertas de fechamento, validação de venda, resumo de pagamentos, taxas de cartão e status de estoque, violando o princípio da responsabilidade única."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 21,
+    "linha_fim": 44,
+    "justificativa": "Cadeia extensa de elseif com muitos limites de faixa, dificultando leitura e manutenção."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 91,
+    "linha_fim": 121,
+    "justificativa": "Método com múltiplas condições independentes de alerta, tornando-o extenso e difícil de testar isoladamente."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 23,
+    "linha_fim": 40,
+    "justificativa": "Uso de números mágicos (10, 20, 50, 100, 200, 500, 1000, 2000) para definir faixas de ticket sem nomeação."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 104,
+    "linha_fim": 116,
+    "justificativa": "Limiares numéricos (5, 1000, 20, 6, 5000) aparecem diretamente no código sem constantes."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 140,
+    "linha_fim": 153,
+    "justificativa": "Limites de parcelas, desconto e total são números mágicos não nomeados."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 211,
+    "linha_fim": 224,
+    "justificativa": "Taxas percentuais (1.5, 2.5, 3.5, 4.5, 5.5, 6.5) e faixas de parcelas são números mágicos."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 239,
+    "linha_fim": 246,
+    "justificativa": "Limiares de estoque (5, 20) são usados sem constantes explicativas."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 137,
+    "linha_fim": 137,
+    "justificativa": "Forma de pagamento é comparada com strings 'DI', 'CR', 'DE' diretamente, sem enumeração."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 179,
+    "linha_fim": 186,
+    "justificativa": "Códigos de pagamento repetidos como strings literais, propensos a erro de digitação."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 211,
+    "linha_fim": 213,
+    "justificativa": "Comparações com strings de pagamento 'DE' e 'CR' sem constantes."
+   },
+   {
+    "nome": "Primitive Obsession",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 130,
+    "linha_fim": 157,
+    "justificativa": "Utiliza array associativo para dados da venda em vez de um objeto de valor, expondo detalhes de estrutura e forçando checagens manuais."
+   }
+  ]
+ },
+ "desvios": []
+}

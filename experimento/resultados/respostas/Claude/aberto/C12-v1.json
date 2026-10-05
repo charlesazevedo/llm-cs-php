@@ -1,0 +1,102 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C12-v1",
+ "cs_id": "C12",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "c390ce29153ef6689422c3f0933bd20eb15ae50642ca87f47203b904a3c0534d",
+ "inicio": "2026-10-05T12:48:19+00:00",
+ "duracao_s": 8.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 7257,
+ "tokens_saida": 702,
+ "tokens_raciocinio": 0,
+ "custo": 0.043068,
+ "id_requisicao": "gen-1791204499-xngk4w9jN6A5Ii2pSk1j",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 8032
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 240,
+    "linha_fim": 340,
+    "justificativa": "O método painelDetalhadoDoDia tem cerca de 100 linhas e acumula consultas, cálculos estatísticos de várias entidades e formatação da resposta em um único bloco."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 182,
+    "linha_fim": 221,
+    "justificativa": "Os ramos 'day' e 'range' de historicoAPI repetem praticamente o mesmo laço de formatação de transações, também semelhante ao de fecharCaixaView."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O laço de enriquecimento de transações com vendas e estoque é duplicado em historicoAPI."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI concentra três fluxos distintos com lógica de formatação embutida e laços aninhados."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método fecharCaixaView mistura consultas, formatação de valores e montagem de detalhes em um bloco extenso."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 262,
+    "linha_fim": 339,
+    "justificativa": "A estrutura 'valor'/'formatado' com number_format(..., 2, ',', '.') é repetida dezenas de vezes em vez de extraída para um helper."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,109 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C28-v1",
+ "cs_id": "C28",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "9480f784ff608dc5e6245dffaf7e4ce7d5309a4b652cfdeed1adec1d74a0142c",
+ "inicio": "2026-10-05T14:21:07+00:00",
+ "duracao_s": 9.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5466,
+ "tokens_saida": 893,
+ "tokens_raciocinio": 0,
+ "custo": 0.039724,
+ "id_requisicao": "gen-1791210067-0rzo4If0Ubpa5sYnCnf1",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 9773
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 219,
+    "justificativa": "Os laços que montam pagamento, desconto, total e detalhes das transações são repetidos quase idênticos nos ramos 'day' e 'range' (e também em fecharCaixaView), em vez de serem extraídos para um método comum."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O processamento de transações com consulta de vendas e estoque duplica a mesma lógica presente em historicoAPI."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView acumula consultas, formatação monetária, montagem de detalhes e cálculo de totais em um único método extenso."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI concentra três fluxos distintos com lógica repetida em um único método longo controlado por condicionais de tipo."
+   },
+   {
+    "nome": "Switch Statements",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 221,
+    "justificativa": "A cadeia if/else sobre a string $type seleciona comportamentos diferentes, que poderiam ser tratados por métodos ou estratégias separadas."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de valor monetário com str_replace([\".\",\",\"],[\"\",\".\"]) é repetida várias vezes no controller (linhas 39, 40, 119, 145 e 148), em vez de estar em um helper."
+   },
+   {
+    "nome": "Speculative Generality",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 253,
+    "linha_fim": 256,
+    "justificativa": "O parâmetro $valor de montarDescricaoDeSangria é recebido e documentado, mas nunca utilizado."
+   }
+  ]
+ },
+ "desvios": []
+}

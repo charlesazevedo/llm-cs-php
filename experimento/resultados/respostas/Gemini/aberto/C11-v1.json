@@ -1,0 +1,137 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C11-v1",
+ "cs_id": "C11",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "007d7c1a231ddd641cf769eb1c4d032a1e360d1a4cc23955da3c80f3d4b26b6b",
+ "inicio": "2026-10-02T18:41:14+00:00",
+ "duracao_s": 49.1,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 14260,
+ "tokens_saida": 6365,
+ "tokens_raciocinio": 5389,
+ "custo": 0.1049,
+ "id_requisicao": "gen-1790966474-yNv4tbGV6gMda3TNOtgk",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 48968
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 18,
+    "linha_fim": 1018,
+    "justificativa": "A classe centraliza a extração e formatação de diversas áreas distintas do negócio, tornando-se muito longa e assumindo múltiplas responsabilidades."
+   },
+   {
+    "nome": "Data Clumps",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 28,
+    "linha_fim": 43,
+    "justificativa": "Os parâmetros $inicio e $fim são recebidos e repassados sempre juntos para múltiplos métodos, indicando que deveriam ser extraídos para um objeto de intervalo de datas."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 55,
+    "linha_fim": 55,
+    "justificativa": "A mesma lógica de buscar as transações dentro do período é repetida em vários outros métodos desta classe."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 150,
+    "linha_fim": 151,
+    "justificativa": "A consulta a transações filtradas pelo período se repete novamente."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 746,
+    "linha_fim": 748,
+    "justificativa": "A consulta base de transações por período é duplicada neste método com a adição de um filtro."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 841,
+    "linha_fim": 843,
+    "justificativa": "Trecho que duplica a consulta de transações no intervalo de datas fornecido."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 936,
+    "linha_fim": 938,
+    "justificativa": "O código que consulta as transações utilizando $inicio e $fim é replicado mais uma vez."
+   },
+   {
+    "nome": "Message Chains",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 543,
+    "linha_fim": 544,
+    "justificativa": "A sequência longa de métodos encadeados (pluck, filter, unique, count) torna a linha de código fortemente acoplada e difícil de testar de forma isolada."
+   },
+   {
+    "nome": "Message Chains",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 685,
+    "linha_fim": 686,
+    "justificativa": "Encadeamento sucessivo de várias chamadas de métodos da coleção do Laravel (violação heurística da Lei de Demeter)."
+   },
+   {
+    "nome": "Message Chains",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 698,
+    "linha_fim": 699,
+    "justificativa": "Uso excessivo de encadeamento de métodos para derivar informações estruturais da coleção."
+   },
+   {
+    "nome": "Message Chains",
+    "arquivo": "app/Pdv/RelatorioGerencialDeCaixa.php",
+    "linha_inicio": 720,
+    "linha_fim": 721,
+    "justificativa": "A repetição deste extenso encadeamento aumenta a complexidade de leitura e a fragilidade do método."
+   }
+  ]
+ },
+ "desvios": []
+}

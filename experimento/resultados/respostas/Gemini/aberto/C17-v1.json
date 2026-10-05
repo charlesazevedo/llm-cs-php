@@ -1,0 +1,130 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C17-v1",
+ "cs_id": "C17",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "80b257bd38c4baaa5bf2aff6c5fc63fff27099f9ca936223e4abecc62c7c57a0",
+ "inicio": "2026-10-05T12:53:17+00:00",
+ "duracao_s": 34.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 5108,
+ "tokens_saida": 4214,
+ "tokens_raciocinio": 3197,
+ "custo": 0.060784,
+ "id_requisicao": "gen-1791204797-IDd62KtUrQI3JrrSsiQh",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 34773
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "God Class (Classe Deus)",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 13,
+    "linha_fim": 431,
+    "justificativa": "A classe assume muitas responsabilidades (vendas, caixa, descontos, sangrias, estatísticas mensais e anuais), centralizando lógicas de diversas entidades e violando o Princípio de Responsabilidade Única (SRP)."
+   },
+   {
+    "nome": "Violação de Encapsulamento (Data Class)",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 20,
+    "linha_fim": 265,
+    "justificativa": "A classe expõe dezenas de propriedades como públicas, permitindo que o estado interno seja modificado livremente por qualquer agente externo sem controle."
+   },
+   {
+    "nome": "Consultas de Banco de Dados Ineficientes",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 274,
+    "linha_fim": 281,
+    "justificativa": "Realiza múltiplas consultas sequenciais (sum, count, avg, max, min) na mesma tabela (Transacoes) com o mesmo escopo (today), o que poderia ser otimizado em uma única consulta agregada."
+   },
+   {
+    "nome": "Consultas de Banco de Dados Ineficientes",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 293,
+    "linha_fim": 305,
+    "justificativa": "Executa várias consultas independentes na tabela de Transações para agrupar formas de pagamento em vez de usar um 'group by' ou agregação única."
+   },
+   {
+    "nome": "Consultas de Banco de Dados Ineficientes",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 317,
+    "linha_fim": 318,
+    "justificativa": "Executa duas funções de agregação (avg e max) em consultas separadas ao banco, degradando a performance desnecessariamente."
+   },
+   {
+    "nome": "Consultas de Banco de Dados Ineficientes",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 330,
+    "linha_fim": 336,
+    "justificativa": "Executa diversas consultas de contagem e soma para calcular parcelamentos de hoje, podendo ser resolvido com uma única consulta no banco."
+   },
+   {
+    "nome": "Consultas de Banco de Dados Ineficientes",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 348,
+    "linha_fim": 350,
+    "justificativa": "Busca dados no modelo Caixa repetidas vezes sob as mesmas condições, o que gera redundância de consultas no banco de dados."
+   },
+   {
+    "nome": "Consultas de Banco de Dados Ineficientes",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 363,
+    "linha_fim": 365,
+    "justificativa": "Agrega dados de Sangria repetidas vezes no banco de dados (sum, count, max), o que poderia ser obtido de uma vez só."
+   },
+   {
+    "nome": "Consultas de Banco de Dados Ineficientes",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 377,
+    "linha_fim": 379,
+    "justificativa": "Realiza consultas repetidas na mesma tabela de Entrada_caixa para capturar diferentes métricas que poderiam ser agrupadas em uma só consulta."
+   },
+   {
+    "nome": "Consultas de Banco de Dados Ineficientes",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 409,
+    "linha_fim": 414,
+    "justificativa": "Faz três consultas individuais ao banco buscando a soma das transações do mês por método de pagamento em vez de utilizar agrupamento no banco de dados."
+   }
+  ]
+ },
+ "desvios": []
+}

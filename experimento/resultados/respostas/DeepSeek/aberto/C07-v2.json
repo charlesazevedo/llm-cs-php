@@ -1,0 +1,83 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C07-v2",
+ "cs_id": "C07",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "e3aa267dd8e50b8684fe6053be9977f26d7fee4f68652eb7618f42498c515cdd",
+ "inicio": "2026-10-03T23:16:48+00:00",
+ "duracao_s": 19.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 580,
+ "tokens_saida": 2205,
+ "tokens_raciocinio": 1931,
+ "custo": 0.004585372,
+ "id_requisicao": "gen-1791069408-kbWe8KeeTd76lkVDiwir",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 18903
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Estilos inline via JavaScript",
+    "arquivo": "resources/views/admin/caixa/aviso.blade.php",
+    "linha_inicio": 16,
+    "linha_fim": 17,
+    "justificativa": "Estilos CSS são aplicados diretamente via JavaScript, misturando responsabilidades e dificultando manutenção."
+   },
+   {
+    "nome": "Consulta duplicada ao DOM",
+    "arquivo": "resources/views/admin/caixa/aviso.blade.php",
+    "linha_inicio": 16,
+    "linha_fim": 17,
+    "justificativa": "O elemento é buscado duas vezes com getElementById, podendo ser armazenado em uma variável."
+   },
+   {
+    "nome": "Strings mágicas para cores",
+    "arquivo": "resources/views/admin/caixa/aviso.blade.php",
+    "linha_inicio": 16,
+    "linha_fim": 17,
+    "justificativa": "Os valores hexadecimais das cores estão fixos no código, dificultando reutilização e mudanças de tema."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,172 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C20-v1",
+ "cs_id": "C20",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "2f5b6847ce010e189e8996fcb692c02fafb45facca7dad72e4a0afb702c46d90",
+ "inicio": "2026-10-05T13:38:35+00:00",
+ "duracao_s": 32.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 3103,
+ "tokens_saida": 2051,
+ "tokens_raciocinio": 977,
+ "custo": 0.028266,
+ "id_requisicao": "gen-1791207515-5Qa3QAv3TAylWUrkq8lk",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 32526
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe com baixa coesão",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 12,
+    "linha_fim": 250,
+    "justificativa": "A classe concentra classificação de tickets, datas, fechamento de caixa, validação, pagamentos, taxas e estoque, reunindo responsabilidades que mudam por motivos distintos."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 23,
+    "linha_fim": 40,
+    "justificativa": "Os limites das faixas de ticket estão embutidos na cadeia condicional em vez de serem representados por constantes ou configuração de negócio."
+   },
+   {
+    "nome": "Cadeia condicional extensa",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 23,
+    "linha_fim": 41,
+    "justificativa": "A longa sequência de if/elseif para mapear faixas dificulta extensão e manutenção em comparação com uma tabela de intervalos."
+   },
+   {
+    "nome": "Switch extenso e repetitivo",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 55,
+    "linha_fim": 79,
+    "justificativa": "O mapeamento fixo dos sete números da semana para nomes é implementado com vários casos repetitivos em vez de uma tabela ou recurso de localização."
+   },
+   {
+    "nome": "Dependência rígida de persistência",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 93,
+    "linha_fim": 95,
+    "justificativa": "As chamadas estáticas aos modelos Eloquent acoplam diretamente a regra de negócio ao banco de dados e dificultam testes isolados."
+   },
+   {
+    "nome": "Carregamento e processamento excessivo em memória",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 94,
+    "linha_fim": 117,
+    "justificativa": "Coleções completas são carregadas e percorridas repetidamente para count, sum, max e filtros que poderiam ser executados diretamente pelo banco."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 104,
+    "linha_fim": 117,
+    "justificativa": "Limites de sangrias, descontos, parcelas e valor da venda aparecem como literais sem constantes que expressem as políticas correspondentes."
+   },
+   {
+    "nome": "Primitive Obsession",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 130,
+    "linha_fim": 154,
+    "justificativa": "A venda é representada por um array associativo de valores primitivos, sem um objeto que garanta campos, tipos e invariantes."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 137,
+    "linha_fim": 153,
+    "justificativa": "Os limites de parcelas, desconto e total são codificados diretamente na validação, espalhando regras de negócio como literais."
+   },
+   {
+    "nome": "Códigos de tipo primitivos",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 137,
+    "linha_fim": 139,
+    "justificativa": "As formas de pagamento são representadas por strings abreviadas DI, CR e DE em vez de enumeração ou objeto de valor."
+   },
+   {
+    "nome": "Cadeia condicional por código de tipo",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 178,
+    "linha_fim": 187,
+    "justificativa": "O comportamento de totalização é selecionado por uma sequência de comparações com códigos textuais de pagamento."
+   },
+   {
+    "nome": "Códigos de tipo primitivos",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 179,
+    "linha_fim": 186,
+    "justificativa": "Os códigos DI, CR e DE são novamente interpretados como strings, duplicando o conhecimento sobre formas de pagamento."
+   },
+   {
+    "nome": "Cadeia condicional aninhada",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 211,
+    "linha_fim": 225,
+    "justificativa": "O cálculo da taxa combina condicionais por forma de pagamento e por faixa de parcelas, tornando a política tarifária rígida e difícil de ampliar."
+   },
+   {
+    "nome": "Códigos de tipo primitivos",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 211,
+    "linha_fim": 225,
+    "justificativa": "O cálculo depende diretamente dos códigos textuais DE e CR, repetindo uma convenção de domínio sem encapsulamento."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 211,
+    "linha_fim": 224,
+    "justificativa": "Taxas e limites de parcelas estão embutidos no método como literais, dificultando a atualização da tabela tarifária."
+   },
+   {
+    "nome": "Números mágicos",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 239,
+    "linha_fim": 247,
+    "justificativa": "Os limites 0, 5 e 20 que definem o status do estoque aparecem diretamente na condição em vez de constantes ou configuração."
+   }
+  ]
+ },
+ "desvios": []
+}

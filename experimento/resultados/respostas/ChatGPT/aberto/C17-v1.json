@@ -1,0 +1,249 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C17-v1",
+ "cs_id": "C17",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "80b257bd38c4baaa5bf2aff6c5fc63fff27099f9ca936223e4abecc62c7c57a0",
+ "inicio": "2026-10-05T12:53:25+00:00",
+ "duracao_s": 35.7,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 4124,
+ "tokens_saida": 3125,
+ "tokens_raciocinio": 1456,
+ "custo": 0.0415585,
+ "id_requisicao": "gen-1791204806-7aUnd4mbj6TgX4aCzlpp",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 34650
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe grande",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 13,
+    "linha_fim": 430,
+    "justificativa": "A classe concentra dezenas de indicadores e consultas de vendas, pagamentos, caixa, sangrias, entradas e períodos distintos, acumulando responsabilidades excessivas."
+   },
+   {
+    "nome": "Estado público mutável",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 20,
+    "linha_fim": 265,
+    "justificativa": "Todos os indicadores são propriedades públicas e podem ser alterados externamente sem validação, comprometendo o encapsulamento."
+   },
+   {
+    "nome": "Objeto parcialmente inicializado",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 272,
+    "linha_fim": 430,
+    "justificativa": "Cada método preenche apenas parte das propriedades, permitindo que instâncias sejam consumidas com indicadores ainda nulos ou desatualizados."
+   },
+   {
+    "nome": "Nomenclatura fora do padrão",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 6,
+    "linha_fim": 6,
+    "justificativa": "O nome de classe Entrada_caixa usa underscore e não segue a convenção PascalCase adotada normalmente para classes PHP."
+   },
+   {
+    "nome": "Consultas redundantes ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 274,
+    "linha_fim": 281,
+    "justificativa": "A mesma seleção de transações do dia é executada repetidamente para calcular agregados que poderiam ser obtidos em uma única consulta."
+   },
+   {
+    "nome": "Processamento desnecessário em memória",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 279,
+    "linha_fim": 281,
+    "justificativa": "Todos os clientes do dia são carregados para a aplicação antes da deduplicação, em vez de usar uma contagem distinta no banco."
+   },
+   {
+    "nome": "Valor nulo não tratado",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 276,
+    "linha_fim": 278,
+    "justificativa": "As operações avg, max e min podem retornar null quando não há vendas, apesar de as propriedades serem documentadas como float."
+   },
+   {
+    "nome": "Consultas redundantes ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 293,
+    "linha_fim": 305,
+    "justificativa": "Totais e quantidades por forma de pagamento provocam várias consultas sobre o mesmo conjunto de transações diárias."
+   },
+   {
+    "nome": "Códigos mágicos",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 293,
+    "linha_fim": 305,
+    "justificativa": "Os códigos DI, CR e DE estão embutidos nas consultas sem constantes ou enumerações que expressem seu significado."
+   },
+   {
+    "nome": "Consultas redundantes ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 317,
+    "linha_fim": 318,
+    "justificativa": "A média e o máximo de descontos são buscados por duas consultas separadas sobre as mesmas transações do dia."
+   },
+   {
+    "nome": "Valor nulo não tratado",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 317,
+    "linha_fim": 318,
+    "justificativa": "Os agregados de desconto podem retornar null em dias sem transações, contrariando os tipos numéricos documentados."
+   },
+   {
+    "nome": "Consultas redundantes ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 330,
+    "linha_fim": 336,
+    "justificativa": "Os indicadores de parcelamento executam quatro consultas independentes sobre o mesmo conjunto diário."
+   },
+   {
+    "nome": "Número mágico",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 330,
+    "linha_fim": 335,
+    "justificativa": "Os valores 1 e maior que 1 codificam diretamente as regras de venda à vista e parcelada sem abstração de domínio."
+   },
+   {
+    "nome": "Valor nulo não tratado",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 336,
+    "linha_fim": 336,
+    "justificativa": "A média de parcelas pode ser null quando não existem vendas, embora a propriedade seja documentada como float."
+   },
+   {
+    "nome": "Consultas redundantes ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 348,
+    "linha_fim": 350,
+    "justificativa": "O mesmo registro de caixa do dia é consultado duas vezes para recuperar colunas que poderiam ser selecionadas juntas."
+   },
+   {
+    "nome": "Dependência direta do relógio do sistema",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 348,
+    "linha_fim": 350,
+    "justificativa": "O uso direto de date torna o comportamento dependente do relógio e do fuso global, além de dificultar testes determinísticos."
+   },
+   {
+    "nome": "Valor nulo não tratado",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 348,
+    "linha_fim": 350,
+    "justificativa": "value pode retornar null quando não existe caixa para a data, mas os saldos são documentados como valores float."
+   },
+   {
+    "nome": "Consultas redundantes ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 363,
+    "linha_fim": 365,
+    "justificativa": "Soma, quantidade e maior sangria são calculadas por três consultas separadas sobre as sangrias do dia."
+   },
+   {
+    "nome": "Valor nulo não tratado",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 365,
+    "linha_fim": 365,
+    "justificativa": "O maior valor de sangria pode ser null quando não há registros, contrariando o tipo float documentado."
+   },
+   {
+    "nome": "Consultas redundantes ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 377,
+    "linha_fim": 379,
+    "justificativa": "Soma, quantidade e maior entrada são calculadas por três consultas separadas sobre as entradas do dia."
+   },
+   {
+    "nome": "Valor nulo não tratado",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 379,
+    "linha_fim": 379,
+    "justificativa": "O maior valor de entrada pode ser null quando não há registros, contrariando o tipo float documentado."
+   },
+   {
+    "nome": "Consultas redundantes ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 391,
+    "linha_fim": 392,
+    "justificativa": "O total e a quantidade de vendas mensais são obtidos por consultas independentes sobre o mesmo conjunto de dados."
+   },
+   {
+    "nome": "Filtro temporal incompleto",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 393,
+    "linha_fim": 397,
+    "justificativa": "As consultas filtram apenas o número do mês e podem incluir registros do mesmo mês pertencentes a anos anteriores."
+   },
+   {
+    "nome": "Dependência direta do relógio do sistema",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 393,
+    "linha_fim": 396,
+    "justificativa": "A obtenção direta do mês com date dificulta o controle de tempo e a reprodução dos resultados em testes."
+   },
+   {
+    "nome": "Consultas redundantes ao banco",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 409,
+    "linha_fim": 414,
+    "justificativa": "Os totais mensais por pagamento executam três consultas quase idênticas que poderiam ser agregadas condicionalmente."
+   },
+   {
+    "nome": "Códigos mágicos",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 409,
+    "linha_fim": 414,
+    "justificativa": "Os códigos CR, DE e DI são repetidos diretamente nas consultas sem constantes ou enumerações do domínio."
+   },
+   {
+    "nome": "Dependência direta do relógio do sistema",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 426,
+    "linha_fim": 427,
+    "justificativa": "O cálculo do ano anterior depende diretamente de date, dificultando testes e sujeitando o resultado ao relógio global."
+   }
+  ]
+ },
+ "desvios": []
+}

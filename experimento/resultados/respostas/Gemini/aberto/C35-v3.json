@@ -1,0 +1,137 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C35-v3",
+ "cs_id": "C35",
+ "variante": "v3",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "fc5d0fccdf3c1bdf594ba010a4a4090eee7a1cc0bd912e4e38c6b69785f15424",
+ "inicio": "2026-10-05T15:23:05+00:00",
+ "duracao_s": 31.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4013,
+ "tokens_saida": 4017,
+ "tokens_raciocinio": 2974,
+ "custo": 0.05623,
+ "id_requisicao": "gen-1791213785-iR2X1sLTcgJFl5jPm3dq",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 31333
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A logica de sanitizacao de valores monetarios utilizando str_replace se repete em varios trechos do arquivo, violando o principio DRY."
+   },
+   {
+    "nome": "Information Exposure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 53,
+    "justificativa": "Retornar o array bruto de erro do banco de dados para o cliente expoe detalhes internos da infraestrutura e possiveis vulnerabilidades."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Realizar consultas ao banco de dados utilizando os metodos where e get dentro de um laco de repeticao degrada severamente a performance."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "A logica de sanitizacao de valores monetarios utilizando str_replace se repete em varios trechos do arquivo, violando o principio DRY."
+   },
+   {
+    "nome": "Information Exposure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "Retornar o array bruto de erro do banco de dados para o cliente expoe detalhes internos da infraestrutura e possiveis vulnerabilidades."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "A logica de sanitizacao de valores monetarios utilizando str_replace se repete em varios trechos do arquivo, violando o principio DRY."
+   },
+   {
+    "nome": "Undefined Variable / Logic Error",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "A variavel $e referente a excecao esta sendo acessada fora do bloco catch, o que gerara um erro fatal de variavel indefinida na execucao."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Realizar consultas ao banco de dados utilizando os metodos where e get dentro de um laco de repeticao degrada severamente a performance."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Realizar consultas ao banco de dados utilizando os metodos where e get dentro de um laco de repeticao degrada severamente a performance."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "A estrutura de repeticao para tratar as transacoes e buscas de estoque e uma copia exata do trecho anterior na condicional de dias."
+   },
+   {
+    "nome": "Misplaced Responsibility",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 241,
+    "linha_fim": 250,
+    "justificativa": "O calculo de desconto e uma regra de negocio que deveria estar encapsulada em um Model ou Service, e nao solta dentro do Controller."
+   }
+  ]
+ },
+ "desvios": []
+}

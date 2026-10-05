@@ -1,0 +1,88 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C20-v1",
+ "cs_id": "C20",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "2f5b6847ce010e189e8996fcb692c02fafb45facca7dad72e4a0afb702c46d90",
+ "inicio": "2026-10-05T13:38:28+00:00",
+ "duracao_s": 21.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 3683,
+ "tokens_saida": 2053,
+ "tokens_raciocinio": 1689,
+ "custo": 0.032002,
+ "id_requisicao": "gen-1791207509-XeMyV78Nsdr5FuMZ8w8u",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 21737
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Complex Conditional",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 23,
+    "linha_fim": 41,
+    "justificativa": "Uma longa cadeia de if/elseif que poderia ser simplificada utilizando uma estrutura de dados, tabela de decisão ou expressão match."
+   },
+   {
+    "nome": "Switch Statement",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 55,
+    "linha_fim": 79,
+    "justificativa": "O bloco switch verboso para mapear dias da semana pode ser substituído de forma mais limpa por um array associativo ou expressão match."
+   },
+   {
+    "nome": "Magic Numbers",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 104,
+    "linha_fim": 118,
+    "justificativa": "Valores numéricos fixos no código (como 5, 1000, 20, 6 e 5000) dificultam o entendimento das regras de negócio e a manutenção futura."
+   },
+   {
+    "nome": "Complex Conditional",
+    "arquivo": "app/Pdv/AnalisadorDeVendas.php",
+    "linha_inicio": 211,
+    "linha_fim": 225,
+    "justificativa": "Condicionais if/elseif aninhadas tornam a lógica difícil de ler, podendo ser substituídas por retornos antecipados (early returns) ou mapeamento de taxas."
+   }
+  ]
+ },
+ "desvios": []
+}

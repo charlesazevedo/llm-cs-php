@@ -1,0 +1,151 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C13-v1",
+ "cs_id": "C13",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "f68337108cfa6fc0c1fafcd657d7ddc70490328904c1119a825332c4e2e8a7fa",
+ "inicio": "2026-10-05T12:49:48+00:00",
+ "duracao_s": 34.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4611,
+ "tokens_saida": 4554,
+ "tokens_raciocinio": 3282,
+ "custo": 0.06387,
+ "id_requisicao": "gen-1791204588-TAlo9tILX5Xj2Vm46Rea",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 34156
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão manual de formatação de moeda (str_replace) repete-se ao longo da classe e deveria ser extraída para um método auxiliar ou mutator."
+   },
+   {
+    "nome": "Information Exposure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 53,
+    "justificativa": "O retorno direto de mensagens de erro do banco de dados ($e->errorInfo) expõe detalhes internos de infraestrutura para o cliente."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas ao banco de dados nos modelos Venda e Estoque são realizadas repetidamente dentro de um loop iterando sobre transações, o que compromete a performance."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "A conversão manual de formatação de moeda (str_replace) repete-se ao longo da classe e deveria ser extraída para um método auxiliar ou mutator."
+   },
+   {
+    "nome": "Information Exposure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "O retorno direto de mensagens de erro do banco de dados ($e->errorInfo) expõe detalhes internos de infraestrutura para o cliente."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 148,
+    "justificativa": "A conversão manual de formatação de moeda (str_replace) repete-se ao longo da classe e deveria ser extraída para um método auxiliar ou mutator."
+   },
+   {
+    "nome": "Information Exposure",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 161,
+    "justificativa": "O retorno direto de mensagens de erro do banco de dados ($e->errorInfo) expõe detalhes internos de infraestrutura para o cliente."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "A variável de erro $e está sendo utilizada no bloco else fora do contexto do catch, o que resultará em um erro fatal de variável não definida."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 182,
+    "linha_fim": 200,
+    "justificativa": "O bloco de lógica e laço para formatar transações e buscar itens é praticamente idêntico ao bloco existente no tratamento do range, quebrando o princípio DRY."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Consultas ao banco de dados nos modelos Venda e Estoque são realizadas repetidamente dentro de um loop iterando sobre transações, o que compromete a performance."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 201,
+    "linha_fim": 221,
+    "justificativa": "O bloco de lógica e laço para formatar transações e buscar itens é praticamente idêntico ao bloco existente no tratamento por dia, quebrando o princípio DRY."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Consultas ao banco de dados nos modelos Venda e Estoque são realizadas repetidamente dentro de um loop iterando sobre transações, o que compromete a performance."
+   },
+   {
+    "nome": "Long Parameter List",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 251,
+    "linha_fim": 263,
+    "justificativa": "O método possui 11 parâmetros de entrada, o que torna sua chamada confusa e difícil de manter, devendo os dados serem encapsulados em um DTO ou array."
+   }
+  ]
+ },
+ "desvios": []
+}

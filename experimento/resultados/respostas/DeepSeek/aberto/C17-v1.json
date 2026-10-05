@@ -1,0 +1,174 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C17-v1",
+ "cs_id": "C17",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "80b257bd38c4baaa5bf2aff6c5fc63fff27099f9ca936223e4abecc62c7c57a0",
+ "inicio": "2026-10-05T13:01:05+00:00",
+ "duracao_s": 85.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 4321,
+ "tokens_saida": 7514,
+ "tokens_raciocinio": 6125,
+ "custo": 0.017566252,
+ "id_requisicao": "gen-1791205265-ev80oDjbrCszgI7QMVUf",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 85183
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 293,
+    "linha_fim": 305,
+    "justificativa": "Usa strings literais 'DI', 'CR', 'DE' para identificar formas de pagamento, em vez de constantes nomeadas."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 330,
+    "linha_fim": 336,
+    "justificativa": "Usa valor literal '1' e operador '>' para condição de parcelas, em vez de constantes ou escopos nomeados."
+   },
+   {
+    "nome": "Magic Strings",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 409,
+    "linha_fim": 414,
+    "justificativa": "Repete uso de strings mágicas 'CR', 'DE', 'DI' para formas de pagamento."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 291,
+    "linha_fim": 308,
+    "justificativa": "Método duplica a estrutura de consulta de pagamentos presente em carregarPagamentosDoMes, variando apenas o escopo temporal."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 407,
+    "linha_fim": 417,
+    "justificativa": "Método duplica a estrutura de consulta de pagamentos presente em carregarPagamentos, variando apenas o escopo temporal."
+   },
+   {
+    "nome": "Large Class",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 13,
+    "linha_fim": 431,
+    "justificativa": "Classe concentra 37 propriedades e 8 métodos de carregamento, assumindo muitas responsabilidades de indicadores."
+   },
+   {
+    "nome": "Public Fields",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 20,
+    "linha_fim": 265,
+    "justificativa": "Todos os atributos são declarados como públicos, sem getters/setters, quebrando o encapsulamento."
+   },
+   {
+    "nome": "Repeated Queries",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 274,
+    "linha_fim": 278,
+    "justificativa": "Realiza cinco consultas separadas ao banco para o mesmo escopo (Transacoes::today()), que poderiam ser combinadas em uma única consulta com agregações."
+   },
+   {
+    "nome": "Repeated Queries",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 293,
+    "linha_fim": 305,
+    "justificativa": "Executa múltiplas consultas ao banco para o mesmo escopo, repetindo where e agregações, em vez de buscar dados de forma consolidada."
+   },
+   {
+    "nome": "Repeated Queries",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 330,
+    "linha_fim": 336,
+    "justificativa": "Executa múltiplas consultas ao banco para o mesmo escopo, repetindo where e agregações."
+   },
+   {
+    "nome": "Nullable Type Mismatch",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 276,
+    "linha_fim": 278,
+    "justificativa": "Atribuições de avg, max e min podem retornar null, mas as propriedades são tipadas como float/int, causando inconsistência."
+   },
+   {
+    "nome": "Nullable Type Mismatch",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 317,
+    "linha_fim": 318,
+    "justificativa": "Atribuições de avg e max podem retornar null, mas as propriedades são tipadas como float/int."
+   },
+   {
+    "nome": "Nullable Type Mismatch",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 365,
+    "linha_fim": 365,
+    "justificativa": "max('valor') pode retornar null, mas a propriedade maiorSangria é tipada como float."
+   },
+   {
+    "nome": "Nullable Type Mismatch",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 379,
+    "linha_fim": 379,
+    "justificativa": "max('valor') pode retornar null, mas a propriedade maiorEntrada é tipada como float."
+   },
+   {
+    "nome": "Nullable Type Mismatch",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 336,
+    "linha_fim": 336,
+    "justificativa": "avg('parcelas') pode retornar null, mas a propriedade mediaDeParcelas é tipada como float."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Pdv/PainelDoCaixa.php",
+    "linha_inicio": 348,
+    "linha_fim": 350,
+    "justificativa": "Chama date('Y-m-d') duas vezes separadamente, o que poderia ser armazenado em uma variável para evitar inconsistência e duplicação."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,102 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C21-v2",
+ "cs_id": "C21",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "cf64caf11808cd47031b51b0b63441e80319d3a00e935f78351dd8be1f1df028",
+ "inicio": "2026-10-05T13:39:22+00:00",
+ "duracao_s": 26.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 2736,
+ "tokens_saida": 3521,
+ "tokens_raciocinio": 2972,
+ "custo": 0.047724,
+ "id_requisicao": "gen-1791207562-ppKa7UqpqWVhy3bENxwz",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 26065
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Primitive Obsession",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 51,
+    "linha_fim": 54,
+    "justificativa": "A chave 'success' deveria ser um booleano (false), mas está sendo retornada como uma string ('false')."
+   },
+   {
+    "nome": "Information Exposure",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 66,
+    "linha_fim": 73,
+    "justificativa": "Retornar a mensagem bruta da exceção de banco de dados diretamente na resposta JSON pode expor detalhes sensíveis da infraestrutura e queries."
+   },
+   {
+    "nome": "Primitive Obsession",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 69,
+    "linha_fim": 72,
+    "justificativa": "A chave 'success' deveria ser um booleano (false), mas está sendo retornada como uma string ('false')."
+   },
+   {
+    "nome": "Primitive Obsession",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 80,
+    "linha_fim": 84,
+    "justificativa": "A chave 'success' deveria ser um booleano (true), mas está sendo retornada como uma string ('true')."
+   },
+   {
+    "nome": "Improper Exception Handling",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 96,
+    "linha_fim": 103,
+    "justificativa": "Lançar InvalidArgumentException na falha de validação e não tratá-la resultará em um erro 500 no servidor, quando o ideal seria retornar um erro HTTP 422."
+   },
+   {
+    "nome": "High Coupling",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 168,
+    "linha_fim": 178,
+    "justificativa": "A classe lida com fechamento de caixa, mas possui forte acoplamento com múltiplos modelos de domínio não relacionados diretamente à venda (Fornecedor, Marca, Categoria)."
+   }
+  ]
+ },
+ "desvios": []
+}

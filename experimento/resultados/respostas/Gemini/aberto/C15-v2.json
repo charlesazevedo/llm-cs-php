@@ -1,0 +1,81 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C15-v2",
+ "cs_id": "C15",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "b1981c83798f7343fbf037509a13390adca65cb5edce430047ccfcb2fd000453",
+ "inicio": "2026-10-05T12:51:44+00:00",
+ "duracao_s": 54.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 2432,
+ "tokens_saida": 1494,
+ "tokens_raciocinio": 1247,
+ "custo": 0.022792,
+ "id_requisicao": "gen-1791204704-dby2sP14hy8pgHJswxRX",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 54191
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Middle Man",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 11,
+    "linha_fim": 212,
+    "justificativa": "A classe age essencialmente como um intermediário, apenas delegando chamadas para os models Transacoes e Caixa sem adicionar comportamento."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 18,
+    "linha_fim": 191,
+    "justificativa": "A chamada 'Transacoes::today()' é repetida em quase todos os métodos, violando o princípio DRY e dificultando manutenções futuras."
+   },
+   {
+    "nome": "Duplicate Code",
+    "arquivo": "app/Pdv/ConsultasDoCaixa.php",
+    "linha_inicio": 198,
+    "linha_fim": 211,
+    "justificativa": "A consulta 'Caixa::where('data', date('Y-m-d'))' é duplicada nos métodos saldoInicial e saldoAtual."
+   }
+  ]
+ },
+ "desvios": []
+}

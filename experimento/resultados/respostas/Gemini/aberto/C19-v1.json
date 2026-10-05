@@ -1,0 +1,130 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C19-v1",
+ "cs_id": "C19",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "e9c1fc7f4b87df9bedfc15dd9e024012332cf39de364bac71736db2871af444e",
+ "inicio": "2026-10-05T13:37:25+00:00",
+ "duracao_s": 36.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4377,
+ "tokens_saida": 4809,
+ "tokens_raciocinio": 3825,
+ "custo": 0.066462,
+ "id_requisicao": "gen-1791207445-W0cAXTRREMnPyPMd33Vq",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 36417
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Método Longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método concentra muitas responsabilidades, lidando com formatação de valores, regras de negócio e consultas múltiplas simultaneamente."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O loop de formatação de transações e busca de vendas é repetido com pequenas variações em outras partes do código."
+   },
+   {
+    "nome": "Problema N+1 (Consulta em Loop)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 75,
+    "linha_fim": 83,
+    "justificativa": "Consultas aos modelos Venda e Estoque estão sendo executadas a cada iteração do loop, o que gera gargalos severos de performance."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Esse trecho repete exatamente a mesma lógica de formatação de transações e iteração de vendas encontrada em outros métodos e blocos."
+   },
+   {
+    "nome": "Problema N+1 (Consulta em Loop)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 188,
+    "linha_fim": 195,
+    "justificativa": "Assim como em outros trechos, as consultas de Venda e Estoque são feitas repetidamente dentro de um foreach de transações."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Bloco de repetição e formatação de transações é idêntico ao do filtro por 'day', configurando clara duplicação de código."
+   },
+   {
+    "nome": "Problema N+1 (Consulta em Loop)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 209,
+    "linha_fim": 216,
+    "justificativa": "Consultas ao banco para Venda e Estoque estão rodando em repetição a cada ciclo do loop, agravando a latência do sistema."
+   },
+   {
+    "nome": "Erro de Lógica (Variável Indefinida)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 164,
+    "linha_fim": 168,
+    "justificativa": "O código tenta acessar a propriedade $e->errorInfo[2] em um bloco 'else' fora de um 'catch', onde a variável $e não existe."
+   },
+   {
+    "nome": "Complexidade Condicional",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método baseia-se em uma cadeia de 'if/else' avaliando o tipo de data, o que poderia ser melhor resolvido com polimorfismo ou subdivisão de métodos."
+   },
+   {
+    "nome": "Código Duplicado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "O processo de sanitização da string trocando vírgulas e pontos ocorre identicamente e é espalhado em várias outras partes (linhas 119, 145, 148)."
+   }
+  ]
+ },
+ "desvios": []
+}

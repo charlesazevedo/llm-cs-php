@@ -1,0 +1,74 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C08-v2",
+ "cs_id": "C08",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "ceadac21c684b8b1c95609fd43f301e576094da22b28a2b2c8599252b0331c25",
+ "inicio": "2026-10-03T23:09:04+00:00",
+ "duracao_s": 8.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 1899,
+ "tokens_saida": 663,
+ "tokens_raciocinio": 354,
+ "custo": 0.020856,
+ "id_requisicao": "gen-1791068944-aJOR2EUyuZ3yzP6wrptN",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 8123
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Mistura de linguagens (HTML gerado em PHP)",
+    "arquivo": "app/Pdv/FormularioDeSangria.php",
+    "linha_inicio": 35,
+    "linha_fim": 41,
+    "justificativa": "O HTML do formulário é montado por concatenação de strings dentro de uma classe PHP, em vez de ficar numa view Blade, o que mistura apresentação e lógica e dificulta a manutenção."
+   },
+   {
+    "nome": "Mistura de linguagens (JavaScript embutido em PHP)",
+    "arquivo": "app/Pdv/ScriptDoFormularioDeSangria.php",
+    "linha_inicio": 17,
+    "linha_fim": 25,
+    "justificativa": "O código JavaScript está embutido como string (heredoc) numa classe PHP, em vez de ficar num arquivo .js próprio, o que impede reuso, cache, lint e testes do script."
+   }
+  ]
+ },
+ "desvios": []
+}

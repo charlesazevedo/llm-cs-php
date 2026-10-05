@@ -1,0 +1,109 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C32-v2",
+ "cs_id": "C32",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "b554b5d88759f1fc7f206fb969e9b82df9d85f5fdd9a393ce81fdae14edce51c",
+ "inicio": "2026-10-05T15:19:48+00:00",
+ "duracao_s": 24.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 3944,
+ "tokens_saida": 2916,
+ "tokens_raciocinio": 2221,
+ "custo": 0.04288,
+ "id_requisicao": "gen-1791213588-MoxlgFU1MNmDLIkvXEYV",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 24369
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A lógica de substituição de strings para tratar valores monetários está duplicada aqui e em várias outras partes do arquivo (linhas 119, 145, 148)."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas ao banco de dados (Venda e Estoque) sendo executadas dentro de laços de repetição (foreach), o que causa grave degradação de performance."
+   },
+   {
+    "nome": "Undefined Variable",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "A variável '$e' é chamada no bloco 'else', mas foi definida apenas no bloco 'catch' anterior, o que gerará um erro fatal durante a execução."
+   },
+   {
+    "nome": "Unreachable Code (Dead Code)",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Esta instrução de retorno nunca será alcançada, pois os blocos 'if' (e seus 'catch') e 'else' anteriores já possuem suas próprias instruções de retorno."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Novamente, consultas aos models Venda e Estoque ocorrem dentro de laços de repetição no processo de extração do histórico."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Este bloco de código é uma cópia exata do laço de repetição escrito nas linhas 186 a 198, violando o princípio DRY."
+   },
+   {
+    "nome": "Primitive Obsession",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 242,
+    "linha_fim": 245,
+    "justificativa": "Uso de tipo 'float' e funções de arredondamento para cálculos monetários, o que é uma má prática propensa a erros de precisão (o ideal seria int/centavos ou biblioteca específica)."
+   }
+  ]
+ },
+ "desvios": []
+}

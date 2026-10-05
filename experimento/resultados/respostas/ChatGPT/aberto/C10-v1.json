@@ -1,0 +1,67 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C10-v1",
+ "cs_id": "C10",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "7a62629d35324e64409742ab53ab21c0c48e4179b3d14c1be4111f711d70d99b",
+ "inicio": "2026-10-03T23:14:34+00:00",
+ "duracao_s": 3.8,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 486,
+ "tokens_saida": 151,
+ "tokens_raciocinio": 70,
+ "custo": 0.002482,
+ "id_requisicao": "gen-1791069274-xnsXwYR2wsQSP5HpAlBL",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 3660
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Tag HTML não fechada",
+    "arquivo": "resources/views/admin/caixa/saldo.blade.php",
+    "linha_inicio": 10,
+    "linha_fim": 15,
+    "justificativa": "A div externa com a classe \"panel panel-default\" é aberta, mas não é fechada, deixando a estrutura HTML inválida."
+   }
+  ]
+ },
+ "desvios": []
+}

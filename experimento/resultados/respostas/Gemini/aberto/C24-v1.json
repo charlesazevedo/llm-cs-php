@@ -1,0 +1,109 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C24-v1",
+ "cs_id": "C24",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "a1f91c050df2caeb7ca5ff1fc8088507218b8cf60f585297067799b4130f7b82",
+ "inicio": "2026-10-02T18:42:51+00:00",
+ "duracao_s": 27.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 4662,
+ "tokens_saida": 3564,
+ "tokens_raciocinio": 2899,
+ "custo": 0.052092,
+ "id_requisicao": "gen-1790966571-abRvQZAlLCn7ou0BbmDm",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 27435
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "Consultas aos modelos Venda e Estoque são realizadas dentro de um loop iterativo, o que causa lentidão ao realizar múltiplas requisições ao banco de dados."
+   },
+   {
+    "nome": "Undefined Variable / Logic Error",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "O bloco 'else' tenta acessar a variável de erro '$e', que não foi definida nesse escopo pois pertence unicamente ao bloco 'catch'."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "Este retorno é inalcançável porque as condicionais anteriores 'if' e 'else' já retornam uma resposta e encerram a execução do método."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "Consultas aos modelos Venda e Estoque estão inseridas dentro de um loop sobre as transações (N+1 queries), degradando a performance da API."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Este laço que itera pelas transações e busca vendas possui lógica idêntica à já definida nas linhas 186 a 198 para outro tipo de pesquisa."
+   },
+   {
+    "nome": "N+1 Query Problem",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "Assim como no condicional anterior, há consultas repetitivas de Venda e Estoque sendo executadas dentro de um loop."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 259,
+    "linha_fim": 283,
+    "justificativa": "A implementação inteira do método resumoParaConferencia é uma cópia exata do método resumoParaFechamento."
+   }
+  ]
+ },
+ "desvios": []
+}

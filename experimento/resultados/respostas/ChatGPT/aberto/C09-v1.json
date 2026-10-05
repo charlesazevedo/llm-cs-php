@@ -1,0 +1,130 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C09-v1",
+ "cs_id": "C09",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "fe313af2ea43205a79be83263c33b8f3f6dbd4f4de9b81909bc537f7350d01d0",
+ "inicio": "2026-10-03T23:13:52+00:00",
+ "duracao_s": 9.5,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 1315,
+ "tokens_saida": 860,
+ "tokens_raciocinio": 191,
+ "custo": 0.011886,
+ "id_requisicao": "gen-1791069232-cJ4V2aJqAWBxnuujevkb",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 9411
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado",
+    "arquivo": "resources/views/admin/caixa/nova-entrada.blade.php",
+    "linha_inicio": 9,
+    "linha_fim": 19,
+    "justificativa": "A estrutura do formulário é praticamente idêntica à da tela de sangria, variando apenas textos, rota, identificadores e estilo do botão."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "resources/views/admin/caixa/nova-sangria.blade.php",
+    "linha_inicio": 9,
+    "linha_fim": 19,
+    "justificativa": "A estrutura do formulário é praticamente idêntica à da tela de entrada, indicando a necessidade de um componente ou partial reutilizável."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "resources/views/admin/caixa/nova-entrada.blade.php",
+    "linha_inicio": 21,
+    "linha_fim": 40,
+    "justificativa": "O script de submissão assíncrona está integralmente duplicado na view de sangria."
+   },
+   {
+    "nome": "Código duplicado",
+    "arquivo": "resources/views/admin/caixa/nova-sangria.blade.php",
+    "linha_inicio": 21,
+    "linha_fim": 40,
+    "justificativa": "O script de submissão assíncrona está integralmente duplicado na view de entrada."
+   },
+   {
+    "nome": "JavaScript embutido na view",
+    "arquivo": "resources/views/admin/caixa/nova-entrada.blade.php",
+    "linha_inicio": 21,
+    "linha_fim": 40,
+    "justificativa": "A lógica de comportamento está misturada à apresentação, dificultando reutilização, testes e manutenção."
+   },
+   {
+    "nome": "JavaScript embutido na view",
+    "arquivo": "resources/views/admin/caixa/nova-sangria.blade.php",
+    "linha_inicio": 21,
+    "linha_fim": 40,
+    "justificativa": "A lógica de comportamento está misturada à apresentação, dificultando reutilização, testes e manutenção."
+   },
+   {
+    "nome": "Tratamento de erro ausente",
+    "arquivo": "resources/views/admin/caixa/nova-entrada.blade.php",
+    "linha_inicio": 27,
+    "linha_fim": 36,
+    "justificativa": "A requisição AJAX trata somente respostas bem-sucedidas e não informa ao usuário falhas de rede, HTTP ou respostas JSON inválidas."
+   },
+   {
+    "nome": "Tratamento de erro ausente",
+    "arquivo": "resources/views/admin/caixa/nova-sangria.blade.php",
+    "linha_inicio": 27,
+    "linha_fim": 36,
+    "justificativa": "A requisição AJAX trata somente respostas bem-sucedidas e não informa ao usuário falhas de rede, HTTP ou respostas JSON inválidas."
+   },
+   {
+    "nome": "Booleano representado como string",
+    "arquivo": "resources/views/admin/caixa/nova-entrada.blade.php",
+    "linha_inicio": 28,
+    "linha_fim": 28,
+    "justificativa": "Comparar success com a string 'true' cria um contrato frágil e falha caso a API retorne o valor booleano true."
+   },
+   {
+    "nome": "Booleano representado como string",
+    "arquivo": "resources/views/admin/caixa/nova-sangria.blade.php",
+    "linha_inicio": 28,
+    "linha_fim": 28,
+    "justificativa": "Comparar success com a string 'true' cria um contrato frágil e falha caso a API retorne o valor booleano true."
+   }
+  ]
+ },
+ "desvios": []
+}

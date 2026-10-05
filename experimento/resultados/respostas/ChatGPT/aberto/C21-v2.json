@@ -1,0 +1,151 @@
+{
+ "modelo": "ChatGPT",
+ "modelo_pedido": "openai/gpt-5.6-sol",
+ "provider": {
+  "order": [
+   "openai"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C21-v2",
+ "cs_id": "C21",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "cf64caf11808cd47031b51b0b63441e80319d3a00e935f78351dd8be1f1df028",
+ "inicio": "2026-10-05T13:39:39+00:00",
+ "duracao_s": 37.3,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "openai/gpt-5.6-sol",
+ "provedor_servido": "OpenAI",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "completed",
+ "recusa": null,
+ "tokens_entrada": 2381,
+ "tokens_saida": 2859,
+ "tokens_raciocinio": 2005,
+ "custo": 0.034541,
+ "id_requisicao": "gen-1791207579-MsixcKjccLy08Ic8VVA2",
+ "roteamento": {
+  "requested": "openai/gpt-5.6-sol",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=OpenAI",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 7,
+   "available": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-5.6-sol-20260709",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 37085
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Classe com múltiplas responsabilidades",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 45,
+    "linha_fim": 193,
+    "justificativa": "A classe acumula validação HTTP, persistência, controle transacional, cache, autenticação e geração de resumos financeiros e de estoque."
+   },
+   {
+    "nome": "Acoplamento excessivo",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 45,
+    "linha_fim": 193,
+    "justificativa": "A implementação depende diretamente de numerosos modelos e facades estáticos, dificultando testes isolados e alterações nas dependências."
+   },
+   {
+    "nome": "Booleano representado como string",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 51,
+    "linha_fim": 54,
+    "justificativa": "O campo success usa a string 'false' em vez do valor booleano false, podendo causar interpretações incorretas no cliente."
+   },
+   {
+    "nome": "Conversão monetária manual e frágil",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 57,
+    "linha_fim": 58,
+    "justificativa": "O valor monetário é normalizado por substituição manual de separadores, sem garantir formato, escala ou validade numérica."
+   },
+   {
+    "nome": "Booleano representado como string",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 69,
+    "linha_fim": 72,
+    "justificativa": "O campo success usa a string 'false' em vez do valor booleano false, tornando o contrato JSON semanticamente incorreto."
+   },
+   {
+    "nome": "Vazamento de detalhes internos",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 66,
+    "linha_fim": 72,
+    "justificativa": "A mensagem original da exceção de banco de dados é enviada ao cliente e pode expor informações internas da aplicação."
+   },
+   {
+    "nome": "Erro retornado sem status HTTP apropriado",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 50,
+    "linha_fim": 54,
+    "justificativa": "A ausência de um código HTTP de erro faz a resposta de caixa inexistente ser devolvida com o status padrão de sucesso."
+   },
+   {
+    "nome": "Erro retornado sem status HTTP apropriado",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 66,
+    "linha_fim": 72,
+    "justificativa": "A falha de persistência é convertida em JSON sem definir um status HTTP de erro correspondente."
+   },
+   {
+    "nome": "Booleano representado como string",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 80,
+    "linha_fim": 84,
+    "justificativa": "O campo success usa a string 'true' em vez do valor booleano true, criando um contrato de API propenso a erros."
+   },
+   {
+    "nome": "Validação insuficiente de entrada",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 96,
+    "linha_fim": 102,
+    "justificativa": "A regra verifica apenas a presença de contado e permite textos, valores negativos ou formatos monetários inválidos."
+   },
+   {
+    "nome": "Exceção genérica para erro de validação",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 100,
+    "linha_fim": 102,
+    "justificativa": "Um erro esperado de entrada é lançado como InvalidArgumentException em vez de produzir uma resposta de validação estruturada."
+   },
+   {
+    "nome": "Primitive Obsession para valores monetários",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 114,
+    "linha_fim": 160,
+    "justificativa": "Valores financeiros são manipulados diretamente como escalares em somas e subtrações, sem um tipo monetário que controle precisão e arredondamento."
+   },
+   {
+    "nome": "Magic string",
+    "arquivo": "app/Pdv/FechamentoDeCaixa.php",
+    "linha_inicio": 157,
+    "linha_fim": 160,
+    "justificativa": "O código de pagamento 'DI' está embutido no cálculo sem constante ou enumeração que documente seu significado."
+   }
+  ]
+ },
+ "desvios": []
+}

@@ -1,0 +1,102 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C13-v1",
+ "cs_id": "C13",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "f68337108cfa6fc0c1fafcd657d7ddc70490328904c1119a825332c4e2e8a7fa",
+ "inicio": "2026-10-05T12:48:35+00:00",
+ "duracao_s": 9.2,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 6087,
+ "tokens_saida": 480,
+ "tokens_raciocinio": 0,
+ "custo": 0.033948,
+ "id_requisicao": "gen-1791204515-TM1uqXQEfShO9VrnqNdd",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 8727,
+  "pipeline": [
+   {
+    "type": "guardrail",
+    "name": "moderation",
+    "summary": "Content passed OpenAI moderation",
+    "data": {
+     "engine": "openai-moderations",
+     "flagged": false,
+     "moderator_ids": [
+      "OpenAIOmniModerator"
+     ]
+    }
+   }
+  ]
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Long Parameter List",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 251,
+    "linha_fim": 263,
+    "justificativa": "O método registrarVendaDeItem recebe onze parâmetros primitivos que poderiam ser agrupados em objetos como transação e item de venda."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 183,
+    "linha_fim": 220,
+    "justificativa": "Os ramos 'day' e 'range' repetem o mesmo laço de formatação das transações e montagem dos detalhes, que também aparece em fecharCaixaView."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView mistura consultas, laços aninhados, formatação monetária e montagem da view em um único método extenso."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI concentra três fluxos distintos com consultas e formatação em um só método condicional extenso."
+   }
+  ]
+ },
+ "desvios": []
+}

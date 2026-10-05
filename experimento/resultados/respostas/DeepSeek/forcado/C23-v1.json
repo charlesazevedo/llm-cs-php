@@ -1,0 +1,377 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "forcado",
+ "entrada": "C23-v1",
+ "cs_id": "C23",
+ "variante": "v1",
+ "hash_condicao": "f95b74f9fca5d23d",
+ "sha256_entrada": "f77ae490ae976c9be1364583e757d899684970aa79752ca844fc739a8937a9b4",
+ "inicio": "2026-10-05T14:07:20+00:00",
+ "duracao_s": 83.4,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 6563,
+ "tokens_saida": 8690,
+ "tokens_raciocinio": 7003,
+ "custo": 0.02153778,
+ "id_requisicao": "gen-1791209240-JExPgx49grIitfbNORhh",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 83044
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "avaliacoes": [
+   {
+    "item": 1,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 2,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 3,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 4,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 5,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 6,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 7,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 8,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 9,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 10,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 11,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 12,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 13,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 14,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Pdv/FormaDePagamento.php",
+      "linha_inicio": 8,
+      "linha_fim": 8
+     }
+    ],
+    "justificativa": "A classe FormaDePagamento possui 16 subclasses (BoletoBancario, CartaoDeCredito, CartaoDeDebito, CarteiraDigital, Cashback, Cheque, ChequePreDatado, Crediario, CreditoDaLoja, Dinheiro, LinkDePagamento, Pix, TransferenciaBancaria, ValeAlimentacao, ValePresente, ValeRefeicao), excedendo o limite de 15."
+   },
+   {
+    "item": 15,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 16,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 17,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 18,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 19,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 20,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 21,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 22,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 23,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 24,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 25,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 26,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 27,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 28,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 29,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 30,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 31,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 32,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 33,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 34,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 35,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 36,
+    "presente": true,
+    "trechos": [
+     {
+      "arquivo": "app/Pdv/BoletoBancario.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/CartaoDeCredito.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/CartaoDeDebito.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/CarteiraDigital.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/Cashback.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/Cheque.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/ChequePreDatado.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/Crediario.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/CreditoDaLoja.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/Dinheiro.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/LinkDePagamento.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/Pix.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/TransferenciaBancaria.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/ValeAlimentacao.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/ValePresente.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     },
+     {
+      "arquivo": "app/Pdv/ValeRefeicao.php",
+      "linha_inicio": 10,
+      "linha_fim": 38
+     }
+    ],
+    "justificativa": "As 16 subclasses repetem a mesma estrutura de métodos codigo(), nome() e taxa(), incluindo docblocks, diferindo apenas nos valores retornados. Isso constitui duplicação de código em diferentes partes do sistema."
+   },
+   {
+    "item": 37,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   },
+   {
+    "item": 38,
+    "presente": false,
+    "trechos": [],
+    "justificativa": ""
+   }
+  ]
+ },
+ "desvios": []
+}

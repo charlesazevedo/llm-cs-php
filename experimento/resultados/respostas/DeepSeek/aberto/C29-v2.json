@@ -1,0 +1,209 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C29-v2",
+ "cs_id": "C29",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "7ab7ed0c47bcd74db5f4e8a736cfae4c50a151eb3413b5495801ba997f73b7e5",
+ "inicio": "2026-10-05T14:32:54+00:00",
+ "duracao_s": 86.0,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 3551,
+ "tokens_saida": 7924,
+ "tokens_raciocinio": 5976,
+ "custo": 0.015909916,
+ "id_requisicao": "gen-1791210774-3omIohuWWj05PjANKgBv",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 85931
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Código duplicado - Sanitização de moeda",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de valor monetário com str_replace é repetida nas linhas 39 e 40."
+   },
+   {
+    "nome": "Código duplicado - Sanitização de moeda",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 119,
+    "linha_fim": 119,
+    "justificativa": "A conversão de valor monetário com str_replace é repetida na linha 119."
+   },
+   {
+    "nome": "Código duplicado - Sanitização de moeda",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 145,
+    "linha_fim": 145,
+    "justificativa": "A conversão de valor monetário com str_replace é repetida na linha 145."
+   },
+   {
+    "nome": "Código duplicado - Sanitização de moeda",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 148,
+    "linha_fim": 148,
+    "justificativa": "A conversão de valor monetário com str_replace é repetida na linha 148."
+   },
+   {
+    "nome": "Código duplicado - Formatação de detalhes da transação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 73,
+    "linha_fim": 86,
+    "justificativa": "O bloco que monta os detalhes da transação é duplicado em fecharCaixaView e nos tipos day e range do histórico."
+   },
+   {
+    "nome": "Código duplicado - Formatação de detalhes da transação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 198,
+    "justificativa": "O bloco que monta os detalhes da transação é duplicado no ramo day do histórico."
+   },
+   {
+    "nome": "Código duplicado - Formatação de detalhes da transação",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 207,
+    "linha_fim": 219,
+    "justificativa": "O bloco que monta os detalhes da transação é duplicado no ramo range do histórico."
+   },
+   {
+    "nome": "Tipo de retorno inconsistente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 43,
+    "linha_fim": 56,
+    "justificativa": "O método iniciarCaixa retorna JSON em um caminho e uma View em outro, causando inconsistência no tipo de resposta."
+   },
+   {
+    "nome": "Tipo de retorno inconsistente / Retorno ausente",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 115,
+    "linha_fim": 134,
+    "justificativa": "O método sangriaPost retorna JSON ou string bruta e não retorna nada quando a condição Caixa::checkOpen() é falsa."
+   },
+   {
+    "nome": "Tratamento de erro inadequado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 48,
+    "linha_fim": 52,
+    "justificativa": "O bloco catch retorna a mensagem de erro do banco diretamente ao cliente, expondo informações internas."
+   },
+   {
+    "nome": "Tratamento de erro inadequado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 128,
+    "linha_fim": 130,
+    "justificativa": "O bloco catch retorna a string de erro do banco diretamente, sem formato JSON e expondo detalhes internos."
+   },
+   {
+    "nome": "Tratamento de erro inadequado",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 156,
+    "linha_fim": 160,
+    "justificativa": "O bloco catch retorna a mensagem de erro do banco diretamente ao cliente, expondo informações internas."
+   },
+   {
+    "nome": "Bloco catch vazio",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 242,
+    "linha_fim": 244,
+    "justificativa": "O catch em reabrirCaixaDoDia engole a exceção sem registro ou tratamento, dificultando a depuração."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "O método fecharCaixaView é extenso e acumula múltiplas responsabilidades como consulta, formatação e preparação de dados."
+   },
+   {
+    "nome": "Método longo",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "O método historicoAPI possui vários ramos com lógica complexa e duplicada, tornando-o extenso e difícil de manter."
+   },
+   {
+    "nome": "String mágica 'caixa_aberto'",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 41,
+    "linha_fim": 41,
+    "justificativa": "A string literal 'caixa_aberto' é usada como chave de configuração, devendo ser extraída para constante."
+   },
+   {
+    "nome": "String mágica 'caixa_aberto'",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 103,
+    "linha_fim": 103,
+    "justificativa": "A string literal 'caixa_aberto' é usada como chave de configuração, devendo ser extraída para constante."
+   },
+   {
+    "nome": "String mágica 'caixa_aberto'",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 241,
+    "linha_fim": 241,
+    "justificativa": "A string literal 'caixa_aberto' é usada como chave de configuração, devendo ser extraída para constante."
+   },
+   {
+    "nome": "Erro de digitação em nome de propriedade",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 225,
+    "linha_fim": 225,
+    "justificativa": "A propriedade $request->rage provavelmente é um erro de digitação para 'range', indicando má nomeação."
+   },
+   {
+    "nome": "Código morto",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "A instrução return $request->valor é inalcançável porque todos os caminhos anteriores já retornam."
+   },
+   {
+    "nome": "Uso de variável indefinida",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 163,
+    "linha_fim": 168,
+    "justificativa": "No bloco else de addCaixa, a variável $e é utilizada (linha 166) sem estar definida, pois está fora do escopo do catch."
+   }
+  ]
+ },
+ "desvios": []
+}

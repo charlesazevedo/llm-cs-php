@@ -1,0 +1,137 @@
+{
+ "modelo": "Claude",
+ "modelo_pedido": "anthropic/claude-opus-5.5",
+ "provider": {
+  "order": [
+   "anthropic"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C30-v2",
+ "cs_id": "C30",
+ "variante": "v2",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "6626da370d57abbada5318b5b99021bf6378f0608efb9bd32568dd02718661c3",
+ "inicio": "2026-10-05T15:18:06+00:00",
+ "duracao_s": 13.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "anthropic/claude-opus-5.5",
+ "provedor_servido": "Anthropic",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "end_turn",
+ "recusa": null,
+ "tokens_entrada": 5359,
+ "tokens_saida": 1338,
+ "tokens_raciocinio": 0,
+ "custo": 0.048196,
+ "id_requisicao": "gen-1791213488-RO84zLPBEHAZ3TWAFWWU",
+ "roteamento": {
+  "requested": "anthropic/claude-opus-5.5",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Anthropic",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 11,
+   "available": [
+    {
+     "provider": "Anthropic",
+     "model": "anthropic/claude-opus-5.5-20260921",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 12232
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 186,
+    "linha_fim": 219,
+    "justificativa": "O laço que formata as transações e monta os detalhes de venda aparece repetido nos ramos 'day' e 'range', e também em fecharCaixaView, quase idêntico."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 60,
+    "linha_fim": 100,
+    "justificativa": "fecharCaixaView junta em um só método a consulta, a formatação de valores, a montagem de detalhes e os cálculos de totais."
+   },
+   {
+    "nome": "Long Method",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 178,
+    "linha_fim": 222,
+    "justificativa": "historicoAPI é extenso, tem vários ramos condicionais e repete lógica de formatação dentro de cada um."
+   },
+   {
+    "nome": "Switch Statements",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 179,
+    "linha_fim": 221,
+    "justificativa": "Uma cadeia de if/else sobre a string $type escolhe comportamentos distintos, o que favorece duplicação e dificulta a extensão."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 39,
+    "linha_fim": 40,
+    "justificativa": "A conversão de moeda com str_replace([\".\",\",\"],[\"\",\".\"]) se repete em vários métodos (linhas 39, 40, 119, 145 e 148) em vez de ficar em um helper."
+   },
+   {
+    "nome": "Duplicated Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 92,
+    "linha_fim": 96,
+    "justificativa": "number_format($x, 2, ',', '.') aparece repetido em todo o controller, embora já exista o método formatarEmReais."
+   },
+   {
+    "nome": "Middle Man",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 21,
+    "linha_fim": 23,
+    "justificativa": "O método público data() só delega para date('Y-m-d') e quase não é usado, já que o código chama date diretamente em outros pontos."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 169,
+    "linha_fim": 169,
+    "justificativa": "O 'return $request->valor' não pode ser alcançado, pois todos os ramos anteriores já retornam."
+   },
+   {
+    "nome": "Dead Code",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 241,
+    "linha_fim": 244,
+    "justificativa": "O método público formatarSaldo não é usado em nenhum ponto do controller."
+   },
+   {
+    "nome": "Message Chains",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 79,
+    "linha_fim": 83,
+    "justificativa": "Há uma consulta de Estoque para cada item de venda de cada transação (problema N+1), quando relacionamentos Eloquent deveriam ser usados."
+   },
+   {
+    "nome": "Magic Number",
+    "arquivo": "app/Http/Controllers/Admin/CaixaController.php",
+    "linha_inicio": 76,
+    "linha_fim": 76,
+    "justificativa": "Os códigos 'DI', 'CR' e 'DE' estão fixos como strings mágicas e se repetem nas linhas 76, 189 e 210 sem constantes ou mapeamento centralizado."
+   }
+  ]
+ },
+ "desvios": []
+}

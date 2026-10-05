@@ -1,0 +1,90 @@
+{
+ "modelo": "DeepSeek",
+ "modelo_pedido": "deepseek/deepseek-v4-pro-0813",
+ "provider": {
+  "order": [
+   "deepseek"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "allow"
+ },
+ "formato": "json_object",
+ "params": {
+  "temperature": 0
+ },
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C07-v1",
+ "cs_id": "C07",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "6311009611746a1c1473c0dff35334d9d1c7ae1cdcfa4c11cd37196d5584e74e",
+ "inicio": "2026-10-03T23:16:21+00:00",
+ "duracao_s": 27.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "deepseek/deepseek-v4-pro-0813",
+ "provedor_servido": "DeepSeek",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "stop",
+ "recusa": null,
+ "tokens_entrada": 721,
+ "tokens_saida": 3682,
+ "tokens_raciocinio": 3320,
+ "custo": 0.007602892,
+ "id_requisicao": "gen-1791069381-f73YR8FPKcas35CF17bJ",
+ "roteamento": {
+  "requested": "deepseek/deepseek-v4-pro-0813",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=DeepSeek",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 20,
+   "available": [
+    {
+     "provider": "DeepSeek",
+     "model": "deepseek/deepseek-v4-pro-20260813",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 27647
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Inline JavaScript in Blade view",
+    "arquivo": "resources/views/admin/caixa/movimentacoes.blade.php",
+    "linha_inicio": 28,
+    "linha_fim": 34,
+    "justificativa": "O JavaScript está embutido diretamente no template Blade, dificultando a manutenção e o reaproveitamento do código."
+   },
+   {
+    "nome": "Styling via JavaScript",
+    "arquivo": "resources/views/admin/caixa/movimentacoes.blade.php",
+    "linha_inicio": 30,
+    "linha_fim": 32,
+    "justificativa": "A estilização é aplicada imperativamente via jQuery .css() em vez de usar classes CSS, misturando responsabilidades e reduzindo a reutilização."
+   },
+   {
+    "nome": "Conditional logic in view",
+    "arquivo": "resources/views/admin/caixa/movimentacoes.blade.php",
+    "linha_inicio": 21,
+    "linha_fim": 21,
+    "justificativa": "A view contém uma expressão condicional ternária para atribuir classe CSS, misturando lógica de apresentação com marcação."
+   },
+   {
+    "nome": "Missing empty state handling",
+    "arquivo": "resources/views/admin/caixa/movimentacoes.blade.php",
+    "linha_inicio": 18,
+    "linha_fim": 23,
+    "justificativa": "O loop @foreach não trata o caso em que a coleção $movimentacoes está vazia, podendo exibir apenas uma tabela vazia sem mensagem ao usuário."
+   }
+  ]
+ },
+ "desvios": []
+}

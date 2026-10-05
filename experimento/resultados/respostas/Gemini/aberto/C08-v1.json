@@ -1,0 +1,67 @@
+{
+ "modelo": "Gemini",
+ "modelo_pedido": "google/gemini-3.1-pro-preview",
+ "provider": {
+  "order": [
+   "google-ai-studio"
+  ],
+  "allow_fallbacks": false,
+  "require_parameters": true,
+  "data_collection": "deny"
+ },
+ "formato": "json_schema",
+ "params": {},
+ "max_tokens": 64000,
+ "modo": "aberto",
+ "entrada": "C08-v1",
+ "cs_id": "C08",
+ "variante": "v1",
+ "hash_condicao": "ee85a2056993cd3b",
+ "sha256_entrada": "85867c70944782ab4d5227cecaec591481ab3b30d3a9ee924ef9e83d449beec9",
+ "inicio": "2026-10-03T23:11:58+00:00",
+ "duracao_s": 7.9,
+ "execucao": "paralela, uma fila por modelo",
+ "modelo_servido": "google/gemini-3.1-pro-preview",
+ "provedor_servido": "Google AI Studio",
+ "stop_reason": "stop",
+ "stop_reason_nativo": "STOP",
+ "recusa": null,
+ "tokens_entrada": 1003,
+ "tokens_saida": 829,
+ "tokens_raciocinio": 757,
+ "custo": 0.011954,
+ "id_requisicao": "gen-1791069118-YNj3QiGYrKGOg32gKI9j",
+ "roteamento": {
+  "requested": "google/gemini-3.1-pro-preview",
+  "strategy": "direct",
+  "region": "JDO",
+  "summary": "available=1, selected=Google AI Studio",
+  "attempt": 1,
+  "is_byok": false,
+  "endpoints": {
+   "total": 6,
+   "available": [
+    {
+     "provider": "Google AI Studio",
+     "model": "google/gemini-3.1-pro-preview-20260219",
+     "selected": true
+    }
+   ]
+  },
+  "generation_time": 7750
+ },
+ "recusas_antes": [],
+ "espera_s": 0,
+ "resposta": {
+  "smells": [
+   {
+    "nome": "Embedded HTML (Violação do Padrão MVC)",
+    "arquivo": "app/Pdv/TabelaDeSangrias.php",
+    "linha_inicio": 8,
+    "linha_fim": 64,
+    "justificativa": "A classe PHP está gerando código HTML manualmente concatenando strings, responsabilidade que deveria ser delegada a uma View (template Blade) para manter a separação de conceitos."
+   }
+  ]
+ },
+ "desvios": []
+}

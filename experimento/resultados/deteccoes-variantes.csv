@@ -1,0 +1,713 @@
+cs_id,variante,entrada,tipo,modelo,modo,resultado,motivo,automatico,julgamento,citacoes,outros_citados,outros_do_catalogo,json_valido
+C01,v1,C01-v1,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,31,30,3,True
+C01,v2,C01-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,32,32,3,True
+C01,v3,C01-v3,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,31,30,5,True
+C02,v1,C02-v1,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,sim,33,32,5,True
+C02,v2,C02-v2,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,34,33,6,True
+C03,v1,C03-v1,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,45,45,4,True
+C03,v2,C03-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,28,28,4,True
+C04,v1,C04-v1,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C04,v2,C04-v2,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,5,5,4,True
+C05,v1,C05-v1,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,4,4,0,True
+C05,v2,C05-v2,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,3,0,0,True
+C05,v3,C05-v3,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,34,34,4,True
+C06,v1,C06-v1,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,2,1,0,True
+C06,v2,C06-v2,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,3,2,0,True
+C06,v3,C06-v3,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,26,26,3,True
+C07,v1,C07-v1,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,3,2,1,True
+C07,v2,C07-v2,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,3,3,0,True
+C08,v1,C08-v1,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,8,8,2,True
+C08,v2,C08-v2,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,9,9,1,True
+C09,v1,C09-v1,arquivos,ChatGPT,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,10,6,2,True
+C09,v2,C09-v2,membros,ChatGPT,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,30,28,2,True
+C10,v1,C10-v1,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C10,v2,C10-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,28,28,5,True
+C10,v3,C10-v3,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,sim,1,0,0,True
+C11,v1,C11-v1,arquivos,ChatGPT,aberto,detectada,julgamento manual: a citação aponta o CS no código injetado,a_julgar,sim,40,39,12,True
+C11,v2,C11-v2,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,40,39,35,True
+C12,v1,C12-v1,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,33,31,1,True
+C12,v2,C12-v2,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,38,35,5,True
+C13,v1,C13-v1,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,36,35,4,True
+C13,v2,C13-v2,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,sim,30,29,4,True
+C14,v1,C14-v1,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,15,15,1,True
+C14,v2,C14-v2,arquivos,ChatGPT,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,20,19,1,True
+C15,v1,C15-v1,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,9,9,1,True
+C15,v2,C15-v2,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,15,15,2,True
+C16,v1,C16-v1,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,9,9,1,True
+C16,v2,C16-v2,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,11,9,1,True
+C17,v1,C17-v1,arquivos,ChatGPT,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,27,26,0,True
+C17,v2,C17-v2,arquivos,ChatGPT,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,22,21,0,True
+C18,v1,C18-v1,membros,ChatGPT,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,30,29,5,True
+C18,v2,C18-v2,membros,ChatGPT,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,27,26,3,True
+C19,v1,C19-v1,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,32,32,4,True
+C19,v2,C19-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,31,30,4,True
+C20,v1,C20-v1,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,16,16,0,True
+C20,v2,C20-v2,arquivos,ChatGPT,aberto,detectada,julgamento manual: a citação aponta o CS no código injetado,a_julgar,sim,24,21,0,True
+C21,v1,C21-v1,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,15,15,0,True
+C21,v2,C21-v2,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,13,12,0,True
+C22,v1,C22-v1,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,12,11,7,True
+C22,v2,C22-v2,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,9,8,0,True
+C23,v1,C23-v1,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,33,33,16,True
+C23,v2,C23-v2,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,31,31,0,True
+C24,v1,C24-v1,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,26,22,2,True
+C24,v2,C24-v2,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,6,4,0,True
+C24,v3,C24-v3,membros+arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,43,39,2,True
+C25,v1,C25-v1,membros,ChatGPT,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,33,32,5,True
+C25,v2,C25-v2,membros,ChatGPT,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,36,35,4,True
+C25,v3,C25-v3,membros,ChatGPT,aberto,detectada,julgamento manual: a citação aponta o CS no código injetado,nao_detectada,sim,30,30,4,True
+C26,v1,C26-v1,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,28,28,3,True
+C26,v2,C26-v2,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,33,32,7,True
+C27,v1,C27-v1,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,45,44,3,True
+C27,v2,C27-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,33,33,5,True
+C27,v3,C27-v3,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,27,27,5,True
+C28,v1,C28-v1,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,34,33,4,True
+C28,v2,C28-v2,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,30,29,5,True
+C28,v3,C28-v3,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C29,v1,C29-v1,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,sim,34,33,4,True
+C29,v2,C29-v2,membros,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,35,34,4,True
+C29,v3,C29-v3,arquivos,ChatGPT,aberto,detectada,nomeou o CS no código injetado,detectada,,4,3,0,True
+C30,v1,C30-v1,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,39,39,6,True
+C30,v2,C30-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,36,36,4,True
+C31,v1,C31-v1,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,32,32,5,True
+C31,v2,C31-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,39,39,3,True
+C32,v1,C32-v1,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,25,25,4,True
+C32,v2,C32-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,30,30,4,True
+C32,v3,C32-v3,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,39,39,3,True
+C33,v1,C33-v1,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,38,38,4,True
+C33,v2,C33-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,41,41,4,True
+C33,v3,C33-v3,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,2,2,0,True
+C34,v1,C34-v1,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,36,36,4,True
+C34,v2,C34-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,32,32,4,True
+C35,v1,C35-v1,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,36,36,3,True
+C35,v2,C35-v2,arquivos,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C35,v3,C35-v3,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,34,34,4,True
+C36,v1,C36-v1,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,27,27,3,True
+C36,v2,C36-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,30,30,3,True
+C36,v3,C36-v3,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,31,31,4,True
+C37,v1,C37-v1,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,31,31,5,True
+C37,v2,C37-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,37,37,5,True
+C38,v1,C38-v1,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,30,30,4,True
+C38,v2,C38-v2,membros,ChatGPT,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,43,43,4,True
+C01,v1,C01-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C01,v2,C01-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C01,v3,C01-v3,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C02,v1,C02-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C02,v2,C02-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C03,v1,C03-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C03,v2,C03-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C04,v1,C04-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C04,v2,C04-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C05,v1,C05-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C05,v2,C05-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C05,v3,C05-v3,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,8,7,7,True
+C06,v1,C06-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C06,v2,C06-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C06,v3,C06-v3,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C07,v1,C07-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C07,v2,C07-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C08,v1,C08-v1,arquivos,ChatGPT,forcado,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C08,v2,C08-v2,arquivos,ChatGPT,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,1,1,1,True
+C09,v1,C09-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,3,2,2,True
+C09,v2,C09-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,9,8,8,True
+C10,v1,C10-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C10,v2,C10-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C10,v3,C10-v3,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C11,v1,C11-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C11,v2,C11-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C12,v1,C12-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C12,v2,C12-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,sim,7,6,6,True
+C13,v1,C13-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C13,v2,C13-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C14,v1,C14-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C14,v2,C14-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C15,v1,C15-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C15,v2,C15-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C16,v1,C16-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C16,v2,C16-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C17,v1,C17-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C17,v2,C17-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C18,v1,C18-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,8,7,7,True
+C18,v2,C18-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,10,9,9,True
+C19,v1,C19-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C19,v2,C19-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C20,v1,C20-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C20,v2,C20-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C21,v1,C21-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C21,v2,C21-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C22,v1,C22-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,sim,2,1,1,True
+C22,v2,C22-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C23,v1,C23-v1,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C23,v2,C23-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C24,v1,C24-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C24,v2,C24-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C24,v3,C24-v3,membros+arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C25,v1,C25-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C25,v2,C25-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C25,v3,C25-v3,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C26,v1,C26-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C26,v2,C26-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C27,v1,C27-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C27,v2,C27-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C27,v3,C27-v3,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C28,v1,C28-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C28,v2,C28-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C28,v3,C28-v3,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C29,v1,C29-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C29,v2,C29-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,8,7,7,True
+C29,v3,C29-v3,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,3,2,2,True
+C30,v1,C30-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C30,v2,C30-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C31,v1,C31-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C31,v2,C31-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C32,v1,C32-v1,membros,ChatGPT,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,6,6,6,True
+C32,v2,C32-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C32,v3,C32-v3,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,8,7,7,True
+C33,v1,C33-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C33,v2,C33-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,8,7,7,True
+C33,v3,C33-v3,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C34,v1,C34-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C34,v2,C34-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C35,v1,C35-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C35,v2,C35-v2,arquivos,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C35,v3,C35-v3,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C36,v1,C36-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C36,v2,C36-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C36,v3,C36-v3,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C37,v1,C37-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C37,v2,C37-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C38,v1,C38-v1,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C38,v2,C38-v2,membros,ChatGPT,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C01,v1,C01-v1,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,8,7,6,True
+C01,v2,C01-v2,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,7,6,5,True
+C01,v3,C01-v3,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,4,3,3,True
+C02,v1,C02-v1,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,12,11,6,True
+C02,v2,C02-v2,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,12,11,6,True
+C03,v1,C03-v1,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,6,6,6,True
+C03,v2,C03-v2,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,8,8,5,True
+C04,v1,C04-v1,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C04,v2,C04-v2,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C05,v1,C05-v1,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C05,v2,C05-v2,arquivos,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C05,v3,C05-v3,membros,Claude,aberto,detectada,julgamento manual: a citação aponta o CS no código injetado,nao_detectada,sim,13,13,5,True
+C06,v1,C06-v1,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C06,v2,C06-v2,arquivos,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C06,v3,C06-v3,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,6,6,4,True
+C07,v1,C07-v1,arquivos,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C07,v2,C07-v2,arquivos,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C08,v1,C08-v1,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C08,v2,C08-v2,arquivos,Claude,aberto,detectada,julgamento manual: a citação aponta o CS no código injetado,nao_detectada,sim,2,2,1,True
+C09,v1,C09-v1,arquivos,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,2,0,0,True
+C09,v2,C09-v2,membros,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,12,7,2,True
+C10,v1,C10-v1,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C10,v2,C10-v2,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,10,10,5,True
+C10,v3,C10-v3,arquivos,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C11,v1,C11-v1,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C11,v2,C11-v2,arquivos,Claude,aberto,detectada,julgamento manual: a citação aponta o CS no código injetado,a_julgar,sim,1,0,0,True
+C12,v1,C12-v1,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,6,3,3,True
+C12,v2,C12-v2,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,5,2,2,True
+C13,v1,C13-v1,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,4,3,3,True
+C13,v2,C13-v2,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C14,v1,C14-v1,arquivos,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,1,0,0,True
+C14,v2,C14-v2,arquivos,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,1,0,0,True
+C15,v1,C15-v1,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,1,1,0,True
+C15,v2,C15-v2,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,2,2,0,True
+C16,v1,C16-v1,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,2,2,1,True
+C16,v2,C16-v2,arquivos,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,2,1,1,True
+C17,v1,C17-v1,arquivos,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,1,0,0,True
+C17,v2,C17-v2,arquivos,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,1,0,0,True
+C18,v1,C18-v1,membros,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,5,4,4,True
+C18,v2,C18-v2,membros,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,5,4,4,True
+C19,v1,C19-v1,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,11,11,7,True
+C19,v2,C19-v2,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,7,7,6,True
+C20,v1,C20-v1,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C20,v2,C20-v2,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,1,1,0,True
+C21,v1,C21-v1,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C21,v2,C21-v2,arquivos,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C22,v1,C22-v1,arquivos,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C22,v2,C22-v2,arquivos,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C23,v1,C23-v1,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,16,16,0,True
+C23,v2,C23-v2,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,30,30,0,True
+C24,v1,C24-v1,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,11,7,2,True
+C24,v2,C24-v2,arquivos,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,2,0,0,True
+C24,v3,C24-v3,membros+arquivos,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,8,3,2,True
+C25,v1,C25-v1,membros,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,10,8,6,True
+C25,v2,C25-v2,membros,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,10,8,6,True
+C25,v3,C25-v3,membros,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,10,8,6,True
+C26,v1,C26-v1,membros,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,9,7,5,True
+C26,v2,C26-v2,membros,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,9,7,7,True
+C27,v1,C27-v1,membros,Claude,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,9,7,5,True
+C27,v2,C27-v2,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,14,13,9,True
+C27,v3,C27-v3,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,5,5,4,True
+C28,v1,C28-v1,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,7,7,5,True
+C28,v2,C28-v2,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,6,4,4,True
+C28,v3,C28-v3,arquivos,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C29,v1,C29-v1,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,10,9,5,True
+C29,v2,C29-v2,membros,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,13,12,6,True
+C29,v3,C29-v3,arquivos,Claude,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C30,v1,C30-v1,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,5,5,4,True
+C30,v2,C30-v2,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,11,11,5,True
+C31,v1,C31-v1,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,4,4,4,True
+C31,v2,C31-v2,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,8,8,4,True
+C32,v1,C32-v1,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,10,10,5,True
+C32,v2,C32-v2,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,8,8,5,True
+C32,v3,C32-v3,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,7,7,6,True
+C33,v1,C33-v1,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,10,10,7,True
+C33,v2,C33-v2,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,11,11,6,True
+C33,v3,C33-v3,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C34,v1,C34-v1,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,10,10,6,True
+C34,v2,C34-v2,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,12,12,6,True
+C35,v1,C35-v1,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,9,9,5,True
+C35,v2,C35-v2,arquivos,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C35,v3,C35-v3,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,8,8,6,True
+C36,v1,C36-v1,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,6,6,5,True
+C36,v2,C36-v2,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,9,9,5,True
+C36,v3,C36-v3,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,10,10,5,True
+C37,v1,C37-v1,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,8,8,6,True
+C37,v2,C37-v2,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,7,7,5,True
+C38,v1,C38-v1,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,9,9,5,True
+C38,v2,C38-v2,membros,Claude,aberto,nao_detectada,não nomeou o CS,nao_detectada,,10,10,6,True
+C01,v1,C01-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C01,v2,C01-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C01,v3,C01-v3,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C02,v1,C02-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C02,v2,C02-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C03,v1,C03-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C03,v2,C03-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C04,v1,C04-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C04,v2,C04-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,sim,1,0,0,True
+C05,v1,C05-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C05,v2,C05-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C05,v3,C05-v3,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C06,v1,C06-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C06,v2,C06-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,sim,1,0,0,True
+C06,v3,C06-v3,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C07,v1,C07-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C07,v2,C07-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C08,v1,C08-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C08,v2,C08-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C09,v1,C09-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,3,2,2,True
+C09,v2,C09-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,8,7,7,True
+C10,v1,C10-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C10,v2,C10-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C10,v3,C10-v3,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C11,v1,C11-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C11,v2,C11-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C12,v1,C12-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C12,v2,C12-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C13,v1,C13-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C13,v2,C13-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C14,v1,C14-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C14,v2,C14-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C15,v1,C15-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C15,v2,C15-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C16,v1,C16-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,sim,1,0,0,True
+C16,v2,C16-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C17,v1,C17-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C17,v2,C17-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C18,v1,C18-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C18,v2,C18-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,8,7,7,True
+C19,v1,C19-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C19,v2,C19-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C20,v1,C20-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C20,v2,C20-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C21,v1,C21-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C21,v2,C21-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C22,v1,C22-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C22,v2,C22-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C23,v1,C23-v1,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C23,v2,C23-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C24,v1,C24-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C24,v2,C24-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C24,v3,C24-v3,membros+arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C25,v1,C25-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,sim,7,6,6,True
+C25,v2,C25-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C25,v3,C25-v3,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C26,v1,C26-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C26,v2,C26-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C27,v1,C27-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C27,v2,C27-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,sim,6,5,5,True
+C27,v3,C27-v3,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C28,v1,C28-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C28,v2,C28-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C28,v3,C28-v3,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C29,v1,C29-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C29,v2,C29-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C29,v3,C29-v3,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C30,v1,C30-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C30,v2,C30-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C31,v1,C31-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C31,v2,C31-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C32,v1,C32-v1,membros,Claude,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,6,6,6,True
+C32,v2,C32-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C32,v3,C32-v3,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C33,v1,C33-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C33,v2,C33-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,8,7,7,True
+C33,v3,C33-v3,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C34,v1,C34-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C34,v2,C34-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C35,v1,C35-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C35,v2,C35-v2,arquivos,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C35,v3,C35-v3,membros,Claude,forcado,nao_detectada,nomeou o CS fora do código injetado,nao_detectada,nao,6,5,5,True
+C36,v1,C36-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C36,v2,C36-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C36,v3,C36-v3,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C37,v1,C37-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C37,v2,C37-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C38,v1,C38-v1,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C38,v2,C38-v2,membros,Claude,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C01,v1,C01-v1,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,6,5,2,True
+C01,v2,C01-v2,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,7,6,2,True
+C01,v3,C01-v3,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,7,6,1,True
+C02,v1,C02-v1,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,10,9,3,True
+C02,v2,C02-v2,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,9,8,3,True
+C03,v1,C03-v1,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,8,8,4,True
+C03,v2,C03-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,8,8,2,True
+C04,v1,C04-v1,arquivos,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,0,0,0,True
+C04,v2,C04-v2,arquivos,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,4,4,4,True
+C05,v1,C05-v1,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,2,1,0,True
+C05,v2,C05-v2,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,4,1,0,True
+C05,v3,C05-v3,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,11,11,5,True
+C06,v1,C06-v1,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,2,1,0,True
+C06,v2,C06-v2,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,2,1,0,True
+C06,v3,C06-v3,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,9,9,3,True
+C07,v1,C07-v1,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C07,v2,C07-v2,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,2,1,0,True
+C08,v1,C08-v1,arquivos,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,1,1,0,True
+C08,v2,C08-v2,arquivos,Gemini,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,2,0,0,True
+C09,v1,C09-v1,arquivos,Gemini,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,2,0,0,True
+C09,v2,C09-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,9,7,0,True
+C10,v1,C10-v1,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C10,v2,C10-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,9,9,3,True
+C10,v3,C10-v3,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C11,v1,C11-v1,arquivos,Gemini,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,11,10,5,True
+C11,v2,C11-v2,arquivos,Gemini,aberto,detectada,julgamento manual: a citação aponta o CS no código injetado,a_julgar,sim,9,8,3,True
+C12,v1,C12-v1,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,8,7,3,True
+C12,v2,C12-v2,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,13,12,5,True
+C13,v1,C13-v1,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,13,12,5,True
+C13,v2,C13-v2,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,11,10,3,True
+C14,v1,C14-v1,arquivos,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,4,4,2,True
+C14,v2,C14-v2,arquivos,Gemini,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,4,3,1,True
+C15,v1,C15-v1,arquivos,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,2,2,1,True
+C15,v2,C15-v2,arquivos,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,3,3,2,True
+C16,v1,C16-v1,arquivos,Gemini,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,3,2,0,True
+C16,v2,C16-v2,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,sim,5,3,0,True
+C17,v1,C17-v1,arquivos,Gemini,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,10,8,0,True
+C17,v2,C17-v2,arquivos,Gemini,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,7,6,0,True
+C18,v1,C18-v1,membros,Gemini,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,8,7,3,True
+C18,v2,C18-v2,membros,Gemini,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,7,6,3,True
+C19,v1,C19-v1,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,10,10,5,True
+C19,v2,C19-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,7,7,3,True
+C20,v1,C20-v1,arquivos,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,4,4,0,True
+C20,v2,C20-v2,arquivos,Gemini,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,8,7,0,True
+C21,v1,C21-v1,arquivos,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,8,8,0,True
+C21,v2,C21-v2,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,6,5,0,True
+C22,v1,C22-v1,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,18,11,0,True
+C22,v2,C22-v2,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,13,2,0,True
+C23,v1,C23-v1,arquivos,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,17,17,0,True
+C23,v2,C23-v2,arquivos,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,30,30,0,True
+C24,v1,C24-v1,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,7,5,0,True
+C24,v2,C24-v2,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,3,1,0,True
+C24,v3,C24-v3,membros+arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,9,4,1,True
+C25,v1,C25-v1,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,13,13,5,True
+C25,v2,C25-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,10,10,2,True
+C25,v3,C25-v3,membros,Gemini,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,8,7,2,True
+C26,v1,C26-v1,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,6,4,1,True
+C26,v2,C26-v2,membros,Gemini,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,7,6,2,True
+C27,v1,C27-v1,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,8,6,1,True
+C27,v2,C27-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,5,5,2,True
+C27,v3,C27-v3,membros,Gemini,aberto,detectada,julgamento manual: a citação aponta o CS no código injetado,nao_detectada,sim,7,6,2,True
+C28,v1,C28-v1,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,8,7,2,True
+C28,v2,C28-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,7,6,2,True
+C28,v3,C28-v3,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C29,v1,C29-v1,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,13,12,8,True
+C29,v2,C29-v2,membros,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,sim,12,11,6,True
+C29,v3,C29-v3,arquivos,Gemini,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C30,v1,C30-v1,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,8,8,3,True
+C30,v2,C30-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,9,9,1,True
+C31,v1,C31-v1,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,7,7,3,True
+C31,v2,C31-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,8,8,3,True
+C32,v1,C32-v1,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,9,9,5,True
+C32,v2,C32-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,7,7,2,True
+C32,v3,C32-v3,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,7,7,2,True
+C33,v1,C33-v1,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,8,8,3,True
+C33,v2,C33-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,10,10,3,True
+C33,v3,C33-v3,arquivos,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,2,2,0,True
+C34,v1,C34-v1,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,14,14,6,True
+C34,v2,C34-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,6,6,3,True
+C35,v1,C35-v1,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,13,13,6,True
+C35,v2,C35-v2,arquivos,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,1,1,0,True
+C35,v3,C35-v3,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,11,11,4,True
+C36,v1,C36-v1,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,7,7,2,True
+C36,v2,C36-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,10,10,5,True
+C36,v3,C36-v3,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,7,7,5,True
+C37,v1,C37-v1,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,9,9,4,True
+C37,v2,C37-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,10,10,5,True
+C38,v1,C38-v1,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,8,8,3,True
+C38,v2,C38-v2,membros,Gemini,aberto,nao_detectada,não nomeou o CS,nao_detectada,,9,9,1,True
+C01,v1,C01-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C01,v2,C01-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C01,v3,C01-v3,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C02,v1,C02-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C02,v2,C02-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C03,v1,C03-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C03,v2,C03-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C04,v1,C04-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C04,v2,C04-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,sim,1,0,0,True
+C05,v1,C05-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C05,v2,C05-v2,arquivos,Gemini,forcado,nao_detectada,resposta inválida (JSON incompleto ou malformado),nao_detectada,,0,0,0,False
+C05,v3,C05-v3,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C06,v1,C06-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C06,v2,C06-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,sim,1,0,0,True
+C06,v3,C06-v3,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C07,v1,C07-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C07,v2,C07-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C08,v1,C08-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C08,v2,C08-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C09,v1,C09-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,3,2,2,True
+C09,v2,C09-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,9,8,8,True
+C10,v1,C10-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C10,v2,C10-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,8,7,7,True
+C10,v3,C10-v3,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C11,v1,C11-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C11,v2,C11-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C12,v1,C12-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C12,v2,C12-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C13,v1,C13-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C13,v2,C13-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C14,v1,C14-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C14,v2,C14-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C15,v1,C15-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C15,v2,C15-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C16,v1,C16-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C16,v2,C16-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C17,v1,C17-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C17,v2,C17-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C18,v1,C18-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C18,v2,C18-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C19,v1,C19-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C19,v2,C19-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C20,v1,C20-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C20,v2,C20-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C21,v1,C21-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C21,v2,C21-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C22,v1,C22-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C22,v2,C22-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C23,v1,C23-v1,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C23,v2,C23-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C24,v1,C24-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C24,v2,C24-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C24,v3,C24-v3,membros+arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C25,v1,C25-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,8,7,7,True
+C25,v2,C25-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C25,v3,C25-v3,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C26,v1,C26-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C26,v2,C26-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,sim,7,6,6,True
+C27,v1,C27-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C27,v2,C27-v2,membros,Gemini,forcado,nao_detectada,nomeou o CS fora do código injetado,nao_detectada,nao,6,5,5,True
+C27,v3,C27-v3,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C28,v1,C28-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C28,v2,C28-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C28,v3,C28-v3,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,sim,1,0,0,True
+C29,v1,C29-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C29,v2,C29-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,8,7,7,True
+C29,v3,C29-v3,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C30,v1,C30-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C30,v2,C30-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C31,v1,C31-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C31,v2,C31-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C32,v1,C32-v1,membros,Gemini,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,6,6,6,True
+C32,v2,C32-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C32,v3,C32-v3,membros,Gemini,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,7,7,7,True
+C33,v1,C33-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C33,v2,C33-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C33,v3,C33-v3,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C34,v1,C34-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C34,v2,C34-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C35,v1,C35-v1,membros,Gemini,forcado,nao_detectada,nomeou o CS fora do código injetado,nao_detectada,nao,6,5,5,True
+C35,v2,C35-v2,arquivos,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C35,v3,C35-v3,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C36,v1,C36-v1,membros,Gemini,forcado,nao_detectada,nomeou o CS fora do código injetado,nao_detectada,nao,6,5,5,True
+C36,v2,C36-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C36,v3,C36-v3,membros,Gemini,forcado,nao_detectada,nomeou o CS fora do código injetado,nao_detectada,nao,7,6,6,True
+C37,v1,C37-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C37,v2,C37-v2,membros,Gemini,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,6,6,6,True
+C38,v1,C38-v1,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C38,v2,C38-v2,membros,Gemini,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C01,v1,C01-v1,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,20,19,5,True
+C01,v2,C01-v2,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,14,13,5,True
+C01,v3,C01-v3,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,17,16,5,True
+C02,v1,C02-v1,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,sim,20,19,4,True
+C02,v2,C02-v2,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,20,19,5,True
+C03,v1,C03-v1,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,16,16,9,True
+C03,v2,C03-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,12,12,5,True
+C04,v1,C04-v1,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,5,5,1,True
+C04,v2,C04-v2,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,4,4,4,True
+C05,v1,C05-v1,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,5,4,0,True
+C05,v2,C05-v2,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,3,0,0,True
+C05,v3,C05-v3,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,26,26,9,True
+C06,v1,C06-v1,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,9,8,0,True
+C06,v2,C06-v2,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,3,0,0,True
+C06,v3,C06-v3,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,18,18,6,True
+C07,v1,C07-v1,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,4,3,1,True
+C07,v2,C07-v2,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,3,2,0,True
+C08,v1,C08-v1,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,5,5,2,True
+C08,v2,C08-v2,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,6,6,1,True
+C09,v1,C09-v1,arquivos,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,6,4,2,True
+C09,v2,C09-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,22,19,2,True
+C10,v1,C10-v1,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C10,v2,C10-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,24,24,5,True
+C10,v3,C10-v3,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C11,v1,C11-v1,arquivos,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,20,19,14,True
+C11,v2,C11-v2,arquivos,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,25,24,22,True
+C12,v1,C12-v1,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,13,11,3,True
+C12,v2,C12-v2,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,18,16,6,True
+C13,v1,C13-v1,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,15,14,5,True
+C13,v2,C13-v2,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,12,11,4,True
+C14,v1,C14-v1,arquivos,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,10,9,4,True
+C14,v2,C14-v2,arquivos,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,10,9,5,True
+C15,v1,C15-v1,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,4,4,1,True
+C15,v2,C15-v2,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,11,11,4,True
+C16,v1,C16-v1,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,6,6,1,True
+C16,v2,C16-v2,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,6,6,2,True
+C17,v1,C17-v1,arquivos,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,16,15,3,True
+C17,v2,C17-v2,arquivos,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,18,17,8,True
+C18,v1,C18-v1,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,33,33,10,True
+C18,v2,C18-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,20,20,5,True
+C19,v1,C19-v1,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,21,21,8,True
+C19,v2,C19-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,,17,17,5,True
+C20,v1,C20-v1,arquivos,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,12,11,2,True
+C20,v2,C20-v2,arquivos,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,18,17,3,True
+C21,v1,C21-v1,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,9,9,0,True
+C21,v2,C21-v2,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,3,3,2,True
+C22,v1,C22-v1,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,12,11,7,True
+C22,v2,C22-v2,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,16,15,12,True
+C23,v1,C23-v1,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,48,48,16,True
+C23,v2,C23-v2,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,30,30,30,True
+C24,v1,C24-v1,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,21,19,1,True
+C24,v2,C24-v2,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,2,0,0,True
+C24,v3,C24-v3,membros+arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,19,14,0,True
+C25,v1,C25-v1,membros,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,13,11,5,True
+C25,v2,C25-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,,20,19,9,True
+C25,v3,C25-v3,membros,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,13,11,5,True
+C26,v1,C26-v1,membros,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,25,23,9,True
+C26,v2,C26-v2,membros,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,23,22,9,True
+C27,v1,C27-v1,membros,DeepSeek,aberto,nao_detectada,julgamento manual: o nome amplo não descreve o CS,a_julgar,nao,19,17,9,True
+C27,v2,C27-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,15,14,5,True
+C27,v3,C27-v3,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,19,17,6,True
+C28,v1,C28-v1,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,11,10,2,True
+C28,v2,C28-v2,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,15,14,5,True
+C28,v3,C28-v3,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,2,1,0,True
+C29,v1,C29-v1,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,17,16,3,True
+C29,v2,C29-v2,membros,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,21,20,9,True
+C29,v3,C29-v3,arquivos,DeepSeek,aberto,detectada,nomeou o CS no código injetado,detectada,,2,1,0,True
+C30,v1,C30-v1,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,,13,13,4,True
+C30,v2,C30-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,16,16,5,True
+C31,v1,C31-v1,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,24,24,3,True
+C31,v2,C31-v2,membros,DeepSeek,aberto,nao_detectada,nomeou o CS fora do código injetado,nao_detectada,,14,13,5,True
+C32,v1,C32-v1,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,,25,25,11,True
+C32,v2,C32-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,28,28,15,True
+C32,v3,C32-v3,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,18,18,8,True
+C33,v1,C33-v1,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,14,14,5,True
+C33,v2,C33-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,20,20,8,True
+C33,v3,C33-v3,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,1,1,0,True
+C34,v1,C34-v1,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,,18,18,5,True
+C34,v2,C34-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,23,23,10,True
+C35,v1,C35-v1,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,,15,15,8,True
+C35,v2,C35-v2,arquivos,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,1,1,0,True
+C35,v3,C35-v3,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,19,19,5,True
+C36,v1,C36-v1,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,16,16,6,True
+C36,v2,C36-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,22,22,10,True
+C36,v3,C36-v3,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,24,24,9,True
+C37,v1,C37-v1,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,,23,23,4,True
+C37,v2,C37-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,,20,20,5,True
+C38,v1,C38-v1,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,24,20,3,True
+C38,v2,C38-v2,membros,DeepSeek,aberto,nao_detectada,não nomeou o CS,nao_detectada,nao,15,15,5,True
+C01,v1,C01-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C01,v2,C01-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C01,v3,C01-v3,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C02,v1,C02-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,5,4,4,True
+C02,v2,C02-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C03,v1,C03-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,5,4,4,True
+C03,v2,C03-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C04,v1,C04-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C04,v2,C04-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C05,v1,C05-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C05,v2,C05-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C05,v3,C05-v3,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C06,v1,C06-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C06,v2,C06-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C06,v3,C06-v3,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C07,v1,C07-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C07,v2,C07-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C08,v1,C08-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C08,v2,C08-v2,arquivos,DeepSeek,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,1,1,1,True
+C09,v1,C09-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,3,2,2,True
+C09,v2,C09-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,9,8,8,True
+C10,v1,C10-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C10,v2,C10-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C10,v3,C10-v3,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C11,v1,C11-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C11,v2,C11-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C12,v1,C12-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C12,v2,C12-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C13,v1,C13-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C13,v2,C13-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C14,v1,C14-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C14,v2,C14-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C15,v1,C15-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C15,v2,C15-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C16,v1,C16-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C16,v2,C16-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C17,v1,C17-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C17,v2,C17-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,3,2,2,True
+C18,v1,C18-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C18,v2,C18-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C19,v1,C19-v1,membros,DeepSeek,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,6,6,6,True
+C19,v2,C19-v2,membros,DeepSeek,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,5,5,5,True
+C20,v1,C20-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,sim,1,0,0,True
+C20,v2,C20-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C21,v1,C21-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C21,v2,C21-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C22,v1,C22-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,3,2,2,True
+C22,v2,C22-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C23,v1,C23-v1,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C23,v2,C23-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C24,v1,C24-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,5,4,4,True
+C24,v2,C24-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C24,v3,C24-v3,membros+arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,4,3,3,True
+C25,v1,C25-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C25,v2,C25-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C25,v3,C25-v3,membros,DeepSeek,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,5,5,5,True
+C26,v1,C26-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,8,7,7,True
+C26,v2,C26-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C27,v1,C27-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C27,v2,C27-v2,membros,DeepSeek,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,5,5,5,True
+C27,v3,C27-v3,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C28,v1,C28-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C28,v2,C28-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C28,v3,C28-v3,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C29,v1,C29-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,5,4,4,True
+C29,v2,C29-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C29,v3,C29-v3,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,2,1,1,True
+C30,v1,C30-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,5,4,4,True
+C30,v2,C30-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,5,4,4,True
+C31,v1,C31-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,sim,6,5,5,True
+C31,v2,C31-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C32,v1,C32-v1,membros,DeepSeek,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,6,6,6,True
+C32,v2,C32-v2,membros,DeepSeek,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,7,7,7,True
+C32,v3,C32-v3,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C33,v1,C33-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C33,v2,C33-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C33,v3,C33-v3,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C34,v1,C34-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C34,v2,C34-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,7,6,6,True
+C35,v1,C35-v1,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,5,4,4,True
+C35,v2,C35-v2,arquivos,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,1,0,0,True
+C35,v3,C35-v3,membros,DeepSeek,forcado,nao_detectada,nomeou o CS fora do código injetado,nao_detectada,nao,5,4,4,True
+C36,v1,C36-v1,membros,DeepSeek,forcado,nao_detectada,nomeou o CS fora do código injetado,nao_detectada,nao,5,4,4,True
+C36,v2,C36-v2,membros,DeepSeek,forcado,nao_detectada,nomeou o CS fora do código injetado,nao_detectada,nao,6,5,5,True
+C36,v3,C36-v3,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,6,5,5,True
+C37,v1,C37-v1,membros,DeepSeek,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,6,6,6,True
+C37,v2,C37-v2,membros,DeepSeek,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,5,5,5,True
+C38,v1,C38-v1,membros,DeepSeek,forcado,nao_detectada,não nomeou o CS,nao_detectada,nao,5,5,5,True
+C38,v2,C38-v2,membros,DeepSeek,forcado,detectada,nomeou o CS no código injetado,detectada,,5,4,4,True
